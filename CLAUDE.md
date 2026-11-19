@@ -17,7 +17,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Títulos em ouro serifado (Cinzel 900), textos em Cormorant 600. Placas com moldura dourada e ornamento.
 - **Primeiro quadro = a thumbnail, idêntica, que ganha vida** (o Sommelier pisca, fala a 1ª frase, acena; câmera aproxima devagar).
   Thumb e abertura saem do MESMO código (`thumbFrame(0)` = thumb). Fechar com o logo Wine Know (~2,5–3 s).
-- Thumb: 2 linhas de texto, rosto como ponto focal, selo do canal PEQUENO, centralizado, logo abaixo da linha vermelha.
+- Thumb: 2 linhas de texto que DIZEM O ASSUNTO do vídeo (curiosidade sim, mistério vazio não: "A LUZ ESTRAGA SEU VINHO!", não "O INIMIGO INVISÍVEL"); sempre levar 3 opções. Rosto como ponto focal, selo do canal PEQUENO, centralizado, logo abaixo da linha vermelha.
 - Marca d'água: selo do canal GRANDE, centralizado (abaixo do rosto), bem clarinho (~7,5%), em todas as cenas menos abertura e logo final
   — sobrevive a recorte de Reels.
 - Mão NUNCA na frente do rótulo: mão apoiada fica atrás da garrafa; ao erguer, segura pelo gargalo.

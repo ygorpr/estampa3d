@@ -27,7 +27,7 @@ Revista Adega, ABS) e grave `pesquisa.md` com cada fato e sua fonte. Nada de sit
 ~11 cenas) serve para Shorts. Uma frase falada por cena. Estrutura, tom e checagem de fatos em
 `references/roteiro.md`. Grave em `<pasta>/vo/lines.json` como `[[0,0,"frase"], ...]`. A última frase é sempre "Wine Know. Dark Divino.".
 
-**4. Pasta e thumbnail.**
+**4. Pasta e thumbnail.** A thumb precisa DIZER O ASSUNTO (curiosidade, não mistério vazio); leve 3 opções com título do YouTube para o dono escolher.
 ```
 python3 SK/scripts/doctor.py
 python3 SK/scripts/new_video.py <pasta> --thumb <thumbnail-do-usuário>      # ou qualquer imagem provisória
