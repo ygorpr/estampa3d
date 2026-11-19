@@ -1,10 +1,10 @@
-# Para que serve o buraco no fundo da garrafa? — roteiro FLUIDO (sem capítulos), voz C (emoção)
+# Você nunca reparou? (Por que toda garrafa de vinho tem um buraco no fundo?) — roteiro FLUIDO (sem capítulos), voz C (emoção)
 Para quem NÃO sabe nada de vinho: toda palavra difícil é explicada na hora; história em ordem, sem buracos.
 Uma frase por cena; ~3 min. [marcação] = emoção do Paulo. Fontes: pesquisa.md.
 
 | # | Fala (narração = legenda) | O que aparece |
 |---|---|---|
-| 0 | [curious] Já reparou? Vira uma garrafa de vinho de cabeça pra baixo... e o fundo é afundado pra dentro! Pra que serve isso? | THUMB viva: Sommelier com a garrafa de cabeça pra baixo (mão no gargalo), mostrando o fundo |
+| 0 | [curious] Você nunca reparou? Vira uma garrafa de vinho de cabeça pra baixo... o fundo é afundado pra dentro! Pra que serve isso? | THUMB viva: "VOCÊ NUNCA REPAROU?" — Sommelier com a garrafa de cabeça pra baixo (mão no gargalo), mostrando o fundo |
 | 1 | [excited] Esse buraco tem nome, tem história... e tem até uma lenda. Fica comigo! | placas: NOME · HISTÓRIA · LENDA |
 | 2 | [warm] Pra entender, a gente volta pro tempo em que toda garrafa era feita à mão, por um vidreiro: o artesão que trabalha o vidro. | oficina do vidreiro, forno aceso |
 | 3 | [thoughtful] Ele pegava o vidro derretido na ponta de um cano comprido... e soprava, como quem enche um balão. | cano de sopro, bolha de vidro crescendo |
