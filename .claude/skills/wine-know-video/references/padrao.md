@@ -26,7 +26,7 @@ O vídeo-modelo é `examples/sobrou-vinho/` ("Sobrou vinho?", 45 s, narrado pelo
 - Rótulos fixos são bem-vindos: "DIA N", placas de dica "1. ...", chips de palavra-chave, etiquetas de preço.
 
 ## Montagem e câmera
-- Abrir com a thumbnail (~3,5–4,5 s, zoom lento) e fechar com o logo + "Wine Know. Dark Divino." — o dono pediu esse final em todos.
+- Abrir com a thumbnail idêntica que ganha vida (ver `references/longo.md`) e fechar com o logo + "Wine Know. Dark Divino." — o dono pediu esse final em todos.
 - Dissolve de ~0,5 s entre lugares diferentes (calendário ↔ bar, cartão ↔ cena). Corte seco para close apertado "pulou a câmera":
   comece no enquadramento médio e aproxime devagar.
 - Cenário não é fixo: o que combina com o assunto (bar com geladeira, adega, sala, rua, vinhedo...).
@@ -43,5 +43,5 @@ O vídeo-modelo é `examples/sobrou-vinho/` ("Sobrou vinho?", 45 s, narrado pelo
 3. Gravata da mesma cor do colete.
 4. Legenda batendo com a fala; sem legenda na tabela final e no logo.
 5. Nenhum corte direto para close; dissolves entre lugares.
-6. Abre com a thumbnail, fecha com "Wine Know. Dark Divino.".
+6. 1º quadro idêntico à thumbnail; marca d'água do selo nas cenas; fecha com "Wine Know. Dark Divino.".
 7. Nada cruza o rosto (garrafa, placa, etiqueta).

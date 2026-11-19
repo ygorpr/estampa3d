@@ -24,7 +24,7 @@ FILM={dur:1,cuts:[0,30],fadeIn:0,fadeOut:0,cam(){return {x:1080,y:500,z:1.7,b:[1
   comp([['w',10],['h'],['f']]);ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.55)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
   const r=ctx.createRadialGradient(1380,430,40,1380,430,560);r.addColorStop(0,'rgba(255,190,110,.18)');r.addColorStop(1,'rgba(255,190,110,0)');ctx.fillStyle=r;ctx.fillRect(0,0,W,H);ctx.restore();
   const T_=layer('t',null),L2=THUMB.lines;goldText(T_,L2[0][0],545,L2.length>1?400:480,L2[0][1],'Cinzel',900);if(L2[1])goldText(T_,L2[1][0],545,570,Math.min(L2[1][1],L2[0][1]),'Cinzel',900);
-  T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.drawImage(SEAL,1640,30,240,230);ctx.restore()},plants(){return {}}};
+  T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(SEAL,545-62,680,124,119);ctx.restore()},plants(){return {}}};
 """)
 html = (d / "index.html").read_text().replace("<script src=vo_words.js></script>", "<script>VOX=[];</script>").replace("<script src=film.js></script>", "<script src=thumb_cfg.js></script><script>const SEAL=new Image();SEAL.src='logo_badge.png';</script><script src=thumb_scene.js></script>").replace("bootFilm()", "SEAL.decode().then(()=>bootFilm())")
 (d / "thumb.html").write_text(html)

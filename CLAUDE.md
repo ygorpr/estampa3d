@@ -15,7 +15,10 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 ## Visual
 - Paleta Dark Divino: fundo #140509, parede #2C0B15, vinho #5E1428, bordô #8E1B3A, ouro #D4A24C, ouro claro #F2D27A, vela #FFB45E, creme #F3E6C8, garrafa #1E3A31.
 - Títulos em ouro serifado (Cinzel 900), textos em Cormorant 600. Placas com moldura dourada e ornamento.
-- Abrir com a thumbnail do vídeo (zoom lento, ~3,5 s) e fechar com o logo Wine Know (~2,5 s).
+- **Primeiro quadro = a thumbnail, idêntica, que ganha vida** (o Sommelier pisca, fala a 1ª frase, acena; câmera aproxima devagar).
+  Thumb e abertura saem do MESMO código (`thumbFrame(0)` = thumb). Fechar com o logo Wine Know (~2,5–3 s).
+- Thumb: 2 linhas de texto, rosto como ponto focal, selo do canal PEQUENO, centralizado, logo abaixo da linha vermelha.
+- Marca d'água: selo do canal bem transparente (~16%) no canto superior direito em todas as cenas (menos a abertura e o logo final).
 - Tela final com tabela em cartões dourados (ícone de taça + prazo/dica).
 - Cenário NÃO é fixo: escolher o que combina com o assunto (bar/cozinha com geladeira, adega, vinhedo, sala...).
 
@@ -42,6 +45,6 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Rótulos fixos permitidos: "DIA N" e as placas de dica ("1. TAMPE COM A ROLHA").
 
 ## Montagem
-- Duração ~40-45 s (cabe a narração). Transições entre lugares diferentes (calendário ↔ bar) com dissolve de ~0,5 s.
+- Formato padrão: longo (~3 min) em capítulos, com gancho, CTA de inscrição e tabela final; o curto (~40–45 s) é para Shorts. Transições entre lugares diferentes (calendário ↔ bar) com dissolve de ~0,5 s.
 - Nunca cortar direto para um close apertado: começar no enquadramento médio e aproximar devagar (push-in).
 - Conferir quadros (stills) antes de renderizar; avisar que o áudio foi medido, não ouvido.

@@ -21,7 +21,20 @@ curva preço×qualidade, contador animado) · cenário (vinhedo, adega com barri
 ## Legenda
 Sempre no máximo 2 linhas: o `karaoke()` divide frases longas em páginas e mostra a página que está sendo falada.
 
+## Abertura = thumbnail viva
+O primeiro quadro do vídeo é a própria thumbnail, idêntica pixel a pixel, e ela ganha vida (piscar, falar a 1ª frase, acenar, câmera
+aproximando). Faça as duas com a MESMA função (`thumbFrame(t)` no exemplo): a thumb é `thumbFrame(0)` renderizada por `thumb.html`.
+Use `fadeIn:0`. Depois da abertura, um dissolve leva à cena 1.
+
+## Marca d'água
+Selo do canal a ~16% de opacidade, 150 px, no canto superior direito, em todas as cenas menos a abertura e o logo final
+(`watermark()` no exemplo) — protege contra reuso do vídeo sem a marca.
+
 ## Thumbnail
 2 linhas de texto no máximo (sem nada por cima), rosto do Sommelier grande e expressivo como ponto focal, selo real do canal
-(`assets/logo_badge.png`) num canto, fundo escurecido atrás do texto. Confira em tamanho pequeno (320×180): tem que ler.
+(`assets/logo_badge.png`) PEQUENO e centralizado logo abaixo da linha vermelha, fundo escurecido atrás do texto. Confira em tamanho pequeno (320×180): tem que ler.
 `make_thumb.py` já faz esse layout. Imagens locais no canvas pedem Chromium com `--allow-file-access-from-files`.
+
+## Fechamento (aprovado)
+- Tabela final: a narração cita CADA cartão, e cada cartão entra quando o Paulo diz a palavra dele (`wt`). Cartão sem fala = erro.
+- CTA "Inscreva-se" + "Comente" no canto superior esquerdo: nada de botão ou cartão na faixa de baixo, que é da legenda.

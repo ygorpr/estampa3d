@@ -1,5 +1,5 @@
 // VINHO CARO VALE A PENA? — versão longa (~3 min), Wine Know / Dark Divino.
-const LEN=[6.1,5.0,7.8,3.5,5.6,6.0,4.7,6.9,6.6,3.5,4.3,6.3,5.2,3.4,5.9,7.6,6.5,4.5,4.0,5.8,5.7,4.9,3.8,4.8,5.1,4.9,4.4,7.0,5.4,5.8,7.5,7.0,3.2],T=sceneStarts(LEN);
+const LEN=[6.1,5.0,7.8,3.5,5.6,6.0,4.7,6.9,6.6,3.5,4.3,6.3,5.2,3.4,5.9,7.6,6.5,4.5,4.0,5.8,5.7,4.9,3.8,4.8,5.1,4.9,4.4,7.0,5.4,5.8,8.5,7.0,3.2],T=sceneStarts(LEN);
 const LOGO=new Image();LOGO.src='logo_badge.png';
 // ---------- lip sync from the narration timings ----------
 function speak(t){for(const l of VOX){if(t<l.at||t>l.at+l.dur)continue;for(const w of l.words){const s=l.at+w[1],e=l.at+w[2];if(t>=s&&t<=e){const u=(t-s)/Math.max(.05,e-s);return .18+.34*Math.sin(u*Math.PI)}}return .05}return 0}
@@ -58,12 +58,26 @@ function curveCard(t,s,phase){veil(null,t);const g=layer('g',null);goldText(g,'P
 function shelf(t,s){veil(null,t,cellarWall,.7);const tm=wt(21,'meio'),u=easeIO(seg(t,tm-.2,tm+.5)),g=layer('g',null);const sg=g.createLinearGradient(0,150,0,820);sg.addColorStop(0,`rgba(255,200,120,${.45*u})`);sg.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=sg;g.beginPath();g.moveTo(900,120);g.lineTo(1020,120);g.lineTo(1180,820);g.lineTo(740,820);g.closePath();g.fill();
  g.fillStyle='#5A2E1C';g.fillRect(360,800,1200,26);bottleL(g,[600,800],1.2,'cheap');bottleL(g,[960,800],1.2+.08*u,'mid');bottleL(g,[1320,800],1.2,'exp');priceTag(g,600,330,'R$ 50',1,.8);priceTag(g,960,330,'R$ 150',1,.8+.15*u);priceTag(g,1320,330,'R$ 500',1,.8);blit(ctx,L.g,0);tip_('O MEIO DA PRATELEIRA',win(t,T[s]+.2,T[s+1]-.1))}
 function finalTable(t,s){veil(null,t);const g=layer('g',null);goldText(g,'VINHO CARO VALE A PENA?',960,150,84);ornament(g,960,240,620);blit(ctx,L.g,0,seg(t,T[s],T[s]+.5));
- for(const [cx,n,d,kind,ta] of [[480,'DIA A DIA','Intermediário','mid',T[s]+.6],[960,'GRANDES MOMENTOS','O caro','exp',T[s]+1.3],[1440,'PARA GUARDAR','O caro, por anos','exp',T[s]+2]]){const c=layer('c'+cx,null);plaque(c,cx,600,400,500);bottleL(c,[cx,690],.95,kind);goldText(c,n,cx,750,34,'Cinzel',700);blit(ctx,L['c'+cx],0,seg(t,ta,ta+.5));serif(d,cx,808,48,`rgba(243,230,200,${seg(t,ta,ta+.5)})`)}
- serif('Pague pelo vinho, não pela fama do rótulo',960,960,50,`rgba(212,162,76,${seg(t,T[s]+3,T[s]+3.6)})`,'italic')}
+ for(const [cx,n,d,kind,ta] of [[480,'DIA A DIA','Intermediário','mid',wt(30,'intermedi')-.2],[960,'GRANDES MOMENTOS','O caro','exp',wt(30,'grandes')-.2],[1440,'PARA GUARDAR','O caro, por anos','exp',wt(30,'guardar')-.2]]){const c=layer('c'+cx,null);plaque(c,cx,600,400,500);bottleL(c,[cx,690],.95,kind);goldText(c,n,cx,750,34,'Cinzel',700);blit(ctx,L['c'+cx],0,seg(t,ta,ta+.5));serif(d,cx,808,48,`rgba(243,230,200,${seg(t,ta,ta+.5)})`)}
+ serif('Pague pelo vinho, não pela fama do rótulo',960,960,50,`rgba(212,162,76,${seg(t,wt(30,'anos')+.4,wt(30,'anos')+1)})`,'italic')}
 function ctaScene(t,cam,s){talkScene(t,cam,s,{gest:[[0,'wave'],[2.2,'open'],[4.5,'rest']],face:t=>({mouth:.7,brow:.5})});
- const a=easeIO(seg(t,T[s]+.4,T[s]+1)),g=layer('g',null);g.save();g.globalAlpha=a;g.fillStyle='#B0122E';g.beginPath();g.roundRect(150,780,520,110,55);g.fill();g.strokeStyle='#F2D27A';g.lineWidth=5;g.stroke();g.restore();
- g.save();g.globalAlpha=a;goldText(g,'INSCREVA-SE',410,836,52,'Cinzel',900);g.restore();chip(g,410,700,'COMENTE: QUAL VINHO?',easeIO(seg(t,wt(31,'comentários'),wt(31,'comentários')+.4)));blit(ctx,L.g,0);
- if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=a;ctx.drawImage(LOGO,1620,40,250,240);ctx.restore()}}
+ const a=easeIO(seg(t,T[s]+.4,T[s]+1)),g=layer('g',null);g.save();g.globalAlpha=a;g.fillStyle='#B0122E';g.beginPath();g.roundRect(120,120,520,110,55);g.fill();g.strokeStyle='#F2D27A';g.lineWidth=5;g.stroke();g.restore();
+ g.save();g.globalAlpha=a;goldText(g,'INSCREVA-SE',380,176,52,'Cinzel',900);g.restore();chip(g,380,300,'COMENTE: QUAL VINHO?',easeIO(seg(t,wt(31,'comentários'),wt(31,'comentários')+.4)));blit(ctx,L.g,0);
+ if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=a;ctx.drawImage(LOGO,1640,40,230,220);ctx.restore()}}
+
+// ---------- opening = the thumbnail, alive. thumbFrame(0) IS the thumbnail image (same code, same pixels). ----------
+function thumbFrame(t){const u=easeIO(seg(t,.6,LEN[0])),cam={x:1080+u*10,y:500-u*6,z:1.7+u*.07,b:[10,0,0]};
+ let x=layer('w',cam);cellarWall(x,0);
+ const live=t>0,sp=live?speak(t):0,wv=live?Math.sin(t*2.4)*.5+.5:0;
+ const p={x:1330,y:600,s:1,face:1,noLegs:true,breath:1+(live?t*2.1:0),look:-.45,lookY:-.15,brow:1.1,wide:1,sad:.15,mouth:.05,open:Math.max(.5-(live?seg(t,.3,.5)*.5:0),sp),tilt:-.08+(live?Math.sin(t*1.2)*.02:0),blink:live?blinkAt(t,[1.4,3.9]):0,hands:{},arm3d:true};
+ p.hands.l=[...w2l(p,[1190,640]),110];p.hands.r=[...w2l(p,[1470,640-wv*12]),90];const hp=actor(layer('h',cam),'s',C10,p,cam,'rgba(255,190,110,1)',1);
+ const f=layer('f',cam);cellarTable(f);bottleL(f,[1190,760],1,'exp');const hl=h2w(hp,'l'),hr=h2w(hp,'r');gripHand(f,hl[0],hl[1],0,C10,.85);openHand(f,hr[0],hr[1],.5,C10,.85);
+ comp([['w',10],['h'],['f']]);ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.55)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
+ const r=ctx.createRadialGradient(1380,430,40,1380,430,560);r.addColorStop(0,'rgba(255,190,110,.18)');r.addColorStop(1,'rgba(255,190,110,0)');ctx.fillStyle=r;ctx.fillRect(0,0,W,H);ctx.restore();
+ const T_=layer('t',null);goldText(T_,'VINHO CARO',545,400,124,'Cinzel',900);goldText(T_,'VALE A PENA?',545,570,106,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);
+ if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(LOGO,545-62,680,124,119);ctx.restore()}}
+// faint watermark on every scene of the video (protects reuse without the brand)
+function watermark(){if(!LOGO.complete)return;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.16;ctx.filter='blur(1px)';ctx.drawImage(LOGO,1742,26,150,144);ctx.restore()}
 // ---------- the scene list (one per narration line) ----------
 const TALK=(o)=>(t,c,s)=>talkScene(t,c,s,o);
 const SC=[
@@ -101,17 +115,17 @@ const SC=[
  (t,c,s)=>ctaScene(t,c,s),
  null];
 const CAMS=s=>{const u=0;return null};
-FILM={dur:T[T.length-1],cuts:T.map(v=>Math.round(v*30)),fadeIn:.3,fadeOut:.8,warm(){return .4},
+FILM={dur:T[T.length-1],cuts:T.map(v=>Math.round(v*30)),fadeIn:0,fadeOut:.8,warm(){return .4},
  cam(s,u,t){const talk=[1,2,12,14,16,17,23,27,29,31].includes(s);if(talk){const k=[1,2,12,14,16,17,23,27,29,31].indexOf(s)%3;return [{x:lerp(950,975,u),y:lerp(560,545,u),z:lerp(1.18,1.28,easeIO(u)),b:[6,0,0]},{x:lerp(930,915,u),y:lerp(545,520,u),z:lerp(1.42,1.62,easeIO(u)),b:[8,0,0]},{x:lerp(1000,985,u),y:550,z:lerp(1.3,1.4,u),b:[7,0,0]}][k]}
   if(s==4)return {x:lerp(900,1020,easeIO(u)),y:560,z:1.1,b:[2,0,0]};if(s==7)return {x:lerp(700,1220,easeIO(u)),y:600,z:1.5,b:[3,0,0]};if(s==8||s==24)return {x:960,y:560,z:lerp(1.2,1.3,u),b:[8,0,0]};return {x:960,y:540,z:1,b:[10,0,0]}},
- draw(t,cam,s,u){if(s==0){photo(IMG.thumb,t,0,T[1],1,1.07);return}if(s==32){photo(IMG.logo,t,T[32],T[33],1,1.05);return}SC[s](t,cam,s)},
+ draw(t,cam,s,u){if(s==0){thumbFrame(t);return}if(s==32){photo(IMG.logo,t,T[32],T[33],1,1.05);return}SC[s](t,cam,s)},
  plants(){return {}}};
 // dissolves between places; subtitles everywhere except the final table and the logo
-(function(){const DISS={3:.5,4:.5,5:.5,7:.5,8:.4,9:.5,10:.5,12:.5,13:.5,14:.5,15:.5,16:.5,18:.5,19:.5,21:.5,22:.5,23:.5,24:.5,25:.5,26:.5,27:.5,28:.5,29:.5,30:.5,31:.5},xf=mk(),xz=mk(),CARD=[3,5,6,9,10,11,13,15,18,19,20,21,22,25,26,28,30],draw0=FILM.draw,cam0=FILM.cam;
+(function(){const DISS={1:.6,3:.5,4:.5,5:.5,7:.5,8:.4,9:.5,10:.5,12:.5,13:.5,14:.5,15:.5,16:.5,18:.5,19:.5,21:.5,22:.5,23:.5,24:.5,25:.5,26:.5,27:.5,28:.5,29:.5,30:.5,31:.5},xf=mk(),xz=mk(),CARD=[3,5,6,9,10,11,13,15,18,19,20,21,22,25,26,28,30],draw0=FILM.draw,cam0=FILM.cam;
  FILM.draw=(t,c,s,u)=>{const d=DISS[s],a=d?1-easeIO(seg(t,T[s],T[s]+d)):0;if(a>0){draw0(t,cam0(s-1,1,t),s-1,1);const x=xf.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0)}
   draw0(t,c,s,u);if(CARD.includes(s)){const k=1+.035*easeIO(u),x=xz.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0);ctx.save();ctx.setTransform(k,0,0,k,W/2*(1-k),H/2*(1-k));ctx.drawImage(xz,0,0);ctx.restore()}
-  if(a>0)blit(ctx,xf,0,a);if(s!=30&&s!=32)karaoke(t)}})();
+  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=31&&s!=32)watermark();if(s!=30&&s!=32)karaoke(t)}})();
 // sound
 for(let s=1;s<33;s++)say(T[s],[3,9,13,18,22,26].includes(s)?'line':'whoosh');
 say(wt(1,'cinquenta'),'tag');say(wt(1,'quinhentos'),'tag');say(wt(2,'dez'),'tag');for(const w of ['vinhedo','terra','pouca'])say(wt(4,w),'tag');say(wt(7,'milhares'),'coins');say(wt(10,'imposto'),'coins');for(const w of ['frete','importadora','margem'])say(wt(11,w),'tag');
-for(const t0 of [T[16]+1.2,T[29]+1]){say(t0+.1,'cloth');say(t0+1.2,'sip');say(t0+3.05,'glassdown')}say(wt(21,'meio'),'line');for(const k of [.6,1.3,2])say(T[30]+k,'line');
+for(const t0 of [T[16]+1.2,T[29]+1]){say(t0+.1,'cloth');say(t0+1.2,'sip');say(t0+3.05,'glassdown')}say(wt(21,'meio'),'line');for(const w of ['intermedi','grandes','guardar'])say(wt(30,w)-.2,'line');
