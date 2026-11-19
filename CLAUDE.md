@@ -5,6 +5,11 @@ Vídeos de bonecos (skill **/stickman**, repositório `michxlai/stickman-skill`)
 O kit pronto (motor ajustado, cenários, exemplo completo, ferramentas) está em `kit-dark-divino/`.
 Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skills/stickman`, depois copiar `kit-dark-divino/engine/*` por cima da pasta do filme.
 
+## Referência de qualidade (APROVADA pelo dono do canal)
+- **`videos/sobrou-vinho-narrado-paulo.mp4`** é o vídeo-modelo. Todo vídeo novo deve chegar neste nível.
+  O projeto completo dele está em `kit-dark-divino/exemplo-sobrou-vinho/` (partir dele para novos temas).
+- Sempre terminar com o logo Wine Know e a narração **"Wine Know. Dark Divino."** (sem legenda nessa parte).
+
 ## Visual
 - Paleta Dark Divino: fundo #140509, parede #2C0B15, vinho #5E1428, bordô #8E1B3A, ouro #D4A24C, ouro claro #F2D27A, vela #FFB45E, creme #F3E6C8, garrafa #1E3A31.
 - Títulos em ouro serifado (Cinzel 900), textos em Cormorant 600. Placas com moldura dourada e ornamento.
