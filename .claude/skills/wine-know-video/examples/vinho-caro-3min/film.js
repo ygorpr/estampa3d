@@ -74,8 +74,8 @@ function thumbFrame(t){const u=easeIO(seg(t,.6,LEN[0])),cam={x:1080+u*10,y:500-u
  const p={x:1330,y:600,s:1,face:1,noLegs:true,breath:1+(live?t*2.1:0),look:-.45,lookY:-.15,brow:1.1,wide:1,sad:.15,mouth:.05,open:Math.max(.5-(live?seg(t,.3,.5)*.5:0),sp),tilt:-.08+(live?Math.sin(t*1.2)*.02:0),blink:live?blinkAt(t,[1.4,3.9]):0,hands:{},arm3d:true};
  p.hands.l=[...w2l(p,[1190,522]),110];p.hands.r=[...w2l(p,[1470,640-wv*12]),90];const hp=actor(layer('h',cam),'s',C10,p,cam,'rgba(255,190,110,1)',1);
  const f=layer('f',cam);cellarTable(f);bottleL(f,[1190,760],1,'exp');const hl=h2w(hp,'l'),hr=h2w(hp,'r');gripHand(f,hl[0],hl[1],0,C10,.85);openHand(f,hr[0],hr[1],.5,C10,.85);
- comp([['w',10],['h'],['f']]);ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.55)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
- const r=ctx.createRadialGradient(1380,430,40,1380,430,560);r.addColorStop(0,'rgba(255,190,110,.18)');r.addColorStop(1,'rgba(255,190,110,0)');ctx.fillStyle=r;ctx.fillRect(0,0,W,H);ctx.restore();
+ comp([['w',10]]);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='rgba(16,3,7,.7)';ctx.fillRect(0,0,W,H);ctx.restore();blit(ctx,L.h,0);blit(ctx,L.f,0);
+ ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.55)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);ctx.restore();
  const T_=layer('t',null);goldText(T_,'VINHO CARO',545,400,124,'Cinzel',900);goldText(T_,'VALE A PENA?',545,570,106,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);
  if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(LOGO,545-62,680,124,119);ctx.restore()}}
 // faint watermark on every scene of the video (protects reuse without the brand)
