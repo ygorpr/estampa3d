@@ -47,6 +47,10 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Legenda só enquanto ele explica: na tela final (tabela "Quanto dura aberto?") e no logo, SEM legenda.
 - Rótulos fixos permitidos: "DIA N" e as placas de dica ("1. TAMPE COM A ROLHA").
 
+## Roteiro
+- Público: quem NÃO sabe nada de vinho. Explicar na hora toda palavra difícil (ânfora, sobreiro, espumante...) e contar a linha do tempo
+  sem buracos (se algo sumiu e voltou, dizer que sumiu e por quanto tempo). Fatos só de fonte confiável, com `pesquisa.md`.
+
 ## Montagem
 - Formato padrão: longo (~3 min), FLUIDO e SEM capítulos (transição pela fala), com gancho, CTA de inscrição e tabela final; o curto (~40–45 s) é para Shorts. Transições entre lugares diferentes (calendário ↔ bar) com dissolve de ~0,5 s.
 - Nunca cortar direto para um close apertado: começar no enquadramento médio e aproximar devagar (push-in).
