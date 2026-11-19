@@ -9,4 +9,7 @@
 | ≥140 g/L de açúcar (hoje 6–8 g/L); carta de Mme Clicquot: russos preferiam ~300 g/L | phys.org / PNAS — https://phys.org/news/2015-04-sugary-shipwrecked-champagne-reveals-history.html |
 | 2014: "Cellar in the Sea": 300 garrafas + 50 magnums numa gaiola no Báltico; controle na adega de Reims; experimento de 40 anos; 1ª prova 2017: ambas boas, o do mar mais "fechado/tímido" | International Wine Challenge — https://www.internationalwinechallenge.com/iwc-insight/research/veuve-clicquots-seaageing-experiment.html ; Club Oenologique — https://cluboenologique.com/story/veuve-clicquot-sea-aged-champagne/ |
 
+| Jönköping: escuna sueca afundada por submarino alemão (U-22) em nov/1916, levando champanhe Heidsieck & Co Monopole 1907 para São Petersburgo; achada em 1997 a ~64 m; em 1998 resgatadas >2.000 garrafas, quase todas intactas | União das Maisons de Champagne — https://maisons-champagne.com/en/houses/the-art-of-tasting/article/champagne-at-the-bottom-of-the-sea ; Heidsieck & Co Monopole — https://heidsieckandco-monopole.com/jonkoping-en ; VinePair |
+| Cerveja do naufrágio de Föglö: o centro de pesquisa VTT (Finlândia) e a KU Leuven analisaram; a cervejaria Stallhagen (Åland) recriou a receita ("Stallhagen Historic Beer 1843") | Helsinki Times — https://www.helsinkitimes.fi/eat-and-drink/10984-aland-brewery-revives-170-year-old-beer.html ; ScienceDaily — https://sciencedaily.com/releases/2014/10/141002092408.htm |
+
 Fora do roteiro: destino do navio (Rússia? Alemanha? — contestado); "bebível ou não" (análise de 2018 diverge); arsênico (detalhe técnico).

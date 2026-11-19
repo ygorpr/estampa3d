@@ -36,7 +36,7 @@ python3 SK/scripts/make_thumb.py <pasta> --title "LINHA 1" "LINHA 2?" --set bar|
 Se o usuário mandou thumbnail própria, ela abre o vídeo; se não, use a do `make_thumb.py` e mostre a ele.
 Se o Chromium já existir no sistema (ex.: /opt/pw-browsers), instale `playwright` na mesma versão em vez de baixar outro.
 
-**5. Voz do Paulo (com emoção — padrão aprovado "C").** Escreva `vo/tagged.json` com uma marcação de emoção por frase
+**5. (Só com APROVAÇÃO EXPLÍCITA do roteiro pelo dono — nunca antes.) Voz do Paulo (com emoção — padrão aprovado "C").** Escreva `vo/tagged.json` com uma marcação de emoção por frase
 (`[excited]`, `[curious]`, `[confident]`, `[emphatic]`, `[warm]`, `[serious]`, `[cheerful]`, `[playful]`, `[thoughtful]`, `[friendly]`;
 pode pôr `[laughs]` ou outra marcação no meio da frase). A emoção acompanha o momento: curioso nas perguntas, empolgado no gancho e
 nas descobertas, sério nos cuidados, simpático no convite.

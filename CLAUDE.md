@@ -34,6 +34,10 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Gestos com ida, pausa e volta (keyframes com ease), sem movimento mole.
 - Gole: a taça inclina até ~1 rad, a borda chega na boca, o vinho fica SEMPRE nivelado (horizontal) e corre para a borda, com leve balanço.
 
+## Fluxo de aprovação (regra do dono)
+- A voz (ElevenLabs) é gerada SÓ depois que o dono APROVAR o roteiro daquele vídeo, de forma explícita. Mudou o roteiro? Mostra de novo e espera.
+- Não refazer vídeos já entregues sem o dono pedir; corrigir só o que ele apontou e perguntar antes de re-renderizar os outros.
+
 ## Som
 - Trilha: sempre jazz/blues/piano com sax (`kit-dark-divino/tools/jazz.py` gera uma; faixa real liberada é melhor se o usuário mandar).
 - Narração: ElevenLabs, voz **Paulo** (ID `Qrdut83w0Cr152Yb4Xn3`), modelo **eleven_v3 com marcações de emoção** por frase (voz "C"
