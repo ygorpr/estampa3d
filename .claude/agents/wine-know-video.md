@@ -1,6 +1,7 @@
 ---
 name: wine-know-video
-description: Produz do início ao fim um vídeo animado do canal Wine Know – Dark Divino no padrão aprovado (pauta, roteiro, thumb, voz do Paulo, animação, legenda karaokê, jazz, render e conferência). Use quando pedirem um vídeo novo do canal de vinho e o trabalho puder rodar sozinho.
+description: |
+  Produz do início ao fim um vídeo animado do canal Wine Know – Dark Divino no padrão aprovado (pauta, roteiro, thumb, voz do Paulo, animação, legenda karaokê, jazz, render e conferência). Use quando pedirem um vídeo novo do canal de vinho e o trabalho puder rodar sozinho.
   <example>
   Context: O dono do canal quer o próximo vídeo pronto.
   user: "Faz o vídeo do canal sobre vinho seco ou suave, no nosso padrão"

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: pauta-youtube
+expected_outcome: |
+  Uma lista de 3 a 4 temas para o canal, cada um justificado por buscas reais do autocompletar do YouTube Brasil (citadas), adequados ao público 40+ com dinheiro, deixando a escolha final para o usuário.

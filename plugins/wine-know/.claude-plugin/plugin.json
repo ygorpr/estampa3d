@@ -1,0 +1,8 @@
+{
+  "name": "wine-know",
+  "version": "1.0.0",
+  "description": "Vídeos animados do canal Wine Know – Dark Divino no padrão aprovado: pauta no YouTube, roteiro, thumbnail, voz do Paulo, legenda karaokê, jazz e render.",
+  "author": { "name": "Wine Know – Dark Divino" },
+  "keywords": ["vinho", "video", "youtube", "animacao", "stickman"],
+  "license": "MIT"
+}

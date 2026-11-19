@@ -14,8 +14,10 @@ Antes de começar, leia **`references/padrao.md`** (o que foi aprovado e por qu�
 ## Fluxo
 
 **1. Pauta.** Se o usuário não deu tema, pesquise o que o público pergunta: `python3 SK/scripts/youtube_ideas.py` (autocompletar do
-YouTube Brasil; precisa do host `suggestqueries.google.com` liberado). Proponha 3–4 temas com as buscas reais que os justificam e
-deixe o usuário escolher — o tema é decisão dele.
+YouTube Brasil; precisa do host `suggestqueries.google.com` liberado) e, para os melhores candidatos,
+`youtube_ideas.py --views "tema"` (vídeos que já existem: visualizações e idade — mostra o tamanho do interesse e se a concorrência
+está velha). Pule temas que o canal já fez (veja `examples/` e a pasta de vídeos do projeto). Proponha 3–4 temas com as buscas
+reais e os números que os justificam e deixe o usuário escolher — o tema é decisão dele.
 
 **2. Roteiro.** Uma frase falada por cena, ~11 cenas, 40–55 s no total. Estrutura, tom e checagem de fatos em
 `references/roteiro.md`. Grave em `<pasta>/vo/lines.json` como `[[0,0,"frase"], ...]`. A última frase é sempre "Wine Know. Dark Divino.".
