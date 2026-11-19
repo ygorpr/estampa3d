@@ -7,5 +7,5 @@ function thumbFrame(t){const u=easeIO(seg(t,.6,LEN[0])),cam={x:1080+u*10,y:500-u
  const f=layer('f',cam);const hl=h2w(hp,'l'),hr=h2w(hp,'r');vitrine(f,1090,815,210,300,.68);gripHand(f,hl[0],hl[1],0,C10,.85);openHand(f,hr[0],hr[1],.5,C10,.85);
  comp([['w',10]]);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='rgba(16,3,7,.42)';ctx.fillRect(0,0,W,H);ctx.restore();blit(ctx,L.h,0);blit(ctx,L.f,0);
  ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.42)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);ctx.restore();
- const T_=layer('t',null);goldText(T_,'POR QUE A GARRAFA',545,416,65,'Cinzel',900);goldText(T_,'É VERDE?',545,528,124,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);
+ const T_=layer('t',null);goldText(T_,'VINHO DE',545,392,124,'Cinzel',900);goldText(T_,'1.700 ANOS',545,534,111,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);
  if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(LOGO,545-62,680,124,119);ctx.restore()}}

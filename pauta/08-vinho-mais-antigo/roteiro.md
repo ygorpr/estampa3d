@@ -1,6 +1,6 @@
 # O vinho mais antigo do mundo — roteiro FLUIDO (sem capítulos), voz C (emoção)
-Para quem NÃO sabe nada de vinho. ~3 min 30 s. Fontes: pesquisa.md. AGUARDANDO APROVAÇÃO (voz só depois do ok).
-Thumb: 3 opções que dizem o assunto (ver thumb-antigo-opcoes.jpg).
+Para quem NÃO sabe nada de vinho. ~3 min 30 s. Fontes: pesquisa.md. APROVADO pelo dono.
+Thumb escolhida (A): "VINHO DE / 1.700 ANOS" — YouTube: "Esse vinho tem 1.700 anos (e ninguém tem coragem de abrir)".
 
 | # | Fala (narração = legenda) | O que aparece |
 |---|---|---|
