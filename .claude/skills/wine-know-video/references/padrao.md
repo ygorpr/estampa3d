@@ -38,10 +38,14 @@ O vídeo-modelo é `examples/sobrou-vinho/` ("Sobrou vinho?", 45 s, narrado pelo
 - Voz: ElevenLabs, Paulo `Qrdut83w0Cr152Yb4Xn3`, eleven_multilingual_v2, estabilidade .45, similaridade .75, speed 1.05–1.1.
 
 ## Lista de conferência (olhe os quadros, não confie só no audit)
-1. Cotovelos para baixo em todo gesto; nenhuma mão na cintura; mãos encostam no que seguram.
+1. Cotovelos para baixo em todo gesto; nenhuma mão na cintura nem solta no ar (mão de descanso sempre apoiada numa garrafa).
+   **Mão NUNCA na frente do rótulo:** mão apoiada fica ATRÁS da garrafa/guardanapo (desenhe a mão antes da garrafa); ao erguer,
+   segura pelo GARGALO (`bottleUp`: garrafa = mão + 250 px). Só a mão que segura a taça fica na frente.
 2. No gole, borda da taça na boca e vinho nivelado.
 3. Gravata da mesma cor do colete.
 4. Legenda batendo com a fala; sem legenda na tabela final e no logo.
 5. Nenhum corte direto para close; dissolves entre lugares.
 6. 1º quadro idêntico à thumbnail; marca d'água do selo nas cenas; fecha com "Wine Know. Dark Divino.".
-7. Nada cruza o rosto (garrafa, placa, etiqueta).
+7. Nada cruza o rosto (garrafa, placa, etiqueta) e nenhum texto passa da moldura de um cartão (reduza a fonte em títulos longos).
+8. Nenhum chip/etiqueta em cima de outro, nem na faixa da legenda.
+9. Presente = celofane com cordão dourado (nada de laço rosa).

@@ -27,8 +27,8 @@ aproximando). Faça as duas com a MESMA função (`thumbFrame(t)` no exemplo): a
 Use `fadeIn:0`. Depois da abertura, um dissolve leva à cena 1.
 
 ## Marca d'água
-Selo do canal a ~16% de opacidade, 150 px, no canto superior direito, em todas as cenas menos a abertura e o logo final
-(`watermark()` no exemplo) — protege contra reuso do vídeo sem a marca.
+Selo do canal GRANDE (~460 px), centralizado na horizontal e abaixo do rosto (centro em y≈720), a ~7,5% de opacidade, em todas as
+cenas menos a abertura e o logo final (`watermark()` no exemplo). Centralizado para sobreviver a um recorte vertical de Reels.
 
 ## Thumbnail
 2 linhas de texto no máximo (sem nada por cima), rosto do Sommelier grande e expressivo como ponto focal, selo real do canal

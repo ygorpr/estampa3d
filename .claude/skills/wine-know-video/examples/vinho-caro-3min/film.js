@@ -9,7 +9,7 @@ const G={
  open:{l:[[800,690],95],r:[[1120,690],95],lo:1,ro:1},
  thinking:{l:[[915,585],135],r:[[1086,706],50]},
  point:{l:[[790,776],40],r:[[1185,630],40],ro:1},
- bottleUp:{l:[[790,776],40],r:[[1135,665],90]},
+ bottleUp:{l:[[790,776],40],r:[[1140,560],100]},
  shrug:{l:[[745,700],80],r:[[1175,700],80],lo:1,ro:1},
  wave:{l:[[790,776],40],r:[[1150,560],80],ro:1}};
 function gest(t,seq){let a=seq[0][1],b=a,u=1;for(let i=0;i<seq.length;i++){if(t>=seq[i][0]){a=i?seq[i-1][1]:seq[i][1];b=seq[i][1];u=easeIO(seg(t,seq[i][0],seq[i][0]+.45))}}
@@ -27,10 +27,12 @@ function talkScene(t,cam,s,o){const x=layer('w',cam);(o.set||cellarWall)(x,t);if
  const L_=o.sip!=null?[gripOf(gl),70+clamp((812-gl.b[1])/182)*95]:gs.l;setHands(p,L_,gs.r);const hp=sommActor(cam,p);
  const f=layer('f',cam);cellarTable(f);for(const c of (o.candles||[[560,80],[1400,100]]))candle(f,c[0],830,c[1],t);
  if(o.sip!=null)glassT(f,gl,o.wine??.4,o.wineCol||CEL.wine,t,keyed(t-1/30,o.sip,sipKeys(860,812))||gl);
- const held=gs.name=='bottleUp';for(const [kind,bx] of (o.bottles||[]))if(!(held&&kind==(o.bottleHeld||'exp')&&bx>1000))bottleL(f,[bx,815],1,kind);
+ const held=gs.name=='bottleUp',hl=h2w(hp,'l'),hr=h2w(hp,'r'),behindL=o.sip==null,behindR=!held;
+ if(behindL)(gs.lo?openHand:gripHand)(f,hl[0],hl[1],gs.lo?-.4:0,C10,.85);if(behindR)(gs.ro?openHand:gripHand)(f,hr[0],hr[1],gs.ro?.4:0,C10,.85);
+for(const [kind,bx] of (o.bottles||[]))if(!(held&&kind==(o.bottleHeld||'exp')&&bx>1000))bottleL(f,[bx,815],1,kind);
  if(o.napkins)for(const [bx,l] of o.napkins){bottleL(f,[bx,815],1,'mid');napkin(f,[bx,815],1,l)}
- if(held){const hr=h2w(hp,'r');bottleL(f,[hr[0],hr[1]+110],1,o.bottleHeld||'exp')}
- const hl=h2w(hp,'l'),hr=h2w(hp,'r');(gs.lo&&o.sip==null?openHand:gripHand)(f,hl[0],hl[1],gs.lo?-.4:gl.a,C10,.85);(gs.ro?openHand:gripHand)(f,hr[0],hr[1],gs.ro?.4:0,C10,.85);
+ if(held){const hr=h2w(hp,'r');bottleL(f,[hr[0],hr[1]+250],1,o.bottleHeld||'exp')}
+ if(!behindL)gripHand(f,hl[0],hl[1],gl.a,C10,.85);if(!behindR)gripHand(f,hr[0],hr[1],0,C10,.85);
  for(const [txt,tx,ty,ta] of (o.tags||[]))priceTag(f,tx,ty,txt,ease(seg(t,ta,ta+.35)));
  comp([['w',cam.b[0]],['h'],['f']]);
  for(const [txt,cx,cy,ta] of (o.chips||[])){const c=layer('chipL',null);chip(c,cx,cy,txt,ease(seg(t,ta,ta+.35)));blit(ctx,L.chipL,0)}
@@ -38,7 +40,7 @@ function talkScene(t,cam,s,o){const x=layer('w',cam);(o.set||cellarWall)(x,t);if
 // ---------- cards ----------
 function veil(cam,t,set,a=.74){const x=layer('w',cam);(set||cellarWall)(x,t);comp([['w',12]]);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle=`rgba(20,6,10,${a})`;ctx.fillRect(0,0,W,H);ctx.restore()}
 function chapter(t,cam,s,num,title,sub){veil(cam,t,cellarWall,.8);const u=easeIO(seg(t,T[s],T[s]+.6)),g=layer('g',null);
- g.save();g.globalAlpha=u;g.translate(0,(1-u)*30);plaque(g,960,520,1100,420);goldText(g,isNaN(+num)?num:'CAPÍTULO '+num,960,405,46,'Cinzel',700);ornament(g,960,465,520);goldText(g,title,960,560,92);if(sub)goldText(g,sub,960,650,54,'Cinzel',700);g.restore();blit(ctx,L.g,0)}
+ g.save();g.globalAlpha=u;g.translate(0,(1-u)*30);plaque(g,960,520,1100,420);goldText(g,isNaN(+num)?num:'CAPÍTULO '+num,960,405,46,'Cinzel',700);ornament(g,960,465,520);goldText(g,title,960,560,Math.min(92,Math.floor(1400/title.length)));if(sub)goldText(g,sub,960,650,Math.min(54,Math.floor(1500/sub.length)),'Cinzel',700);g.restore();blit(ctx,L.g,0)}
 function chipsCard(t,cam,s,title,items,set,art){veil(cam,t,set);const g=layer('g',null);goldText(g,title,960,200,70);ornament(g,960,272,560);if(art)art(g,t);
  for(const [txt,cx,cy,ta] of items)chip(g,cx,cy,txt,ease(seg(t,ta,ta+.35)));blit(ctx,L.g,0,seg(t,T[s],T[s]+.4))}
 function bigGrapes(g,cx,cy,s){grapes(g,cx,cy,s)}
@@ -58,7 +60,7 @@ function curveCard(t,s,phase){veil(null,t);const g=layer('g',null);goldText(g,'P
 function shelf(t,s){veil(null,t,cellarWall,.7);const tm=wt(21,'meio'),u=easeIO(seg(t,tm-.2,tm+.5)),g=layer('g',null);const sg=g.createLinearGradient(0,150,0,820);sg.addColorStop(0,`rgba(255,200,120,${.45*u})`);sg.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=sg;g.beginPath();g.moveTo(900,120);g.lineTo(1020,120);g.lineTo(1180,820);g.lineTo(740,820);g.closePath();g.fill();
  g.fillStyle='#5A2E1C';g.fillRect(360,800,1200,26);bottleL(g,[600,800],1.2,'cheap');bottleL(g,[960,800],1.2+.08*u,'mid');bottleL(g,[1320,800],1.2,'exp');priceTag(g,600,330,'R$ 50',1,.8);priceTag(g,960,330,'R$ 150',1,.8+.15*u);priceTag(g,1320,330,'R$ 500',1,.8);blit(ctx,L.g,0);tip_('O MEIO DA PRATELEIRA',win(t,T[s]+.2,T[s+1]-.1))}
 function finalTable(t,s){veil(null,t);const g=layer('g',null);goldText(g,'VINHO CARO VALE A PENA?',960,150,84);ornament(g,960,240,620);blit(ctx,L.g,0,seg(t,T[s],T[s]+.5));
- for(const [cx,n,d,kind,ta] of [[480,'DIA A DIA','Intermediário','mid',wt(30,'intermedi')-.2],[960,'GRANDES MOMENTOS','O caro','exp',wt(30,'grandes')-.2],[1440,'PARA GUARDAR','O caro, por anos','exp',wt(30,'guardar')-.2]]){const c=layer('c'+cx,null);plaque(c,cx,600,400,500);bottleL(c,[cx,690],.95,kind);goldText(c,n,cx,750,34,'Cinzel',700);blit(ctx,L['c'+cx],0,seg(t,ta,ta+.5));serif(d,cx,808,48,`rgba(243,230,200,${seg(t,ta,ta+.5)})`)}
+ for(const [cx,n,d,kind,ta] of [[480,'DIA A DIA','Intermediário','mid',wt(30,'intermedi')-.2],[960,'GRANDES MOMENTOS','O caro','exp',wt(30,'grandes')-.2],[1440,'PARA GUARDAR','O caro, por anos','exp',wt(30,'guardar')-.2]]){const c=layer('c'+cx,null);plaque(c,cx,600,440,500);bottleL(c,[cx,690],.95,kind);goldText(c,n,cx,752,n.length>12?27:32,'Cinzel',700);blit(ctx,L['c'+cx],0,seg(t,ta,ta+.5));serif(d,cx,810,44,`rgba(243,230,200,${seg(t,ta,ta+.5)})`)}
  serif('Pague pelo vinho, não pela fama do rótulo',960,960,50,`rgba(212,162,76,${seg(t,wt(30,'anos')+.4,wt(30,'anos')+1)})`,'italic')}
 function ctaScene(t,cam,s){talkScene(t,cam,s,{gest:[[0,'wave'],[2.2,'open'],[4.5,'rest']],face:t=>({mouth:.7,brow:.5})});
  const a=easeIO(seg(t,T[s]+.4,T[s]+1)),g=layer('g',null);g.save();g.globalAlpha=a;g.fillStyle='#B0122E';g.beginPath();g.roundRect(120,120,520,110,55);g.fill();g.strokeStyle='#F2D27A';g.lineWidth=5;g.stroke();g.restore();
@@ -70,20 +72,20 @@ function thumbFrame(t){const u=easeIO(seg(t,.6,LEN[0])),cam={x:1080+u*10,y:500-u
  let x=layer('w',cam);cellarWall(x,0);
  const live=t>0,sp=live?speak(t):0,wv=live?Math.sin(t*2.4)*.5+.5:0;
  const p={x:1330,y:600,s:1,face:1,noLegs:true,breath:1+(live?t*2.1:0),look:-.45,lookY:-.15,brow:1.1,wide:1,sad:.15,mouth:.05,open:Math.max(.5-(live?seg(t,.3,.5)*.5:0),sp),tilt:-.08+(live?Math.sin(t*1.2)*.02:0),blink:live?blinkAt(t,[1.4,3.9]):0,hands:{},arm3d:true};
- p.hands.l=[...w2l(p,[1190,640]),110];p.hands.r=[...w2l(p,[1470,640-wv*12]),90];const hp=actor(layer('h',cam),'s',C10,p,cam,'rgba(255,190,110,1)',1);
+ p.hands.l=[...w2l(p,[1190,522]),110];p.hands.r=[...w2l(p,[1470,640-wv*12]),90];const hp=actor(layer('h',cam),'s',C10,p,cam,'rgba(255,190,110,1)',1);
  const f=layer('f',cam);cellarTable(f);bottleL(f,[1190,760],1,'exp');const hl=h2w(hp,'l'),hr=h2w(hp,'r');gripHand(f,hl[0],hl[1],0,C10,.85);openHand(f,hr[0],hr[1],.5,C10,.85);
  comp([['w',10],['h'],['f']]);ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.55)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
  const r=ctx.createRadialGradient(1380,430,40,1380,430,560);r.addColorStop(0,'rgba(255,190,110,.18)');r.addColorStop(1,'rgba(255,190,110,0)');ctx.fillStyle=r;ctx.fillRect(0,0,W,H);ctx.restore();
  const T_=layer('t',null);goldText(T_,'VINHO CARO',545,400,124,'Cinzel',900);goldText(T_,'VALE A PENA?',545,570,106,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(205,645,680,10);blit(ctx,L.t,0);
  if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(LOGO,545-62,680,124,119);ctx.restore()}}
 // faint watermark on every scene of the video (protects reuse without the brand)
-function watermark(){if(!LOGO.complete)return;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.16;ctx.filter='blur(1px)';ctx.drawImage(LOGO,1742,26,150,144);ctx.restore()}
+function watermark(){if(!LOGO.complete)return;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.075;ctx.filter='blur(.6px)';ctx.drawImage(LOGO,960-230,720-221,460,442);ctx.restore()}
 // ---------- the scene list (one per narration line) ----------
 const TALK=(o)=>(t,c,s)=>talkScene(t,c,s,o);
 const SC=[
  null,
  (t,c,s)=>talkScene(t,c,s,{bottles:[['cheap',760],['exp',1160]],gest:[[0,'rest'],[wt(1,'cinquenta')-T[1]-.3,'open'],[wt(1,'quinhentos')-T[1],'bottleUp']],bottleHeld:'exp',tags:[['R$ 50',760,430,wt(1,'cinquenta')],['R$ 500',1250,380,wt(1,'quinhentos')]],face:t=>({look:t<wt(1,'quinhentos')?-.5:.5})}),
- (t,c,s)=>talkScene(t,c,s,{bottles:[['cheap',760]],gest:[[0,'thinking'],[3.4,'point'],[5.6,'open']],chips:[['10× MELHOR?',1400,300,wt(2,'dez')]],face:t=>({brow:t<T[2]+3.4?1:.5,sad:t<T[2]+3.4?.35:0,look:.25})}),
+ (t,c,s)=>talkScene(t,c,s,{bottles:[['cheap',760],['exp',1100]],gest:[[0,'thinking'],[3.4,'point'],[5.6,'open']],chips:[['10× MELHOR?',1400,300,wt(2,'dez')]],face:t=>({brow:t<T[2]+3.4?1:.5,sad:t<T[2]+3.4?.35:0,look:.25})}),
  (t,c,s)=>chapter(t,c,s,'1','O QUE VOCÊ PAGA','DENTRO DA GARRAFA'),
  (t,c,s)=>{const x=layer('w',c);vineyard(x,t);comp([['w',2]]);const g=layer('g',null);for(const [w,cx,cy] of [['vinhedo',560,250],['terra',960,360],['pouca',1360,250]])chip(g,cx,cy,{vinhedo:'VINHEDO PEQUENO',terra:'TERRA CARA',pouca:'POUCA UVA POR PÉ'}[w],ease(seg(t,wt(4,w),wt(4,w)+.35)));blit(ctx,L.g,0)},
  (t,c,s)=>chipsCard(t,c,s,'MENOS UVA, MAIS SABOR',[['FRUTA CONCENTRADA',760,790,wt(5,'concentrada')],['MENOS GARRAFAS',1160,790,wt(5,'garrafas')]],vineyard,(g,t)=>{for(let i=0;i<5;i++)grapes(g,380+i*90,560,.9);grapes(g,1440,560,1.6);goldText(g,'MUITA UVA',560,700,36,'Cinzel',700);goldText(g,'POUCA UVA',1440,700,36,'Cinzel',700)}),
@@ -97,7 +99,7 @@ const SC=[
  (t,c,s)=>chapter(t,c,s,'3','A PROVA ÀS CEGAS',''),
  (t,c,s)=>talkScene(t,c,s,{napkins:[[1110,'A'],[1290,'B']],gest:[[0,'thinking'],[3,'rest']],face:t=>({look:Math.sin((t-T[14])*1.6)*.6,brow:-.1,sad:.25})}),
  (t,c,s)=>chipsCard(t,c,s,'MILHARES DE DEGUSTAÇÕES',[['RÓTULOS ESCONDIDOS',960,420,wt(15,'cegas')],['O CARO NÃO GANHOU',960,790,wt(15,'caros')]],null,(g,t)=>{const n=Math.round(6000*easeIO(seg(t,T[15]+.6,T[15]+3)));goldText(g,(n>=6000?'+':'')+n.toLocaleString('pt-BR'),960,610,150,'Cinzel',900)}),
- (t,c,s)=>talkScene(t,c,s,{sip:T[16]+1.2,tags:[['R$ 500',1250,380,T[16]+.3]],chips:[['O CÉREBRO GOSTA MAIS',1350,250,wt(16,'cérebro')]],face:t=>({mouth:t>T[16]+4.3?.9:.45,laugh:t>T[16]+4.4&&t<T[16]+5.6?1:0})}),
+ (t,c,s)=>talkScene(t,c,s,{sip:T[16]+1.2,bottles:[['exp',1100]],tags:[['R$ 500',1250,380,T[16]+.3]],chips:[['O CÉREBRO GOSTA MAIS',560,250,wt(16,'cérebro')]],face:t=>({mouth:t>T[16]+4.3?.9:.45,laugh:t>T[16]+4.4&&t<T[16]+5.6?1:0})}),
  (t,c,s)=>talkScene(t,c,s,{gest:[[0,'open']],chips:[['ANTES DO 1º GOLE',960,250,wt(17,'gole')-.4]],face:t=>({brow:.7,mouth:.5})}),
  (t,c,s)=>chapter(t,c,s,'4','O PONTO CERTO',''),
  (t,c,s)=>curveCard(t,s,0),
@@ -106,11 +108,16 @@ const SC=[
  (t,c,s)=>chapter(t,c,s,'5','QUANDO O CARO','VALE A PENA'),
  (t,c,s)=>talkScene(t,c,s,{gest:[[0,'bottleUp']],bottleHeld:'exp',candles:[[560,90],[1400,110],[1250,70]],chips:[['OCASIÃO ESPECIAL',1350,280,T[23]+.4]],face:t=>({mouth:.7,laugh:t>T[23]+2.6&&t<T[23]+3.8?1:0})}),
  (t,c,s)=>{const x=layer('w',c);cellarWall(x,t);comp([['w',c.b[0]]]);const g=layer('g',null);for(let i=0;i<5;i++)bottleL(g,[600+i*180,820],1,'exp');chip(g,960,300,'PARA GUARDAR',ease(seg(t,T[24]+.3,T[24]+.7)));chip(g,960,420,'MELHORA POR ANOS',ease(seg(t,wt(24,'anos'),wt(24,'anos')+.35)));blit(ctx,L.g,0)},
- (t,c,s)=>chipsCard(t,c,s,'PARA PRESENTEAR',[['QUEM ENTENDE DE VINHO',960,330,wt(25,'entende')]],null,(g,t)=>{const y=780;bottleL(g,[960,y],1.6,'exp');g.strokeStyle='#C24A6E';g.lineWidth=16;g.beginPath();g.moveTo(905,y-200);g.lineTo(1015,y-200);g.stroke();g.fillStyle='#C24A6E';for(const d of [-1,1]){g.beginPath();g.moveTo(960,y-200);g.quadraticCurveTo(960+d*90,y-280,960+d*70,y-170);g.closePath();g.fill()}}),
+ (t,c,s)=>chipsCard(t,c,s,'PARA PRESENTEAR',[['QUEM ENTENDE DE VINHO',1400,560,wt(25,'entende')]],null,(g,t)=>{const y=820;bottleL(g,[960,y],1.6,'exp');const sh=Math.sin(t*1.7)*.5+.5;
+  g.save();g.beginPath();g.moveTo(860,y+6);g.quadraticCurveTo(830,y-260,905,y-395);g.lineTo(880,y-470);g.quadraticCurveTo(960,y-440,1040,y-470);g.lineTo(1015,y-395);g.quadraticCurveTo(1090,y-260,1060,y+6);g.closePath();
+  const cg=g.createLinearGradient(850,0,1070,0);cg.addColorStop(0,'rgba(255,255,255,.10)');cg.addColorStop(.3+.2*sh,'rgba(255,255,255,.34)');cg.addColorStop(.6,'rgba(255,255,255,.08)');cg.addColorStop(1,'rgba(255,255,255,.18)');g.fillStyle=cg;g.fill();
+  g.strokeStyle='rgba(255,255,255,.45)';g.lineWidth=2.5;g.stroke();g.strokeStyle='rgba(255,255,255,.28)';g.lineWidth=2;for(const q of [-60,-20,25,62]){g.beginPath();g.moveTo(960+q,y-10);g.quadraticCurveTo(960+q*1.2,y-200,960+q*.35,y-392);g.stroke()}
+  for(const q of [-1,1]){g.beginPath();g.moveTo(960,y-400);g.quadraticCurveTo(960+q*50,y-450,960+q*85,y-470);g.stroke()}g.restore();
+  g.strokeStyle='#D4A24C';g.lineWidth=7;g.beginPath();g.ellipse(960,y-398,34,9,0,0,7);g.stroke();g.beginPath();g.moveTo(960,y-398);g.quadraticCurveTo(930,y-360,940,y-320);g.moveTo(960,y-398);g.quadraticCurveTo(992,y-355,982,y-318);g.stroke()}),
  (t,c,s)=>chapter(t,c,s,'BÔNUS','3 DICAS PARA PAGAR','MENOS E BEBER MELHOR'),
  (t,c,s)=>talkScene(t,c,s,{bottles:[['cheap',760]],gest:[[0,'rest'],[.5,'bottleUp']],bottleHeld:'mid',tip:'1. ESCOLHA PELO PRODUTOR',face:t=>({brow:.5,mouth:.55})}),
  (t,c,s)=>chipsCard(t,c,s,'2. REGIÕES MENOS FAMOSAS',[['ALENTEJO',560,480,T[28]+1],['DÃO',1360,480,T[28]+1.6],['CAMPANHA GAÚCHA',560,700,T[28]+2.2],['SUL DA ITÁLIA',1360,700,T[28]+2.8]],null,(g,t)=>{goldText(g,'muito vinho pelo preço',960,590,40,'Cinzel',700)}),
- (t,c,s)=>talkScene(t,c,s,{sip:T[29]+1,tip:'3. CONFIE NO SEU GOSTO',face:t=>({mouth:t>T[29]+4.2?.9:.45,laugh:t>T[29]+4.3&&t<T[29]+5.4?1:0})}),
+ (t,c,s)=>talkScene(t,c,s,{sip:T[29]+1,bottles:[['mid',1100]],tip:'3. CONFIE NO SEU GOSTO',face:t=>({mouth:t>T[29]+4.2?.9:.45,laugh:t>T[29]+4.3&&t<T[29]+5.4?1:0})}),
  (t,c,s)=>finalTable(t,s),
  (t,c,s)=>ctaScene(t,c,s),
  null];
@@ -124,7 +131,7 @@ FILM={dur:T[T.length-1],cuts:T.map(v=>Math.round(v*30)),fadeIn:0,fadeOut:.8,warm
 (function(){const DISS={1:.6,3:.5,4:.5,5:.5,7:.5,8:.4,9:.5,10:.5,12:.5,13:.5,14:.5,15:.5,16:.5,18:.5,19:.5,21:.5,22:.5,23:.5,24:.5,25:.5,26:.5,27:.5,28:.5,29:.5,30:.5,31:.5},xf=mk(),xz=mk(),CARD=[3,5,6,9,10,11,13,15,18,19,20,21,22,25,26,28,30],draw0=FILM.draw,cam0=FILM.cam;
  FILM.draw=(t,c,s,u)=>{const d=DISS[s],a=d?1-easeIO(seg(t,T[s],T[s]+d)):0;if(a>0){draw0(t,cam0(s-1,1,t),s-1,1);const x=xf.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0)}
   draw0(t,c,s,u);if(CARD.includes(s)){const k=1+.035*easeIO(u),x=xz.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0);ctx.save();ctx.setTransform(k,0,0,k,W/2*(1-k),H/2*(1-k));ctx.drawImage(xz,0,0);ctx.restore()}
-  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=31&&s!=32)watermark();if(s!=30&&s!=32)karaoke(t)}})();
+  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=32)watermark();if(s!=30&&s!=32)karaoke(t)}})();
 // sound
 for(let s=1;s<33;s++)say(T[s],[3,9,13,18,22,26].includes(s)?'line':'whoosh');
 say(wt(1,'cinquenta'),'tag');say(wt(1,'quinhentos'),'tag');say(wt(2,'dez'),'tag');for(const w of ['vinhedo','terra','pouca'])say(wt(4,w),'tag');say(wt(7,'milhares'),'coins');say(wt(10,'imposto'),'coins');for(const w of ['frete','importadora','margem'])say(wt(11,w),'tag');

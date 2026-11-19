@@ -18,7 +18,9 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - **Primeiro quadro = a thumbnail, idêntica, que ganha vida** (o Sommelier pisca, fala a 1ª frase, acena; câmera aproxima devagar).
   Thumb e abertura saem do MESMO código (`thumbFrame(0)` = thumb). Fechar com o logo Wine Know (~2,5–3 s).
 - Thumb: 2 linhas de texto, rosto como ponto focal, selo do canal PEQUENO, centralizado, logo abaixo da linha vermelha.
-- Marca d'água: selo do canal bem transparente (~16%) no canto superior direito em todas as cenas (menos a abertura e o logo final).
+- Marca d'água: selo do canal GRANDE, centralizado (abaixo do rosto), bem clarinho (~7,5%), em todas as cenas menos abertura e logo final
+  — sobrevive a recorte de Reels.
+- Mão NUNCA na frente do rótulo: mão apoiada fica atrás da garrafa; ao erguer, segura pelo gargalo.
 - Tela final com tabela em cartões dourados (ícone de taça + prazo/dica).
 - Cenário NÃO é fixo: escolher o que combina com o assunto (bar/cozinha com geladeira, adega, vinhedo, sala...).
 
