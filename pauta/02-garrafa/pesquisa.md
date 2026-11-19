@@ -1,4 +1,4 @@
-# Os segredos da garrafa de vinho — pesquisa com fontes (19/11/2026)
+# Por que a garrafa de vinho tem 750 ml? — pesquisa com fontes (19/11/2026)
 
 | Fato no roteiro | Fonte |
 |---|---|
@@ -15,5 +15,12 @@
 | Cortiça leve, elástica, quase impermeável | Amorim, "Why cork" — https://www.amorimcork.com/en/cork/why-cork/ |
 | Garrafa deitada mantém a rolha úmida (veda melhor) | Consenso (Wine Spectator / WSET) |
 | Vidro escuro protege da luz | já checado no vídeo do supermercado (AWRI) |
+
+| Barrica de 225 L × 4 = tonel de 900 L (1.200 garrafas) | Vinhos de Bordeaux, glossário (tonneau) — https://www.bordeaux.com/gb/Our-savoir-faire/glossary-t/tonneau |
+| Garrafas de pint imperial (568 ml) no Reino Unido; Churchill tomava champanhe em pint; até 1973 (entrada no Mercado Comum) | Decanter, tamanhos de garrafa — https://www.decanter.com/learn/wine-bottle-sizes-methuselah-vs-balthazar-440193/ ; Jancis Robinson (pint = 568,26 ml) |
+| EUA: padrões métricos desde 1975, obrigatórios em 1º/1/1979; 750 ml = antigo "4/5 de quarto" (o "quinto" de galão) | TTB (governo dos EUA) — https://www.ttb.gov/public-information/industry-circulars/archives/1979/79-07 ; https://www.ttb.gov/regulated-commodities/beverage-alcohol/distilled-spirits/conversion-tables |
+| Garrafas sopradas à mão no séc. XVII; produção em massa no começo do séc. XIX | Wine Spectator, "Is it my imagination, or have wine bottles been getting smaller?" — https://www.winespectator.com/articles/wine-bottle-size-changes-55792 |
+| Meia garrafa 375 ml; magnum 1,5 L = 2; Nabucodonosor 15 L = 20 | Decanter, tamanhos de garrafa (mesmo link acima) |
+| ~6 taças por garrafa | conta: 750 ÷ 125 ml (dose de taça comum); dito como "umas seis" |
 
 Fora do roteiro por falta de base sólida: "galão imperial" como origem dos 750 ml; diretiva europeia de 1975; panos com azeite antes da rolha.
