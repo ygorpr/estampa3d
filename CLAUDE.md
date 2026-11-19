@@ -2,6 +2,8 @@
 
 Canal de vinho para homens 40+, com dinheiro, que gostam de vinho e querem tirar dúvidas.
 Vídeos de bonecos (skill **/stickman**, repositório `michxlai/stickman-skill`) no padrão abaixo.
+**Habilidade instalada: `/wine-know-video`** (`.claude/skills/wine-know-video/`) e agente `wine-know-video` (`.claude/agents/`).
+Para um vídeo novo: "faz um vídeo do canal sobre <tema>" + thumbnail. O zip para o app do Claude está em `wine-know-video.zip`.
 O kit pronto (motor ajustado, cenários, exemplo completo, ferramentas) está em `kit-dark-divino/`.
 Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skills/stickman`, depois copiar `kit-dark-divino/engine/*` por cima da pasta do filme.
 
