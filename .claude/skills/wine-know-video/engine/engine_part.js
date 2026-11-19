@@ -45,4 +45,4 @@ function shelf(t,s){veil(null,t,marketWall,.7);const tm=wt(20,'meio'),u=easeIO(s
  g.fillStyle='#5A2E1C';g.fillRect(360,800,1200,26);bottleL(g,[600,800],1.2,'cheap');bottleL(g,[960,800],1.2+.08*u,'mid');bottleL(g,[1320,800],1.2,'exp');priceTag(g,600,330,'R$ 30',1,.8);priceTag(g,960,330,'R$ 90',1,.8+.15*u);priceTag(g,1320,330,'R$ 400',1,.8);blit(ctx,L.g,0);tip_('A FAIXA DO MEIO',win(t,T[s]+.2,T[s+1]-.1))}
 
 // avisos NUNCA por cima do rosto/cabeça do Sommelier: empurra para o lado livre (regra do dono do canal)
-function chipSafe(txt,cx,cy){const w=txt.length*26+80,HL=760,HR=1200,HB=640;if(cy>HB||cx+w/2<HL||cx-w/2>HR)return [cx,cy];let left=cx<980;if(left&&w>HL-40)left=false;if(!left&&HR+w>1880)left=w<=HL-40;if(left)return [Math.min(cx,HL-w/2),cy];if(HR+w<=1880)return [Math.max(cx,HR+w/2),cy];return [960,70+95*(chipSafe.top++||0)]}
+function chipSafe(txt,cx,cy){const w=txt.length*26+80,HL=690,HR=1250,HB=660;if(cy>HB||cx+w/2<HL||cx-w/2>HR)return [cx,cy];let left=cx<980;if(left&&w>HL-40)left=false;if(!left&&HR+w>1880)left=w<=HL-40;if(left)return [Math.min(cx,HL-w/2),cy];if(HR+w<=1880)return [Math.max(cx,HR+w/2),cy];return [960,70+95*(chipSafe.top++||0)]}
