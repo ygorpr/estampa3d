@@ -10,7 +10,7 @@ src, dst = sys.argv[1], sys.argv[2]; bsz = int(sys.argv[sys.argv.index("--bloco"
 L = json.load(open(src)); os.chdir(dst)
 clean = lambda s: re.sub(r"\s*\[[^\]]*\]\s*", " ", s).strip()
 blocks = [list(range(i, min(i + bsz, len(L)))) for i in range(0, len(L), bsz)]
-if len(blocks) > 1 and len(L) - 1 == blocks[-1][0]: pass  # a última frase ("Wine Know. Dark Divino.") pode ficar sozinha
+if len(blocks[-1]) > 1: blocks[-1:] = [blocks[-1][:-1], [len(L) - 1]]  # "Wine Know. Dark Divino." sempre sozinha
 out = [None] * len(L)
 for bi, blk in enumerate(blocks):
     text = " ".join(L[i][0] + " " + L[i][1] for i in blk)

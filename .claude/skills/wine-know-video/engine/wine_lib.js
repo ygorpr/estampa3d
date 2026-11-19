@@ -35,9 +35,9 @@ function karaoke(t){let L=null;for(const l of VOX){if(t>=l.at-.12&&t<=l.at+l.dur
  const size=70;ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.font=`600 ${size}px Cormorant`;ctx.textBaseline='alphabetic';
  const sp=ctx.measureText(' ').width,ws=L.words.map(w=>({w:w[0],s:L.at+w[1],e:L.at+w[2],wd:ctx.measureText(w[0]).width}));
  // pages of at most 2 lines: show only the page being spoken
- const pg=[[]];let pw=0;for(const w of ws){if(pw+w.wd>2900&&pg[pg.length-1].length){pg.push([]);pw=0}pg[pg.length-1].push(w);pw+=w.wd+sp}
- let cur=pg[0];for(const q of pg)if(t>=q[0].s-.05)cur=q;ws.length=0;ws.push(...cur);
- const lines=[[]];let lw=0;for(const w of ws){if(lw+w.wd>1500&&lines[lines.length-1].length){lines.push([]);lw=0}lines[lines.length-1].push(w);lw+=w.wd+sp}
+ // wrap ALL words into lines of 1500px, then show pages of 2 lines (never 3)
+ const all=[[]];let lw=0;for(const w of ws){if(lw+w.wd>1500&&all[all.length-1].length){all.push([]);lw=0}all[all.length-1].push(w);lw+=w.wd+sp}
+ const pg=[];for(let i=0;i<all.length;i+=2)pg.push(all.slice(i,i+2));let lines=pg[0];for(const q of pg)if(t>=q[0][0].s-.05)lines=q;
  const y0=1010-(lines.length-1)*(size*1.08);
  lines.forEach((ln,j)=>{const tw=ln.reduce((q,w)=>q+w.wd,0)+sp*(ln.length-1);let x=W/2-tw/2;const y=y0+j*size*1.08;
   ctx.globalAlpha=a*.55;ctx.fillStyle='rgba(14,4,8,1)';ctx.beginPath();ctx.roundRect(x-26,y-size*.86,tw+52,size*1.12,18);ctx.fill();
