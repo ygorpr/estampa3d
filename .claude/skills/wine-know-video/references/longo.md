@@ -38,3 +38,10 @@ cenas menos a abertura e o logo final (`watermark()` no exemplo). Centralizado p
 ## Fechamento (aprovado)
 - Tabela final: a narração cita CADA cartão, e cada cartão entra quando o Paulo diz a palavra dele (`wt`). Cartão sem fala = erro.
 - CTA "Inscreva-se" + "Comente" no canto superior esquerdo: nada de botão ou cartão na faixa de baixo, que é da legenda.
+
+## Contextualizar sempre
+Cada assunto acontece no seu ambiente: o tema geral no lugar onde a dúvida nasce (ex.: o Sommelier atrás da gôndola do supermercado),
+e cada exemplo no cenário dele (churrasqueira no quintal, quiosque na praia, festa em casa com tábua de queijos, cozinha com pizza,
+sala de jantar com pudim). Cenários e comidas prontos em `examples/supermercado-ocasioes/sets_extra.js` (marketWall/marketFront,
+backyard, beach, meatBoard, fishPlate, cheeseBoard, pizzaBoard, pudim, garrafas `bottleS` red/white/rose/spark/moscato/clear).
+Nomes de uva/rótulo: use `chip` (largura automática), não `priceTag` (só para preço/ano curto).
