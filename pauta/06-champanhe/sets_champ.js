@@ -20,3 +20,6 @@ function riddlingRack(x,cx,base,s,t){x.save();x.translate(cx,base);x.scale(s,s);
  for(let r=0;r<4;r++){const u=.18+r*.2,hx=-200+170*u,hy=-400*u;for(const dz of [-30,30]){x.save();x.translate(hx+dz*.3,hy+dz*.15);x.rotate(-.64);invBottleS(x,0,0,.5,'spark');x.restore();}}
  x.fillStyle='#7A4A26';x.beginPath();x.moveTo(-230,0);x.lineTo(-50,-440);x.lineTo(50,-440);x.lineTo(230,0);x.lineTo(180,0);x.lineTo(20,-390);x.lineTo(-20,-390);x.lineTo(-180,0);x.closePath();x.fill();
  x.fillStyle='#3A1E0E';for(let r=0;r<4;r++){const u=.18+r*.2;x.beginPath();x.ellipse(-200+170*u+8,-400*u,10,7,0,0,7);x.fill()}x.restore()}
+// bolhas SÓ dentro do bojo da taça (recortadas no formato da taça; nunca na haste ou fora)
+function fluteBubbles(x,bx,by,s,lv,t,n){x.save();x.translate(bx,by);x.scale(s,s);const bw=24,top=-210;x.beginPath();x.moveTo(-6,-72);x.quadraticCurveTo(-bw-4,-92,-bw,-136);x.lineTo(-bw+4,top);x.lineTo(bw-4,top);x.lineTo(bw,-136);x.quadraticCurveTo(bw+4,-92,6,-72);x.closePath();x.clip();
+ const yb=-76,yt=-72-138*lv+6,h=yb-yt;x.strokeStyle='rgba(255,245,210,.9)';x.lineWidth=1.6/s*2;const r=rng(9);for(let i=0;i<n;i++){const bx2=(r()-.5)*(bw*1.4),sp=14+r()*22,by2=yb-((r()*h+t*sp)%h);x.beginPath();x.arc(bx2+Math.sin(t*3+i)*1.2,by2,(1+r()*1.6),0,7);x.stroke()}x.restore()}

@@ -21,6 +21,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Marca d'água: selo do canal GRANDE, centralizado (abaixo do rosto), bem clarinho (~7,5%), em todas as cenas menos abertura e logo final
   — sobrevive a recorte de Reels.
 - Avisos/placas NUNCA por cima do rosto ou da cabeça do Sommelier (o motor empurra para o lado livre: `chipSafe`).
+- Bolhas e líquidos SEMPRE dentro do recipiente (taça/garrafa): nada na haste nem fora do vidro (`fluteBubbles` recorta no bojo).
 - Mão NUNCA na frente do rótulo: mão apoiada fica atrás da garrafa; ao erguer, segura pelo gargalo.
 - Tela final com tabela em cartões dourados (ícone de taça + prazo/dica).
 - Cenário NÃO é fixo: escolher o que combina com o assunto (bar/cozinha com geladeira, adega, vinhedo, sala...).
