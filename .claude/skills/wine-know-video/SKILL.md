@@ -19,14 +19,15 @@ YouTube Brasil; precisa do host `suggestqueries.google.com` liberado) e, para os
 está velha). Pule temas que o canal já fez (veja `examples/` e a pasta de vídeos do projeto). Proponha 3–4 temas com as buscas
 reais e os números que os justificam e deixe o usuário escolher — o tema é decisão dele.
 
-**2. Roteiro.** Uma frase falada por cena, ~11 cenas, 40–55 s no total. Estrutura, tom e checagem de fatos em
+**2. Roteiro.** Formato padrão agora é o **longo (~3 min, em capítulos)** — leia `references/longo.md`; o curto (40–55 s,
+~11 cenas) serve para Shorts. Uma frase falada por cena. Estrutura, tom e checagem de fatos em
 `references/roteiro.md`. Grave em `<pasta>/vo/lines.json` como `[[0,0,"frase"], ...]`. A última frase é sempre "Wine Know. Dark Divino.".
 
 **3. Pasta e thumbnail.**
 ```
 python3 SK/scripts/doctor.py
 python3 SK/scripts/new_video.py <pasta> --thumb <thumbnail-do-usuário>      # ou qualquer imagem provisória
-python3 SK/scripts/make_thumb.py <pasta> --title "LINHA 1" "LINHA 2" "LINHA 3?" --set bar|cellar --bottles "exp:R$ 500" "cheap:R$ 50"
+python3 SK/scripts/make_thumb.py <pasta> --title "LINHA 1" "LINHA 2?" --set bar|cellar --bottles "exp:"     # 2 linhas, selo real
 ```
 Se o usuário mandou thumbnail própria, ela abre o vídeo; se não, use a do `make_thumb.py` e mostre a ele.
 Se o Chromium já existir no sistema (ex.: /opt/pw-browsers), instale `playwright` na mesma versão em vez de baixar outro.
