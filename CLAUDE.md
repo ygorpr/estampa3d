@@ -31,6 +31,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 ## Legendas
 - **Legenda = exatamente o que o narrador fala**, estilo karaokê: frase atual embaixo, palavra dourada no instante em que é dita
   (já ditas em ouro, atual em ouro claro com leve escala, próximas em creme). Nada de textos de legenda diferentes da fala.
+- Legenda só enquanto ele explica: na tela final (tabela "Quanto dura aberto?") e no logo, SEM legenda.
 - Rótulos fixos permitidos: "DIA N" e as placas de dica ("1. TAMPE COM A ROLHA").
 
 ## Montagem

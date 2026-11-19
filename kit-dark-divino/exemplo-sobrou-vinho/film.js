@@ -113,7 +113,7 @@ for(const tt of [19.1,19.9,25.95,26.45,26.95,27.45])say(tt,'flip');say(29.75,'yu
  const DISS={5:.5,6:.5,7:.5,8:.6,9:.5},xf=mk();
  FILM.draw=(t,c,s,u)=>{const d=DISS[s],a=d?1-easeIO(seg(t,NEW[s],NEW[s]+d)):0;
   if(a>0){const wt=warp(t);draw0(wt,cam0(s-1,1,wt),s-1,1);const x=xf.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0)}
-  draw0(warp(t),c,s,u);if(a>0)blit(ctx,xf,0,a);karaoke(t)};
+  draw0(warp(t),c,s,u);if(a>0)blit(ctx,xf,0,a);if(s<9)karaoke(t)};
  for(const e of EVENTS)e.t=unwarp(e.t);})();
 
 // ---- karaoke subtitles: exactly the narration, each word turns gold as it is spoken ----
