@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf8><style>
+@font-face{font-family:Cinzel;font-weight:700;src:url(fonts/cinzel-latin-700-normal.woff2)}
+@font-face{font-family:Cinzel;font-weight:900;src:url(fonts/cinzel-latin-900-normal.woff2)}
+@font-face{font-family:Cormorant;font-weight:600;src:url(fonts/cormorant-garamond-latin-600-normal.woff2)}
+@font-face{font-family:Cormorant;font-weight:600;font-style:italic;src:url(fonts/cormorant-garamond-latin-600-italic.woff2)}
+</style><body style="margin:0;background:#000"><canvas id=c width=1920 height=1080></canvas>
+<script src=core.js></script><script src=chars.js></script><script src=motion.js></script><script src=props.js></script>
+<script src=sets/cellar.js></script><script src=sets/bar.js></script><script src=film_lib.js></script>
+<script src=vo_words.js></script><script src=film.js></script><script>Promise.all(['900 40px Cinzel','700 40px Cinzel','600 40px Cormorant','italic 600 40px Cormorant'].map(f=>document.fonts.load(f)).concat(Object.values(IMG).map(i=>i.decode()))).then(()=>bootFilm())</script>
