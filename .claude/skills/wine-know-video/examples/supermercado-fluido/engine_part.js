@@ -33,7 +33,7 @@ for(const [kind,bx] of (o.bottles||[]))if(!(held&&kind==(o.bottleHeld||'exp')&&b
  if(!behindL)gripHand(f,hl[0],hl[1],gl.a,C10,.85);if(!behindR)gripHand(f,hr[0],hr[1],0,C10,.85);
  for(const [txt,tx,ty,ta] of (o.tags||[]))priceTag(f,tx,ty,txt,ease(seg(t,ta,ta+.35)));
  comp([['w',cam.b[0]],['h'],['f']]);
- for(const [txt,cx,cy,ta] of (o.chips||[])){const c=layer('chipL',null);chip(c,cx,cy,txt,ease(seg(t,ta,ta+.35)));blit(ctx,L.chipL,0)}
+ for(const [txt,cx0,cy0,ta] of (o.chips||[])){const c=layer('chipL',null),[cx,cy]=chipSafe(txt,cx0,cy0);chip(c,cx,cy,txt,ease(seg(t,ta,ta+.35)));blit(ctx,L.chipL,0)}
  if(o.tip)tip_(o.tip,win(t,t0+.2,T[s+1]-.1))}
 
 function veil(cam,t,set,a=.74){const x=layer('w',cam);(set||marketWall)(x,t);comp([['w',12]]);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle=`rgba(20,6,10,${a})`;ctx.fillRect(0,0,W,H);ctx.restore()}
@@ -43,3 +43,6 @@ function chipsCard(t,cam,s,title,items,set,art){veil(cam,t,set);const g=layer('g
  for(const [txt,cx,cy,ta] of items)chip(g,cx,cy,txt,ease(seg(t,ta,ta+.35)));blit(ctx,L.g,0,seg(t,T[s],T[s]+.4))}
 function shelf(t,s){veil(null,t,marketWall,.7);const tm=wt(20,'meio'),u=easeIO(seg(t,tm-.2,tm+.5)),g=layer('g',null);const sg=g.createLinearGradient(0,150,0,820);sg.addColorStop(0,`rgba(255,200,120,${.45*u})`);sg.addColorStop(1,'rgba(255,200,120,0)');g.fillStyle=sg;g.beginPath();g.moveTo(900,120);g.lineTo(1020,120);g.lineTo(1180,820);g.lineTo(740,820);g.closePath();g.fill();
  g.fillStyle='#5A2E1C';g.fillRect(360,800,1200,26);bottleL(g,[600,800],1.2,'cheap');bottleL(g,[960,800],1.2+.08*u,'mid');bottleL(g,[1320,800],1.2,'exp');priceTag(g,600,330,'R$ 30',1,.8);priceTag(g,960,330,'R$ 90',1,.8+.15*u);priceTag(g,1320,330,'R$ 400',1,.8);blit(ctx,L.g,0);tip_('A FAIXA DO MEIO',win(t,T[s]+.2,T[s+1]-.1))}
+
+// avisos NUNCA por cima do rosto/cabeça do Sommelier: empurra para o lado livre (regra do dono do canal)
+function chipSafe(txt,cx,cy){const w=txt.length*26+80,HL=760,HR=1200,HB=640;if(cy>HB||cx+w/2<HL||cx-w/2>HR)return [cx,cy];let left=cx<980;if(left&&w>HL-40)left=false;if(!left&&HR+w>1880)left=w<=HL-40;if(left)return [Math.min(cx,HL-w/2),cy];if(HR+w<=1880)return [Math.max(cx,HR+w/2),cy];return [960,70]}

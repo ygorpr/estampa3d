@@ -48,7 +48,7 @@ Gerar frase por frase sozinha (tts_paulo.py, v2) deixou a voz "mole": cada frase
 A chave do ElevenLabs fica salva no ambiente (cabeçalho `xi-api-key`); nunca peça a chave no chat. 401 → peça a credencial do host
 `api.elevenlabs.io` (permissão: Text to Speech). Eu não ouço áudio: em dúvida de tom, gere 2–3 amostras curtas e deixe o usuário escolher.
 
-**6. Animação.** Comece do esqueleto `<pasta>/film.js` (já copiado) e escreva uma cena por frase. A API dos helpers, os cenários e os
+**6. Animação.** Avisos (chips) NUNCA cobrem o rosto/cabeça do Sommelier — use `engine/engine_part.js` (função `chipSafe`) e confira nos quadros. Comece do esqueleto `<pasta>/film.js` (já copiado) e escreva uma cena por frase. A API dos helpers, os cenários e os
 padrões de gesto estão em `references/animacao.md`; dois vídeos completos para copiar cenas estão em `examples/`.
 Confira quadros cedo e vá corrigindo: `python3 SK/scripts/stills.py <pasta> sheet.jpg <tempos>` e olhe a imagem (2 rodadas é normal).
 

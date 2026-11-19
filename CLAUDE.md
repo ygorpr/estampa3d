@@ -20,6 +20,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Thumb: 2 linhas de texto que DIZEM O ASSUNTO do vídeo (curiosidade sim, mistério vazio não: "A LUZ ESTRAGA SEU VINHO!", não "O INIMIGO INVISÍVEL"); sempre levar 3 opções. Rosto como ponto focal, selo do canal PEQUENO, centralizado, logo abaixo da linha vermelha.
 - Marca d'água: selo do canal GRANDE, centralizado (abaixo do rosto), bem clarinho (~7,5%), em todas as cenas menos abertura e logo final
   — sobrevive a recorte de Reels.
+- Avisos/placas NUNCA por cima do rosto ou da cabeça do Sommelier (o motor empurra para o lado livre: `chipSafe`).
 - Mão NUNCA na frente do rótulo: mão apoiada fica atrás da garrafa; ao erguer, segura pelo gargalo.
 - Tela final com tabela em cartões dourados (ícone de taça + prazo/dica).
 - Cenário NÃO é fixo: escolher o que combina com o assunto (bar/cozinha com geladeira, adega, vinhedo, sala...).

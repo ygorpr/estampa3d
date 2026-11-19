@@ -1,10 +1,10 @@
 # Champanhe no fundo do mar (170 anos num naufrágio) — roteiro FLUIDO, voz C (emoção)
-Para quem NÃO sabe nada de vinho. ~3 min. Thumb: "CHAMPANHE NO / FUNDO DO MAR" — YouTube: "Acharam champanhe de 170 anos no fundo do mar (e beberam!)". Fontes: pesquisa.md.
+Para quem NÃO sabe nada de vinho. ~3 min. Cenário do Sommelier: BAR DE NAVIO DE CRUZEIRO (pedido do dono). Thumb: "CHAMPANHE NO / FUNDO DO MAR" — YouTube: "Acharam champanhe de 170 anos no fundo do mar (e beberam!)". Fontes: pesquisa.md.
 
 | # | Fala (narração = legenda) | O que aparece |
 |---|---|---|
 | 0 | [curious] Você beberia um champanhe que passou cento e setenta anos no fundo do mar? Pois tem gente que já bebeu! | THUMB viva: Sommelier com garrafa de espumante, mar ao fundo |
-| 1 | [excited] É uma história com naufrágio, mergulhadores, leilão de milhares de euros... e muita ciência. Fica comigo! | placas NAUFRÁGIO · LEILÃO · CIÊNCIA |
+| 1 | [playful] E já que a gente está aqui, no bar de um navio... nada melhor que uma história de naufrágio, mergulhadores, leilão... e ciência. Fica comigo! | bar do cruzeiro; placas NAUFRÁGIO · LEILÃO · CIÊNCIA |
 | 2 | [thoughtful] Tudo começou em dois mil e dez, no mar Báltico: um mar gelado lá no norte da Europa, entre a Finlândia e a Suécia. | mapa do Báltico |
 | 3 | [warm] Perto das ilhas Åland, mergulhadores acharam um barco de carga afundado, a uns cinquenta metros de profundidade. | mergulhador descendo; navio no fundo |
 | 4 | [excited] E lá dentro... garrafas de champanhe! Umas cento e cinquenta, ainda fechadas. | garrafas aparecendo no lodo |
