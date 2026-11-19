@@ -3,7 +3,11 @@
 Modelo completo: `examples/vinho-caro-3min/` (33 cenas, 2:59). O dono pediu vídeos de ~3 min; para anúncios no meio do vídeo o
 YouTube exige 8 min ou mais, então para isso some capítulos (mesma estrutura, mais conteúdo).
 
-## Roteiro em capítulos (retenção)
+## Roteiro fluido (retenção) — SEM cartões de capítulo
+O dono pediu um vídeo único e fluido: nada de "Capítulo 1". A ponte entre assuntos é uma frase falada ("Vai ter peixe?
+Aí o branco brilha...", "Escolheu a ocasião? Agora, na prateleira..."). Escreva para FALAR: perguntas, exclamações, frases curtas.
+
+### (formato antigo, só referência)
 Gancho com promessa ("fica comigo até o final...") · Capítulo 1 · 2 · 3 ... · Bônus (3 dicas) · Resumo (tabela) · CTA (inscreva-se +
 pergunta para comentar) · "Wine Know. Dark Divino.". Cada capítulo abre com um cartão "CAPÍTULO N" e termina com uma frase que puxa o
 próximo. ~450 palavras ≈ 2,5 min de fala ≈ 3 min de vídeo. Fatos: cite estudos só de forma geral e verdadeira.

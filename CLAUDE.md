@@ -35,8 +35,9 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 
 ## Som
 - Trilha: sempre jazz/blues/piano com sax (`kit-dark-divino/tools/jazz.py` gera uma; faixa real liberada é melhor se o usuário mandar).
-- Narração: ElevenLabs, voz **Paulo** (ID `Qrdut83w0Cr152Yb4Xn3`), modelo eleven_multilingual_v2, estab. .45, simil. .75, speed ~1.05-1.1.
-  Gerar frase por frase COM timestamps (`kit-dark-divino/tools/tts_paulo.py`); cada frase entra na sua cena.
+- Narração: ElevenLabs, voz **Paulo** (ID `Qrdut83w0Cr152Yb4Xn3`), modelo **eleven_v3 com marcações de emoção** por frase (voz "C"
+  aprovada), gerada em BLOCOS de 3 frases e cortada por frase (`.claude/skills/wine-know-video/scripts/tts_v3.py`).
+  Texto escrito para falar: perguntas, exclamações, frases curtas. Nada de frase isolada (fica "mole").
   Se a fala não couber, esticar as cenas (time-warp), não cortar o sentido.
 - Efeitos: rolha, taças, geladeira, calendário. Voz na frente; música e efeitos abaixo.
 
@@ -47,6 +48,6 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Rótulos fixos permitidos: "DIA N" e as placas de dica ("1. TAMPE COM A ROLHA").
 
 ## Montagem
-- Formato padrão: longo (~3 min) em capítulos, com gancho, CTA de inscrição e tabela final; o curto (~40–45 s) é para Shorts. Transições entre lugares diferentes (calendário ↔ bar) com dissolve de ~0,5 s.
+- Formato padrão: longo (~3 min), FLUIDO e SEM capítulos (transição pela fala), com gancho, CTA de inscrição e tabela final; o curto (~40–45 s) é para Shorts. Transições entre lugares diferentes (calendário ↔ bar) com dissolve de ~0,5 s.
 - Nunca cortar direto para um close apertado: começar no enquadramento médio e aproximar devagar (push-in).
 - Conferir quadros (stills) antes de renderizar; avisar que o áudio foi medido, não ouvido.

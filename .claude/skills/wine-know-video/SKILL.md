@@ -23,7 +23,7 @@ reais e os números que os justificam e deixe o usuário escolher — o tema é 
 mas busque mais respostas em fontes confiáveis (lei/Embrapa, AWRI, Jancis Robinson, WSET, Decanter, Wine Spectator, Wine Folly,
 Revista Adega, ABS) e grave `pesquisa.md` com cada fato e sua fonte. Nada de site sem base.
 
-**3. Roteiro.** Formato padrão agora é o **longo (~3 min, em capítulos)** — leia `references/longo.md`; o curto (40–55 s,
+**3. Roteiro.** Formato padrão: **longo (~3 min), FLUIDO, sem capítulos** — as transições são feitas pela própria fala — leia `references/longo.md`; o curto (40–55 s,
 ~11 cenas) serve para Shorts. Uma frase falada por cena. Estrutura, tom e checagem de fatos em
 `references/roteiro.md`. Grave em `<pasta>/vo/lines.json` como `[[0,0,"frase"], ...]`. A última frase é sempre "Wine Know. Dark Divino.".
 
@@ -36,14 +36,17 @@ python3 SK/scripts/make_thumb.py <pasta> --title "LINHA 1" "LINHA 2?" --set bar|
 Se o usuário mandou thumbnail própria, ela abre o vídeo; se não, use a do `make_thumb.py` e mostre a ele.
 Se o Chromium já existir no sistema (ex.: /opt/pw-browsers), instale `playwright` na mesma versão em vez de baixar outro.
 
-**5. Voz do Paulo.**
+**5. Voz do Paulo (com emoção — padrão aprovado "C").** Escreva `vo/tagged.json` com uma marcação de emoção por frase
+(`[excited]`, `[curious]`, `[confident]`, `[emphatic]`, `[warm]`, `[serious]`, `[cheerful]`, `[playful]`, `[thoughtful]`, `[friendly]`;
+pode pôr `[laughs]` ou outra marcação no meio da frase). A emoção acompanha o momento: curioso nas perguntas, empolgado no gancho e
+nas descobertas, sério nos cuidados, simpático no convite.
 ```
-python3 SK/scripts/tts_paulo.py <pasta>/vo/lines.json <pasta>/vo
+python3 SK/scripts/tts_v3.py <pasta>/vo/tagged.json <pasta>/vo          # ElevenLabs v3, em blocos de 3 frases (embalo)
 python3 SK/scripts/plan_timing.py <pasta> --min <duração mínima por cena...>
 ```
-A chave do ElevenLabs fica salva no ambiente e é injetada no cabeçalho `xi-api-key`; nunca peça a chave no chat. Se vier 401 por
-falta de chave ou de permissão, peça a credencial do host `api.elevenlabs.io` (permissão mínima: Text to Speech). O `plan_timing`
-estica as cenas para a fala caber (melhor que cortar sentido) e imprime `LEN=[...]` para o `film.js`.
+Gerar frase por frase sozinha (tts_paulo.py, v2) deixou a voz "mole": cada frase fecha descendo o tom. Use o v2 só se o v3 falhar.
+A chave do ElevenLabs fica salva no ambiente (cabeçalho `xi-api-key`); nunca peça a chave no chat. 401 → peça a credencial do host
+`api.elevenlabs.io` (permissão: Text to Speech). Eu não ouço áudio: em dúvida de tom, gere 2–3 amostras curtas e deixe o usuário escolher.
 
 **6. Animação.** Comece do esqueleto `<pasta>/film.js` (já copiado) e escreva uma cena por frase. A API dos helpers, os cenários e os
 padrões de gesto estão em `references/animacao.md`; dois vídeos completos para copiar cenas estão em `examples/`.
