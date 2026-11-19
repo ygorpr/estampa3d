@@ -1,0 +1,7 @@
+---
+type: llm
+focus: trace
+weight: 1
+---
+
+The result matches this description: Um MP4 de 40 a 55 s no padrão aprovado: abre com thumbnail, Sommelier de colete e gravata vinho com braços em 3D, voz do Paulo, legenda karaokê igual à fala, jazz com sax, dissolves, tabela final sem legenda e fecho 'Wine Know. Dark Divino.'

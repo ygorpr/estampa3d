@@ -1,0 +1,13 @@
+{
+ "eval_name": "roteiro-thumb-storyboard",
+ "prompt": "Quero o próximo vídeo do canal sobre vinho seco ou suave. Por enquanto me manda só o roteiro, a thumb no nosso estilo e um storyboard com uns quadros das cenas principais, sem gerar a voz ainda que eu quero aprovar antes.",
+ "assertions": [
+  "The script has between 9 and 13 scenes, one spoken sentence (or two short ones) per scene",
+  "The last line of the script is 'Wine Know. Dark Divino.'",
+  "The script is in Brazilian Portuguese, speaks to the viewer as 'você' and its first line is a question hook about seco ou suave",
+  "The thumbnail shows a gold-framed plaque with the topic title, the Sommelier character and the Wine Know / Dark Divino seal",
+  "In the storyboard frames the Sommelier wears the wine-coloured vest with a bow tie of the same wine colour",
+  "In the storyboard frames the Sommelier's elbows hang down by the body (no sideways-broken arm, no hand resting on the hip)",
+  "No ElevenLabs voice was generated (no text-to-speech call was made), as the user asked to approve the script first"
+ ]
+}

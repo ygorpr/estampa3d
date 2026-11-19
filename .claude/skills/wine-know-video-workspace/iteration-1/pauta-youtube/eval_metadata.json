@@ -1,0 +1,12 @@
+{
+ "eval_name": "pauta-youtube",
+ "prompt": "pesquisa no youtube o que o povo mais pergunta de vinho e me fala 3 ou 4 temas bons pro proximo video do canal, com o motivo de cada um",
+ "assertions": [
+  "The reply suggests 3 or 4 video topics",
+  "Each suggested topic is justified with real YouTube Brazil autocomplete searches quoted in the reply",
+  "The raw research file contains actual autocomplete results (not invented examples)",
+  "The topics suit the channel audience (men 40+ who spend on wine) and the reply says why",
+  "The reply leaves the final choice of topic to the user",
+  "The reply is in Portuguese"
+ ]
+}
