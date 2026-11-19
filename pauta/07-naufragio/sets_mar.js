@@ -5,8 +5,6 @@ function underwater(x,t){let g=x.createLinearGradient(0,-300,0,1000);g.addColorS
  wreck(x,1500,860,1);bubbles(x,600,860,900,900,t*.6,26,.6)}
 function wreck(x,cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);x.rotate(-.12);x.fillStyle='#0E2228';x.beginPath();x.moveTo(-320,-20);x.lineTo(300,-60);x.lineTo(250,10);x.lineTo(-280,40);x.closePath();x.fill();
  x.fillRect(-60,-330,14,290);x.save();x.translate(140,-60);x.rotate(.5);x.fillRect(-7,-240,14,240);x.restore();x.strokeStyle='rgba(14,34,40,.9)';x.lineWidth=4;x.beginPath();x.moveTo(-53,-330);x.lineTo(-250,-30);x.stroke();x.restore()}
-function diver(x,cx,cy,s,t){x.save();x.translate(cx,cy+Math.sin(t*1.5)*8);x.scale(s,s);x.rotate(.35);x.fillStyle='#1A1A22';x.beginPath();x.ellipse(0,0,90,26,0,0,7);x.fill();x.fillStyle='#E6BF98';x.beginPath();x.arc(-95,-6,22,0,7);x.fill();x.fillStyle='rgba(180,230,255,.7)';x.beginPath();x.ellipse(-104,-10,13,10,0,0,7);x.fill();
- x.fillStyle='#C8A040';x.fillRect(-40,-40,80,18);x.fillStyle='#1A1A22';x.beginPath();x.moveTo(80,-8);x.lineTo(150,-30+Math.sin(t*4)*10);x.lineTo(150,10+Math.sin(t*4)*10);x.closePath();x.fill();x.restore()}
 function cage(x,cx,base,s){x.save();x.translate(cx,base);x.scale(s,s);for(let i=0;i<5;i++)for(let r=0;r<2;r++)bottleS(x,[-160+i*80,-r*10],.5,'spark');x.strokeStyle='#8A8A92';x.lineWidth=6;x.strokeRect(-220,-200,440,200);for(let i=-220;i<=220;i+=40){x.beginPath();x.moveTo(i,-200);x.lineTo(i,0);x.stroke()}x.beginPath();x.moveTo(0,-200);x.lineTo(0,-700);x.stroke();x.restore()}
 function thermo(x,cx,cy,h,u,label){x.save();x.fillStyle=CREAM;x.beginPath();x.roundRect(cx-18,cy-h,36,h,18);x.fill();x.beginPath();x.arc(cx,cy+16,34,0,7);x.fill();x.fillStyle='#3A7AC8';x.beginPath();x.arc(cx,cy+16,24,0,7);x.fill();x.fillRect(cx-9,cy-h*u,18,h*u+10);goldText(x,label,cx+170,cy-h*u,52,'Cinzel',900);x.restore()}
 function hammer(x,cx,cy,a){x.save();x.translate(cx,cy);x.rotate(-a);x.fillStyle='#6A4426';x.fillRect(-10,-20,20,220);x.fillStyle='#8A5A30';x.beginPath();x.roundRect(-80,-60,160,70,14);x.fill();x.restore()}
@@ -29,3 +27,30 @@ function balticMap(x,u){x.save();let g=x.createLinearGradient(0,280,0,880);g.add
  x.font='700 34px Cinzel';x.textAlign='center';x.fillText('SUÉCIA',560,480);x.fillText('FINLÂNDIA',1330,420);x.fillText('ÅLAND',975,640);x.font='italic 600 30px Cormorant';x.fillStyle=CREAM;x.fillText('mar Báltico',1150,760);x.restore();x.strokeStyle=GOLD;x.lineWidth=6;x.beginPath();x.roundRect(360,300,1200,580,26);x.stroke()}
 function fish(x,cx,cy,s,t){x.save();x.translate(cx,cy);x.scale(s,s);x.fillStyle='#E6A050';x.beginPath();x.ellipse(0,0,40,18,0,0,7);x.fill();x.beginPath();x.moveTo(36,0);x.lineTo(62,-16+Math.sin(t*8)*4);x.lineTo(62,16+Math.sin(t*8)*4);x.closePath();x.fill();x.fillStyle='#1A0A08';x.beginPath();x.arc(-22,-4,4,0,7);x.fill();x.restore()}
 function lyingBottle(x,cx,cy,s,rot){x.save();x.translate(cx,cy);x.rotate(rot);bottleS(x,[0,0],s,'spark');x.restore()}
+// MERGULHADOR (personagem detalhado, estilo do canal): nadando para a esquerda, roupa de neoprene, máscara, cilindro, nadadeiras batendo
+function diver(x,cx,cy,s,t){const k=Math.sin(t*4);x.save();x.translate(cx,cy+Math.sin(t*1.4)*8);x.scale(s,s);x.rotate(.12+Math.sin(t*1.4)*.03);
+ const SUIT='#1F2C33',SUIT2='#2E5A66',SKIN='#E6BF98',HAIR='#5A3E2A';
+ const cap=(x0,y0,x1,y1,w,col)=>{x.strokeStyle=col;x.lineWidth=w;x.lineCap='round';x.beginPath();x.moveTo(x0,y0);x.lineTo(x1,y1);x.stroke()};
+ // nadadeiras + pernas (perna de trás primeiro)
+ for(const [ph,dy,shade] of [[1,10,.75],[-1,-6,1]]){const a=k*ph*.35,kx=70,ky=dy,fx=150,fy=dy+a*60,ex=205,ey=dy+a*110;
+  x.globalAlpha=shade;cap(10,dy,kx,ky,34,SUIT);cap(kx,ky,fx,fy,28,SUIT);x.fillStyle='#14181C';x.beginPath();x.moveTo(fx-6,fy-14);x.quadraticCurveTo(ex,ey-34,ex+50,ey-8);x.lineTo(ex+44,ey+22);x.quadraticCurveTo(ex,ey+20,fx-6,fy+14);x.closePath();x.fill();
+  x.strokeStyle=SUIT2;x.lineWidth=4;x.beginPath();x.moveTo(fx,fy);x.lineTo(ex+40,ey+6);x.stroke();x.globalAlpha=1}
+ // cilindro nas costas
+ x.save();x.rotate(-.05);x.fillStyle='#E2B13C';x.beginPath();x.roundRect(-70,-78,150,42,20);x.fill();x.fillStyle='rgba(255,255,255,.35)';x.fillRect(-60,-72,130,8);x.fillStyle='#8A8A92';x.fillRect(-92,-68,24,22);x.fillStyle='#14181C';x.fillRect(-30,-80,10,46);x.fillRect(40,-80,10,46);x.restore();
+ // tronco
+ x.fillStyle=SUIT;x.beginPath();x.roundRect(-80,-40,120,74,34);x.fill();x.strokeStyle=SUIT2;x.lineWidth=6;x.beginPath();x.moveTo(-70,-8);x.lineTo(30,-8);x.stroke();
+ x.fillStyle='#3A3A40';x.fillRect(4,-40,16,74);x.fillStyle='#C9A050';x.fillRect(6,-6,12,12);
+ // braço de trás
+ x.globalAlpha=.8;cap(-60,-6,-120,22+k*6,22,SUIT);x.fillStyle='#14181C';x.beginPath();x.arc(-128,24+k*6,12,0,7);x.fill();x.globalAlpha=1;
+ // cabeça: capuz, rosto, máscara, regulador
+ x.fillStyle=SUIT;x.beginPath();x.arc(-110,-14,40,0,7);x.fill();x.fillStyle=SKIN;x.beginPath();x.ellipse(-122,-10,26,28,0,0,7);x.fill();
+ x.fillStyle=HAIR;x.beginPath();x.ellipse(-118,12,18,10,0,0,Math.PI);x.fill();
+ x.fillStyle='#14181C';x.beginPath();x.roundRect(-152,-34,46,28,10);x.fill();x.fillStyle='rgba(170,220,240,.85)';x.beginPath();x.roundRect(-148,-30,38,20,7);x.fill();
+ x.fillStyle='#1A1A1A';x.beginPath();x.arc(-138,-20,3.5,0,7);x.arc(-122,-20,3.5,0,7);x.fill();x.fillStyle='rgba(255,255,255,.7)';x.fillRect(-144,-28,8,3);
+ x.strokeStyle='#14181C';x.lineWidth=5;x.beginPath();x.moveTo(-106,-22);x.lineTo(-86,-26);x.stroke();
+ x.fillStyle='#14181C';x.beginPath();x.roundRect(-150,2,22,16,6);x.fill();x.strokeStyle='#3A3A40';x.lineWidth=6;x.beginPath();x.moveTo(-132,10);x.quadraticCurveTo(-100,40,-80,-50);x.stroke();
+ // braço da frente (estendido, luva)
+ cap(-56,4,-150,30+k*5,24,SUIT);x.strokeStyle=SUIT2;x.lineWidth=4;x.beginPath();x.moveTo(-60,4);x.lineTo(-140,28+k*5);x.stroke();x.fillStyle='#14181C';x.beginPath();x.arc(-160,32+k*5,13,0,7);x.fill();
+ // bolhas saindo do regulador
+ x.strokeStyle='rgba(220,245,255,.85)';x.lineWidth=2.5;for(let i=0;i<6;i++){const u=((t*.8+i/6)%1);x.beginPath();x.arc(-150+Math.sin(t*3+i)*6,-10-u*170,3+u*6,0,7);x.stroke()}
+ x.restore()}

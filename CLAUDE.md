@@ -26,6 +26,10 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 - Tela final com tabela em cartões dourados (ícone de taça + prazo/dica).
 - Cenário NÃO é fixo: escolher o que combina com o assunto (bar/cozinha com geladeira, adega, vinhedo, sala...).
 
+## Personagens extras (mergulhador, monge, cientista...)
+- Sempre PERSONAGEM de verdade, no mesmo estilo e com o mesmo cuidado do Sommelier (rosto, roupa, mãos, equipamento, movimento).
+  Nunca forma genérica ou mancha (ex.: o mergulhador `diver()` tem máscara, rosto, cilindro, braços, pernas e nadadeiras batendo).
+
 ## Personagem padrão: Sommelier (versão 10)
 - Pele #E6BF98, cabelo e barba curta castanhos #5A3E2A (risca lateral), camisa creme #F4F0E8,
   **colete vinho #5E1428 e gravata-borboleta da MESMA cor do colete (#5E1428)**. Cara de ~40-45 anos.
