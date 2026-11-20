@@ -100,3 +100,5 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Cada tarefa da equipe tem barra de progresso: `{"txt","pct","eta"}` ou, se travada, `{"txt","pct","bloqueio"}`; e o agente tem `"esperando"`
   dizendo O QUÊ está esperando (ex.: créditos do ElevenLabs). Atualizar a porcentagem quando cada etapa termina
   (cenas ~50%, stills conferidos ~70%, voz ~85%, render ~95%, na Revisão 100%).
+- Tempo de produção médio: cada vídeo pronto recebe `producaoMin` = minutos de trabalho da máquina somados
+  (roteiro + thumbs + cenas + voz + render + ajustes). Medir pela duração real de cada agente/render e gravar no doc do vídeo.
