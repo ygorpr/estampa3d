@@ -39,6 +39,12 @@ header.top p{margin:4px 0 0;color:var(--muted);font-style:italic}
 .st{font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;align-self:flex-start}
 .st.on{background:var(--bottle);color:#d6efdd}.st.off{background:#ffffff14;color:var(--muted)}.st.wait{background:#5a3a12;color:#ffd9a3}
 .agent ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:3px;font-size:16px}
+.tasks{display:flex;flex-direction:column;gap:8px}
+.task .tt{font-size:15px;line-height:1.3}
+.bar{height:8px;border-radius:6px;background:#ffffff14;border:1px solid var(--line);overflow:hidden;margin-top:4px}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--bordo),var(--gold));border-radius:6px}
+.task .tm{display:flex;justify-content:space-between;gap:8px;font-family:var(--f-ui);font-size:12px;color:var(--muted);margin-top:2px;font-variant-numeric:tabular-nums}
+.blk{background:#5a3a1233;border:1px solid #5a3a12;border-radius:4px;padding:6px 8px;font-family:var(--f-ui);font-size:13px;color:#ffd9a3}
 .agent h4{margin:0;font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .cfg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cfg label{display:flex;flex-direction:column;gap:4px;font-family:var(--f-ui);font-size:12px;color:var(--muted)}
@@ -383,6 +389,9 @@ function boneco(k){const L=LOOK[k]||LOOK.pauta;
   const extra=L.tipo==='oculos'?`<rect x="36" y="40" width="11" height="8" rx="3" fill="none" stroke="#111" stroke-width="2"/><rect x="53" y="40" width="11" height="8" rx="3" fill="none" stroke="#111" stroke-width="2"/><path d="M47 44h6" stroke="#111" stroke-width="2"/>`
    :L.tipo==='fone'?`<path d="M28 44c0-16 10-25 22-25s22 9 22 25" fill="none" stroke="#1a1a1a" stroke-width="4"/><rect x="24" y="40" width="7" height="12" rx="3" fill="#1a1a1a"/><rect x="69" y="40" width="7" height="12" rx="3" fill="#1a1a1a"/><path d="M27 52c2 8 10 11 16 11" fill="none" stroke="#1a1a1a" stroke-width="2"/><circle cx="44" cy="63" r="2.5" fill="#1a1a1a"/>`:'';
   return `<svg viewBox="0 0 100 100" role="img" aria-label="Boneco do agente"><path d="M14 100c2-20 16-30 36-30s34 10 36 30z" fill="${L.terno}"/><path d="M40 70l10 12 10-12z" fill="#F4F0E8"/><path d="M47 74l3 18 3-18-3-3z" fill="${L.gravata}"/><path d="M40 70l-6 30M60 70l6 30" stroke="#00000033" stroke-width="2"/><rect x="44" y="60" width="12" height="12" fill="${L.pele}"/><ellipse cx="50" cy="46" rx="19" ry="21" fill="${L.pele}"/>${cab}<circle cx="43" cy="45" r="2.3" fill="#2a1a12"/><circle cx="57" cy="45" r="2.3" fill="#2a1a12"/><path d="M44 55q6 4 12 0" fill="none" stroke="#7a3b2b" stroke-width="2" stroke-linecap="round"/>${extra}</svg>`;}
+function tarefa(x){const t=typeof x==='string'?{txt:x}:x; const p=Math.max(0,Math.min(100,t.pct||0));
+  return `<div class="task"><div class="tt">${esc(t.txt)}</div><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${p}"><span style="width:${p}%"></span></div>
+  <div class="tm"><span>${p}%</span><span>${t.bloqueio?'⏸ '+esc(t.bloqueio):t.eta?'faltam ~'+esc(t.eta):''}</span></div></div>`}
 function renderEquipe(){
   const el=$('#team'); if(!el) return;
   if(!EQUIPE){el.innerHTML='<div class="empty">Carregando a equipe…</div>';return}
@@ -392,8 +401,9 @@ function renderEquipe(){
   el.innerHTML=A.map(a=>{const st=(a.fazendo||[]).length?['on','Trabalhando']:(a.fila||[]).length?['wait','Esperando']:['off','Livre'];
     return `<article class="agent"><div class="who">${boneco(a.look)}<div style="min-width:0"><div class="nm">${esc(a.nome)}</div><div class="cg">${esc(a.cargo)}</div></div></div>
     <span class="st ${st[0]}">${st[1]}</span>
-    ${(a.fazendo||[]).length?`<div><h4>Fazendo agora</h4><ul>${a.fazendo.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
-    ${(a.fila||[]).length?`<div><h4>Fila de espera</h4><ul>${a.fila.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+    ${a.esperando?`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}</div>`:''}
+    ${(a.fazendo||[]).length?`<div><h4>Fazendo agora</h4><div class="tasks">${a.fazendo.map(tarefa).join('')}</div></div>`:''}
+    ${(a.fila||[]).length?`<div><h4>Fila de espera</h4><div class="tasks">${a.fila.map(tarefa).join('')}</div></div>`:''}
     ${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}</article>`}).join('');
 }
 function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}

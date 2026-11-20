@@ -97,3 +97,6 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Ajuste pedido na Revisão: o vídeo FICA na Revisão (estado "Ajustando o vídeo") até voltar para "Sua vez"; não volta para Produção.
 - Custo: contar desde o primeiro vídeo. `config/custos.creditosUsadosTotal` = total real do ElevenLabs (o dono informou 160 mil);
   custo médio = total ÷ vídeos prontos. Manter `ledger` com cada geração de voz (vídeo, refação, amostra) e somar os créditos de cada nova voz.
+- Cada tarefa da equipe tem barra de progresso: `{"txt","pct","eta"}` ou, se travada, `{"txt","pct","bloqueio"}`; e o agente tem `"esperando"`
+  dizendo O QUÊ está esperando (ex.: créditos do ElevenLabs). Atualizar a porcentagem quando cada etapa termina
+  (cenas ~50%, stills conferidos ~70%, voz ~85%, render ~95%, na Revisão 100%).
