@@ -1,4 +1,4 @@
-# De onde vem a cor do vinho? — roteiro v3 (química e física, no laboratório) — AGUARDANDO APROVAÇÃO DO ROTEIRO
+# De onde vem a cor do vinho? — roteiro v3 (química e física, no laboratório) — ROTEIRO APROVADO PELO DONO em 20/11/2026 ("Os 4 estão aprovados")
 Thumb escolhida: C "DE ONDE VEM / A COR DO VINHO?" (refeita com o laboratório ao fundo). ~3 min 20 s. Cenário: LABORATÓRIO de análise de vinho (bancada, tubos, espectrofotômetro, pHmetro). Fontes: pesquisa.md.
 
 ## Pronúncia

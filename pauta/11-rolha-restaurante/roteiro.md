@@ -1,4 +1,4 @@
-# Cheirar a rolha é erro? — roteiro v3 (a ROLHA no restaurante: origem, mito e verdade) — AGUARDANDO APROVAÇÃO DO ROTEIRO
+# Cheirar a rolha é erro? — roteiro v3 (a ROLHA no restaurante: origem, mito e verdade) — ROTEIRO APROVADO PELO DONO em 20/11/2026 ("Os 4 estão aprovados")
 Thumb escolhida: B "CHEIRAR A ROLHA / É ERRO?". ~3 min 20 s. Cenário: RESTAURANTE, na mesa (toalha branca, velas). Fontes: pesquisa.md. (A parte da palavra "sommelier" saiu daqui e virou o vídeo 12.)
 
 ## Pronúncia

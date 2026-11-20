@@ -1,0 +1,280 @@
+<title>Esteira Dark Divino</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap">
+<style>
+/* Layout: uma esteira de produção (6 estações em sequência) com a faixa "Sua vez" no topo e uma gaveta lateral de detalhe. Visual único escuro, da marca. */
+:root{
+  --bg:#140509; --wall:#1F0810; --panel:#2C0B15; --line:#4A1A26;
+  --wine:#5E1428; --bordo:#8E1B3A; --gold:#D4A24C; --gold2:#F2D27A;
+  --cream:#F3E6C8; --muted:#CDB3A1; --candle:#FFB45E; --bottle:#1E3A31;
+  --ok:#7FB58E; --no:#D9786C;
+  --f-display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --f-body:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --f-ui:"IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:var(--f-body);font-size:18px;line-height:1.45;
+  background-image:radial-gradient(1200px 500px at 50% -200px, #3a0e1c 0%, transparent 70%);}
+.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 60px;max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);color:var(--gold);margin:0;text-wrap:balance;letter-spacing:.04em}
+h1{font-size:clamp(26px,4vw,40px);font-weight:800}
+h2{font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.ui{font-family:var(--f-ui)}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px}
+header p{margin:4px 0 0;color:var(--muted);font-style:italic}
+.tally{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.tally b{display:block;font-family:var(--f-display);font-size:26px;color:var(--cream);font-variant-numeric:tabular-nums}
+.tally .hot b{color:var(--gold2)}
+.note{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.note.warn{color:var(--candle)}
+
+/* Sua vez */
+.yours{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.ask{background:linear-gradient(180deg,#3a0f1d,#2a0a14);border:1px solid var(--gold);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.ask:hover,.ask:focus-visible{border-color:var(--gold2);outline:none;box-shadow:0 0 0 2px #d4a24c40}
+.ask .what{font-family:var(--f-ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+.ask .t{font-family:var(--f-display);font-size:17px;color:var(--cream);line-height:1.25}
+.empty{border:1px dashed var(--line);border-radius:6px;padding:18px;color:var(--muted);font-style:italic}
+
+/* Esteira */
+.belt-scroll{overflow-x:auto;padding-bottom:6px}
+.belt{display:grid;grid-template-columns:repeat(6,minmax(230px,1fr));gap:12px;min-width:1440px}
+.station{background:var(--wall);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
+.station>header{border:0;padding:12px 12px 10px;display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.station .step{font-family:var(--f-ui);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.station h3{font-size:15px}
+.station .who{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.cards{display:flex;flex-direction:column;gap:8px;padding:0 10px 12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:6px;cursor:pointer;color:inherit;font:inherit;text-align:left;width:100%}
+.card:hover,.card:focus-visible{border-color:var(--gold);outline:none}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;display:block;max-width:100%}
+.card .n{font-family:var(--f-ui);font-size:11px;color:var(--muted);letter-spacing:.08em}
+.card .t{font-family:var(--f-display);font-size:14px;line-height:1.25;color:var(--cream)}
+.pill{align-self:flex-start;font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.06em;padding:2px 8px;border-radius:20px;text-transform:uppercase}
+.pill.dono{background:var(--gold);color:#2a0a14}
+.pill.claude{background:#ffffff14;color:var(--muted);border:1px solid var(--line)}
+.pill.feito{background:#1E3A31;color:#bfe0c9}
+.pill.no{background:#5a1d1d;color:#f3c7c0}
+
+/* Nova pauta */
+.newp{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.newp input{flex:1 1 260px;min-width:0;background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:17px;padding:10px 12px;border-radius:4px}
+.newp input:focus{outline:2px solid var(--gold);outline-offset:1px}
+button.b{font-family:var(--f-ui);font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:10px 16px;cursor:pointer;border:1px solid var(--gold);background:var(--gold);color:#2a0a14}
+button.b:hover{background:var(--gold2)}
+button.b.ghost{background:transparent;color:var(--gold)}
+button.b.ghost:hover{background:#d4a24c18}
+button.b.no{background:transparent;border-color:var(--no);color:var(--no)}
+button.b:disabled{opacity:.45;cursor:not-allowed}
+button.b:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
+/* Gaveta */
+.scrim{position:fixed;inset:0;background:#0009;z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--bg);border-left:1px solid var(--gold);z-index:21;overflow-y:auto;
+  padding-top:calc(20px + env(safe-area-inset-top, 0px));padding-bottom:calc(30px + env(safe-area-inset-bottom, 0px));
+  padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:18px}
+.drawer .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.drawer h3{font-size:22px;color:var(--cream)}
+.x{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;font:inherit;font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
+.sec{display:flex;flex-direction:column;gap:8px}
+.sec>h2{font-size:12px}
+.gancho{font-style:italic;font-size:19px;color:var(--cream)}
+ol.script{margin:0;padding-left:28px;display:flex;flex-direction:column;gap:4px}
+ol.script li{font-size:17px}
+ol.script li::marker{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+table.pron{border-collapse:collapse;font-size:16px;width:100%}
+table.pron td,table.pron th{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left}
+table.pron th{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-weight:500}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.opt{border:2px solid var(--line);border-radius:4px;background:var(--panel);color:inherit;font:inherit;padding:8px;cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.opt .l{font-family:var(--f-display);font-size:24px;color:var(--gold)}
+.opt .tx{font-family:var(--f-ui);font-size:12px;line-height:1.3}
+.opt[aria-pressed="true"]{border-color:var(--gold2);background:#4a1424}
+.opt:focus-visible{outline:2px solid var(--gold2)}
+.sheet{width:100%;border-radius:4px;border:1px solid var(--line)}
+textarea{width:100%;min-height:80px;background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:17px;padding:10px;border-radius:4px;resize:vertical}
+textarea:focus{outline:2px solid var(--gold)}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.log{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.log b{color:var(--cream);font-weight:500}
+.file{font-family:var(--f-ui);font-size:13px;color:var(--gold2);word-break:break-all;user-select:all}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom, 0px));background:var(--gold);color:#2a0a14;font-family:var(--f-ui);font-weight:600;padding:10px 18px;border-radius:4px;z-index:30}
+@media (max-width:700px){
+  .belt{min-width:0;grid-template-columns:1fr}
+  .thumbs{grid-template-columns:1fr 1fr 1fr}
+}
+@media (prefers-reduced-motion:no-preference){.card,.ask{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Esteira Dark Divino</h1>
+      <p>Wine Know · do tema ao vídeo pronto. Eu sugiro, você decide em cada estação.</p>
+    </div>
+    <div class="tally" id="tally" aria-live="polite"></div>
+  </header>
+
+  <section class="sec" aria-labelledby="h-vez">
+    <h2 id="h-vez">Sua vez</h2>
+    <div id="yours" class="yours"><div class="empty">Carregando a esteira…</div></div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-nova">
+    <h2 id="h-nova">Tem um tema em mente?</h2>
+    <form class="newp" id="newp">
+      <input id="newp-t" name="tema" placeholder="Ex.: Por que o vinho do Porto é mais forte?" autocomplete="off" aria-label="Tema que você quer ver">
+      <button class="b" type="submit">Mandar para a pauta</button>
+    </form>
+  </section>
+
+  <section class="sec" aria-labelledby="h-est">
+    <h2 id="h-est">A esteira</h2>
+    <p class="note" id="status"></p>
+    <div class="belt-scroll"><div class="belt" id="belt"></div></div>
+  </section>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="d-title"></aside>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script>
+const ETAPAS=[
+  {k:'pauta',   n:'1', t:'Pauta',            who:'Eu sugiro · você aceita ou recusa'},
+  {k:'roteiro', n:'2', t:'Roteiro',          who:'Eu escrevo · você aprova ou pede mudança'},
+  {k:'thumb',   n:'3', t:'Thumbnail',        who:'Três opções · você escolhe A, B ou C'},
+  {k:'execucao',n:'4', t:'Aprovar execução', who:'Seu ok libera a voz e o render'},
+  {k:'producao',n:'5', t:'Produção',         who:'Voz, animação, render, conferência'},
+  {k:'entregue',n:'6', t:'Entregue',         who:'Vídeo e thumb na pasta videos/'}
+];
+const PEDE={pauta:'Aceitar ou recusar o tema',roteiro:'Aprovar o roteiro',thumb:'Escolher a thumb',execucao:'Aprovar a execução'};
+let db=null, docs=[], aberto=null, carregou=false;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const agora=()=>new Date().toISOString();
+const dataBr=iso=>{try{return new Date(iso).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}catch(e){return ''}};
+
+function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600)}
+
+function render(){
+  const ativos=docs.filter(d=>d.etapa!=='recusado');
+  const vez=ativos.filter(d=>d.vez==='dono'&&PEDE[d.etapa]);
+  const cnt=k=>ativos.filter(d=>d.etapa===k).length;
+  $('#tally').innerHTML=
+    `<div class="hot"><b>${vez.length}</b>esperando você</div>`+
+    `<div><b>${cnt('producao')}</b>em produção</div>`+
+    `<div><b>${cnt('entregue')}</b>entregues</div>`;
+  const y=$('#yours');
+  if(!carregou){y.innerHTML='<div class="empty">Carregando a esteira…</div>'}
+  else if(!docs.length){y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas sugeridos; você também pode mandar um tema logo abaixo.</div>'}
+  else if(!vez.length){y.innerHTML='<div class="empty">Nada esperando você agora. Quando eu terminar um roteiro ou as thumbs, o cartão aparece aqui.</div>'}
+  else y.innerHTML=vez.map(d=>`<button class="ask" data-id="${esc(d.id)}"><span class="what">${PEDE[d.etapa]}</span><span class="t">${d.num?esc(d.num)+'. ':''}${esc(d.titulo)}</span>${d.obs?`<span class="note">${esc(d.obs)}</span>`:''}</button>`).join('');
+  $('#belt').innerHTML=ETAPAS.map(e=>{
+    const lst=ativos.filter(d=>d.etapa===e.k).sort((a,b)=>(a.ordem??a.num??999)-(b.ordem??b.num??999));
+    return `<section class="station"><header><span class="step">Estação ${e.n}</span><h3>${e.t}</h3><span class="who">${e.who}</span></header>
+      <div class="cards">${lst.map(cardHtml).join('')||'<span class="note">—</span>'}</div></section>`;
+  }).join('');
+  const rec=docs.filter(d=>d.etapa==='recusado').length;
+  if(carregou) $('#status').textContent=rec?`${rec} tema(s) recusado(s) ficam guardados fora da esteira.`:'';
+  if(aberto) openDrawer(aberto,true);
+}
+function pillFor(d){
+  if(d.etapa==='entregue') return '<span class="pill feito">Pronto</span>';
+  if(d.vez==='dono'&&PEDE[d.etapa]) return '<span class="pill dono">Sua vez</span>';
+  return `<span class="pill claude">${esc(d.estado||'Comigo')}</span>`;
+}
+function cardHtml(d){
+  return `<button class="card" data-id="${esc(d.id)}">${d.thumbImg?`<img src="${esc(d.thumbImg)}" alt="" loading="lazy">`:''}
+    <span class="n">${d.num?'VÍDEO '+esc(d.num):'TEMA'}</span><span class="t">${esc(d.titulo)}</span>${pillFor(d)}</button>`;
+}
+
+function openDrawer(id,refresh){
+  const d=docs.find(x=>x.id===id); if(!d){closeDrawer();return}
+  aberto=id;
+  const dr=$('#drawer');
+  const keepNote=refresh?($('#d-note')?.value??''):'';
+  const keepPick=refresh?openDrawer.pick:null;
+  const et=ETAPAS.find(e=>e.k===d.etapa);
+  const sua=d.vez==='dono'&&PEDE[d.etapa];
+  let h=`<div class="top"><div><span class="note">${d.num?'Vídeo '+esc(d.num)+' · ':''}${et?'Estação '+et.n+' · '+et.t:'Recusado'}</span>
+    <h3 id="d-title">${esc(d.titulo)}</h3></div><button class="x" id="d-x" aria-label="Fechar">×</button></div>`;
+  if(d.gancho) h+=`<div class="sec"><h2>O gancho</h2><div class="gancho">${esc(d.gancho)}</div></div>`;
+  if(d.fontes) h+=`<div class="sec"><h2>Base da pesquisa</h2><div class="note">${esc(d.fontes)}</div></div>`;
+  if(d.roteiro&&d.roteiro.length) h+=`<div class="sec"><h2>Roteiro · ${d.roteiro.length} falas${d.duracao?' · '+esc(d.duracao):''}</h2><ol class="script">${d.roteiro.map(l=>`<li>${esc(l)}</li>`).join('')}</ol></div>`;
+  if(d.pronuncia&&d.pronuncia.length) h+=`<div class="sec"><h2>Pronúncia</h2><table class="pron"><thead><tr><th>Escreve</th><th>Fala</th><th>Fonte</th></tr></thead><tbody>${d.pronuncia.map(p=>`<tr><td>${esc(p.escreve)}</td><td>${esc(p.fala)}</td><td class="note">${esc(p.fonte||'')}</td></tr>`).join('')}</tbody></table></div>`;
+  if(d.thumbs){
+    const sel=keepPick||d.thumbEscolhida||null; openDrawer.pick=sel;
+    h+=`<div class="sec"><h2>Thumbnail${d.thumbEscolhida?' · escolhida: '+esc(d.thumbEscolhida):''}</h2>${d.thumbOpcoesImg?`<img class="sheet" src="${esc(d.thumbOpcoesImg)}" alt="As três opções de thumbnail">`:''}
+      <div class="thumbs" role="group" aria-label="Escolha da thumbnail">${['A','B','C'].filter(k=>d.thumbs[k]).map(k=>`<button class="opt" data-pick="${k}" aria-pressed="${sel===k}" ${d.etapa==='thumb'&&sua?'':'disabled'}><span class="l">${k}</span><span class="tx">${esc(d.thumbs[k])}</span></button>`).join('')}</div></div>`;
+  }
+  if(d.thumbImg&&!d.thumbOpcoesImg) h+=`<div class="sec"><h2>Thumb final</h2><img class="sheet" src="${esc(d.thumbImg)}" alt="Thumbnail do vídeo"></div>`;
+  if(d.video) h+=`<div class="sec"><h2>Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
+  if(d.obs) h+=`<div class="sec"><h2>Recado meu</h2><div>${esc(d.obs)}</div></div>`;
+  if(sua){
+    h+=`<div class="sec"><h2>${PEDE[d.etapa]}</h2><label class="note" for="d-note">Comentário (opcional; obrigatório para pedir mudança)</label><textarea id="d-note" placeholder="Ex.: troque a frase 4; quero mais sobre o Brasil">${esc(keepNote)}</textarea><div class="acts">`;
+    if(d.etapa==='pauta') h+=`<button class="b" data-act="aceitar">Aceitar tema</button><button class="b no" data-act="recusar">Recusar</button>`;
+    if(d.etapa==='roteiro') h+=`<button class="b" data-act="aprovar-roteiro">Aprovar roteiro</button><button class="b ghost" data-act="mudar">Pedir mudança</button>`;
+    if(d.etapa==='thumb') h+=`<button class="b" data-act="escolher" ${openDrawer.pick?'':'disabled'}>Confirmar thumb ${openDrawer.pick||''}</button><button class="b ghost" data-act="mudar">Pedir outras opções</button>`;
+    if(d.etapa==='execucao') h+=`<button class="b" data-act="executar">Aprovar execução</button><button class="b ghost" data-act="mudar">Segurar e comentar</button>`;
+    h+=`</div><span class="note">A voz do ElevenLabs só é gerada depois de "Aprovar execução".</span></div>`;
+  } else if(d.etapa!=='entregue'&&d.etapa!=='recusado'){
+    h+=`<div class="sec"><span class="note">Está comigo agora${d.estado?': '+esc(d.estado):''}. Quando precisar de você, o cartão vai para "Sua vez".</span></div>`;
+  }
+  if(d.etapa==='recusado') h+=`<div class="acts"><button class="b ghost" data-act="reabrir">Voltar para a pauta</button></div>`;
+  if(d.historico&&d.historico.length) h+=`<div class="sec"><h2>Histórico</h2><ul class="log">${d.historico.slice().reverse().map(x=>`<li>${dataBr(x.em)} · <b>${esc(x.quem)}</b> · ${esc(x.txt)}</li>`).join('')}</ul></div>`;
+  dr.innerHTML=h; dr.hidden=false; $('#scrim').hidden=false;
+  if(!refresh) $('#d-x').focus();
+}
+function closeDrawer(){aberto=null;openDrawer.pick=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
+
+async function agir(act){
+  const d=docs.find(x=>x.id===aberto); if(!d||!db) return;
+  const nota=($('#d-note')?.value||'').trim();
+  let up=null, msg='';
+  if(act==='aceitar'){up={etapa:'roteiro',vez:'claude',estado:'Pesquisando e escrevendo'};msg='Tema aceito'}
+  if(act==='recusar'){up={etapa:'recusado',vez:'claude'};msg='Tema recusado'}
+  if(act==='reabrir'){up={etapa:'pauta',vez:'dono'};msg='Tema de volta na pauta'}
+  if(act==='aprovar-roteiro'){up={etapa:'thumb',vez:'claude',estado:'Fazendo as 3 thumbs'};msg='Roteiro aprovado'}
+  if(act==='escolher'){if(!openDrawer.pick)return;up={etapa:'execucao',vez:'dono',thumbEscolhida:openDrawer.pick};msg='Thumb '+openDrawer.pick+' escolhida'}
+  if(act==='executar'){up={etapa:'producao',vez:'claude',estado:'Na fila de produção'};msg='Execução aprovada'}
+  if(act==='mudar'){if(!nota){toast('Escreva o que mudar no comentário');$('#d-note').focus();return}up={vez:'claude',estado:'Ajustando o que você pediu'};msg='Pedido de mudança enviado'}
+  if(!up) return;
+  const hist=(d.historico||[]).slice(-40);
+  hist.push({em:agora(),quem:'Você',txt:msg+(nota?': '+nota:'')});
+  up.historico=hist; up.pedido=nota||null; up.atualizado=agora();
+  document.querySelectorAll('#drawer button.b').forEach(b=>b.disabled=true);
+  try{await db.doc('videos/'+d.id).update(up);toast(msg+'. Me avise no chat.');openDrawer.pick=null;const n=$('#d-note');if(n)n.value=''}
+  catch(e){toast('Não salvou: '+(e&&e.message||'sem permissão de escrita')+'. Tente de novo.');document.querySelectorAll('#drawer button.b').forEach(b=>b.disabled=false)}
+}
+
+document.addEventListener('click',e=>{
+  const c=e.target.closest('[data-id]'); if(c){openDrawer(c.dataset.id);return}
+  const p=e.target.closest('[data-pick]'); if(p&&!p.disabled){openDrawer.pick=p.dataset.pick;openDrawer(aberto,true);return}
+  const a=e.target.closest('[data-act]'); if(a){agir(a.dataset.act);return}
+  if(e.target.id==='d-x'||e.target.id==='scrim') closeDrawer();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&aberto)closeDrawer()});
+$('#newp').addEventListener('submit',async e=>{
+  e.preventDefault(); const v=$('#newp-t').value.trim(); if(!v) return;
+  if(!db){toast('Sem conexão com a esteira agora');return}
+  try{await db.collection('videos').add({titulo:v,etapa:'pauta',vez:'claude',estado:'Vou pesquisar este tema',origem:'dono',ordem:900,
+      historico:[{em:agora(),quem:'Você',txt:'Sugeriu o tema'}],atualizado:agora()});
+    $('#newp-t').value='';toast('Tema na pauta. Eu pesquiso e trago o gancho.')}
+  catch(err){toast('Não salvou: '+(err&&err.message||'erro')+'.')}
+});
+
+render();
+(async()=>{
+  db=await window.claude?.use?.('db');
+  if(!db){carregou=true;$('#status').textContent='A esteira só abre dentro do claude.ai, conectado à sua conta.';$('#status').classList.add('warn');render();return}
+  const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
+  db.collection('videos').onSnapshot(s=>{
+    docs=s.docs.map(x=>({id:x.id,...x.data()})); carregou=true;
+    if(!s.metadata.fromCache){clearTimeout(timer);$('#status').classList.remove('warn')}
+    render();
+  },err=>{clearTimeout(timer);carregou=true;$('#status').textContent='Não consegui ler a esteira ('+(err&&err.code||'erro')+').';$('#status').classList.add('warn');render()});
+})();
+</script>

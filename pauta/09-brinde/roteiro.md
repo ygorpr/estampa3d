@@ -1,4 +1,4 @@
-# Por que a gente brinda? — roteiro v3 (história + Brasil) — AGUARDANDO APROVAÇÃO DO ROTEIRO
+# Por que a gente brinda? — roteiro v3 (história + Brasil) — ROTEIRO APROVADO PELO DONO em 20/11/2026 ("Os 4 estão aprovados")
 Thumb escolhida: A "POR QUE A GENTE / BRINDA?". ~3 min 15 s. Cenário: bar aconchegante. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 
 ## Pronúncia (na voz vai escrito como se fala; a legenda mostra a grafia certa)

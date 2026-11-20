@@ -6,7 +6,7 @@
 7. champanhe-no-fundo-do-mar.mp4 · 8. vinho-mais-antigo-do-mundo.mp4 (cada um com thumb-*.jpg)
 - O dono disse: "os vídeos que passaram" ficam como estão (não refazer o "viúva Clicquot" dos vídeos 6/7).
 
-## Aguardando APROVAÇÃO DO ROTEIRO (voz só depois do "aprovado")
+## ROTEIROS 9–12 APROVADOS pelo dono em 20/11/2026 ("Os 4 estão aprovados ... vamos fazer os 4 vídeos já") — em produção
 - 09-brinde (thumb A escolhida) · 10-tinto-branco = "De onde vem a cor do vinho?" no LABORATÓRIO (thumb C; refazer a thumb com fundo de laboratório)
 - 11-rolha-restaurante = "Cheirar a rolha é erro?" na mesa do restaurante (thumb B) · 12-sommelier (fazer 3 opções de thumb após aprovar)
 - Thumbs prontas: videos/thumb-por-que-brindamos.jpg, thumb-cor-do-vinho.jpg, thumb-cheirar-a-rolha.jpg

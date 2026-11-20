@@ -1,4 +1,4 @@
-# De onde vem a palavra sommelier? — roteiro v1 — AGUARDANDO APROVAÇÃO DO ROTEIRO (thumbs: depois da aprovação, 3 opções)
+# De onde vem a palavra sommelier? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 ("Os 4 estão aprovados") (thumbs: depois da aprovação, 3 opções)
 ~3 min 20 s. Cenários: castelo medieval / corte do rei da França + restaurante moderno no fim. Personagens extras detalhados: burro de carga com cestos, oficial medieval. Fontes: pesquisa.md.
 
 ## Pronúncia (na voz vai escrito como se fala; a legenda mostra a grafia certa)
