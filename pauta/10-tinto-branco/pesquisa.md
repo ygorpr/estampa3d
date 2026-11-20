@@ -9,3 +9,8 @@
 | Blanc de noirs: branco feito de uvas tintas (Pinot Noir/Meunier), mínimo contato com a casca | Decanter — https://www.decanter.com/learn/blanc-de-noirs-champagne-vs-blanc-de-blancs-44916/ |
 | Uma uva tinta pode dar tinto, rosé e branco | Wine Folly — https://winefolly.com/tips/how-one-red-grape-makes-red-rose-white-and-sparkling-wine/ |
 | Dom Pérignon: branco de uva tinta com prensagem suave | já checado no vídeo 6 (GuildSomm) |
+| Casca grossa libera cor mais rápido que casca fina (ex.: Pinot Noir) | Decanter (WSET nível 2) — link acima |
+| Na UE, rosé (vinho sem DOP/IGP) não pode ser mistura de vinho tinto e branco prontos; champanhe rosé é a exceção famosa (~15% de tinto) | GuildSomm — https://www.guildsomm.com/public_content/features/articles/b/elizabeth-gabay/posts/white-grapes-in-rose ; Jancis Robinson — https://www.jancisrobinson.com/articles/rose-champagne-the-missing-ingredient |
+| Vinho laranja = branco fermentado com as cascas; Geórgia, em qvevri (potes de barro enterrados), até 6 meses de contato | Wine Folly — https://winefolly.com/deep-dive/orange-wine/ ; Decanter — https://www.decanter.com/wine/from-qvevri-to-glass-the-fascinating-journey-of-georgian-orange-wine-570301/ |
+| Tinto vai de roxo a cor de tijolo com a idade; branco escurece (dourado) | estudo PMC — https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6269080/ ; Jancis Robinson — https://www.jancisrobinson.com/articles/what-happens-wine-it-ages |
+| Antocianinas também dão cor ao mirtilo e ao repolho roxo (mudam com a acidez) | Britannica (anthocyanin) — checar link antes da voz; Wine Folly (pH e cor) |

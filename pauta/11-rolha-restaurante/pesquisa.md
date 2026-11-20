@@ -7,3 +7,5 @@
 | A prova serve para checar defeitos (TCA, etc.), não preferência | Wine Spectator — https://www.winespectator.com/articles/what-s-the-proper-etiquette-when-a-waiter-pours-you-a-small-taste-of-wine |
 | Gosto de rolha (TCA): papelão molhado/mofo; pode pedir outra | Wine Spectator; Decanter |
 | Rolha seca/esfarelando: pode vir de garrafa em pé/lugar seco; não prova que o vinho estragou, mas é mau sinal; vinho vazando até o topo: geralmente calor (vinho "cozido") ou rolha frouxa — prove antes de decidir | Wine Spectator — https://www.winespectator.com/articles/why-do-some-corks-crumble-56404 ; https://www.winespectator.com/articles/is-a-bottle-of-wine-ruined-if-the-wine-has-seeped-through-the-cork |
+| "Sommelier": do francês antigo, quem cuidava dos animais de carga/provisões; depois, das provisões da adega (vinho) | Merriam-Webster — https://www.merriam-webster.com/dictionary/sommelier ; Wiktionary — https://en.wiktionary.org/wiki/sommelier ; A Way with Words |
+| Nova Zelândia: ~90% dos vinhos com tampa de rosca; adoção para fugir do gosto de rolha | New Zealand Wine (órgão oficial) — https://www.nzwine.com/en/media/story/innovation/ ; Wine Spectator |
