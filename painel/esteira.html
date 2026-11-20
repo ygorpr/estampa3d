@@ -384,7 +384,12 @@ const LOOK={
   producao:{pele:'#E6BF98',cabelo:'#7A7A7A',terno:'#5E1428',gravata:'#F3E6C8',tipo:'fone'},
   anima:{pele:'#F1CFAE',cabelo:'#B5651D',terno:'#22313F',gravata:'#D4A24C',tipo:'cacho'},
   render:{pele:'#A86F4C',cabelo:'#1F1F1F',terno:'#3B2F2F',gravata:'#8E1B3A',tipo:'oculos'},
-  gerente:{pele:'#DDB08A',cabelo:'#3A2A1E',terno:'#140509',gravata:'#D4A24C',tipo:'coque'}
+  gerente:{pele:'#DDB08A',cabelo:'#3A2A1E',terno:'#140509',gravata:'#D4A24C',tipo:'coque'},
+  pedro:{pele:'#C68A5E',cabelo:'#2A1A10',terno:'#2C3E50',gravata:'#8E1B3A',tipo:'liso'},
+  julia:{pele:'#F0C9A8',cabelo:'#6B3E1F',terno:'#4A1426',gravata:'#F2D27A',tipo:'cacho'},
+  checador:{pele:'#9C6644',cabelo:'#D9D9D9',terno:'#1E3A31',gravata:'#D4A24C',tipo:'oculos'},
+  youtube:{pele:'#EBC6A4',cabelo:'#8B1E1E',terno:'#2C0B15',gravata:'#F3E6C8',tipo:'coque'},
+  shorts:{pele:'#B07A52',cabelo:'#0F0F0F',terno:'#3A3A3A',gravata:'#D4A24C',tipo:'fone'}
 };
 function boneco(k){const L=LOOK[k]||LOOK.pauta;
   const cab=L.tipo==='coque'?`<circle cx="50" cy="20" r="9" fill="${L.cabelo}"/><path d="M30 40c0-14 9-22 20-22s20 8 20 22c-3-6-10-10-20-10s-17 4-20 10z" fill="${L.cabelo}"/>`
