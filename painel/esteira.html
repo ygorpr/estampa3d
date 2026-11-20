@@ -26,6 +26,17 @@ header.top p{margin:4px 0 0;color:var(--muted);font-style:italic}
 .tally{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
 .tally b{display:block;font-family:var(--f-display);font-size:26px;color:var(--cream);font-variant-numeric:tabular-nums}
 .tally .hot b{color:var(--gold2)}
+.tally .sep{width:1px;background:var(--line);align-self:stretch}
+.tally button.kpi{background:none;border:0;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.tally button.kpi:hover b,.tally button.kpi:focus-visible b{color:var(--gold2)}
+.tally small{display:block;font-size:11px;color:var(--muted)}
+.cfg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cfg label{display:flex;flex-direction:column;gap:4px;font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.cfg input{background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:16px;padding:8px;border-radius:4px}
+table.custo{border-collapse:collapse;width:100%;font-size:16px}
+table.custo td,table.custo th{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left}
+table.custo td.n{text-align:right;font-variant-numeric:tabular-nums}
+table.custo th{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-weight:500}
 .note{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
 .note.warn{color:var(--candle)}
 .sec{display:flex;flex-direction:column;gap:10px}
@@ -169,6 +180,10 @@ const ETAPAS=[
 const ORD=ETAPAS.map(e=>e.k);
 const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escolha a thumb e libere o vídeo',revisao:'Assista e aprove o vídeo'};
 let db=null, cm=null, docs=[], aberto=null, carregou=false, arrastando=false, sortables=[];
+let CUSTO={usdPor1000:0.22,cotacao:5.4,plano:'ElevenLabs Creator (estimado)'};
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const mmss=s=>Math.floor(s/60)+' min '+String(Math.round(s%60)).padStart(2,'0')+' s';
+const custoVoz=c=>c*CUSTO.usdPor1000/1000*CUSTO.cotacao;
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const agora=()=>new Date().toISOString();
@@ -207,7 +222,12 @@ function render(){
   const ativos=docs.filter(d=>d.etapa!=='recusado');
   const vez=ativos.filter(d=>d.vez==='dono'&&PEDE[d.etapa]).sort((a,b)=>ORD.indexOf(b.etapa)-ORD.indexOf(a.etapa)||(a.ordem??a.num??999)-(b.ordem??b.num??999));
   const cnt=k=>ativos.filter(d=>d.etapa===k).length;
-  $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('entregue')}</b>entregues</div>`;
+  const comT=docs.filter(d=>d.duracaoSeg>0), comC=docs.filter(d=>d.creditosVoz>0);
+  const tMed=comT.length?comT.reduce((a,d)=>a+d.duracaoSeg,0)/comT.length:0;
+  const cMed=comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0;
+  $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><span class="sep" aria-hidden="true"></span>`+
+    `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio<small>${comT.length} vídeos prontos</small></div>`+
+    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>voz + música + efeitos · ver detalhes</small></button>`;
   const y=$('#yours');
   if(!carregou) y.innerHTML='<div class="empty">Carregando a esteira…</div>';
   else if(!docs.length) y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas pesquisados; você também pode mandar um tema logo abaixo.</div>';
@@ -228,7 +248,7 @@ function render(){
   })));
   const rec=docs.filter(d=>d.etapa==='recusado').length;
   if(carregou&&!$('#status').classList.contains('warn')) $('#status').textContent=rec?`${rec} tema(s) em Recusados. Arraste de volta para a Pauta se mudar de ideia.`:'';
-  if(aberto) openDrawer(aberto,true);
+  if(aberto&&aberto!=='__custos') openDrawer(aberto,true);
 }
 function rowHtml(d){
   let a='';
@@ -290,6 +310,7 @@ function openDrawer(id,refresh,mudar){
       ${pode?'<span class="note">Escreva no campo abaixo o que você quer no vídeo (opcional) e clique na letra: isso já libera a voz e a produção.</span>':''}</div>`;
   }
   if(d.thumbImg&&!d.thumbOpcoesImg) h+=`<div class="sec"><h2 class="s">Thumb</h2><img class="sheet" src="${esc(d.thumbImg)}" alt="Thumbnail do vídeo"></div>`;
+  if(d.duracaoSeg||d.creditosVoz) h+=`<div class="sec"><h2 class="s">Números</h2><div>${d.duracaoSeg?'Duração: '+mmss(d.duracaoSeg):''}${d.duracaoSeg&&d.creditosVoz?' · ':''}${d.creditosVoz?'Voz: '+d.creditosVoz.toLocaleString('pt-BR')+' créditos ≈ '+brl(custoVoz(d.creditosVoz)):''}</div></div>`;
   if(d.previa) h+=`<div class="sec"><h2 class="s">Assista ao vídeo${d.duracao?' · '+esc(d.duracao):''}</h2><video class="sheet" controls preload="metadata" playsinline src="${esc(d.previa)}"${d.thumbImg?` poster="${esc(d.thumbImg)}"`:''}></video><span class="note">Prévia em qualidade menor para assistir aqui. O arquivo final em alta está na conversa e em ${esc(d.video||'videos/')}.</span></div>`;
   else if(d.video) h+=`<div class="sec"><h2 class="s">Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
   if(d.obs) h+=`<div class="sec"><h2 class="s">Recado meu</h2><div>${esc(d.obs)}</div></div>`;
@@ -305,6 +326,25 @@ function openDrawer(id,refresh,mudar){
   if(d.historico&&d.historico.length) h+=`<div class="sec"><h2 class="s">Histórico</h2><ul class="log">${d.historico.slice().reverse().map(x=>`<li>${dataBr(x.em)} · <b>${esc(x.quem)}</b> · ${esc(x.txt)}</li>`).join('')}</ul></div>`;
   dr.innerHTML=h; dr.hidden=false; $('#scrim').hidden=false;
   if(!refresh){ if(mudar) $('#d-note')?.focus(); else $('#d-x').focus(); }
+}
+function abrirCustos(){
+  aberto='__custos'; const comC=docs.filter(d=>d.creditosVoz>0).sort((a,b)=>(a.num||0)-(b.num||0));
+  const tot=comC.reduce((a,d)=>a+custoVoz(d.creditosVoz),0);
+  let h=`<div class="dtop"><div><span class="note">Painel</span><h3 id="d-title">Custo por vídeo</h3></div><button class="x" id="d-x" aria-label="Fechar">×</button></div>
+  <div class="sec"><h2 class="s">Como é calculado</h2><div><b>Narração (ElevenLabs):</b> 1 crédito por caractere do texto falado (com as marcações de emoção). É o único custo que muda de vídeo para vídeo.</div>
+  <div><b>Música (jazz) e efeitos:</b> gerados por programa aqui mesmo: R$ 0,00.</div><div><b>Animação e render:</b> feitos nesta sessão: R$ 0,00 a mais.</div>
+  <div class="note">A assinatura do Claude é fixa por mês e não entra na conta por vídeo. Amostras de voz e refações também gastam créditos e não estão somadas aqui.</div></div>
+  <div class="sec"><h2 class="s">Seu plano (ajuste se for diferente)</h2><div class="cfg"><label for="cfg-usd">US$ por 1.000 créditos<input id="cfg-usd" type="number" step="0.01" min="0" value="${CUSTO.usdPor1000}"></label><label for="cfg-cot">Cotação do dólar (R$)<input id="cfg-cot" type="number" step="0.01" min="0" value="${CUSTO.cotacao}"></label></div>
+  <span class="note">Padrão: plano Creator, US$ 22 por 100 mil créditos = US$ 0,22 por mil. Confira o seu plano no site do ElevenLabs.</span><div class="acts"><button class="b" type="button" data-salvar-custo="1">Salvar valores</button></div></div>
+  <div class="sec"><h2 class="s">Por vídeo</h2><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Vídeo</th><th>Duração</th><th>Créditos</th><th>Custo</th></tr></thead><tbody>${comC.map(d=>`<tr><td>${d.num?d.num+'. ':''}${esc(d.titulo)}</td><td class="n">${d.duracaoSeg?mmss(d.duracaoSeg):'—'}</td><td class="n">${d.creditosVoz.toLocaleString('pt-BR')}</td><td class="n">${brl(custoVoz(d.creditosVoz))}</td></tr>`).join('')}</tbody></table></div>
+  <span class="note">Total destes ${comC.length} vídeos: ${brl(tot)}.</span></div>`;
+  $('#drawer').innerHTML=h; $('#drawer').hidden=false; $('#scrim').hidden=false; $('#d-x').focus();
+}
+async function salvarCusto(){
+  const u=parseFloat($('#cfg-usd').value), c=parseFloat($('#cfg-cot').value);
+  if(!(u>=0)||!(c>0)){toast('Confira os números.');return}
+  CUSTO={...CUSTO,usdPor1000:u,cotacao:c}; render(); abrirCustos();
+  if(db){try{await db.doc('config/custos').set({...CUSTO,atualizado:agora()});toast('Valores salvos.')}catch(e){toast('Não salvou: '+(e&&e.message||'erro'))}}
 }
 function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
 
@@ -333,8 +373,10 @@ async function agir(act,id,pick){
 }
 
 document.addEventListener('click',e=>{
+  if(e.target.closest('[data-salvar-custo]')){salvarCusto();return}
   const a=e.target.closest('[data-act]'); if(a&&!a.disabled){agir(a.dataset.act,a.dataset.for,a.dataset.pick);return}
   const o=e.target.closest('[data-open]'); if(o){openDrawer(o.dataset.open,false,!!o.dataset.mudar);return}
+  if(e.target.closest('#kpi-custo')){abrirCustos();return}
   if(e.target.id==='d-x'||e.target.id==='scrim') closeDrawer();
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&aberto)closeDrawer()});
@@ -353,6 +395,7 @@ render(); pintarAviso();
   db=dbx; cm=cmx; checarAviso(); setInterval(checarAviso,60000);
   if(!db){carregou=true;$('#status').textContent='A esteira só abre dentro do claude.ai, conectado à sua conta.';$('#status').classList.add('warn');render();return}
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
+  db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{
     docs=s.docs.map(x=>({id:x.id,...x.data()})); carregou=true;
     if(!s.metadata.fromCache){clearTimeout(timer);$('#status').classList.remove('warn')}

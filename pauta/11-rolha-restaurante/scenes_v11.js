@@ -170,6 +170,7 @@ const SC=[null,
   chip(g,1340,770,'FOGE DO GOSTO DE ROLHA',ap(t,18,'fugir'))},.62),
  (t,c,s)=>finalTable(t,s),
  (t,c,s)=>ctaScene(t,c,s),
+ (t,c,s)=>toastScene(t,c,s),
  null];
 function finalTable(t,s){veil(null,t,restaurant,.8);const g=layer('g',null);goldText(g,'A ROLHA NO RESTAURANTE',960,130,64);ornament(g,960,205,600);blit(ctx,L.g,0,seg(t,T[s],T[s]+.5));
  const C=[['brand','ROLHA MARCADA','garrafa original','prova'],['wet','ÚMIDA','bem guardada','guardada'],['sniff','CHEIRAR','quase não ajuda','cheirar'],['tca','PAPELÃO MOLHADO','peça outra','defeito'],['crumb','FARELO','não é defeito','gosto']];
@@ -177,23 +178,29 @@ function finalTable(t,s){veil(null,t,restaurant,.8);const g=layer('g',null);gold
   if(ic=='brand')corkH(c,cx,560,220,84,{wet:1,brand:'CHÂTEAU',year:'1870'});else if(ic=='wet')corkH(c,cx,560,220,84,{wet:1});
   else if(ic=='sniff'){corkH(c,cx,600,200,74,{wet:1});c.strokeStyle='rgba(243,230,200,.6)';c.lineWidth=4;for(const k of [-1,0,1]){c.beginPath();c.moveTo(cx+k*40,540);c.quadraticCurveTo(cx+k*40-14,500,cx+k*40,460);c.stroke()}}
   else if(ic=='tca'){cloud(c,cx,560,'rgba(120,120,128,.85)','');goldText(c,'TCA',cx,565,48,'Cinzel',900)}else{glassW(c,cx,690,1.1,.4,CEL.wine);c.fillStyle='#C99A5B';c.beginPath();c.ellipse(cx-6,690-1.1*178*.4-40,7,4,0,0,7);c.fill()}
-  goldText(c,n,cx,768,Math.min(34,Math.floor(290/(.8*n.length))),'Cinzel',700);blit(ctx,L['c'+i],0,seg(t,ta,ta+.45));serif(d,cx,822,32,`rgba(243,230,200,${seg(t,ta,ta+.45)})`)})}
+  goldText(c,n,cx,768,Math.min(34,Math.floor(290/(.8*n.length))),'Cinzel',700);blit(ctx,L['c'+i],0,easeIO(seg(t,ta,ta+.8)));serif(d,cx,822,32,`rgba(243,230,200,${easeIO(seg(t,ta,ta+.8))})`)})}
 function ctaScene(t,cam,s){mesa(t,cam,s,{hands:t=>{const t0=T[s],u=easeIO(seg(t,t0+.2,t0+.7))*(1-easeIO(seg(t,t0+2.4,t0+2.9)));return {l:REST.l,r:[[lerp(1086,1150,u),lerp(706,560,u)],lerp(50,80,u)],ro:u>.5}},
   rHold:true,bottle:false,props:(f)=>bottleS(f,[1100,815],1,'red'),face:t=>({mouth:.75,brow:.5,look:-.05})});
  const a=easeIO(seg(t,T[s]+.4,T[s]+1)),g=layer('g',null);g.save();g.globalAlpha=a;g.fillStyle='#B0122E';g.beginPath();g.roundRect(120,120,520,110,55);g.fill();g.strokeStyle=GOLD2;g.lineWidth=5;g.stroke();g.restore();
  g.save();g.globalAlpha=a;goldText(g,'INSCREVA-SE',380,176,52,'Cinzel',900);g.restore();chip(g,380,300,'QUAL CURIOSIDADE?',ap(t,20,'curiosidade'));blit(ctx,L.g,0);
  if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=a;ctx.drawImage(LOGO,1640,40,230,220);ctx.restore()}}
-const TALKS=[1,5,6,10,12,15,20],FINAL=21,TABLE=19;
+// fechamento (sem fala/legenda): o Sommelier ergue a taça pela haste num brinde; câmera aproxima, música sobe
+function toastScene(t,cam,s){const t0=T[s],u=easeIO(seg(t,t0+.2,t0+1.1)),k=Math.sin(Math.PI*seg(t,t0+1.25,t0+1.75));
+ mesa(t,cam,s,{noTalk:true,glassOn:false,
+  hands:t=>({l:[[lerp(840,755,u)+k*14,lerp(780,615,u)-k*10],lerp(70,135,u)+k*20],r:[[1086,706],50]}),
+  held:(f,hl,hr)=>glassW(f,hl[0],hl[1]+42,1+.1*u,.35,CEL.wine),
+  face:t=>({look:-.05,lookY:-.05,brow:.6,mouth:.85,tilt:-.04*u})})}
+const TALKS=[1,5,6,10,12,15,20],FINAL=22,TABLE=19,TOAST=21;
 FILM={dur:T[T.length-1],cuts:T.map(v=>Math.round(v*30)),fadeIn:0,fadeOut:.8,warm(){return .4},
- cam(s,u,t){if(TALKS.includes(s)){if([5,12,15].includes(s))return {x:lerp(960,975,u),y:lerp(560,550,u),z:lerp(1.0,1.07,easeIO(u)),b:[6,0,0]};const k=TALKS.indexOf(s)%3;return [{x:lerp(950,975,u),y:lerp(560,545,u),z:lerp(1.18,1.28,easeIO(u)),b:[6,0,0]},{x:lerp(970,985,u),y:lerp(545,520,u),z:lerp(1.3,1.45,easeIO(u)),b:[8,0,0]},{x:lerp(1000,985,u),y:550,z:lerp(1.22,1.32,u),b:[7,0,0]}][k]}return {x:960,y:540,z:1,b:[10,0,0]}},
+ cam(s,u,t){if(TALKS.includes(s)){if([5,12,15].includes(s))return {x:lerp(960,975,u),y:lerp(560,550,u),z:lerp(1.0,1.07,easeIO(u)),b:[6,0,0]};const k=TALKS.indexOf(s)%3;return [{x:lerp(950,975,u),y:lerp(560,545,u),z:lerp(1.18,1.28,easeIO(u)),b:[6,0,0]},{x:lerp(970,985,u),y:lerp(545,520,u),z:lerp(1.3,1.45,easeIO(u)),b:[8,0,0]},{x:lerp(1000,985,u),y:550,z:lerp(1.22,1.32,u),b:[7,0,0]}][k]}if(s==TOAST)return {x:lerp(975,965,u),y:lerp(545,560,u),z:lerp(1.28,1.5,easeIO(u)),b:[6,0,0]};return {x:960,y:540,z:1,b:[10,0,0]}},
  draw(t,cam,s,u){if(s==0){thumbFrame(t);return}if(s==FINAL){photo(IMG.logo,t,T[FINAL],T[FINAL+1],1,1.05);return}SC[s](t,cam,s)},
  plants(){return {}}};
-(function(){const DISS={1:.6},xf=mk(),xz=mk(),CARD=[2,3,4,7,8,9,11,13,14,16,17,18,19],draw0=FILM.draw,cam0=FILM.cam;for(let s=2;s<=FINAL;s++)DISS[s]=.45;
+(function(){const DISS={1:.6},xf=mk(),xz=mk(),CARD=[2,3,4,7,8,9,11,13,14,16,17,18],draw0=FILM.draw,cam0=FILM.cam;for(let s=2;s<=FINAL;s++)DISS[s]=.45;
  FILM.draw=(t,c,s,u)=>{const d=DISS[s],a=d?1-easeIO(seg(t,T[s],T[s]+d)):0;if(a>0){draw0(t,cam0(s-1,1,t),s-1,1);const x=xf.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0)}
   draw0(t,c,s,u);if(CARD.includes(s)){const k=1+.035*easeIO(u),x=xz.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0);ctx.save();ctx.setTransform(k,0,0,k,W/2*(1-k),H/2*(1-k));ctx.drawImage(xz,0,0);ctx.restore()}
-  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=FINAL)watermark();if(s!=TABLE&&s!=FINAL)karaoke(t)}})();
+  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=FINAL)watermark();if(s!=TABLE&&s!=TOAST&&s!=FINAL)karaoke(t)}})();
 // som
-for(let s=1;s<FINAL;s++)say(T[s],'whoosh');
+for(let s=1;s<FINAL;s++)if(s!=TOAST)say(T[s],'whoosh');say(T[TOAST]+1.45,'clink');
 for(const [i,w] of [[2,'sumia'],[3,'gravar'],[3,'identidade'],[5,'provava'],[7,'firme'],[8,'alerta'],[9,'calor'],[11,'ajuda'],[13,'defeito'],[14,'trilhão'],[16,'tira'],[17,'cogumelo'],[18,'noventa']])say(wt(i,w),'tag');
 say(wt(4,'tampasse'),'corkin');say(wt(12,'serve'),'pour');say(wt(14,'papelão'),'yuck');say(wt(15,'outra'),'bottledown');say(wt(17,'sai'),'pop');say(T[10]+.6,'sniff');
 for(const w of ['prova','guardada','cheirar','defeito','gosto'])say(wt(19,w)-.15,'line');

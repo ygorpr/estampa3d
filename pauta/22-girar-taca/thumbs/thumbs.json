@@ -1,0 +1,17 @@
+{
+ "A": "POR QUE A GENTE / GIRA O VINHO?",
+ "B": "GIRAR A TAÇA / É FRESCURA?",
+ "C": "O VINHO FAZ / UMA ONDA!",
+ "recomendada": "B",
+ "porque": "Texto à direita (o formato que o dono costuma escolher), frase curta e grande que diz o assunto e repete a pergunta da abertura ('É frescura... ou tem motivo?'); o rosto sorrindo de canto é o ponto focal e a taça girando, com o vinho em onda dentro do bojo, fica entre o rosto e o texto.",
+ "tituloYouTube": {
+  "A": "Por que a gente gira o vinho na taça? A física por trás do gesto",
+  "B": "Girar a taça é frescura? A onda que solta o aroma do vinho",
+  "C": "O vinho faz uma onda! O que acontece quando você gira a taça"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à esquerda"
+ }
+}

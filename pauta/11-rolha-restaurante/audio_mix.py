@@ -32,9 +32,14 @@ if SFX:
         elif k == "pour": m.nb(t, 400, 2200, 1.3, .1, .4, .1, .2); m.sfx("impactglass-light-001", t + .1, 1.4, 4000, .06, .2)
         elif k == "pop": m.nb(t, 300, 2500, .06, .002, .05, .5, .1); m.sfx("impactsoft-medium-001", t, 1.6, 4000, .2, .1)
         elif k == "sniff": m.nb(t, 1500, 6000, .45, .1, .2, .05, .1)
+        elif k == "clink": m.sfx("impactglass-light-003", t, 1.5, 6000, .22, .1, .4); m.sfx("impactglass-light-002", t + .03, 1.9, 7000, .1, -.1, .4)
         elif k == "line": m.sfx("impactglass-light-002", t, 1.0, 5000, .08, 0, .35)
 if MUSIC:
     m.music_file("jazz.wav", gain_db=-15)
+    # fechamento: a música sobe no brinde (+5 dB) e volta a ficar embaixo da voz do logo
+    TOAST, LOGO_T = 182.6, 185.8
+    up = m.curve([(0, 1), (TOAST, 1), (TOAST + 1.0, 1.78), (LOGO_T - .1, 1.78), (LOGO_T + .4, 1.15), (info["dur"], 1.15)])
+    m.mus[0] *= up; m.mus[1] *= up
 if VOICE:
     st = json.load(open("vo/starts.json"))
     for i, at in enumerate(st):
