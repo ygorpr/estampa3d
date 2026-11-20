@@ -1,0 +1,68 @@
+{
+ "roteiro": [
+  "Pode colocar gelo no vinho? Ou isso é crime? Fica comigo, que a resposta vai te surpreender!",
+  "Na França, existe até nome pra isso: \"piscine\", que quer dizer piscina! É o espumante, o vinho com gás, servido com gelo numa taça grandona.",
+  "Erro ou tradição? E por que a tal \"temperatura ambiente\" do vinho tinto era bem mais fria antigamente? Vamos por partes!",
+  "Primeiro: misturar coisa no vinho é antigo! Os gregos quase nunca bebiam vinho puro: misturavam com água, num vaso grande chamado cratera.",
+  "E os romanos ricos iam além: compravam neve das montanhas pra gelar a bebida. O imperador Nero fervia a água e gelava num vaso enterrado na neve!",
+  "E o filósofo Sêneca achava isso um luxo absurdo! Gastar fortunas... com neve!",
+  "Agora, pula pra Espanha. No calor de Córdoba, um dono de pousada misturou vinho tinto com refrigerante e gelo. Nasceu o \"tinto de verano\": o tinto de verão!",
+  "E no País Basco, conta a história que, numa festa de 1972, o vinho estava ruim... e salvaram tudo com Coca-Cola! Virou o \"kalimotxo\".",
+  "E a piscine? Ela vem das praias de Saint-Tropez, no sul da França. Dizem que o pessoal já bebia assim nos anos sessenta, no calorão do verão.",
+  "Até que, em 2011, a Moët, uma das casas de champanhe mais famosas do mundo, lançou um champanhe feito pra beber com gelo! Três pedras, taça grande.",
+  "E sabe o segredo? Ele é mais docinho de propósito. Porque o gelo derrete... e dilui: ou seja, mistura água no vinho.",
+  "Quanto? Faz a conta comigo: pra gelar uma taça de vinho quente, uns vinte gramas de gelo derretem. É mais de dez por cento de água no seu copo!",
+  "E o frio ainda \"fecha\" o vinho: o aroma, que é o cheiro da bebida, quase não sobe do copo gelado. E o tinto gelado demais fica amargo e áspero!",
+  "E a tal temperatura ambiente? Em francês, é o vinho \"chambré\": deixado na temperatura da \"chambre\", o cômodo da casa.",
+  "Só que essa regra nasceu numa Europa sem aquecedor. A sala de jantar ficava entre treze e dezoito graus!",
+  "E aqui no verão do Brasil? A sala passa dos trinta graus! Tinto a trinta graus? O álcool aparece, e o vinho fica pesado e quente na boca.",
+  "Então, anota a temperatura certa: espumante, de seis a dez graus. Branco e rosé, de sete a doze. E o tinto, de quinze a dezoito: mais fresquinho do que a sua sala!",
+  "Quer gelar sem aguar? Coloca uva congelada na taça! Ela esfria e não solta água nenhuma. Ou pedras de aço, que vão no congelador.",
+  "Tá com pressa? Balde com gelo, água e um punhado de sal! O sal deixa a água mais fria que o próprio gelo. Em uns dez minutos, a garrafa tá pronta!",
+  "E o tinto? Quinze minutinhos na geladeira antes de abrir. Simples assim!",
+  "Então, gelo no vinho é crime? Não! Num rosé ou num espumante leve, num dia de praia, tudo bem. Num tinto caro, guardado por anos... aí é desperdício!",
+  "Resumindo: o gelo dilui e fecha o aroma, a temperatura ambiente era a da Europa fria, e a uva congelada salva o seu verão!",
+  "Curtiu? Se inscreve no canal e me conta: você coloca gelo no vinho?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "piscine",
+   "fala": "pi-SSÍN",
+   "fonte": "francês /pi.sin/ (Wiktionary \"piscine\")"
+  },
+  {
+   "escreve": "Saint-Tropez",
+   "fala": "Sã Tropê",
+   "fonte": "francês [sɛ̃ tʁɔpe] (Wikipedia fr; Merriam-Webster ˌsaⁿ-trȯ-ˈpā)"
+  },
+  {
+   "escreve": "Moët",
+   "fala": "Mo-ét",
+   "fonte": "francês [mɔɛt], o \"t\" se pronuncia (Wikipedia \"Moët & Chandon\"; porta-voz da casa via Mental Floss)"
+  },
+  {
+   "escreve": "chambré",
+   "fala": "xambrê",
+   "fonte": "francês /ʃɑ̃.bʁe/ (Wiktionary \"chambré\")"
+  },
+  {
+   "escreve": "chambre",
+   "fala": "xâmbr",
+   "fonte": "francês /ʃɑ̃bʁ/ (Wiktionary \"chambre\")"
+  },
+  {
+   "escreve": "tinto de verano",
+   "fala": "tinto de beráno",
+   "fonte": "espanhol /ˈtinto ðe βeˈɾano/ (Wiktionary \"verano\")"
+  },
+  {
+   "escreve": "kalimotxo",
+   "fala": "kalimótcho",
+   "fonte": "basco /kalimot͡ʃo/ (Wiktionary \"kalimotxo\")"
+  }
+ ],
+ "duracao": "~3 min 20 s",
+ "obs": "O 'crime' do gelo tem 2 mil anos: o imperador Nero já gelava a bebida com neve, a Moët lançou em 2011 um champanhe feito para gelo (mais doce de propósito, porque o gelo põe mais de 10% de água no copo), e a 'temperatura ambiente' do tinto era a de salas europeias a 13–18 °C, não a de uma sala brasileira a 30 °C.",
+ "fontes": "Decanter (gelo no vinho e temperatura do tinto); Jancis Robinson (Moët Ice Impérial, 2011); Comité Champagne e Wine Folly (temperaturas de serviço); Riedel (temperatura ambiente antes do aquecimento central); Britannica e D. Woods/UCC (cratera grega e a água gelada de Nero)"
+}
