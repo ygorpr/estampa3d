@@ -197,7 +197,8 @@ const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escol
 let db=null, cm=null, docs=[], aberto=null, carregou=false, arrastando=false, sortables=[];
 let CUSTO={usdPor1000:0.22,cotacao:5.4,plano:'ElevenLabs Creator (estimado)',creditosUsadosTotal:0,ledger:[]};
 let EQUIPE=null;
-const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const reais=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const brl=v=>CUSTO.moeda==='BRL'?reais(v):'US$ '+(v/CUSTO.cotacao).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const mmss=s=>Math.floor(s/60)+' min '+String(Math.round(s%60)).padStart(2,'0')+' s';
 const custoVoz=c=>c*CUSTO.usdPor1000/1000*CUSTO.cotacao;
 const $=s=>document.querySelector(s);
@@ -244,7 +245,7 @@ function render(){
   const cMed=CUSTO.creditosUsadosTotal&&nProntos?custoVoz(CUSTO.creditosUsadosTotal)/nProntos:(comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0);
   $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><span class="sep" aria-hidden="true"></span>`+
     `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio<small>${comT.length} vídeos prontos</small></div>`+
-    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>tudo o que já foi gasto ÷ vídeos prontos · ver detalhes</small></button>`;
+    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>${cMed?'≈ '+reais(cMed)+' · ':''}tudo o que já foi gasto ÷ vídeos prontos · ver detalhes</small></button>`;
   const y=$('#yours');
   if(!carregou) y.innerHTML='<div class="empty">Carregando a esteira…</div>';
   else if(!docs.length) y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas pesquisados; você também pode mandar um tema logo abaixo.</div>';
@@ -355,7 +356,7 @@ function abrirCustos(){
   ${CUSTO.creditosUsadosTotal?`<div class="sec"><h2 class="s">Gasto real desde o começo</h2><div><b>${CUSTO.creditosUsadosTotal.toLocaleString('pt-BR')} créditos</b> usados no ElevenLabs ≈ <b>${brl(custoVoz(CUSTO.creditosUsadosTotal))}</b>. Dividido pelos ${docs.filter(d=>d.duracaoSeg>0).length} vídeos prontos = <b>${brl(custoVoz(CUSTO.creditosUsadosTotal)/Math.max(1,docs.filter(d=>d.duracaoSeg>0).length))}</b> por vídeo.</div><span class="note">Inclui tudo: amostras de voz, vídeos refeitos, Shorts, vozes que pararam no meio e o que mais a conta usou.</span></div>`:''}
   ${(CUSTO.ledger||[]).length?`<div class="sec"><h2 class="s">De onde saíram os créditos (estimativa pelos arquivos)</h2><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Item</th><th>Créditos</th></tr></thead><tbody>${CUSTO.ledger.map(l=>`<tr><td>${esc(l.item)}</td><td class="n">${Number(l.creditos).toLocaleString('pt-BR')}</td></tr>`).join('')}<tr><td><b>Soma que eu consigo comprovar</b></td><td class="n"><b>${CUSTO.ledger.reduce((a,l)=>a+Number(l.creditos||0),0).toLocaleString('pt-BR')}</b></td></tr></tbody></table></div><span class="note">${esc(CUSTO.ledgerNota||'')}</span></div>`:''}
   <div class="sec"><h2 class="s">Seu plano (ajuste se for diferente)</h2><div class="cfg"><label for="cfg-usd">US$ por 1.000 créditos<input id="cfg-usd" type="number" step="0.01" min="0" value="${CUSTO.usdPor1000}"></label><label for="cfg-cot">Cotação do dólar (R$)<input id="cfg-cot" type="number" step="0.01" min="0" value="${CUSTO.cotacao}"></label><label for="cfg-tot">Créditos já usados no ElevenLabs (total)<input id="cfg-tot" type="number" step="1000" min="0" value="${CUSTO.creditosUsadosTotal||0}"></label></div>
-  <span class="note">Padrão: plano Creator, US$ 22 por 100 mil créditos = US$ 0,22 por mil. Confira o seu plano no site do ElevenLabs.</span><div class="acts"><button class="b" type="button" data-salvar-custo="1">Salvar valores</button></div></div>
+  <span class="note">Seu plano: Creator, US$ 22 por 121 mil créditos = US$ 0,18 por mil. Os valores aparecem em dólar; a cotação serve só para mostrar o equivalente em reais.</span><div class="acts"><button class="b" type="button" data-salvar-custo="1">Salvar valores</button></div></div>
   <div class="sec"><h2 class="s">Por vídeo</h2><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Vídeo</th><th>Duração</th><th>Créditos</th><th>Custo</th></tr></thead><tbody>${comC.map(d=>`<tr><td>${d.num?d.num+'. ':''}${esc(d.titulo)}</td><td class="n">${d.duracaoSeg?mmss(d.duracaoSeg):'—'}</td><td class="n">${d.creditosVoz.toLocaleString('pt-BR')}</td><td class="n">${brl(custoVoz(d.creditosVoz))}</td></tr>`).join('')}</tbody></table></div>
   <span class="note">Total destes ${comC.length} vídeos: ${brl(tot)}.</span></div>`;
   $('#drawer').innerHTML=h; $('#drawer').hidden=false; $('#scrim').hidden=false; $('#d-x').focus();
