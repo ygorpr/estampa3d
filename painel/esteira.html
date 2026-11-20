@@ -3,12 +3,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap">
 <style>
-/* Layout: uma esteira de produção (6 estações em sequência) com a faixa "Sua vez" no topo e uma gaveta lateral de detalhe. Visual único escuro, da marca. */
+/* Layout: faixa "Sua vez" em linhas com botões, depois a esteira de 7 estações (arrastar = decidir) e uma gaveta de detalhe. Visual único escuro, da marca. */
 :root{
   --bg:#140509; --wall:#1F0810; --panel:#2C0B15; --line:#4A1A26;
   --wine:#5E1428; --bordo:#8E1B3A; --gold:#D4A24C; --gold2:#F2D27A;
   --cream:#F3E6C8; --muted:#CDB3A1; --candle:#FFB45E; --bottle:#1E3A31;
-  --ok:#7FB58E; --no:#D9786C;
+  --ok:#9FD3AE; --no:#E88C80; --ink:#2a0a14;
   --f-display:"Cinzel", "Trajan Pro", Georgia, serif;
   --f-body:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --f-ui:"IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
@@ -17,56 +17,69 @@
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--cream);font-family:var(--f-body);font-size:18px;line-height:1.45;
   background-image:radial-gradient(1200px 500px at 50% -200px, #3a0e1c 0%, transparent 70%);}
-.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 60px;max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 60px;max-width:1600px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
 h1,h2,h3{font-family:var(--f-display);color:var(--gold);margin:0;text-wrap:balance;letter-spacing:.04em}
 h1{font-size:clamp(26px,4vw,40px);font-weight:800}
 h2{font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
-.ui{font-family:var(--f-ui)}
-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px}
-header p{margin:4px 0 0;color:var(--muted);font-style:italic}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px}
+header.top p{margin:4px 0 0;color:var(--muted);font-style:italic}
 .tally{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
 .tally b{display:block;font-family:var(--f-display);font-size:26px;color:var(--cream);font-variant-numeric:tabular-nums}
 .tally .hot b{color:var(--gold2)}
 .note{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
 .note.warn{color:var(--candle)}
+.sec{display:flex;flex-direction:column;gap:10px}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.dot.on{background:var(--ok)}
 
-/* Sua vez */
-.yours{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
-.ask{background:linear-gradient(180deg,#3a0f1d,#2a0a14);border:1px solid var(--gold);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:left;color:inherit;font:inherit}
-.ask:hover,.ask:focus-visible{border-color:var(--gold2);outline:none;box-shadow:0 0 0 2px #d4a24c40}
-.ask .what{font-family:var(--f-ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
-.ask .t{font-family:var(--f-display);font-size:17px;color:var(--cream);line-height:1.25}
-.empty{border:1px dashed var(--line);border-radius:6px;padding:18px;color:var(--muted);font-style:italic}
+/* Sua vez: uma linha por decisão */
+.rows{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--wall)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 14px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .what{font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+.row .t{font-family:var(--f-display);font-size:16px;color:var(--cream);line-height:1.25;background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.row .t:hover,.row .t:focus-visible{color:var(--gold2);outline:none;text-decoration:underline}
+.row .g{font-size:16px;color:var(--muted);margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row .acts{flex-wrap:nowrap}
+.row.leaving{opacity:.35;pointer-events:none}
+.empty{padding:18px;color:var(--muted);font-style:italic}
 
 /* Esteira */
 .belt-scroll{overflow-x:auto;padding-bottom:6px}
-.belt{display:grid;grid-template-columns:repeat(6,minmax(230px,1fr));gap:12px;min-width:1440px}
+.belt{display:grid;grid-template-columns:repeat(6,minmax(220px,1fr)) minmax(170px,.7fr);gap:12px;min-width:1560px}
 .station{background:var(--wall);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
-.station>header{border:0;padding:12px 12px 10px;display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.station.rej{background:transparent;border-style:dashed}
+.station>header{padding:12px 12px 10px;display:flex;flex-direction:column;gap:2px}
 .station .step{font-family:var(--f-ui);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 .station h3{font-size:15px}
 .station .who{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
-.cards{display:flex;flex-direction:column;gap:8px;padding:0 10px 12px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:6px;cursor:pointer;color:inherit;font:inherit;text-align:left;width:100%}
+.cards{display:flex;flex-direction:column;gap:8px;padding:0 10px 12px;min-height:90px;flex:1}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:6px;cursor:grab;color:inherit;font:inherit;text-align:left;width:100%;touch-action:manipulation}
 .card:hover,.card:focus-visible{border-color:var(--gold);outline:none}
-.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;display:block;max-width:100%}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;display:block;max-width:100%;pointer-events:none}
 .card .n{font-family:var(--f-ui);font-size:11px;color:var(--muted);letter-spacing:.08em}
 .card .t{font-family:var(--f-display);font-size:14px;line-height:1.25;color:var(--cream)}
+.ghost-drop{opacity:.35;border:1px dashed var(--gold)}
+.dragging .cards{outline:1px dashed #d4a24c55;outline-offset:-4px}
 .pill{align-self:flex-start;font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.06em;padding:2px 8px;border-radius:20px;text-transform:uppercase}
-.pill.dono{background:var(--gold);color:#2a0a14}
+.pill.dono{background:var(--gold);color:var(--ink)}
 .pill.claude{background:#ffffff14;color:var(--muted);border:1px solid var(--line)}
-.pill.feito{background:#1E3A31;color:#bfe0c9}
-.pill.no{background:#5a1d1d;color:#f3c7c0}
+.pill.feito{background:var(--bottle);color:#d6efdd}
 
 /* Nova pauta */
 .newp{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .newp input{flex:1 1 260px;min-width:0;background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:17px;padding:10px 12px;border-radius:4px}
 .newp input:focus{outline:2px solid var(--gold);outline-offset:1px}
-button.b{font-family:var(--f-ui);font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:10px 16px;cursor:pointer;border:1px solid var(--gold);background:var(--gold);color:#2a0a14}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button.b{font-family:var(--f-ui);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:9px 14px;cursor:pointer;border:1px solid var(--gold);background:var(--gold);color:var(--ink);white-space:nowrap}
 button.b:hover{background:var(--gold2)}
 button.b.ghost{background:transparent;color:var(--gold)}
 button.b.ghost:hover{background:#d4a24c18}
 button.b.no{background:transparent;border-color:var(--no);color:var(--no)}
+button.b.no:hover{background:#e88c8018}
+button.b.abc{min-width:42px;padding:9px 10px;font-family:var(--f-display);font-size:16px}
 button.b:disabled{opacity:.45;cursor:not-allowed}
 button.b:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 
@@ -75,11 +88,10 @@ button.b:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
 .drawer{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--bg);border-left:1px solid var(--gold);z-index:21;overflow-y:auto;
   padding-top:calc(20px + env(safe-area-inset-top, 0px));padding-bottom:calc(30px + env(safe-area-inset-bottom, 0px));
   padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:18px}
-.drawer .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.drawer .dtop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
 .drawer h3{font-size:22px;color:var(--cream)}
 .x{background:none;border:1px solid var(--line);color:var(--muted);border-radius:4px;font:inherit;font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
-.sec{display:flex;flex-direction:column;gap:8px}
-.sec>h2{font-size:12px}
+.sec>h2.s{font-size:12px}
 .gancho{font-style:italic;font-size:19px;color:var(--cream)}
 ol.script{margin:0;padding-left:28px;display:flex;flex-direction:column;gap:4px}
 ol.script li{font-size:17px}
@@ -96,30 +108,30 @@ table.pron th{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-wei
 .sheet{width:100%;border-radius:4px;border:1px solid var(--line)}
 textarea{width:100%;min-height:80px;background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:17px;padding:10px;border-radius:4px;resize:vertical}
 textarea:focus{outline:2px solid var(--gold)}
-.acts{display:flex;gap:10px;flex-wrap:wrap}
 .log{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--f-ui);font-size:13px;color:var(--muted)}
 .log b{color:var(--cream);font-weight:500}
 .file{font-family:var(--f-ui);font-size:13px;color:var(--gold2);word-break:break-all;user-select:all}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom, 0px));background:var(--gold);color:#2a0a14;font-family:var(--f-ui);font-weight:600;padding:10px 18px;border-radius:4px;z-index:30}
-@media (max-width:700px){
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom, 0px));background:var(--gold);color:var(--ink);font-family:var(--f-ui);font-weight:600;padding:10px 18px;border-radius:4px;z-index:30;max-width:calc(100% - 32px);text-align:center}
+@media (max-width:760px){
   .belt{min-width:0;grid-template-columns:1fr}
-  .thumbs{grid-template-columns:1fr 1fr 1fr}
+  .row{grid-template-columns:1fr}
+  .row .acts{flex-wrap:wrap}
 }
-@media (prefers-reduced-motion:no-preference){.card,.ask{transition:border-color .15s}}
+@media (prefers-reduced-motion:no-preference){.card,.row{transition:border-color .15s, opacity .2s}}
 </style>
 
 <div class="wrap">
-  <header>
+  <header class="top">
     <div>
       <h1>Esteira Dark Divino</h1>
-      <p>Wine Know · do tema ao vídeo pronto. Eu sugiro, você decide em cada estação.</p>
+      <p>Wine Know · do tema ao vídeo pronto. Clique ou arraste o cartão: a decisão chega direto para mim.</p>
     </div>
     <div class="tally" id="tally" aria-live="polite"></div>
   </header>
 
   <section class="sec" aria-labelledby="h-vez">
-    <h2 id="h-vez">Sua vez</h2>
-    <div id="yours" class="yours"><div class="empty">Carregando a esteira…</div></div>
+    <div class="sechead"><h2 id="h-vez">Sua vez</h2><span class="link" id="link"><span class="dot" id="dot"></span><span id="link-t">Verificando aviso automático…</span></span></div>
+    <div id="yours" class="rows"><div class="empty">Carregando a esteira…</div></div>
   </section>
 
   <section class="sec" aria-labelledby="h-nova">
@@ -131,7 +143,7 @@ textarea:focus{outline:2px solid var(--gold)}
   </section>
 
   <section class="sec" aria-labelledby="h-est">
-    <h2 id="h-est">A esteira</h2>
+    <div class="sechead"><h2 id="h-est">A esteira</h2><span class="note">Arraste para a próxima estação para aprovar · para trás para pedir mudança · para "Recusados" para descartar</span></div>
     <p class="note" id="status"></p>
     <div class="belt-scroll"><div class="belt" id="belt"></div></div>
   </section>
@@ -141,6 +153,7 @@ textarea:focus{outline:2px solid var(--gold)}
 <aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="d-title"></aside>
 <div class="toast" id="toast" hidden role="status"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 <script>
 const ETAPAS=[
   {k:'pauta',   n:'1', t:'Pauta',            who:'Eu sugiro · você aceita ou recusa'},
@@ -148,127 +161,192 @@ const ETAPAS=[
   {k:'thumb',   n:'3', t:'Thumbnail',        who:'Três opções · você escolhe A, B ou C'},
   {k:'execucao',n:'4', t:'Aprovar execução', who:'Seu ok libera a voz e o render'},
   {k:'producao',n:'5', t:'Produção',         who:'Voz, animação, render, conferência'},
-  {k:'entregue',n:'6', t:'Entregue',         who:'Vídeo e thumb na pasta videos/'}
+  {k:'entregue',n:'6', t:'Entregue',         who:'Vídeo e thumb na pasta videos/'},
+  {k:'recusado',n:'–', t:'Recusados',        who:'Solte aqui para descartar', rej:true}
 ];
-const PEDE={pauta:'Aceitar ou recusar o tema',roteiro:'Aprovar o roteiro',thumb:'Escolher a thumb',execucao:'Aprovar a execução'};
-let db=null, docs=[], aberto=null, carregou=false;
+const ORD=ETAPAS.map(e=>e.k);
+const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escolha a thumb',execucao:'Liberar a produção'};
+let db=null, cm=null, docs=[], aberto=null, carregou=false, arrastando=false, sortables=[];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const agora=()=>new Date().toISOString();
 const dataBr=iso=>{try{return new Date(iso).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}catch(e){return ''}};
+const nome=d=>(d.num?'Vídeo '+d.num+' · ':'')+d.titulo;
+function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,3200)}
 
-function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600)}
+/* ---------- aviso para o Claude (comentário "Enviar ao Claude"), agrupado ---------- */
+let fila=[], filaTimer=null, filaAnchor=null, avisoOk=null;
+async function checarAviso(){
+  if(!cm){avisoOk=false;return pintarAviso()}
+  try{avisoOk=(await cm.canSendToClaude())==='available'}catch(e){avisoOk=false}
+  pintarAviso();
+}
+function pintarAviso(){
+  $('#dot').classList.toggle('on',!!avisoOk);
+  $('#link-t').textContent=avisoOk?'Aviso automático ligado: cada decisão chega para mim':'Aviso automático indisponível agora: decida aqui e me diga "olha o painel" no chat';
+}
+async function avisarClaude(linha){
+  fila.push(linha);
+  if(!filaAnchor&&cm){try{filaAnchor=await cm.anchorFor($('#yours'))}catch(e){}}
+  clearTimeout(filaTimer); filaTimer=setTimeout(enviarFila,2500);
+}
+async function enviarFila(){
+  const linhas=fila.splice(0); const anchor=filaAnchor; filaAnchor=null;
+  if(!linhas.length) return;
+  if(!cm||!anchor||!avisoOk){toast('Salvo. Me diga "olha o painel" no chat.');return}
+  const text='[Esteira] Decisões do dono:\n'+linhas.map(l=>'• '+l).join('\n');
+  try{await cm.sendToClaude({anchor,text});toast('Enviado para o Claude.')}
+  catch(e){toast('Salvo no painel. O aviso não foi ('+(e&&e.code||'erro')+'): me diga "olha o painel" no chat.');checarAviso()}
+}
 
+/* ---------- desenho ---------- */
 function render(){
+  if(arrastando) return;
   const ativos=docs.filter(d=>d.etapa!=='recusado');
-  const vez=ativos.filter(d=>d.vez==='dono'&&PEDE[d.etapa]);
+  const vez=ativos.filter(d=>d.vez==='dono'&&PEDE[d.etapa]).sort((a,b)=>ORD.indexOf(b.etapa)-ORD.indexOf(a.etapa)||(a.ordem??a.num??999)-(b.ordem??b.num??999));
   const cnt=k=>ativos.filter(d=>d.etapa===k).length;
-  $('#tally').innerHTML=
-    `<div class="hot"><b>${vez.length}</b>esperando você</div>`+
-    `<div><b>${cnt('producao')}</b>em produção</div>`+
-    `<div><b>${cnt('entregue')}</b>entregues</div>`;
+  $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('entregue')}</b>entregues</div>`;
   const y=$('#yours');
-  if(!carregou){y.innerHTML='<div class="empty">Carregando a esteira…</div>'}
-  else if(!docs.length){y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas sugeridos; você também pode mandar um tema logo abaixo.</div>'}
-  else if(!vez.length){y.innerHTML='<div class="empty">Nada esperando você agora. Quando eu terminar um roteiro ou as thumbs, o cartão aparece aqui.</div>'}
-  else y.innerHTML=vez.map(d=>`<button class="ask" data-id="${esc(d.id)}"><span class="what">${PEDE[d.etapa]}</span><span class="t">${d.num?esc(d.num)+'. ':''}${esc(d.titulo)}</span>${d.obs?`<span class="note">${esc(d.obs)}</span>`:''}</button>`).join('');
+  if(!carregou) y.innerHTML='<div class="empty">Carregando a esteira…</div>';
+  else if(!docs.length) y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas pesquisados; você também pode mandar um tema logo abaixo.</div>';
+  else if(!vez.length) y.innerHTML='<div class="empty">Nada esperando você agora. Quando eu terminar um roteiro ou as thumbs, a linha aparece aqui.</div>';
+  else y.innerHTML=vez.map(rowHtml).join('');
+  const old=sortables.splice(0); old.forEach(s=>s.destroy());
   $('#belt').innerHTML=ETAPAS.map(e=>{
-    const lst=ativos.filter(d=>d.etapa===e.k).sort((a,b)=>(a.ordem??a.num??999)-(b.ordem??b.num??999));
-    return `<section class="station"><header><span class="step">Estação ${e.n}</span><h3>${e.t}</h3><span class="who">${e.who}</span></header>
-      <div class="cards">${lst.map(cardHtml).join('')||'<span class="note">—</span>'}</div></section>`;
+    const lst=docs.filter(d=>d.etapa===e.k).sort((a,b)=>(a.ordem??a.num??999)-(b.ordem??b.num??999));
+    return `<section class="station${e.rej?' rej':''}"><header><span class="step">${e.rej?'Fora da esteira':'Estação '+e.n}</span><h3>${e.t}</h3><span class="who">${e.who}</span></header>
+      <div class="cards" data-etapa="${e.k}">${lst.map(cardHtml).join('')}</div></section>`;
   }).join('');
+  if(window.Sortable) document.querySelectorAll('.cards').forEach(el=>sortables.push(Sortable.create(el,{
+    group:'esteira',animation:150,ghostClass:'ghost-drop',delay:180,delayOnTouchOnly:true,sort:false,
+    onStart:()=>{arrastando=true;document.body.classList.add('dragging')},
+    onEnd:ev=>{arrastando=false;document.body.classList.remove('dragging');
+      const de=ev.from.dataset.etapa, para=ev.to.dataset.etapa, id=ev.item.dataset.id;
+      render(); if(de!==para) soltar(id,de,para);}
+  })));
   const rec=docs.filter(d=>d.etapa==='recusado').length;
-  if(carregou) $('#status').textContent=rec?`${rec} tema(s) recusado(s) ficam guardados fora da esteira.`:'';
+  if(carregou&&!$('#status').classList.contains('warn')) $('#status').textContent=rec?`${rec} tema(s) em Recusados. Arraste de volta para a Pauta se mudar de ideia.`:'';
   if(aberto) openDrawer(aberto,true);
+}
+function rowHtml(d){
+  let a='';
+  if(d.etapa==='pauta') a=`<button class="b" data-act="aceitar" data-for="${esc(d.id)}">Aceitar</button><button class="b no" data-act="recusar" data-for="${esc(d.id)}">Recusar</button>`;
+  if(d.etapa==='roteiro') a=`<button class="b ghost" data-open="${esc(d.id)}">Ler</button><button class="b" data-act="aprovar-roteiro" data-for="${esc(d.id)}">Aprovar</button><button class="b no" data-open="${esc(d.id)}" data-mudar="1">Mudar</button>`;
+  if(d.etapa==='thumb') a=['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>`<button class="b abc" data-act="escolher" data-pick="${k}" data-for="${esc(d.id)}" title="${esc(d.thumbs[k])}">${k}</button>`).join('')+`<button class="b ghost" data-open="${esc(d.id)}">Ver</button>`;
+  if(d.etapa==='execucao') a=`<button class="b" data-act="executar" data-for="${esc(d.id)}">Aprovar execução</button><button class="b ghost" data-open="${esc(d.id)}">Ver</button>`;
+  const sub=d.etapa==='pauta'?d.gancho:(d.etapa==='thumb'?'Thumbs: '+['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>k+' '+d.thumbs[k]).join(' · '):d.obs);
+  return `<div class="row" data-row="${esc(d.id)}"><div style="min-width:0"><span class="what">${PEDE[d.etapa]}${d.num?' · vídeo '+esc(d.num):''}</span><br>
+    <button class="t" data-open="${esc(d.id)}">${esc(d.titulo)}</button>${sub?`<div class="g">${esc(sub)}</div>`:''}</div>
+    <div class="acts">${a}</div></div>`;
 }
 function pillFor(d){
   if(d.etapa==='entregue') return '<span class="pill feito">Pronto</span>';
+  if(d.etapa==='recusado') return '';
   if(d.vez==='dono'&&PEDE[d.etapa]) return '<span class="pill dono">Sua vez</span>';
   return `<span class="pill claude">${esc(d.estado||'Comigo')}</span>`;
 }
 function cardHtml(d){
-  return `<button class="card" data-id="${esc(d.id)}">${d.thumbImg?`<img src="${esc(d.thumbImg)}" alt="" loading="lazy">`:''}
+  return `<button class="card" data-id="${esc(d.id)}" data-open="${esc(d.id)}">${d.thumbImg?`<img src="${esc(d.thumbImg)}" alt="" loading="lazy">`:''}
     <span class="n">${d.num?'VÍDEO '+esc(d.num):'TEMA'}</span><span class="t">${esc(d.titulo)}</span>${pillFor(d)}</button>`;
 }
 
-function openDrawer(id,refresh){
+/* ---------- arrastar = decidir ---------- */
+function soltar(id,de,para){
+  const d=docs.find(x=>x.id===id); if(!d) return;
+  const i=ORD.indexOf(de), j=ORD.indexOf(para);
+  if(para==='recusado') return de==='pauta'?agir('recusar',id):toast('Só temas da Pauta vão para Recusados.');
+  if(de==='recusado') return para==='pauta'?agir('reabrir',id):toast('Volte o tema primeiro para a Pauta.');
+  if(j<i){ if(de==='producao'||de==='entregue') return toast('Esse já está em produção. Me fale no chat o que mudar.'); return openDrawer(id,false,true); }
+  if(j>i+1) return toast('Uma estação de cada vez.');
+  if(d.vez!=='dono') return toast('Ainda está comigo: '+(d.estado||'trabalhando')+'.');
+  if(de==='pauta') return agir('aceitar',id);
+  if(de==='roteiro') return (d.roteiro&&d.roteiro.length)?agir('aprovar-roteiro',id):toast('O roteiro ainda não está pronto.');
+  if(de==='thumb'){ toast('Escolha A, B ou C.'); return openDrawer(id); }
+  if(de==='execucao') return agir('executar',id);
+  toast('Essa estação é minha.');
+}
+
+/* ---------- gaveta ---------- */
+function openDrawer(id,refresh,mudar){
   const d=docs.find(x=>x.id===id); if(!d){closeDrawer();return}
   aberto=id;
   const dr=$('#drawer');
   const keepNote=refresh?($('#d-note')?.value??''):'';
-  const keepPick=refresh?openDrawer.pick:null;
   const et=ETAPAS.find(e=>e.k===d.etapa);
   const sua=d.vez==='dono'&&PEDE[d.etapa];
-  let h=`<div class="top"><div><span class="note">${d.num?'Vídeo '+esc(d.num)+' · ':''}${et?'Estação '+et.n+' · '+et.t:'Recusado'}</span>
+  let h=`<div class="dtop"><div><span class="note">${d.num?'Vídeo '+esc(d.num)+' · ':''}${et?(et.rej?'Recusado':'Estação '+et.n+' · '+et.t):''}</span>
     <h3 id="d-title">${esc(d.titulo)}</h3></div><button class="x" id="d-x" aria-label="Fechar">×</button></div>`;
-  if(d.gancho) h+=`<div class="sec"><h2>O gancho</h2><div class="gancho">${esc(d.gancho)}</div></div>`;
-  if(d.fontes) h+=`<div class="sec"><h2>Base da pesquisa</h2><div class="note">${esc(d.fontes)}</div></div>`;
-  if(d.roteiro&&d.roteiro.length) h+=`<div class="sec"><h2>Roteiro · ${d.roteiro.length} falas${d.duracao?' · '+esc(d.duracao):''}</h2><ol class="script">${d.roteiro.map(l=>`<li>${esc(l)}</li>`).join('')}</ol></div>`;
-  if(d.pronuncia&&d.pronuncia.length) h+=`<div class="sec"><h2>Pronúncia</h2><table class="pron"><thead><tr><th>Escreve</th><th>Fala</th><th>Fonte</th></tr></thead><tbody>${d.pronuncia.map(p=>`<tr><td>${esc(p.escreve)}</td><td>${esc(p.fala)}</td><td class="note">${esc(p.fonte||'')}</td></tr>`).join('')}</tbody></table></div>`;
+  if(d.gancho) h+=`<div class="sec"><h2 class="s">O gancho</h2><div class="gancho">${esc(d.gancho)}</div></div>`;
+  if(d.emAlta) h+=`<div class="sec"><h2 class="s">Do que estão falando</h2><div>${esc(d.emAlta)}</div></div>`;
+  if(d.fontes) h+=`<div class="sec"><h2 class="s">Fontes</h2><div class="note">${esc(d.fontes)}</div></div>`;
+  if(d.roteiro&&d.roteiro.length) h+=`<div class="sec"><h2 class="s">Roteiro · ${d.roteiro.length} falas${d.duracao?' · '+esc(d.duracao):''}</h2><ol class="script">${d.roteiro.map(l=>`<li>${esc(l)}</li>`).join('')}</ol></div>`;
+  if(d.pronuncia&&d.pronuncia.length) h+=`<div class="sec"><h2 class="s">Pronúncia</h2><table class="pron"><thead><tr><th>Escreve</th><th>Fala</th><th>Fonte</th></tr></thead><tbody>${d.pronuncia.map(p=>`<tr><td>${esc(p.escreve)}</td><td>${esc(p.fala)}</td><td class="note">${esc(p.fonte||'')}</td></tr>`).join('')}</tbody></table></div>`;
   if(d.thumbs){
-    const sel=keepPick||d.thumbEscolhida||null; openDrawer.pick=sel;
-    h+=`<div class="sec"><h2>Thumbnail${d.thumbEscolhida?' · escolhida: '+esc(d.thumbEscolhida):''}</h2>${d.thumbOpcoesImg?`<img class="sheet" src="${esc(d.thumbOpcoesImg)}" alt="As três opções de thumbnail">`:''}
-      <div class="thumbs" role="group" aria-label="Escolha da thumbnail">${['A','B','C'].filter(k=>d.thumbs[k]).map(k=>`<button class="opt" data-pick="${k}" aria-pressed="${sel===k}" ${d.etapa==='thumb'&&sua?'':'disabled'}><span class="l">${k}</span><span class="tx">${esc(d.thumbs[k])}</span></button>`).join('')}</div></div>`;
+    const pode=d.etapa==='thumb'&&sua;
+    h+=`<div class="sec"><h2 class="s">Thumbnail${d.thumbEscolhida?' · escolhida: '+esc(d.thumbEscolhida):''}</h2>${d.thumbOpcoesImg?`<img class="sheet" src="${esc(d.thumbOpcoesImg)}" alt="As três opções de thumbnail">`:''}
+      <div class="thumbs" role="group" aria-label="Escolha da thumbnail">${['A','B','C'].filter(k=>d.thumbs[k]).map(k=>`<button class="opt" ${pode?`data-act="escolher" data-pick="${k}" data-for="${esc(d.id)}"`:'disabled'} aria-pressed="${d.thumbEscolhida===k}"><span class="l">${k}</span><span class="tx">${esc(d.thumbs[k])}</span></button>`).join('')}</div>
+      ${pode?'<span class="note">Clique na letra para escolher.</span>':''}</div>`;
   }
-  if(d.thumbImg&&!d.thumbOpcoesImg) h+=`<div class="sec"><h2>Thumb final</h2><img class="sheet" src="${esc(d.thumbImg)}" alt="Thumbnail do vídeo"></div>`;
-  if(d.video) h+=`<div class="sec"><h2>Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
-  if(d.obs) h+=`<div class="sec"><h2>Recado meu</h2><div>${esc(d.obs)}</div></div>`;
-  if(sua){
-    h+=`<div class="sec"><h2>${PEDE[d.etapa]}</h2><label class="note" for="d-note">Comentário (opcional; obrigatório para pedir mudança)</label><textarea id="d-note" placeholder="Ex.: troque a frase 4; quero mais sobre o Brasil">${esc(keepNote)}</textarea><div class="acts">`;
-    if(d.etapa==='pauta') h+=`<button class="b" data-act="aceitar">Aceitar tema</button><button class="b no" data-act="recusar">Recusar</button>`;
-    if(d.etapa==='roteiro') h+=`<button class="b" data-act="aprovar-roteiro">Aprovar roteiro</button><button class="b ghost" data-act="mudar">Pedir mudança</button>`;
-    if(d.etapa==='thumb') h+=`<button class="b" data-act="escolher" ${openDrawer.pick?'':'disabled'}>Confirmar thumb ${openDrawer.pick||''}</button><button class="b ghost" data-act="mudar">Pedir outras opções</button>`;
-    if(d.etapa==='execucao') h+=`<button class="b" data-act="executar">Aprovar execução</button><button class="b ghost" data-act="mudar">Segurar e comentar</button>`;
-    h+=`</div><span class="note">A voz do ElevenLabs só é gerada depois de "Aprovar execução".</span></div>`;
-  } else if(d.etapa!=='entregue'&&d.etapa!=='recusado'){
-    h+=`<div class="sec"><span class="note">Está comigo agora${d.estado?': '+esc(d.estado):''}. Quando precisar de você, o cartão vai para "Sua vez".</span></div>`;
+  if(d.thumbImg&&!d.thumbOpcoesImg) h+=`<div class="sec"><h2 class="s">Thumb</h2><img class="sheet" src="${esc(d.thumbImg)}" alt="Thumbnail do vídeo"></div>`;
+  if(d.video) h+=`<div class="sec"><h2 class="s">Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
+  if(d.obs) h+=`<div class="sec"><h2 class="s">Recado meu</h2><div>${esc(d.obs)}</div></div>`;
+  if(d.etapa!=='entregue'&&d.etapa!=='producao'){
+    h+=`<div class="sec"><h2 class="s">${sua?'Sua decisão':'Comentário'}</h2><label class="note" for="d-note">${mudar?'Diga o que mudar e clique em "Pedir mudança"':'Comentário (opcional; obrigatório para pedir mudança)'}</label><textarea id="d-note" placeholder="Ex.: troque a frase 4; quero mais sobre o Brasil">${esc(keepNote)}</textarea><div class="acts">`;
+    if(sua&&d.etapa==='pauta') h+=`<button class="b" data-act="aceitar" data-for="${esc(d.id)}">Aceitar tema</button><button class="b no" data-act="recusar" data-for="${esc(d.id)}">Recusar</button>`;
+    if(sua&&d.etapa==='roteiro') h+=`<button class="b" data-act="aprovar-roteiro" data-for="${esc(d.id)}">Aprovar roteiro</button>`;
+    if(sua&&d.etapa==='execucao') h+=`<button class="b" data-act="executar" data-for="${esc(d.id)}">Aprovar execução</button>`;
+    if(d.etapa==='recusado') h+=`<button class="b ghost" data-act="reabrir" data-for="${esc(d.id)}">Voltar para a pauta</button>`;
+    else h+=`<button class="b ghost" data-act="mudar" data-for="${esc(d.id)}">Pedir mudança</button>`;
+    h+=`</div>${sua?'<span class="note">A voz do ElevenLabs só é gerada depois de "Aprovar execução".</span>':''}</div>`;
   }
-  if(d.etapa==='recusado') h+=`<div class="acts"><button class="b ghost" data-act="reabrir">Voltar para a pauta</button></div>`;
-  if(d.historico&&d.historico.length) h+=`<div class="sec"><h2>Histórico</h2><ul class="log">${d.historico.slice().reverse().map(x=>`<li>${dataBr(x.em)} · <b>${esc(x.quem)}</b> · ${esc(x.txt)}</li>`).join('')}</ul></div>`;
+  if(d.historico&&d.historico.length) h+=`<div class="sec"><h2 class="s">Histórico</h2><ul class="log">${d.historico.slice().reverse().map(x=>`<li>${dataBr(x.em)} · <b>${esc(x.quem)}</b> · ${esc(x.txt)}</li>`).join('')}</ul></div>`;
   dr.innerHTML=h; dr.hidden=false; $('#scrim').hidden=false;
-  if(!refresh) $('#d-x').focus();
+  if(!refresh){ if(mudar) $('#d-note')?.focus(); else $('#d-x').focus(); }
 }
-function closeDrawer(){aberto=null;openDrawer.pick=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
+function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
 
-async function agir(act){
-  const d=docs.find(x=>x.id===aberto); if(!d||!db) return;
-  const nota=($('#d-note')?.value||'').trim();
+/* ---------- decisões ---------- */
+async function agir(act,id,pick){
+  const d=docs.find(x=>x.id===id); if(!d) return;
+  if(!db){toast('Sem conexão com a esteira agora.');return}
+  const nota=(aberto===id?($('#d-note')?.value||''):'').trim();
   let up=null, msg='';
   if(act==='aceitar'){up={etapa:'roteiro',vez:'claude',estado:'Pesquisando e escrevendo'};msg='Tema aceito'}
   if(act==='recusar'){up={etapa:'recusado',vez:'claude'};msg='Tema recusado'}
-  if(act==='reabrir'){up={etapa:'pauta',vez:'dono'};msg='Tema de volta na pauta'}
-  if(act==='aprovar-roteiro'){up={etapa:'thumb',vez:'claude',estado:'Fazendo as 3 thumbs'};msg='Roteiro aprovado'}
-  if(act==='escolher'){if(!openDrawer.pick)return;up={etapa:'execucao',vez:'dono',thumbEscolhida:openDrawer.pick};msg='Thumb '+openDrawer.pick+' escolhida'}
-  if(act==='executar'){up={etapa:'producao',vez:'claude',estado:'Na fila de produção'};msg='Execução aprovada'}
-  if(act==='mudar'){if(!nota){toast('Escreva o que mudar no comentário');$('#d-note').focus();return}up={vez:'claude',estado:'Ajustando o que você pediu'};msg='Pedido de mudança enviado'}
+  if(act==='reabrir'){up={etapa:'pauta',vez:'dono'};msg='Tema voltou para a pauta'}
+  if(act==='aprovar-roteiro'){up={etapa:'thumb',vez:'claude',estado:'Fazendo as 3 thumbs'};msg='Roteiro APROVADO'}
+  if(act==='escolher'){up={etapa:'execucao',vez:'dono',thumbEscolhida:pick};msg='Thumb '+pick+' escolhida'}
+  if(act==='executar'){up={etapa:'producao',vez:'claude',estado:'Na fila de produção'};msg='Execução APROVADA (pode gerar a voz)'}
+  if(act==='mudar'){if(!nota){openDrawer(id,false,true);toast('Escreva o que mudar.');return}up={vez:'claude',estado:'Ajustando o que você pediu'};msg='Pediu mudança'}
   if(!up) return;
   const hist=(d.historico||[]).slice(-40);
   hist.push({em:agora(),quem:'Você',txt:msg+(nota?': '+nota:'')});
   up.historico=hist; up.pedido=nota||null; up.atualizado=agora();
-  document.querySelectorAll('#drawer button.b').forEach(b=>b.disabled=true);
-  try{await db.doc('videos/'+d.id).update(up);toast(msg+'. Me avise no chat.');openDrawer.pick=null;const n=$('#d-note');if(n)n.value=''}
-  catch(e){toast('Não salvou: '+(e&&e.message||'sem permissão de escrita')+'. Tente de novo.');document.querySelectorAll('#drawer button.b').forEach(b=>b.disabled=false)}
+  document.querySelector(`[data-row="${CSS.escape(id)}"]`)?.classList.add('leaving');
+  avisarClaude(`${nome(d)} [${d.id}]: ${msg}${nota?' — "'+nota+'"':''}`);
+  try{await db.doc('videos/'+d.id).update(up); if(aberto===id) closeDrawer(); if(!avisoOk) toast(msg+'. Me diga "olha o painel" no chat.')}
+  catch(e){fila=fila.filter(l=>!l.includes('['+d.id+']'));toast('Não salvou: '+(e&&e.message||'sem permissão')+'. Tente de novo.');render()}
 }
 
 document.addEventListener('click',e=>{
-  const c=e.target.closest('[data-id]'); if(c){openDrawer(c.dataset.id);return}
-  const p=e.target.closest('[data-pick]'); if(p&&!p.disabled){openDrawer.pick=p.dataset.pick;openDrawer(aberto,true);return}
-  const a=e.target.closest('[data-act]'); if(a){agir(a.dataset.act);return}
+  const a=e.target.closest('[data-act]'); if(a&&!a.disabled){agir(a.dataset.act,a.dataset.for,a.dataset.pick);return}
+  const o=e.target.closest('[data-open]'); if(o){openDrawer(o.dataset.open,false,!!o.dataset.mudar);return}
   if(e.target.id==='d-x'||e.target.id==='scrim') closeDrawer();
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&aberto)closeDrawer()});
 $('#newp').addEventListener('submit',async e=>{
   e.preventDefault(); const v=$('#newp-t').value.trim(); if(!v) return;
-  if(!db){toast('Sem conexão com a esteira agora');return}
-  try{await db.collection('videos').add({titulo:v,etapa:'pauta',vez:'claude',estado:'Vou pesquisar este tema',origem:'dono',ordem:900,
+  if(!db){toast('Sem conexão com a esteira agora.');return}
+  try{const ref=await db.collection('videos').add({titulo:v,etapa:'pauta',vez:'claude',estado:'Vou pesquisar este tema',origem:'dono',ordem:900,
       historico:[{em:agora(),quem:'Você',txt:'Sugeriu o tema'}],atualizado:agora()});
-    $('#newp-t').value='';toast('Tema na pauta. Eu pesquiso e trago o gancho.')}
+    $('#newp-t').value=''; avisarClaude(`Novo tema sugerido pelo dono [${ref.id}]: ${v}`);}
   catch(err){toast('Não salvou: '+(err&&err.message||'erro')+'.')}
 });
 
-render();
+render(); pintarAviso();
 (async()=>{
-  db=await window.claude?.use?.('db');
+  const [dbx,cmx]=await Promise.all([window.claude?.use?.('db'),window.claude?.use?.('comments')]);
+  db=dbx; cm=cmx; checarAviso(); setInterval(checarAviso,60000);
   if(!db){carregou=true;$('#status').textContent='A esteira só abre dentro do claude.ai, conectado à sua conta.';$('#status').classList.add('warn');render();return}
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
   db.collection('videos').onSnapshot(s=>{

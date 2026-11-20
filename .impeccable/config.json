@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "painel/esteira.html"
+        ],
+        "createdAt": "2026-11-20T00:45:32.281Z",
+        "reason": "Claude: falso positivo — o scanner mede contra #ffffff, mas a página é só escura (body #140509); ouro #D4A24C e #CDB3A1 sobre o fundo escuro passam de 7:1"
+      }
+    ]
+  }
+}

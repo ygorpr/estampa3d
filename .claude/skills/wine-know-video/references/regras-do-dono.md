@@ -15,6 +15,11 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   e antes da rolha?; o buraco no fundo da garrafa; por que a garrafa é verde; quem inventou o champanhe; champanhe no fundo do mar;
   o vinho mais antigo do mundo; por que brindamos; de onde vem a cor do vinho; o ritual da rolha no restaurante; de onde vem a palavra sommelier.
 - Quando ele pedir temas: pesquisar e trazer **~10 opções** com 1–2 linhas cada (o gancho e o fato surpreendente), recomendar 2 e esperar a escolha.
+- **Pauta SEMPRE pesquisada no Google, no YouTube e nas redes (TikTok, Instagram, Reddit, notícias)** para saber do que o público está
+  falando agora; trazer **no mínimo 10 temas** na esteira, cada um com o gancho e a evidência ("o que estão falando": vídeo, matéria, dúvida comum).
+- Painel de decisões: artefato "Esteira Dark Divino" (https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB, código em `painel/esteira.html`).
+  O dono aceita/recusa, aprova roteiro, escolhe thumb e aprova execução arrastando o cartão ou pelos botões; cada decisão me chega como comentário.
+  Ler as decisões com ArtifactData (coleção `videos`) e atualizar os cartões (etapa, vez, roteiro, thumbs) conforme o trabalho anda.
 - Pesquisa de demanda no YouTube (`scripts/youtube_ideas.py`) ajuda, mas curiosidade boa vale mesmo sem busca (cresce por recomendação/Shorts).
 - Um tema pode virar dois vídeos (ex.: rolha no restaurante + palavra "sommelier"). Se surgir um assunto paralelo bom, separar em outro vídeo.
 
