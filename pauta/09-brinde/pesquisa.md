@@ -10,3 +10,6 @@
 | Bater pelo bojo, não pela borda (bojo é a parte mais forte; borda é a mais fina e frágil) | Wine Folly (sessão da Riedel) — https://plus.winefolly.com/tips/clinking-wine-glasses ; Tasting Table |
 | "Prost/Prosit" vem do latim (prodesse, "fazer bem"); "Kanpai" (乾杯) = "copo seco" | Wikipedia "Kanpai" — https://en.wikipedia.org/wiki/Kanpai ; Wikipedia "Toast (honor)" — https://en.wikipedia.org/wiki/Toast_(honor) |
 | Superstição naval: nas marinhas britânica, americana e outras, não se brinda com água (o homenageado morreria afogado) | Wikipedia "Toast (honor)"; VinePair — https://vinepair.com/articles/bad-luck-toast-water-navy/ |
+| Português "brinde" e espanhol "brindis": do alemão "bring dir's" ("eu te ofereço/trago"), provavelmente via mercenários alemães do séc. XVI | Wiktionary "brinde" — https://en.wiktionary.org/wiki/brinde ; "brindis" — https://en.wiktionary.org/wiki/brindis (cita a Real Academia Espanhola) |
+| Roma: Ovídio, Fastos II (Caristia): "bene vos, bene te, patriae pater, optime Caesar" (brinde nos banquetes) | Ovídio, *Fasti* II, 637–638 (texto clássico) |
+| Brasil: superstições — brindar com copo vazio dá azar; olhar nos olhos (crendice ligada à vida amorosa); "gole pro santo" com cachaça | Gazeta SP — https://www.gazetasp.com.br/estilo-de-vida/costume-de-brindar/ ; Correio Braziliense; Tudo Gostoso |

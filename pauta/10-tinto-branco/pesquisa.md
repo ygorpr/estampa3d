@@ -14,3 +14,10 @@
 | Vinho laranja = branco fermentado com as cascas; Geórgia, em qvevri (potes de barro enterrados), até 6 meses de contato | Wine Folly — https://winefolly.com/deep-dive/orange-wine/ ; Decanter — https://www.decanter.com/wine/from-qvevri-to-glass-the-fascinating-journey-of-georgian-orange-wine-570301/ |
 | Tinto vai de roxo a cor de tijolo com a idade; branco escurece (dourado) | estudo PMC — https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6269080/ ; Jancis Robinson — https://www.jancisrobinson.com/articles/what-happens-wine-it-ages |
 | Antocianinas também dão cor ao mirtilo e ao repolho roxo (mudam com a acidez) | Britannica (anthocyanin) — checar link antes da voz; Wine Folly (pH e cor) |
+| Antocianinas: vermelhas em meio ácido, azuladas quando o pH sobe; vinho tinto tem pH ~2,5–4,0 | revisão PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC6268338/ |
+| Antocianinas são pigmentos de frutas e vegetais (mirtilo, amora, repolho roxo) | revisão PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC5613902/ |
+| Dióxido de enxofre (SO2) descora as antocianinas livres de forma reversível | PMC6268338 (mesmo link) |
+| Antocianinas + taninos formam pigmentos polimerizados, mais estáveis (resistem ao SO2 e à oxidação) | PMC6269080 — https://pmc.ncbi.nlm.nih.gov/articles/PMC6269080/ |
+| Espectrofotômetro: absorbância a 420 nm (amarelo), 520 nm (vermelho), 620 nm (azul); intensidade = soma; tonalidade = A420/A520; com a idade A520 cai e A420 sobe | Shimadzu (nota de aplicação, método Sudraud) — https://www.shimadzu.eu/sites/shimadzu.seg/files/pim/pim_document_file/seg_eu/others/22792/3_wine_color_uv.pdf ; estudos de cor do vinho |
+| O vinho absorve luz em ~520 nm (verde) e por isso parece vermelho (cor complementar) | física da cor + medida a 520 nm acima |
+| Ler a borda da taça sobre fundo branco para estimar idade | Wine Folly (gráfico de cores) — https://winefolly.com/deep-dive/complete-wine-color-chart/ |
