@@ -1,4 +1,4 @@
-# A garrafa de vinho mais cara do mundo — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (voz só depois do "aprovado")
+# A garrafa de vinho mais cara do mundo — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 30 s (dentro do limite de ~3 min 45 s). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md.
 Cenários: abre e fecha numa **adega-cofre** (vitrine iluminada com a garrafa 1945, porta de cofre redonda ao fundo); **vinhedo na colina** da Borgonha;
 **sala de leilão** (púlpito, martelo, placa de lances que sobe, plateia em silhueta com plaquinhas); **cozinha do falsificador**; volta ao **bar** para o mito × verdade.

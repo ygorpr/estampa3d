@@ -1,4 +1,4 @@
-# A praga que quase acabou com o vinho (filoxera) — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (não gerar voz antes)
+# A praga que quase acabou com o vinho (filoxera) — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 35 s · 24 falas + logo · fluido, sem capítulos · para quem NÃO sabe nada de vinho · fontes: pesquisa.md
 
 **Cenários sugeridos:** (1) bar escuro do canal (abertura, explicações e final); (2) vinhedo francês do séc. XIX ao entardecer,

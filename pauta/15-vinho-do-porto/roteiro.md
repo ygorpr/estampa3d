@@ -1,4 +1,4 @@
-# Por que se chama vinho do Porto? (e por que é mais forte) — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
+# Por que se chama vinho do Porto? (e por que é mais forte) — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 20 s (22 falas + logo; ~530 palavras, estimado pelo ritmo do vídeo 06, 499 palavras = 3 min 13 s). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Cenário sugerido: abre num **bar-cave em Vila Nova de Gaia** (pipas ao fundo, janela para o rio com barcos rabelos e a cidade do Porto do outro lado, ao entardecer). Insertos: mapa antigo (Portus Cale), vale do Douro em degraus, rabelo nas corredeiras, navio à vela, cave com pipas, vinhedo com marco de pedra. Personagens extras (de verdade, no estilo do Sommelier): o **barqueiro do rabelo** (arrais, no remo comprido), o **Marquês de Pombal** (peruca branca, casaca) e as **leveduras** (bolinhas com carinha). Transições entre lugares com dissolve de ~0,5 s.
 
