@@ -156,3 +156,14 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Antes de TODA publicação do painel: `node .claude/skills/wine-know-video/scripts/testar_painel.js /caminho/ABSOLUTO/painel/esteira.html`
   tem que dar "OK". Se der "FALHOU", não publicar. Também tirar print do painel e das salas e olhar.
 - Mudança pequena e pedida = mexer só no que foi pedido; não reorganizar o layout que o dono aprovou.
+
+## Analista → diretora → equipe (pedido do dono, 20/11)
+- Rodrigo (publicador e ANALISTA) faz relatório 48 h depois de cada vídeo publicado e toda segunda-feira (coleção `relatorios`):
+  o que aconteceu, deu certo, deu errado, sugestões e ideias, cada um com o número que justifica.
+- OBRIGATÓRIO ler os COMENTÁRIOS do canal (`comentariosPublico` em canal/youtube). Toda dúvida do público ou tema que vale vídeo:
+  (1) vira tema na Pauta com `doComentario: true`, `origem: "comentario"`, gancho citando o comentário (a Sofia pesquisa e completa);
+  (2) aparece para o dono em "Sua vez" como "Pedido do público" — o dono decide se vira vídeo específico;
+  (3) fica registrado no relatório (comentarios.duvidas/temas com virouPauta).
+- Beatriz (diretora geral) lê o relatório e repassa recados para quem precisa agir: `escritorios/<look>.recados[{em,txt,motivo}]`
+  (Sofia: temas; Rafael: gancho/roteiro; Helena: thumb; Otávio: edição/Shorts; Larissa: títulos). Mudança de rumo do canal
+  (horário, tipo de tema) vai para o dono aprovar antes.

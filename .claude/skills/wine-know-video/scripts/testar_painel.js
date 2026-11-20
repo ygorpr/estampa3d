@@ -10,6 +10,6 @@ await p.addInitScript(()=>{const ag=[{look:'gerente',nome:'Beatriz',cargo:'Geren
  window.claude={use:async k=>k==='db'?db:null};});
 await p.goto('file://'+process.argv[2]);await p.waitForTimeout(700);
 const n=await p.evaluate(()=>({equipe:document.querySelectorAll('#team article').length,vez:document.querySelectorAll('#yours > *').length,esteira:document.querySelectorAll('#belt .station').length}));
-try{for(const k of ['gerente','producao','youtube','publica']){await p.click(`article[data-sala="${k}"] .nm`);await p.waitForTimeout(150);if(k==='publica'){await p.click('[data-view="dash"]');await p.waitForTimeout(150)}await p.click('[data-sala-fechar]')}}catch(e){erros.push('Sala não abriu: '+e.message.split('\n')[0])}
+try{for(const k of ['gerente','producao','youtube','publica']){await p.click(`article[data-sala="${k}"] .nm`);await p.waitForTimeout(150);if(k==='publica'){await p.click('[data-view="dash"]');await p.waitForTimeout(150);await p.click('[data-view="rel"]');await p.waitForTimeout(150)}await p.click('[data-sala-fechar]')}}catch(e){erros.push('Sala não abriu: '+e.message.split('\n')[0])}
 await b.close();
 if(erros.length||!n.equipe||!n.vez||!n.esteira){console.error('FALHOU',JSON.stringify(n),erros.join('\n'));process.exit(1)}console.log('OK',JSON.stringify(n))})();

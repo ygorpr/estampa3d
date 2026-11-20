@@ -252,6 +252,13 @@ ul.lst li .when{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin
 .hk{color:var(--cream);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ht{height:10px;background:#ffffff10;border-radius:4px;overflow:hidden}.ht i{display:block;height:100%;background:var(--gold);border-radius:0 4px 4px 0}
 .hv{color:var(--muted);font-variant-numeric:tabular-nums}
+.rel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.rel .rt{font-family:var(--f-display);color:var(--cream);font-size:16px}
+.rel p{margin:0}
+.rel h5{margin:6px 0 2px;font-family:var(--f-ui);font-size:12px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+.cmt{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--candle);padding-left:8px}
+.cq{font-style:italic}
+.pill.publico{background:#5a3a12;color:#ffd9a3}
 </style>
 
 <div class="wrap">
@@ -391,14 +398,14 @@ function rowHtml(d){
   if(d.etapa==='thumb') a=['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>`<button class="b abc" data-act="escolher" data-pick="${k}" data-for="${esc(d.id)}" title="${esc(d.thumbs[k])}">${k}</button>`).join('')+`<button class="b ghost" data-open="${esc(d.id)}">Ver</button>`;
   if(d.etapa==='revisao') a=`<button class="b ghost" data-open="${esc(d.id)}">Assistir</button><button class="b" data-act="aprovar-video" data-for="${esc(d.id)}">Aprovar</button><button class="b no" data-open="${esc(d.id)}" data-mudar="1">Ajustar</button>`;
   const sub=d.etapa==='pauta'?d.gancho:(d.etapa==='thumb'?'Thumbs: '+['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>k+' '+d.thumbs[k]).join(' · '):d.obs);
-  return `<div class="row" data-row="${esc(d.id)}"><div style="min-width:0"><span class="what">${PEDE[d.etapa]}${d.num?' · vídeo '+esc(d.num):''}</span><br>
+  return `<div class="row" data-row="${esc(d.id)}"><div style="min-width:0"><span class="what">${d.doComentario&&d.etapa==='pauta'?'Pedido do público (comentário no canal)':PEDE[d.etapa]}${d.num?' · vídeo '+esc(d.num):''}</span><br>
     <button class="t" data-open="${esc(d.id)}">${esc(d.titulo)}</button>${sub?`<div class="g">${esc(sub)}</div>`:''}${d.etapa==='thumb'?`<input class="pedido" id="ped-${esc(d.id)}" data-pedido-for="${esc(d.id)}" placeholder="Algum pedido para o vídeo? (opcional)" aria-label="Pedido para o vídeo">`:''}</div>
     <div class="acts">${a}</div></div>`;
 }
 function pillFor(d){
   if(d.etapa==='entregue') return '<span class="pill feito">Pronto</span>';
   if(d.etapa==='recusado') return '';
-  if(d.vez==='dono'&&PEDE[d.etapa]) return '<span class="pill dono">Sua vez</span>';
+  if(d.vez==='dono'&&PEDE[d.etapa]) return d.doComentario&&d.etapa==='pauta'?'<span class="pill publico">Pedido do público</span>':'<span class="pill dono">Sua vez</span>';
   return `<span class="pill claude">${esc(d.estado||'Comigo')}</span>`;
 }
 function cardHtml(d){
@@ -527,8 +534,8 @@ function renderEquipe(){
 /* ---------- escritórios ---------- */
 let ESCR={}, CAL=null, salaAberta=null;
 const PASSOS={
-  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Passa cada vídeo liberado para o Otávio','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
-  pauta:['Pesquisa o que está em alta (Google, YouTube, redes)','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
+  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Passa cada vídeo liberado para o Otávio','Repõe a pauta quando cai abaixo de 10 temas','Lê o relatório do Rodrigo e manda um recado para cada funcionário que precisa mudar algo','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
+  pauta:['Pesquisa o que está em alta (Google, YouTube, redes) e lê os pedidos do público que o Rodrigo achou nos comentários','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
   roteiro:['Pesquisa profunda em fontes confiáveis (pesquisa.md)','Monta a linha do tempo sem buracos','Escreve as falas curtas, explicando cada palavra difícil','Fechamento obrigatório: resumo, tabela, inscrição, brinde e logo','Lista as pronúncias com dicionário','Manda para o Caio checar e depois para você aprovar'],
   checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
   arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
@@ -536,7 +543,7 @@ const PASSOS={
   youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Entrega os textos para o Rodrigo publicar'],
   shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
 };
-PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Otávio','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números do canal a cada ronda','Comenta cada número e avisa quem precisa mudar algo'];
+PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Otávio','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números e os comentários do canal','Relatório 48 h depois de cada vídeo e toda segunda: o que aconteceu, certo, errado, sugestões e ideias','Dúvidas e temas dos comentários vão para a Sofia e para você','Entrega o relatório para a Beatriz'];
 ['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
 const passoAtual=(a)=>{const f=(a.fazendo||[])[0]; if(!f) return -1; const p=f.pct||0, n=(PASSOS[a.look]||[]).length; return Math.min(n-1,Math.floor(p/100*n));};
 function proximasDe(a){
@@ -571,14 +578,14 @@ function resumoDe(a){
 }
 const FLUXO={
   gerente:{de:'Todas as salas mandam relatório para ela a cada ronda',para:'Libera o trabalho que você aprovou e chama você quando precisa'},
-  pauta:{de:'Pesquisa de tendências (Google, YouTube, redes) e os temas que você sugere',para:'Você aceita ou recusa → tema aceito vai para o Rafael'},
+  pauta:{de:'Pesquisa de tendências, os temas que você sugere e os pedidos do público nos comentários (via Rodrigo)',para:'Você aceita ou recusa → tema aceito vai para o Rafael'},
   roteiro:{de:'Sofia, depois que você aceita o tema',para:'Caio confere fatos e pronúncia'},
   checador:{de:'Rafael (roteiro pronto)',para:'Você aprova o roteiro → vai para a Helena'},
   arte:{de:'Roteiro aprovado por você',para:'Você escolhe A, B ou C → vai para a Produção'},
   producao:{de:'Helena (thumb que você escolheu)',para:'Você assiste na Revisão → aprovado: Otávio faz os cortes do Shorts, Larissa escreve e Rodrigo publica'},
   shorts:{de:'Vídeo aprovado por você na Revisão',para:'Larissa escreve os textos dos cortes'},
   youtube:{de:'Vídeo aprovado por você e os cortes do Otávio',para:'Rodrigo, que monta o calendário e publica'},
-  publica:{de:'Larissa (textos), Helena (thumb) e Otávio (vídeo e cortes), com o vídeo que você aprovou',para:'Canal no YouTube, no dia e hora do calendário; depois lê os números e avisa a equipe'}
+  publica:{de:'Larissa (textos), Helena (thumb) e Otávio (vídeo e cortes), com o vídeo que você aprovou',para:'Canal no YouTube; depois o relatório com números e comentários vai para a Beatriz, e os pedidos do público vão para a Sofia e para você'}
 };
 PRODS.forEach(k=>FLUXO[k]=FLUXO.producao);
 const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['producao','Otávio'],['*','Você revisa'],['youtube','Larissa'],['publica','Rodrigo'],['*','Você confirma e publica']];
@@ -643,6 +650,22 @@ function dashHtml(){
     <div><h5>De onde vêm as visualizações</h5>${barrasH((C.publico||{}).trafego)}</div><div><h5>Aparelho</h5>${barrasH((C.publico||{}).dispositivo)}</div><div><h5>País</h5>${barrasH((C.publico||{}).pais)}</div></div>${falaLarissa(L.publico)}</section>`;
   return h;
 }
+/* ---------- relatórios do analista (Rodrigo) e recados da diretora (Beatriz) ---------- */
+let RELS=[];
+const NOME_LOOK={pauta:'Sofia',roteiro:'Rafael',checador:'Caio',arte:'Helena',producao:'Otávio',youtube:'Larissa',publica:'Rodrigo',gerente:'Beatriz'};
+const lista=(t,arr)=>arr&&arr.length?`<h5>${t}</h5><ul class="lst">${arr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+function relHtml(r){const c=r.comentarios||{};
+  return `<article class="rel"><div class="sechead"><b class="rt">${esc(r.titulo||'Relatório')}</b><span class="note">${r.em?dataBr(r.em):''} · ${r.tipo==='video'?'48 h depois do vídeo':'semanal'}</span></div>
+   ${r.aconteceu?`<p>${esc(r.aconteceu)}</p>`:''}${lista('Deu certo',r.certo)}${lista('Deu errado',r.errado)}${lista('Sugestões',r.sugestoes)}${lista('Ideias',r.ideias)}
+   <h5>Comentários do público${c.total!=null?' · '+nfmt(c.total)+' lidos':''}</h5>
+   ${(c.duvidas||[]).length||(c.temas||[]).length?`${(c.duvidas||[]).map(d=>`<div class="cmt"><span class="cq">“${esc(d.texto)}”</span><span class="note">${d.video?esc(d.video)+' · ':''}dúvida${d.virouPauta?' → virou pauta da Sofia e foi para você':''}</span></div>`).join('')}
+     ${(c.temas||[]).map(d=>`<div class="cmt"><span class="cq">${esc(d.texto)}</span><span class="note">tema sugerido pelo público${d.virouPauta?' → virou pauta da Sofia e foi para você':''}</span></div>`).join('')}`:'<span class="note">Nenhum comentário ainda.</span>'}
+   ${(r.recados||[]).length?`<h5>Recados que a Beatriz repassou</h5><ul class="lst">${r.recados.map(x=>`<li><b>${esc(NOME_LOOK[x.para]||x.para)}:</b> ${esc(x.txt)}</li>`).join('')}</ul>`:''}</article>`}
+function relatoriosHtml(){return `<section class="box wide"><h4>Relatórios do canal</h4><span class="note">48 h depois de cada vídeo publicado e toda segunda-feira. Inclui a leitura dos comentários: dúvidas e temas do público viram pauta da Sofia e chegam para você em "Sua vez".</span>
+  ${RELS.length?RELS.map(relHtml).join(''):'<span class="note">Nenhum relatório ainda.</span>'}</section>`}
+function recadosHtml(a){const R=((ESCR[a.look]||{}).recados||[]).slice().sort((x,y)=>String(y.em||'').localeCompare(String(x.em||'')));
+  if(!R.length) return '';
+  return `<section class="box wide"><h4>Recados da diretora (Beatriz)</h4><ul class="lst">${R.slice(0,12).map(x=>`<li>${x.em?`<span class="when">${esc(String(x.em).slice(8,10)+'/'+String(x.em).slice(5,7))}</span>`:''}${esc(x.txt)}${x.motivo?`<div class="note">Por quê: ${esc(x.motivo)}</div>`:''}</li>`).join('')}</ul></section>`}
 function abrirSala(look,refresh){
   const a=(EQUIPE?.agentes||[]).find(x=>x.look===look); if(!a) return;
   salaAberta=look; const el=$('#office'); const y=refresh?el.scrollTop:0;
@@ -650,12 +673,15 @@ function abrirSala(look,refresh){
   const st=(a.fazendo||[]).length?['on','Trabalhando']:a.esperando?['wait','Travado']:prox.length?['wait','Com fila']:['off','Livre'];
   const ger=(EQUIPE.agentes||[]).find(x=>x.look==='gerente');
   let h=`<div class="in"><header class="ohead"><div class="id">${boneco(a.look)}<div style="min-width:0"><span class="note">Escritório</span><h3 id="o-title">${esc(a.nome)}</h3><div class="cg">${esc(a.cargo)}</div></div></div>
-    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='publica'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='publica'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button><button class="b ghost" data-view="rel" aria-pressed="${salaView==='rel'}">Relatórios</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+  if(a.look==='publica'&&salaView==='rel'){h+=relatoriosHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="rel"]').focus(); return;}
   if(a.look==='publica'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
   if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
+  h+=recadosHtml(a);
   if(a.look==='publica') h+=integracoesHtml()+calendarioHtml();
   if(a.look==='gerente'){
     h+=`<section class="box wide"><h4>O caminho de um vídeo</h4><div class="flow">${CADEIA.map((c,i)=>`${i?'<span class="ar" aria-hidden="true">→</span>':''}${c[0]==='*'?`<span class="n you">${esc(c[1])}</span>`:c[0]==='prod'?`<span class="n">${esc(c[1])}</span>`:`<button class="n" data-sala="${c[0]}" style="all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px">${esc(c[1])}</button>`}`).join('')}</div><span class="note">Ninguém pula etapa: cada um só começa quando o anterior entrega e, nos pontos dourados, quando você aprova.</span></section>`;
+    h+=`<section class="box wide"><h4>Último relatório do analista (Rodrigo)</h4>${RELS.length?relHtml(RELS[0]):'<span class="note">Nenhum relatório ainda. O primeiro sai 48 h depois da estreia.</span>'}</section>`;
     h+=`<section class="box wide"><h4>Mesa da gerente · conectada a todas as salas</h4><div class="mesa">${(EQUIPE.agentes||[]).filter(x=>x.look!=='gerente').map(x=>{const s=(x.fazendo||[]).length?'on':x.esperando?'wait':'off';
       return `<button data-sala="${esc(x.look)}" aria-label="Abrir o escritório de ${esc(x.nome)}">${boneco(x.look)}<div style="min-width:0"><div class="t">${esc(x.nome)} <span class="st ${s}" style="font-size:10px">${s==='on'?'Trabalhando':s==='wait'?'Travado':'Livre'}</span></div><div class="c2">${esc(x.cargo)}</div><div class="r">${esc(resumoDe(x))}</div></div></button>`}).join('')}</div></section>`;
   }
@@ -729,6 +755,7 @@ render(); pintarAviso();
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
   db.doc('equipe/agora').onSnapshot(s=>{EQUIPE=s.exists?s.data():{agentes:[]};renderEquipe()},()=>{});
   db.collection('escritorios').onSnapshot(s=>{ESCR={};s.docs.forEach(x=>ESCR[x.id]=x.data()); if(salaAberta) abrirSala(salaAberta,true)},()=>{});
+  db.collection('relatorios').onSnapshot(s=>{RELS=s.docs.map(x=>({id:x.id,...x.data()})).sort((a,b)=>String(b.em||'').localeCompare(String(a.em||''))); if(salaAberta==='publica'||salaAberta==='gerente') abrirSala(salaAberta,true)},()=>{});
   db.doc('canal/youtube').onSnapshot(s=>{CANAL=s.exists?s.data():null; if(salaAberta==='publica') abrirSala('publica',true)},()=>{});
   db.doc('calendario/posts').onSnapshot(s=>{CAL=s.exists?s.data():null; if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});

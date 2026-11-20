@@ -80,3 +80,10 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
 
 ## Teste obrigatório
 `node scripts/testar_painel.js <caminho absoluto do esteira.html>` precisa dar OK antes de publicar (pega erro de JavaScript e painel vazio).
+
+## Relatórios e recados
+- Sala do Rodrigo → aba "Relatórios" (coleção `relatorios`: em, tipo video|semana, titulo, aconteceu, certo[], errado[], sugestoes[],
+  ideias[], comentarios{total,duvidas[{texto,video,virouPauta}],temas[...]}, recados[{para:<look>,txt}]).
+- Sala da Beatriz mostra o último relatório; cada sala mostra "Recados da diretora" (`escritorios/<look>.recados`).
+- Tema vindo de comentário: doc em `videos` com etapa pauta, vez dono, `doComentario: true` → aparece como "Pedido do público".
+- `scripts/canal_youtube.py` já traz os comentários (`comentariosPublico`).
