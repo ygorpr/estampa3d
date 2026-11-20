@@ -250,8 +250,8 @@ function render(){
   const nProntos=docs.filter(d=>d.duracaoSeg>0).length;
   const cMed=CUSTO.creditosUsadosTotal&&nProntos?custoVoz(CUSTO.creditosUsadosTotal)/nProntos:(comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0);
   $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><span class="sep" aria-hidden="true"></span>`+
-    `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio<small>${comT.length} vídeos prontos</small></div>`+
-    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>${cMed?'≈ '+reais(cMed)+' · ':''}tudo o que já foi gasto ÷ vídeos prontos · ver detalhes</small></button>`;
+    `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio</div>`+
+    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo</button>`;
   const y=$('#yours');
   if(!carregou) y.innerHTML='<div class="empty">Carregando a esteira…</div>';
   else if(!docs.length) y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas pesquisados; você também pode mandar um tema logo abaixo.</div>';
