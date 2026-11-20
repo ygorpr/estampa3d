@@ -15,6 +15,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--cream);font-family:var(--f-body);font-size:18px;line-height:1.45;
   background-image:radial-gradient(1200px 500px at 50% -200px, #3a0e1c 0%, transparent 70%);}
 .wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:28px 60px;max-width:1600px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
@@ -147,6 +148,59 @@ textarea:focus{outline:2px solid var(--gold)}
   .row .acts{flex-wrap:wrap}
 }
 @media (prefers-reduced-motion:no-preference){.card,.row{transition:border-color .15s, opacity .2s}}
+
+/* Escritórios: cada agente tem uma sala (tela cheia) com agora, passo a passo, próximas, feitas e o elo com a gerente */
+.agent .door{margin-top:auto}
+.office{position:fixed;inset:0;z-index:30;background:var(--bg);overflow-y:auto;
+  background-image:radial-gradient(900px 380px at 50% -160px,#3a0e1c 0%,transparent 70%);
+  padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(40px + env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.office .in{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.ohead{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.ohead .id{display:flex;gap:14px;align-items:center;min-width:0}
+.ohead svg{width:96px;height:96px;flex:none;border-radius:50%;background:var(--panel);border:1px solid var(--gold)}
+.ohead h3{font-size:clamp(22px,3vw,30px);color:var(--cream)}
+.ohead .cg{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.ogrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.ogrid{grid-template-columns:1fr}}
+.box{background:var(--wall);border:1px solid var(--line);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.box.wide{grid-column:1/-1}
+.box h4{margin:0;font-family:var(--f-ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+ol.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;counter-reset:s}
+ol.steps li{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;font-size:16px;counter-increment:s}
+ol.steps li::before{content:counter(s);font-family:var(--f-ui);font-size:12px;font-weight:600;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted)}
+ol.steps li.cur::before{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+ol.steps li.cur{color:var(--gold2)}
+ul.lst{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+ul.lst li{font-size:16px;border-bottom:1px solid #4a1a2666;padding-bottom:6px}
+ul.lst li .when{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin-right:6px;font-variant-numeric:tabular-nums}
+.link-ger{display:flex;gap:10px;align-items:flex-start;background:#1E3A3133;border:1px solid var(--bottle);border-radius:6px;padding:10px;font-size:16px}
+.link-ger .pulse{width:10px;height:10px;border-radius:50%;background:var(--ok);flex:none;margin-top:6px;box-shadow:0 0 0 0 #9fd3ae88;animation:pl 2.4s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 8px #9fd3ae00}100%{box-shadow:0 0 0 0 #9fd3ae00}}
+@media (prefers-reduced-motion:reduce){.link-ger .pulse{animation:none}}
+.mesa{display:grid;align-items:start;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.mesa button{all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px;display:flex;gap:10px;align-items:flex-start;min-width:0}
+.mesa button:hover,.mesa button:focus-visible{border-color:var(--gold)}
+.mesa svg{width:48px;height:48px;flex:none;border-radius:50%;background:var(--wall)}
+.mesa .t{font-family:var(--f-display);font-size:14px;color:var(--cream)}
+.mesa .r{font-size:14px;color:var(--muted);line-height:1.3}
+.integ{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.integ .c{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px;display:flex;flex-direction:column;gap:6px}
+.integ .c b{font-family:var(--f-ui);font-size:13px;letter-spacing:.04em}
+.integ a{color:var(--gold2);font-family:var(--f-ui);font-size:13px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal .dh{font-family:var(--f-ui);font-size:11px;color:var(--muted);text-align:center;letter-spacing:.08em;text-transform:uppercase}
+.cal .d{background:var(--panel);border:1px solid var(--line);border-radius:4px;min-height:92px;padding:5px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.cal .d.past{opacity:.45}.cal .d.today{border-color:var(--gold)}
+.cal .d .n{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.post{border-radius:3px;padding:3px 5px;font-family:var(--f-ui);font-size:11.5px;line-height:1.25;border-left:3px solid var(--gold);background:#d4a24c1a;overflow-wrap:anywhere}
+.post.yt{border-left-color:#e05252}.post.sh{border-left-color:var(--candle)}.post.rl{border-left-color:#c77dff}
+.post.wait{opacity:.7;border-style:dashed;border-left-style:solid}
+.post.ok{background:#1E3A3166}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:5px;border-radius:2px;vertical-align:-1px;background:var(--c)}
+.calist{display:none}
+@media (max-width:700px){.cal{display:none}.calist{display:flex}}
 </style>
 
 <div class="wrap">
@@ -186,6 +240,7 @@ textarea:focus{outline:2px solid var(--gold)}
 
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="d-title"></aside>
+<section class="office" id="office" hidden role="dialog" aria-modal="true" aria-labelledby="o-title"></section>
 <div class="toast" id="toast" hidden role="status"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
@@ -384,7 +439,12 @@ const LOOK={
   producao:{pele:'#E6BF98',cabelo:'#7A7A7A',terno:'#5E1428',gravata:'#F3E6C8',tipo:'fone'},
   anima:{pele:'#F1CFAE',cabelo:'#B5651D',terno:'#22313F',gravata:'#D4A24C',tipo:'cacho'},
   render:{pele:'#A86F4C',cabelo:'#1F1F1F',terno:'#3B2F2F',gravata:'#8E1B3A',tipo:'oculos'},
-  gerente:{pele:'#DDB08A',cabelo:'#3A2A1E',terno:'#140509',gravata:'#D4A24C',tipo:'coque'}
+  gerente:{pele:'#DDB08A',cabelo:'#3A2A1E',terno:'#140509',gravata:'#D4A24C',tipo:'coque'},
+  pedro:{pele:'#C68A5E',cabelo:'#2A1A10',terno:'#2C3E50',gravata:'#8E1B3A',tipo:'liso'},
+  julia:{pele:'#F0C9A8',cabelo:'#6B3E1F',terno:'#4A1426',gravata:'#F2D27A',tipo:'cacho'},
+  checador:{pele:'#9C6644',cabelo:'#D9D9D9',terno:'#1E3A31',gravata:'#D4A24C',tipo:'oculos'},
+  youtube:{pele:'#EBC6A4',cabelo:'#8B1E1E',terno:'#2C0B15',gravata:'#F3E6C8',tipo:'coque'},
+  shorts:{pele:'#B07A52',cabelo:'#0F0F0F',terno:'#3A3A3A',gravata:'#D4A24C',tipo:'fone'}
 };
 function boneco(k){const L=LOOK[k]||LOOK.pauta;
   const cab=L.tipo==='coque'?`<circle cx="50" cy="20" r="9" fill="${L.cabelo}"/><path d="M30 40c0-14 9-22 20-22s20 8 20 22c-3-6-10-10-20-10s-17 4-20 10z" fill="${L.cabelo}"/>`
@@ -408,8 +468,84 @@ function renderEquipe(){
     ${a.esperando?`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div class="acts" style="margin-top:8px"><button class="b" type="button" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`:''}
     ${(a.fazendo||[]).length?`<div><h4>Fazendo agora</h4><div class="tasks">${a.fazendo.map(tarefa).join('')}</div></div>`:''}
     ${(a.fila||[]).length?`<div><h4>Fila de espera</h4><div class="tasks">${a.fila.map(tarefa).join('')}</div></div>`:''}
-    ${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}</article>`}).join('');
+    ${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}<button class="b ghost door" data-sala="${esc(a.look)}">Entrar no escritório →</button></article>`}).join('');
+  if(salaAberta) abrirSala(salaAberta,true);
 }
+/* ---------- escritórios ---------- */
+let ESCR={}, CAL=null, salaAberta=null;
+const PASSOS={
+  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Divide a produção entre os produtores','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
+  pauta:['Pesquisa o que está em alta (Google, YouTube, redes)','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
+  roteiro:['Pesquisa profunda em fontes confiáveis (pesquisa.md)','Monta a linha do tempo sem buracos','Escreve as falas curtas, explicando cada palavra difícil','Fechamento obrigatório: resumo, tabela, inscrição, brinde e logo','Lista as pronúncias com dicionário','Manda para o Caio checar e depois para você aprovar'],
+  checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
+  arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
+  producao:['Gera a voz do Paulo (só depois da thumb escolhida)','Mede as falas e ajusta o tempo das cenas','Anima as cenas no cenário certo','Confere os quadros (stills)','Renderiza com jazz, efeitos e legenda karaokê','Faz a prévia e põe o vídeo na Revisão'],
+  youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte (Shorts e Reels)','Monta o calendário de postagem','Você publica copiando os textos'],
+  shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
+};
+['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
+const passoAtual=(a)=>{const f=(a.fazendo||[])[0]; if(!f) return -1; const p=f.pct||0, n=(PASSOS[a.look]||[]).length; return Math.min(n-1,Math.floor(p/100*n));};
+function proximasDe(a){
+  const k=a.look, out=[...(a.fila||[]).map(x=>typeof x==='string'?x:x.txt)];
+  const V=docs.filter(d=>d.etapa!=='recusado');
+  const t=d=>nome(d);
+  if(k==='pauta'){const n=V.filter(d=>d.etapa==='pauta').length; out.push(n<10?`Repor a pauta: só ${n} temas, buscar mais ${10-n+0} ou mais`:`Pauta com ${n} temas. Repõe 10 quando cair abaixo de 10.`)}
+  if(k==='roteiro'||k==='checador') V.filter(d=>d.etapa==='roteiro'&&d.vez==='claude').forEach(d=>out.push((k==='roteiro'?'Escrever: ':'Checar: ')+t(d)));
+  if(k==='checador') V.filter(d=>d.etapa==='roteiro'&&d.vez==='dono'&&(d.obs||'').match(/[Pp]ronúncia/)).forEach(d=>out.push('Pronúncia esperando você: '+t(d)));
+  if(k==='arte') V.filter(d=>d.etapa==='thumb'&&d.vez==='claude').forEach(d=>out.push('Fazer as 3 thumbs: '+t(d)));
+  if(['producao','pedro','julia','anima','render'].includes(k)){V.filter(d=>d.etapa==='producao'&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Produzir: '+t(d)));
+    V.filter(d=>d.etapa==='revisao'&&/[Aa]justando/.test(d.estado||'')&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Ajuste pedido: '+t(d)));}
+  if(k==='youtube'){const feitos=(ESCR.youtube?.pacotes)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Pacote de textos: '+t(d)));}
+  if(k==='shorts'){const feitos=(ESCR.shorts?.cortados)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Cortes para Shorts e Reels: '+t(d)));}
+  if(k==='gerente'){const sv=V.filter(d=>d.vez==='dono'&&PEDE[d.etapa]); if(sv.length) out.push(sv.length+' itens esperando você em "Sua vez"');
+    (EQUIPE?.agentes||[]).filter(x=>x.esperando).forEach(x=>out.push(x.nome+' travado: '+x.esperando));}
+  return [...new Set(out)];
+}
+function feitasDe(a){return ((ESCR[a.look]||{}).feitos||[]).slice().sort((x,y)=>String(y.em||'').localeCompare(String(x.em||'')))}
+function relatorioDe(a){const r=(ESCR[a.look]||{}).relatorio; if(r) return r;
+  const f=(a.fazendo||[])[0]; if(a.esperando) return 'Travado: '+a.esperando; if(f) return 'Fazendo: '+f.txt+' ('+(f.pct||0)+'%)'; return a.nota||'Livre, sem pendências.';}
+function calendarioHtml(){
+  const itens=(CAL&&CAL.itens)||[];
+  const cor={yt:'#e05252',sh:'var(--candle)',rl:'#c77dff'}, nomeP={yt:'YouTube',sh:'Shorts',rl:'Reels'};
+  const hoje=new Date(); hoje.setHours(0,0,0,0);
+  const ini=new Date(hoje); ini.setDate(ini.getDate()-((ini.getDay()+6)%7));
+  const dias=[...Array(63)].map((_,i)=>{const d=new Date(ini);d.setDate(ini.getDate()+i);return d});
+  const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const post=p=>`<div class="post ${p.plat} ${p.status==='aguarda'?'wait':p.status==='publicado'?'ok':''}" title="${esc(nomeP[p.plat]+' · '+(p.hora||'')+' · '+p.titulo)}">${p.hora?esc(p.hora)+' · ':''}${esc(p.titulo)}${p.status==='aguarda'?' <i>(aguarda aprovação)</i>':p.status==='publicado'?' ✓':''}</div>`;
+  const grid=`<div class="cal" role="grid" aria-label="Calendário de postagem">${['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'].map(x=>`<div class="dh">${x}</div>`).join('')}
+   ${dias.map(d=>{const ps=itens.filter(p=>p.data===iso(d));return `<div class="d${d<hoje?' past':''}${+d===+hoje?' today':''}"><span class="n">${d.getDate()}/${d.getMonth()+1}</span>${ps.map(post).join('')}</div>`}).join('')}</div>`;
+  const lista=`<ul class="lst calist">${itens.filter(p=>p.data>=iso(hoje)).sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)).map(p=>`<li><span class="when">${p.data.split('-').reverse().slice(0,2).join('/')} ${esc(p.hora||'')}</span>${esc(nomeP[p.plat])} · ${esc(p.titulo)}${p.status==='aguarda'?' <i class="note">(aguarda aprovação)</i>':''}</li>`).join('')}</ul>`;
+  return `<section class="box wide"><h4>Calendário de postagem</h4>
+   <div class="legend"><span style="--c:${cor.yt}">YouTube (vídeo longo)</span><span style="--c:${cor.sh}">Shorts</span><span style="--c:${cor.rl}">Reels (Instagram)</span><span style="--c:#ffffff33">tracejado = vídeo ainda na sua Revisão</span></div>
+   ${grid}${lista}${CAL&&CAL.nota?`<span class="note">${esc(CAL.nota)}</span>`:''}</section>`;
+}
+function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) return '';
+  return `<section class="box wide"><h4>Contas conectadas</h4><div class="integ">${I.map(c=>`<div class="c"><b>${esc(c.nome)}</b><span class="st ${c.ok?'on':'wait'}">${c.ok?'Conectado':'Não conectado'}</span><span class="note">${esc(c.txt||'')}</span>${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.linkTxt||'Conectar')}</a>`:''}</div>`).join('')}</div></section>`;}
+function abrirSala(look,refresh){
+  const a=(EQUIPE?.agentes||[]).find(x=>x.look===look); if(!a) return;
+  salaAberta=look; const el=$('#office'); const y=refresh?el.scrollTop:0;
+  const passos=PASSOS[a.look]||[], cur=passoAtual(a), prox=proximasDe(a), feitas=feitasDe(a);
+  const st=(a.fazendo||[]).length?['on','Trabalhando']:a.esperando?['wait','Travado']:prox.length?['wait','Com fila']:['off','Livre'];
+  const ger=(EQUIPE.agentes||[]).find(x=>x.look==='gerente');
+  let h=`<div class="in"><header class="ohead"><div class="id">${boneco(a.look)}<div style="min-width:0"><span class="note">Escritório</span><h3 id="o-title">${esc(a.nome)}</h3><div class="cg">${esc(a.cargo)}</div></div></div>
+    <div class="acts"><span class="st ${st[0]}">${st[1]}</span><button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+  if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
+  if(a.look==='youtube') h+=integracoesHtml()+calendarioHtml();
+  if(a.look==='gerente'){
+    h+=`<section class="box wide"><h4>Mesa da gerente · conectada a todas as salas</h4><div class="mesa">${(EQUIPE.agentes||[]).filter(x=>x.look!=='gerente').map(x=>{const s=(x.fazendo||[]).length?'on':x.esperando?'wait':'off';
+      return `<button data-sala="${esc(x.look)}" aria-label="Abrir o escritório de ${esc(x.nome)}">${boneco(x.look)}<div style="min-width:0"><div class="t">${esc(x.nome)} <span class="st ${s}" style="font-size:10px">${s==='on'?'Trabalhando':s==='wait'?'Travado':'Livre'}</span></div><div class="r">${esc(relatorioDe(x))}</div></div></button>`}).join('')}</div></section>`;
+  }
+  h+=`<div class="ogrid">
+   <section class="box"><h4>Fazendo agora</h4>${(a.fazendo||[]).length?`<div class="tasks">${a.fazendo.map(tarefa).join('')}</div>`:'<span class="note">Nada em andamento agora.</span>'}${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}</section>
+   <section class="box"><h4>Passo a passo do cargo</h4><ol class="steps">${passos.map((p,i)=>`<li class="${i===cur?'cur':''}"${i===cur?' aria-current="step"':''}>${esc(p)}</li>`).join('')}</ol></section>
+   <section class="box"><h4>Próximas tarefas</h4>${prox.length?`<ul class="lst">${prox.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<span class="note">Fila vazia. Assim que você liberar algo no painel, aparece aqui.</span>'}</section>
+   <section class="box"><h4>Já fez</h4>${feitas.length?`<ul class="lst">${feitas.slice(0,40).map(x=>`<li>${x.em?`<span class="when">${esc(String(x.em).slice(8,10)+'/'+String(x.em).slice(5,7))}</span>`:''}${esc(x.txt)}</li>`).join('')}</ul>`:'<span class="note">Ainda sem registro.</span>'}</section>`;
+  if(a.look!=='gerente') h+=`<section class="box wide"><h4>Ligação com a gerente</h4><div class="link-ger"><span class="pulse" aria-hidden="true"></span><div><b>Relatório para a Beatriz:</b> ${esc(relatorioDe(a))}<div class="note" style="margin-top:4px">A Beatriz lê esta sala a cada ronda (de hora em hora)${ger&&ger.nota?' · última ronda: '+esc(ger.nota):''}.</div></div></div></section>`;
+  h+=`</div></div>`;
+  el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden';
+  if(!refresh) el.querySelector('[data-sala-fechar]').focus();
+}
+function fecharSala(){salaAberta=null;$('#office').hidden=true;document.body.style.overflow=''}
 function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
 
 /* ---------- decisões ---------- */
@@ -437,6 +573,8 @@ async function agir(act,id,pick){
 }
 
 document.addEventListener('click',e=>{
+  const sl=e.target.closest('[data-sala]'); if(sl){abrirSala(sl.dataset.sala);return}
+  if(e.target.closest('[data-sala-fechar]')){fecharSala();return}
   const rs=e.target.closest('[data-resolvi]'); if(rs){avisarClaude('Equipe: o dono diz que resolveu o bloqueio de '+rs.dataset.resolvi+'. Pode continuar.');rs.disabled=true;rs.textContent='Aviso enviado';return}
   if(e.target.closest('[data-salvar-custo]')){salvarCusto();return}
   const a=e.target.closest('[data-act]'); if(a&&!a.disabled){agir(a.dataset.act,a.dataset.for,a.dataset.pick);return}
@@ -444,7 +582,7 @@ document.addEventListener('click',e=>{
   if(e.target.closest('#kpi-custo')){abrirCustos();return}
   if(e.target.id==='d-x'||e.target.id==='scrim') closeDrawer();
 });
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&aberto)closeDrawer()});
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return; if(aberto){closeDrawer();return} if(salaAberta)fecharSala()});
 $('#newp').addEventListener('submit',async e=>{
   e.preventDefault(); const v=$('#newp-t').value.trim(); if(!v) return;
   if(!db){toast('Sem conexão com a esteira agora.');return}
@@ -461,11 +599,13 @@ render(); pintarAviso();
   if(!db){carregou=true;$('#status').textContent='A esteira só abre dentro do claude.ai, conectado à sua conta.';$('#status').classList.add('warn');render();return}
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
   db.doc('equipe/agora').onSnapshot(s=>{EQUIPE=s.exists?s.data():{agentes:[]};renderEquipe()},()=>{});
+  db.collection('escritorios').onSnapshot(s=>{ESCR={};s.docs.forEach(x=>ESCR[x.id]=x.data()); if(salaAberta) abrirSala(salaAberta,true)},()=>{});
+  db.doc('calendario/posts').onSnapshot(s=>{CAL=s.exists?s.data():null; if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{
     docs=s.docs.map(x=>({id:x.id,...x.data()})); carregou=true;
     if(!s.metadata.fromCache){clearTimeout(timer);$('#status').classList.remove('warn')}
-    render();
+    render(); if(salaAberta) abrirSala(salaAberta,true);
   },err=>{clearTimeout(timer);carregou=true;$('#status').textContent='Não consegui ler a esteira ('+(err&&err.code||'erro')+').';$('#status').classList.add('warn');render()});
 })();
 </script>

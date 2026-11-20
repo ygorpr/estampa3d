@@ -47,3 +47,15 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
 - Voz: `scripts/tts_v3.py` salva cada bloco ao chegar e retoma sem pagar de novo; se acabar crédito, parar, salvar parciais em `pauta/<v>/vo-parcial/`
   e pôr o agente em "esperando".
 - Prévia: `ffmpeg -i v.mp4 -vf scale=854:480 -c:v libx264 -preset veryfast -crf 30 -c:a aac -b:a 64k -movflags +faststart painel/previas/<slug>.mp4`.
+
+## Escritórios (salas de cada funcionário)
+- Cada cartão da equipe tem "Entrar no escritório →": abre a sala em tela cheia (Esc ou "Voltar ao painel" fecha; o painel principal fica igual).
+- Sala = Fazendo agora (barras) · Passo a passo do cargo (passo atual em ouro, pela % da tarefa) · Próximas tarefas (fila + o que o
+  painel mostra para aquele cargo) · Já fez · Ligação com a gerente (relatório que a Beatriz lê a cada ronda).
+- Beatriz: "Mesa da gerente" com todos os agentes, relatório de cada um e atalho para cada sala.
+- Larissa (redatora): Contas conectadas (YouTube e Instagram do Dark Divino, via Windsor.ai) + Calendário de postagem (9 semanas; YouTube
+  vermelho, Shorts laranja, Reels roxo; tracejado = vídeo ainda na Revisão). Ritmo: longos qui 19h e dom 18h; cortes 12h nos dias entre.
+- Dados: `escritorios/<look>` {feitos:[{em,txt}], relatorio, pacotes:[nums] (Larissa), cortados:[nums] (Diego)} e
+  `calendario/posts` {itens:[{data:'AAAA-MM-DD',hora,plat:'yt'|'sh'|'rl',titulo,status:'agendado'|'aguarda'|'publicado'}], nota, integracoes[]}.
+  A cada trabalho concluído, acrescentar em `feitos` da sala; ao aprovar um vídeo, mudar o status dele no calendário para "agendado".
+- Links de conexão do Windsor.ai NÃO vão para o painel (são da conta do dono); mandar no chat.
