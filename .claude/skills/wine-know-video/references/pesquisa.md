@@ -21,3 +21,9 @@ Evite: blogs de loja, sites de receita, agregadores, IA, fóruns — no máximo 
 - Fontes divergem? Fale a faixa conservadora ou deixe o número de fora ("boa parte", "em poucas horas").
 - Saúde: nada de conselho médico; só o que é consenso e dito com cautela.
 - Mostre o `pesquisa.md` ao usuário junto com o roteiro.
+
+## 4. Profundidade exigida (pedido do dono)
+- "Ir nos confins do universo": etimologia, história completa, ciência (química/física), números, datas, nomes, ângulo Brasil,
+  mito × verdade e curiosidades que quase ninguém sabe. Ver exemplos em `regras-do-dono.md` §3.
+- Pronúncia de todo nome estrangeiro conferida em dicionário (IPA) e posta na tabela do roteiro + `vo/pronuncia.json`.
+- Fato sem fonte boa: tirar do roteiro e avisar. Divergência: "a explicação mais aceita".

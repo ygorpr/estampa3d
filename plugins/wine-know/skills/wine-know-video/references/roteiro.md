@@ -5,6 +5,13 @@
 4–5 explicação/prova (teste, prazo, comparação) · 6–8 o erro comum com reação engraçada do Sommelier, ou o "ponto certo" ·
 9 tabela final com a resposta prática · 10 "Wine Know. Dark Divino."
 
+## Público: quem NÃO sabe nada de vinho (regra do dono do canal)
+- Toda palavra que não é do dia a dia é explicada NA HORA, na própria frase: "ânfora: um jarro grande de barro, com duas alças",
+  "sobreiro, a árvore da cortiça", "espumante, o vinho com gás". Na dúvida, troque pela palavra simples ("espingarda antiga" em vez de "mosquete").
+- Linha do tempo sem buraco: se algo some e volta, DIGA que sumiu e por quanto tempo ("a cortiça sumiu das tampas por uns mil anos...
+  e voltou"). Nunca "voltou" sem antes ter mostrado que existia e que sumiu.
+- Releia o roteiro como se você nunca tivesse bebido vinho: cada frase precisa fazer sentido sozinha, na ordem.
+
 ## Como escrever as frases
 - Uma frase falada por cena, 3–5 s (≈8–14 palavras). Frase longa empurra o vídeo para 55 s+; o primeiro (45 s) foi elogiado.
 - Português do Brasil falado, segunda pessoa ("você"), sem termo técnico sem explicação. Reticências criam pausa natural na voz.

@@ -3,6 +3,16 @@ name: wine-know-video
 description: Produz vídeos animados do canal de vinho Wine Know – Dark Divino no padrão aprovado (Sommelier de colete vinho, visual bordô e ouro, voz do Paulo no ElevenLabs, legenda karaokê igual à fala, jazz com sax, abre com a thumbnail e fecha com "Wine Know. Dark Divino."), além de pesquisa de pauta no YouTube, roteiro e thumbnail no estilo do canal. Use sempre que pedirem vídeo, Short, roteiro, thumb ou pauta do canal de vinho, "o próximo vídeo", "um vídeo no nosso padrão", "faz igual ao Sobrou vinho?", ou qualquer dúvida de vinho que deva virar vídeo do canal — mesmo que o pedido não cite o nome da habilidade.
 ---
 
+> **LEIA PRIMEIRO `references/regras-do-dono.md`** — todas as regras e correções do dono do canal (pesquisa "nos confins do universo",
+> público que não sabe nada de vinho, pronúncia por dicionário, 3 thumbs que dizem o assunto, voz SÓ após aprovação do roteiro,
+> avisos nunca sobre a cabeça, bolhas só dentro da taça, personagens extras detalhados, não refazer vídeos entregues sem pedido).
+>
+> Biblioteca pronta de cenários/desenhos dos vídeos de curiosidade em `engine/lib/` (sets_garrafa, sets_rolha, sets_fundo, sets_cor,
+> sets_champ, sets_mar, sets_antigo, sets_trio): oficina do vidreiro, taverna, porto, Roma, ânfora, sobreiro, microscópio, mergulhador,
+> fundo do mar, bar de cruzeiro, museu, restaurante, garrafa de Speyer, uvas, taças com bolhas recortadas, carimbo, mapas...
+> Exemplos completos em `examples/` (garrafa-750ml, rolha, buraco-no-fundo, garrafa-verde, ...). Thumb: `scripts/thumb_shot.py <pasta>`.
+> Pronúncia na voz: `vo/pronuncia.json` lido por `scripts/tts_v3.py`.
+
 # Wine Know – Dark Divino: vídeo animado no padrão aprovado
 
 O canal fala com homens 40+, que têm dinheiro para vinho e querem tirar dúvidas sem enrolação. O dono aprovou um vídeo-modelo

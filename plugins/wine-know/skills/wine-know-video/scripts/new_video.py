@@ -10,6 +10,6 @@ a = argparse.ArgumentParser(); a.add_argument("folder"); a.add_argument("--thumb
 d = Path(o.folder); d.mkdir(parents=True, exist_ok=True); (d / "vo").mkdir(exist_ok=True)
 shutil.copytree(SK / "engine", d, dirs_exist_ok=True)
 for f in ("film.js", "index.html", "audio_mix.py"): shutil.copy(SK / "template" / f, d / f)
-shutil.copy(SK / "assets" / "logo.jpg", d / "logo.jpg")
+shutil.copy(SK / "assets" / "logo.jpg", d / "logo.jpg"); shutil.copy(SK / "assets" / "logo_badge.png", d / "logo_badge.png")
 Image.open(o.thumb).convert("RGB").resize((1920, 1080)).save(d / "thumb.jpg", quality=92)
 print("pasta pronta:", d.resolve(), "\nfilm.js é o esqueleto de cenas: escreva uma cena por frase (veja references/animacao.md).")
