@@ -62,6 +62,7 @@ história do vinho, curiosidades do vinho, vinho para iniciantes, cortiça portu
 
 ## 4. Comentário fixado
 > Você sabia que a palavra "célula" nasceu olhando uma rolha? 🍷 Conta aqui: rolha de cortiça ou tampa de rosca, qual você prefere?
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Quinta-feira, 10/12, às 19h (horário de Brasília).** Plano B: domingo às 18h.

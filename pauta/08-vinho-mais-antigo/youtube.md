@@ -58,6 +58,7 @@ arqueologia do vinho, museu histórico do palatinado, curiosidades do vinho, vin
 
 ## 4. Comentário fixado
 > E você: abriria a garrafa de 1.700 anos ou deixaria fechada pra sempre? 🍷 Conta aqui!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, 03/01, às 18h (horário de Brasília).** Plano B: quinta, 07/01, às 19h.

@@ -60,6 +60,7 @@ espumante para o ano novo, curiosidades do vinho, vinho para iniciantes, histór
 
 ## 4. Comentário fixado
 > Você também achava que foi o monge? 🍾 E no seu réveillon: estoura a rolha ou abre devagarinho, segurando com a mão? Conta aqui!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, 27/12, às 18h (horário de Brasília).** Plano B: quinta, 17/12, às 19h (trocando de lugar com o vídeo 7).

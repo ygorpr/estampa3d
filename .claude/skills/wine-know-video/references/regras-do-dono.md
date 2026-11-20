@@ -167,3 +167,11 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Beatriz (diretora geral) lê o relatório e repassa recados para quem precisa agir: `escritorios/<look>.recados[{em,txt,motivo}]`
   (Sofia: temas; Rafael: gancho/roteiro; Helena: thumb; Otávio: edição/Shorts; Larissa: títulos). Mudança de rumo do canal
   (horário, tipo de tema) vai para o dono aprovar antes.
+
+## Comentário fixado (aprovado pelo dono, 20/11)
+- Todo vídeo publicado tem 1 comentário fixado, escrito pela Larissa no youtube.md (seção "Comentário fixado"):
+  1ª linha = pergunta ligada ao TÍTULO e ao que foi FALADO no vídeo, fácil de responder (escolha, opinião, experiência):
+  ex.: "Você prefere tinto ou rosé?", "Qual o próximo prato que você vai combinar com vinho?", "Abriria a garrafa de 1.700 anos?".
+  2ª linha = convite fixo: "E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇"
+- Objetivo: fazer as pessoas responderem. O Rodrigo lê as respostas no relatório; dúvidas viram "Pedido do público" na pauta.
+- O dono fixa o comentário ao publicar (não temos acesso de escrita ao YouTube).

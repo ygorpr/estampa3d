@@ -58,6 +58,7 @@ vinho de bordeaux, história do vinho, curiosidades do vinho, vinho para inician
 
 ## 4. Comentário fixado
 > Você já tinha ouvido a lenda do fôlego do vidreiro? 🍷 Conta aqui qual curiosidade do vinho você quer ver no próximo vídeo!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Quinta-feira, 26/11, às 19h (horário de Brasília).** Plano B: domingo às 18h.

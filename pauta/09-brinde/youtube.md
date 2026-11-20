@@ -59,6 +59,7 @@ toast torrada vinho, bring dir's, libação grecia, curiosidades do vinho, vinho
 
 ## 4. Comentário fixado
 > E na sua mesa: você olha nos olhos na hora do brinde, ou é dos que derrama o gole pro santo? 🍷 Conta aqui!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Quinta-feira, às 19h (horário de Brasília).** Plano B: sábado às 10h.

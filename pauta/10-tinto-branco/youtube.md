@@ -60,6 +60,7 @@ química do vinho, curiosidades do vinho, vinho para iniciantes, laboratório de
 
 ## 4. Comentário fixado
 > Você já sabia que o suco da uva tinta sai branco? Pega a próxima taça, inclina sobre uma toalha branca e conta aqui: a borda estava roxa ou cor de tijolo? 🍷
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, às 18h (horário de Brasília).** Plano B: quinta às 19h, se o vídeo 9 sair no domingo.

@@ -59,6 +59,7 @@ garrafa de vinho pesada, curiosidades do vinho, vinho para iniciantes, você nun
 
 ## 4. Comentário fixado
 > Confessa: você já serviu vinho com o dedão no buraco do fundo? 🍷 Conta aqui!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, 20/12, às 18h (horário de Brasília).** Plano B: quinta às 19h.

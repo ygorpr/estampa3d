@@ -64,6 +64,7 @@ como guardar vinho, vinho na prateleira do mercado, ciência do vinho, curiosida
 
 ## 4. Comentário fixado
 > Agora que você sabe do "gosto de luz": onde fica o vinho aí na sua casa? Perto da janela ou num canto escuro? 🍷 Conta aqui!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, 13/12, às 18h (horário de Brasília).** Plano B: quinta às 19h.

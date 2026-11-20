@@ -59,6 +59,7 @@ vinho para iniciantes, dicas de vinho, wine know dark divino
 
 ## 4. Comentário fixado
 > E aí, qual é a próxima ocasião: churrasco, peixe ou pizza? Conta aqui que eu te digo qual vinho levar. 🍷
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Domingo, 29/11, às 18h (horário de Brasília).** Plano B: sábado às 10h.

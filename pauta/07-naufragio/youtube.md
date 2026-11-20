@@ -65,6 +65,7 @@ história do champanhe, curiosidades do vinho, vinho para iniciantes, wine know 
 
 ## 4. Comentário fixado
 > E aí, você teria coragem de provar um champanhe de 170 anos? 🍾 Conta aqui: sim, não ou "só se for de graça"!
+> E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇
 
 ## 5. Melhor horário sugerido
 **Quinta-feira, 17/12, às 19h (horário de Brasília).** Plano B: domingo às 18h.
