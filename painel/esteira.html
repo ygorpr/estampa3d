@@ -527,16 +527,16 @@ function renderEquipe(){
 /* ---------- escritórios ---------- */
 let ESCR={}, CAL=null, salaAberta=null;
 const PASSOS={
-  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Divide a produção entre Otávio, Lucas e Marina','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
+  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Passa cada vídeo liberado para o Otávio','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
   pauta:['Pesquisa o que está em alta (Google, YouTube, redes)','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
   roteiro:['Pesquisa profunda em fontes confiáveis (pesquisa.md)','Monta a linha do tempo sem buracos','Escreve as falas curtas, explicando cada palavra difícil','Fechamento obrigatório: resumo, tabela, inscrição, brinde e logo','Lista as pronúncias com dicionário','Manda para o Caio checar e depois para você aprovar'],
   checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
   arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
-  producao:['Gera a voz do Paulo (só depois da thumb escolhida)','Mede as falas e ajusta o tempo das cenas','Anima as cenas no cenário certo','Confere os quadros (stills)','Renderiza com jazz, efeitos e legenda karaokê','Faz a prévia e põe o vídeo na Revisão'],
+  producao:['Gera a voz do Paulo (só depois da thumb escolhida)','Mede as falas e ajusta o tempo das cenas','Anima as cenas no cenário certo','Confere os quadros (stills)','Renderiza com jazz, efeitos e legenda karaokê','Faz a prévia e põe o vídeo na Revisão','Depois de aprovado, faz 1 a 3 cortes verticais para o Shorts'],
   youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Entrega os textos para o Rodrigo publicar'],
   shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
 };
-PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Diego','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números do canal a cada ronda','Comenta cada número e avisa quem precisa mudar algo']
+PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Otávio','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números do canal a cada ronda','Comenta cada número e avisa quem precisa mudar algo'];
 ['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
 const passoAtual=(a)=>{const f=(a.fazendo||[])[0]; if(!f) return -1; const p=f.pct||0, n=(PASSOS[a.look]||[]).length; return Math.min(n-1,Math.floor(p/100*n));};
 function proximasDe(a){
@@ -551,7 +551,7 @@ function proximasDe(a){
     V.filter(d=>d.etapa==='revisao'&&/[Aa]justando/.test(d.estado||'')&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Ajuste pedido: '+t(d)));}
   if(k==='youtube'){const feitos=(ESCR.youtube?.pacotes)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Pacote de textos: '+t(d)));}
   if(k==='publica'){const cal=((CAL&&CAL.itens)||[]).filter(p=>p.status!=='publicado').sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)).slice(0,6); cal.forEach(p=>out.push('Publicar '+p.data.split('-').reverse().slice(0,2).join('/')+' '+(p.hora||'')+': '+p.titulo+(p.status==='aguarda'?' (aguarda sua aprovação)':'')));}
-  if(k==='shorts'){const feitos=(ESCR.shorts?.cortados)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Cortes para Shorts e Reels: '+t(d)));}
+  if(k==='producao'||k==='shorts'){const feitos=(ESCR.producao?.cortados)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Cortes para Shorts e Reels: '+t(d)));}
   if(k==='gerente'){const sv=V.filter(d=>d.vez==='dono'&&PEDE[d.etapa]); if(sv.length) out.push(sv.length+' itens esperando você em "Sua vez"');
     (EQUIPE?.agentes||[]).filter(x=>x.esperando).forEach(x=>out.push(x.nome+' travado: '+x.esperando));}
   return [...new Set(out)];
@@ -575,13 +575,13 @@ const FLUXO={
   roteiro:{de:'Sofia, depois que você aceita o tema',para:'Caio confere fatos e pronúncia'},
   checador:{de:'Rafael (roteiro pronto)',para:'Você aprova o roteiro → vai para a Helena'},
   arte:{de:'Roteiro aprovado por você',para:'Você escolhe A, B ou C → vai para a Produção'},
-  producao:{de:'Helena (thumb que você escolheu) e a Beatriz, que divide os vídeos',para:'Você assiste na Revisão → aprovado vai para Diego e Larissa'},
+  producao:{de:'Helena (thumb que você escolheu)',para:'Você assiste na Revisão → aprovado: Otávio faz os cortes do Shorts, Larissa escreve e Rodrigo publica'},
   shorts:{de:'Vídeo aprovado por você na Revisão',para:'Larissa escreve os textos dos cortes'},
-  youtube:{de:'Vídeo aprovado por você e os cortes do Diego',para:'Rodrigo, que monta o calendário e publica'},
-  publica:{de:'Larissa (textos), Helena (thumb) e Diego (cortes), com o vídeo que você aprovou',para:'Canal no YouTube, no dia e hora do calendário; depois lê os números e avisa a equipe'}
+  youtube:{de:'Vídeo aprovado por você e os cortes do Otávio',para:'Rodrigo, que monta o calendário e publica'},
+  publica:{de:'Larissa (textos), Helena (thumb) e Otávio (vídeo e cortes), com o vídeo que você aprovou',para:'Canal no YouTube, no dia e hora do calendário; depois lê os números e avisa a equipe'}
 };
 PRODS.forEach(k=>FLUXO[k]=FLUXO.producao);
-const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['prod','Produção (3)'],['*','Você revisa'],['shorts','Diego'],['youtube','Larissa'],['publica','Rodrigo'],['*','Você confirma e publica']];
+const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['producao','Otávio'],['*','Você revisa'],['youtube','Larissa'],['publica','Rodrigo'],['*','Você confirma e publica']];
 const PADRAO=['Mesmo kit e mesmo motor de animação para todos (kit-dark-divino + a habilidade wine-know-video)','Mesma voz: Paulo, ElevenLabs v3 com emoção, em blocos de 3 frases','Abre com a thumb ganhando vida e fecha com o logo e "Wine Know. Dark Divino."','Sommelier versão 10: colete e gravata vinho, braços com profundidade, mão nunca na frente do rótulo','Legenda karaokê igual à fala; marca d\'água clara; avisos nunca em cima do rosto','Jazz com sax por baixo, voz na frente','Fechamento obrigatório: resumo, tabela parada 8 s, inscrição, brinde, logo','Conferência de quadros (stills) antes de renderizar e prévia na Revisão'];
 function fichaHtml(d){const f=d.ficha; if(!f) return '';
   return `<div class="sec ficha"><h2 class="s">Ficha de produção${d.produtor?' · '+esc(d.produtor)+(d.produtorOriginal?' (feito por '+esc(d.produtorOriginal)+')':''):''}</h2><dl style="margin:0">
@@ -664,7 +664,7 @@ function abrirSala(look,refresh){
    <section class="box"><h4>Passo a passo do cargo</h4><ol class="steps">${passos.map((p,i)=>`<li class="${i===cur?'cur':''}"${i===cur?' aria-current="step"':''}>${esc(p)}</li>`).join('')}</ol></section>
    <section class="box"><h4>Próximas tarefas</h4>${prox.length?`<ul class="lst">${prox.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<span class="note">Fila vazia. Assim que você liberar algo no painel, aparece aqui.</span>'}</section>
    ${FLUXO[a.look]?`<section class="box wide"><h4>Onde ${esc(a.nome)} fica na esteira</h4><div class="io"><div><b>Recebe de</b>${esc(FLUXO[a.look].de)}</div><div><b>Entrega para</b>${esc(FLUXO[a.look].para)}</div></div></section>`:''}
-   ${PRODS.includes(a.look)?`<section class="box"><h4>Padrão único de produção (igual para os 3 produtores)</h4><ul class="padrao">${PADRAO.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
+   ${PRODS.includes(a.look)?`<section class="box"><h4>Padrão único de produção</h4><ul class="padrao">${PADRAO.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
    <section class="box"><h4>Histórico de produção</h4>${vidsDe(a).length?`<ul class="hist">${vidsDe(a).map(d=>{const et=ETAPAS.find(e=>e.k===d.etapa);return `<li><button data-open="${esc(d.id)}">${d.thumbImg?`<img src="${esc(d.thumbImg)}" alt="">`:''}<span><span class="t">Vídeo ${esc(d.num)} · ${esc(curto(d.titulo))}</span><br><span class="m">${et?esc(et.t):''}${d.duracaoSeg?' · '+mmss(d.duracaoSeg):''} · ver tudo o que foi usado →</span></span></button></li>`}).join('')}</ul>`:'<span class="note">Ainda não produziu nenhum vídeo.</span>'}</section>`:''}
    <section class="box"><h4>Já fez</h4>${feitas.length?`<ul class="lst">${feitas.slice(0,40).map(x=>`<li>${x.em?`<span class="when">${esc(String(x.em).slice(8,10)+'/'+String(x.em).slice(5,7))}</span>`:''}${esc(x.txt)}</li>`).join('')}</ul>`:'<span class="note">Ainda sem registro.</span>'}</section>`;
   if(a.look!=='gerente') h+=`<section class="box wide"><h4>Ligação com a gerente</h4><div class="link-ger"><span class="pulse" aria-hidden="true"></span><div><b>Relatório para a Beatriz:</b> ${esc(relatorioDe(a))}<div class="note" style="margin-top:4px">A Beatriz lê esta sala a cada ronda (de hora em hora)${ger&&ger.nota?' · última ronda: '+esc(ger.nota):''}.</div></div></div></section>`;

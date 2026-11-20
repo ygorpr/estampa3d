@@ -77,3 +77,6 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
   com base nos números (o que funcionou, o que mudar, quem avisar: Rafael para gancho, Helena para thumb/CTR).
 - Dados: doc `canal/youtube`, gerado por `scripts/canal_youtube.py saida.json` (precisa de WINDSOR_API_KEY_DARKDIVINO no ambiente;
   conta separada da 3uniformes). Atualizar a cada ronda da Beatriz e reescrever os comentários quando os números mudarem.
+
+## Teste obrigatório
+`node scripts/testar_painel.js <caminho absoluto do esteira.html>` precisa dar OK antes de publicar (pega erro de JavaScript e painel vazio).

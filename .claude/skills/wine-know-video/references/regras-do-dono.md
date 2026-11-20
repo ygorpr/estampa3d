@@ -144,3 +144,15 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   junta vídeo aprovado + thumb + textos + cortes, monta o calendário, deixa pronto para publicar, lê os números a cada ronda e
   comenta cada cartão do "Painel do canal" (fica na sala dele, `look: publica`). Ele não aperta "publicar": não há acesso de escrita
   ao YouTube; o dono publica/agenda no YouTube Studio. Equipe: 11 pessoas.
+
+## EQUIPE = NO MÁXIMO 8 (20/11, ordem do dono) — não criar cargo novo sem ele pedir
+- Beatriz (gerente) · Sofia (pauta) · Rafael (roteiro) · Caio (checagem) · Helena (thumbs) · Otávio (TODA a produção + cortes do Shorts)
+  · Larissa (redatora) · Rodrigo (publicador e analista do canal). Saíram: Pedro, Júlia, Lucas, Marina, Diego (vídeos e histórico
+  passaram para o Otávio, com `produtorOriginal`). Se precisar de nova função, ACUMULAR num cargo existente, nunca passar de 8.
+
+## PAINEL: NUNCA PUBLICAR SEM TESTAR (erro de 20/11)
+- A versão 32 foi publicada sem teste e quebrou o painel inteiro: faltou um ";" antes de uma linha que começa com "[" e o
+  JavaScript parou (equipe, "Sua vez" e esteira sumiram). O dono viu o painel "todo cagado".
+- Antes de TODA publicação do painel: `node .claude/skills/wine-know-video/scripts/testar_painel.js /caminho/ABSOLUTO/painel/esteira.html`
+  tem que dar "OK". Se der "FALHOU", não publicar. Também tirar print do painel e das salas e olhar.
+- Mudança pequena e pedida = mexer só no que foi pedido; não reorganizar o layout que o dono aprovou.
