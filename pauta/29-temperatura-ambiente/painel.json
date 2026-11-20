@@ -1,0 +1,57 @@
+{
+ "roteiro": [
+  "Tinto em temperatura ambiente? Aqui no Brasil, isso é servir vinho quente! E você vai ver o que o calor faz com ele. Fica comigo!",
+  "Segundo o INMET, o instituto de meteorologia, a máxima média de janeiro no estado do Rio passa dos trinta e um graus. E a garrafa na prateleira fica na temperatura da sala.",
+  "No vídeo do gelo, a gente viu de onde veio essa regra: das salas frias da Europa antiga. Hoje, a pergunta é outra: por que o calor estraga o gosto?",
+  "Primeiro, o álcool. Vinho quente solta mais vapor de álcool, e ele sobe direto pro nariz. Sabe aquela picada quando você cheira a taça? É o álcool!",
+  "E na boca é pior. A língua tem um sensor de calor, o mesmo que sente a pimenta. Normalmente, ele só dispara lá pelos quarenta e dois graus.",
+  "Mas, em laboratório, cientistas viram que o álcool faz esse sensor disparar perto dos trinta e quatro! Quase a temperatura da boca. Por isso o tinto quente queima!",
+  "E o aroma, que é o cheiro do vinho? No calor, o álcool cobre a fruta. No frio demais, quase nada sobe da taça. O bom fica no meio!",
+  "Agora, um detalhe que pouca gente sabe: a temperatura muda até o doce. Língua mais quente sente mais doce. Mais fria, sente menos.",
+  "É por isso que refrigerante quente fica enjoativo! E é por isso que o vinho doce, de sobremesa, vai bem geladinho.",
+  "Só que o frio também cobra o seu preço. No tinto, ele deixa o tanino mais duro. Tanino é aquilo que amarra a boca, como banana verde, e vem da casca da uva.",
+  "Daí sai a regra de ouro: quanto mais encorpado e cheio de tanino, menos frio. Quanto mais leve, mais frio ele aguenta.",
+  "Então, anota! Espumante, o vinho com gás: de seis a dez graus. Branco leve e rosé: de sete a dez. Branco encorpado: de dez a doze.",
+  "Tinto leve, como Pinot Noir e Beaujolais: de doze a catorze. E tinto encorpado: de dezesseis a dezoito. Repara: nenhum vinho é servido a vinte e cinco graus!",
+  "E o tinto gelado virou moda! Em junho de 2026, o supermercado online inglês Ocado contou: a busca por tinto gelado no site deles subiu mais de mil por cento em um ano!",
+  "Calma: mil por cento partindo de quase nada. Mas, na mesma pesquisa, mais da metade dos jovens disse que já bebeu tinto gelado no verão.",
+  "Só que tem segredo: o tinto que vai bem gelado é o leve, de pouco tanino, como Beaujolais, Pinot Noir e Lambrusco. Um tinto encorpado e caro, gelado, fica duro e amargo.",
+  "E como acertar em casa? Com a regra dos vinte-vinte! O tinto vai vinte minutos pra geladeira antes de abrir. E o branco sai da geladeira vinte minutos antes.",
+  "Por que o branco sai? Porque a geladeira fica uns quatro graus. Gelado demais, o branco não tem cheiro de nada!",
+  "Quer precisão? Existe o termômetro de garrafa: uma pulseirinha que abraça o vidro e mostra os graus. Ele mede o vidro, não o vinho, mas chega bem perto.",
+  "E sirva um pouquinho abaixo do ideal: na taça, o vinho esquenta rapidinho no calor da sala. E segura a taça pela haste, pra mão não esquentar o vinho!",
+  "Resumindo: o calor faz o álcool queimar, o frio endurece o tanino, cada estilo tem a sua faixa, e a regra dos vinte-vinte resolve!",
+  "Curtiu? Se inscreve no canal e me conta: você já bebeu tinto gelado?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "INMET",
+   "fala": "Inmét",
+   "fonte": "sigla pt-BR (Instituto Nacional de Meteorologia), lida como palavra"
+  },
+  {
+   "escreve": "Pinot Noir",
+   "fala": "Pinô Nuár",
+   "fonte": "francês /pi.no nwaʁ/ (Wiktionary \"pinot noir\"); padrão do canal"
+  },
+  {
+   "escreve": "Beaujolais",
+   "fala": "Bojolê",
+   "fonte": "francês /bo.ʒɔ.lɛ/ (Wiktionary \"Beaujolais\")"
+  },
+  {
+   "escreve": "Lambrusco",
+   "fala": "Lambrúsco",
+   "fonte": "italiano /lamˈbrusko/ (Wiktionary \"lambrusco\") — igual ao português, só confirmar a tônica"
+  },
+  {
+   "escreve": "Ocado",
+   "fala": "Ocádou",
+   "fonte": "inglês britânico /əˈkɑːdəʊ/ (pronúncia da marca; Cambridge não lista — conferir com o dono)"
+  }
+ ],
+ "duracao": "~3 min 25 s",
+ "obs": "O álcool engana o sensor de calor da língua: em laboratório, ele faz esse sensor disparar perto dos 34 °C em vez de 42 °C — por isso o tinto servido a 'temperatura ambiente' brasileira (máx. média de 31 °C no RJ em janeiro, INMET) parece queimar.",
+ "fontes": "Trevisani et al., Nature Neuroscience 2002 (álcool e o sensor de calor TRPV1); Talavera et al., Nature 2005 (temperatura e doçura); Decanter e Wine Spectator (temperaturas de serviço, regra dos 20 min); Ocado Retail, 18/06/2026 (tinto gelado +1.020%); INMET Normais 1991–2020 (RJ, janeiro 31,2 °C)"
+}

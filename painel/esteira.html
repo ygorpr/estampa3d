@@ -50,7 +50,7 @@ header.top p{margin:4px 0 0;color:var(--muted);font-style:italic}
 
 /* Esteira */
 .belt-scroll{overflow-x:auto;padding-bottom:6px}
-.belt{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr)) minmax(170px,.7fr);gap:12px;min-width:1320px}
+.belt{display:grid;grid-template-columns:repeat(6,minmax(210px,1fr)) minmax(170px,.7fr);gap:12px;min-width:1500px}
 .station{background:var(--wall);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
 .station.rej{background:transparent;border-style:dashed}
 .station>header{padding:12px 12px 10px;display:flex;flex-direction:column;gap:2px}
@@ -162,11 +162,12 @@ const ETAPAS=[
   {k:'roteiro', n:'2', t:'Roteiro',          who:'Eu escrevo · você aprova ou pede mudança'},
   {k:'thumb',   n:'3', t:'Thumbnail',        who:'Você escolhe A, B ou C e já libera o vídeo'},
   {k:'producao',n:'4', t:'Produção',         who:'Voz, animação, render, conferência'},
-  {k:'entregue',n:'5', t:'Entregue',         who:'Vídeo e thumb na pasta videos/'},
+  {k:'revisao', n:'5', t:'Revisão',          who:'Você assiste e aprova ou pede ajustes'},
+  {k:'entregue',n:'6', t:'Entregue e aprovado', who:'Vídeo final aprovado por você'},
   {k:'recusado',n:'–', t:'Recusados',        who:'Solte aqui para descartar', rej:true}
 ];
 const ORD=ETAPAS.map(e=>e.k);
-const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escolha a thumb e libere o vídeo'};
+const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escolha a thumb e libere o vídeo',revisao:'Assista e aprove o vídeo'};
 let db=null, cm=null, docs=[], aberto=null, carregou=false, arrastando=false, sortables=[];
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -234,6 +235,7 @@ function rowHtml(d){
   if(d.etapa==='pauta') a=`<button class="b" data-act="aceitar" data-for="${esc(d.id)}">Aceitar</button><button class="b no" data-act="recusar" data-for="${esc(d.id)}">Recusar</button>`;
   if(d.etapa==='roteiro') a=`<button class="b ghost" data-open="${esc(d.id)}">Ler</button><button class="b" data-act="aprovar-roteiro" data-for="${esc(d.id)}">Aprovar</button><button class="b no" data-open="${esc(d.id)}" data-mudar="1">Mudar</button>`;
   if(d.etapa==='thumb') a=['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>`<button class="b abc" data-act="escolher" data-pick="${k}" data-for="${esc(d.id)}" title="${esc(d.thumbs[k])}">${k}</button>`).join('')+`<button class="b ghost" data-open="${esc(d.id)}">Ver</button>`;
+  if(d.etapa==='revisao') a=`<button class="b ghost" data-open="${esc(d.id)}">Assistir</button><button class="b" data-act="aprovar-video" data-for="${esc(d.id)}">Aprovar</button><button class="b no" data-open="${esc(d.id)}" data-mudar="1">Ajustar</button>`;
   const sub=d.etapa==='pauta'?d.gancho:(d.etapa==='thumb'?'Thumbs: '+['A','B','C'].filter(k=>d.thumbs&&d.thumbs[k]).map(k=>k+' '+d.thumbs[k]).join(' · '):d.obs);
   return `<div class="row" data-row="${esc(d.id)}"><div style="min-width:0"><span class="what">${PEDE[d.etapa]}${d.num?' · vídeo '+esc(d.num):''}</span><br>
     <button class="t" data-open="${esc(d.id)}">${esc(d.titulo)}</button>${sub?`<div class="g">${esc(sub)}</div>`:''}${d.etapa==='thumb'?`<input class="pedido" id="ped-${esc(d.id)}" data-pedido-for="${esc(d.id)}" placeholder="Algum pedido para o vídeo? (opcional)" aria-label="Pedido para o vídeo">`:''}</div>
@@ -256,12 +258,13 @@ function soltar(id,de,para){
   const i=ORD.indexOf(de), j=ORD.indexOf(para);
   if(para==='recusado') return de==='pauta'?agir('recusar',id):toast('Só temas da Pauta vão para Recusados.');
   if(de==='recusado') return para==='pauta'?agir('reabrir',id):toast('Volte o tema primeiro para a Pauta.');
-  if(j<i){ if(de==='producao'||de==='entregue') return toast('Esse já está em produção. Me fale no chat o que mudar.'); return openDrawer(id,false,true); }
+  if(j<i){ if(de==='producao') return toast('Esse já está em produção. Me fale no chat o que mudar.'); if(de==='revisao'||de==='entregue') return openDrawer(id,false,true); return openDrawer(id,false,true); }
   if(j>i+1) return toast('Uma estação de cada vez.');
   if(d.vez!=='dono') return toast('Ainda está comigo: '+(d.estado||'trabalhando')+'.');
   if(de==='pauta') return agir('aceitar',id);
   if(de==='roteiro') return (d.roteiro&&d.roteiro.length)?agir('aprovar-roteiro',id):toast('O roteiro ainda não está pronto.');
   if(de==='thumb'){ toast('Escolha A, B ou C.'); return openDrawer(id); }
+  if(de==='revisao') return agir('aprovar-video',id);
   toast('Essa estação é minha.');
 }
 
@@ -287,14 +290,16 @@ function openDrawer(id,refresh,mudar){
       ${pode?'<span class="note">Escreva no campo abaixo o que você quer no vídeo (opcional) e clique na letra: isso já libera a voz e a produção.</span>':''}</div>`;
   }
   if(d.thumbImg&&!d.thumbOpcoesImg) h+=`<div class="sec"><h2 class="s">Thumb</h2><img class="sheet" src="${esc(d.thumbImg)}" alt="Thumbnail do vídeo"></div>`;
-  if(d.video) h+=`<div class="sec"><h2 class="s">Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
+  if(d.previa) h+=`<div class="sec"><h2 class="s">Assista ao vídeo${d.duracao?' · '+esc(d.duracao):''}</h2><video class="sheet" controls preload="metadata" playsinline src="${esc(d.previa)}"${d.thumbImg?` poster="${esc(d.thumbImg)}"`:''}></video><span class="note">Prévia em qualidade menor para assistir aqui. O arquivo final em alta está na conversa e em ${esc(d.video||'videos/')}.</span></div>`;
+  else if(d.video) h+=`<div class="sec"><h2 class="s">Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
   if(d.obs) h+=`<div class="sec"><h2 class="s">Recado meu</h2><div>${esc(d.obs)}</div></div>`;
-  if(d.etapa!=='entregue'&&d.etapa!=='producao'){
-    h+=`<div class="sec"><h2 class="s">${sua?'Sua decisão':'Comentário'}</h2><label class="note" for="d-note">${mudar?'Diga o que mudar e clique em "Pedir mudança"':'Comentário (opcional; obrigatório para pedir mudança)'}</label><textarea id="d-note" placeholder="${d.etapa==='thumb'?'Ex.: quero o Sommelier rindo no fim; mostre o mapa do Brasil':'Ex.: troque a frase 4; quero mais sobre o Brasil'}">${esc(keepNote)}</textarea><div class="acts">`;
+  if(d.etapa!=='producao'){
+    h+=`<div class="sec"><h2 class="s">${sua?'Sua decisão':'Comentário'}</h2><label class="note" for="d-note">${mudar?'Diga o que mudar e clique em "Pedir mudança"':'Comentário (opcional; obrigatório para pedir mudança)'}</label><textarea id="d-note" placeholder="${d.etapa==='thumb'?'Ex.: quero o Sommelier rindo no fim; mostre o mapa do Brasil':(d.etapa==='revisao'||d.etapa==='entregue')?'Ex.: aos 1:20 a legenda cobre a taça; deixe a música mais baixa':'Ex.: troque a frase 4; quero mais sobre o Brasil'}">${esc(keepNote)}</textarea><div class="acts">`;
     if(sua&&d.etapa==='pauta') h+=`<button class="b" data-act="aceitar" data-for="${esc(d.id)}">Aceitar tema</button><button class="b no" data-act="recusar" data-for="${esc(d.id)}">Recusar</button>`;
     if(sua&&d.etapa==='roteiro') h+=`<button class="b" data-act="aprovar-roteiro" data-for="${esc(d.id)}">Aprovar roteiro</button>`;
+    if(sua&&d.etapa==='revisao') h+=`<button class="b" data-act="aprovar-video" data-for="${esc(d.id)}">Aprovar vídeo</button>`;
     if(d.etapa==='recusado') h+=`<button class="b ghost" data-act="reabrir" data-for="${esc(d.id)}">Voltar para a pauta</button>`;
-    else h+=`<button class="b ghost" data-act="mudar" data-for="${esc(d.id)}">Pedir mudança</button>`;
+    else h+=`<button class="b ghost" data-act="mudar" data-for="${esc(d.id)}">${d.etapa==='revisao'||d.etapa==='entregue'?'Pedir ajuste no vídeo':'Pedir mudança'}</button>`;
     h+=`</div>${sua?'<span class="note">A voz do ElevenLabs só é gerada depois que você escolhe a thumb.</span>':''}</div>`;
   }
   if(d.historico&&d.historico.length) h+=`<div class="sec"><h2 class="s">Histórico</h2><ul class="log">${d.historico.slice().reverse().map(x=>`<li>${dataBr(x.em)} · <b>${esc(x.quem)}</b> · ${esc(x.txt)}</li>`).join('')}</ul></div>`;
@@ -315,7 +320,8 @@ async function agir(act,id,pick){
   if(act==='aprovar-roteiro'){up={etapa:'thumb',vez:'claude',estado:'Fazendo as 3 thumbs'};msg='Roteiro APROVADO'}
   if(act==='escolher'){up={etapa:'producao',vez:'claude',thumbEscolhida:pick,estado:'Na fila de produção'};msg='Thumb '+pick+' escolhida = execução APROVADA (pode gerar a voz)'}
   if(act==='executar'){up={etapa:'producao',vez:'claude',estado:'Na fila de produção'};msg='Execução APROVADA (pode gerar a voz)'}
-  if(act==='mudar'){if(!nota){openDrawer(id,false,true);toast('Escreva o que mudar.');return}up={vez:'claude',estado:'Ajustando o que você pediu'};msg='Pediu mudança'}
+  if(act==='aprovar-video'){up={etapa:'entregue',vez:'claude',estado:null};msg='Vídeo APROVADO'}
+  if(act==='mudar'){if(!nota){openDrawer(id,false,true);toast('Escreva o que mudar.');return}up={vez:'claude',estado:'Ajustando o que você pediu'};if(d.etapa==='revisao'||d.etapa==='entregue'){up.etapa='producao';msg='Pediu ajuste no vídeo'}else msg='Pediu mudança'}
   if(!up) return;
   const hist=(d.historico||[]).slice(-40);
   hist.push({em:agora(),quem:'Você',txt:msg+(nota?': '+nota:'')});
