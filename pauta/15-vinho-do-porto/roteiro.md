@@ -35,7 +35,7 @@ Cenário sugerido: abre num **bar-cave em Vila Nova de Gaia** (pipas ao fundo, j
 | 15 | Com o sucesso, veio a fraude: vinho fraco tingido com frutinha de sabugueiro! Até que, em mil setecentos e cinquenta e seis, o Marquês de Pombal, ministro do rei, botou ordem na casa. | [serious] | bagas escuras caindo no vinho, X vermelho; Marquês de Pombal (personagem: peruca branca, casaca) |
 | 16 | Criou uma companhia pra controlar o vinho e fincou trezentos e trinta e cinco marcos de pedra: uma das primeiras regiões demarcadas do mundo, com fronteira na lei! | [confident] | marcos de granito "FEITORIA" surgindo no mapa; "335 MARCOS" |
 | 17 | Na hora de comprar: o Ruby é o jovem, vermelho vivo, frutado. O Tawny envelhece em barril pequeno: fica cor de tijolo, com gosto de nozes e caramelo. | [warm] | garrafas RUBY e TAWNY; taças lado a lado |
-| 18 | O Vintage é de um ano só, de safra excepcional, pra guardar. E o branco? Tem quem tome com gelo e água tônica! | [playful] | garrafa VINTAGE empoeirada; taça de Porto branco com gelo |
+| 18 | O Vintage é de uma colheita só, e só nos melhores anos: feito pra guardar. E o branco? Tem quem tome com gelo e água tônica! | [playful] | garrafa VINTAGE empoeirada; taça de Porto branco com gelo |
 | 19 | E o nome é protegido: vinho de outro lugar não pode se chamar Porto. No Brasil, desde um tratado de mil novecentos e trinta e três! | [confident] | selo "DENOMINAÇÃO PROTEGIDA"; bandeiras PT–BR; "1933" |
 | 20 | Resumindo: o nome vem do porto de saída, o país tem o nome da cidade, e a força vem da aguardente que para a fermentação! | [confident] | TABELA final (sem legenda) |
 | 21 | Curtiu? Se inscreve no canal e me conta: você é do time Ruby ou do time Tawny? | [friendly] | CTA (canto superior esquerdo) |
