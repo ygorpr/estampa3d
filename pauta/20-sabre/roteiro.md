@@ -1,4 +1,4 @@
-# Dá para abrir champanhe com espada? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
+# Dá para abrir champanhe com espada? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 25 s (23 falas, 582 palavras; se passar de 3 min 45 s, a fala 15 — recorde da Suíça — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md.
 Linha do tempo: lenda dos hussardos (Napoleão, começo dos anos 1800, sem registro) → 1986 Confraria do Sabre de Ouro (França) → 2009 sabrage coletivo criado em Garibaldi → 2013 Garibaldi, 196 pessoas → 2015 Suíça, 487 (recorde Guinness atual) → maio/2026 italiano, 91 em 1 min (Guinness) → agosto/2026 dentista suíço, 118 em 1 min (sem Guinness).
 

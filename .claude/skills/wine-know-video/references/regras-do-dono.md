@@ -22,6 +22,8 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   O dono aceita/recusa, aprova roteiro e escolhe a thumb arrastando o cartão ou pelos botões; cada decisão me chega como comentário.
   **Escolher a thumb (A/B/C) = aprovar a execução** (pode gerar a voz). Junto com a escolha ele pode mandar um pedido para o vídeo:
   esse pedido é obrigatório de seguir na produção. Não existe mais a etapa separada "Aprovar execução" (pedido do dono, 20/11/2026).
+  **Depois da produção vem a REVISÃO:** o vídeo vai para a estação "Revisão" com uma prévia (480p, `painel/previas/`) para ele assistir no painel;
+  ele aprova (→ "Entregue e aprovado") ou pede ajustes (volta para Produção com o pedido). Nunca marcar "Entregue" sem a aprovação dele.
   Ler as decisões com ArtifactData (coleção `videos`) e atualizar os cartões (etapa, vez, roteiro, thumbs) conforme o trabalho anda.
 - Pesquisa de demanda no YouTube (`scripts/youtube_ideas.py`) ajuda, mas curiosidade boa vale mesmo sem busca (cresce por recomendação/Shorts).
 - Um tema pode virar dois vídeos (ex.: rolha no restaurante + palavra "sommelier"). Se surgir um assunto paralelo bom, separar em outro vídeo.

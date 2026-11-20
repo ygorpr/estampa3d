@@ -1,4 +1,4 @@
-# Por que se guarda vinho deitado? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (voz só depois do "aprovado")
+# Por que se guarda vinho deitado? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 30 s. Cenário: ADEGA de pedra Dark Divino (arcos, prateleiras de madeira com garrafas deitadas, vela) para abrir e fechar;
 LABORATÓRIO (`lab()` de `pauta/10-tinto-branco/sets_lab.js`) para o estudo australiano; COZINHA brasileira com geladeira (do kit) para as dicas.
 Transições com dissolve de ~0,5 s; push-in suave.

@@ -1,4 +1,4 @@
-# O saca-rolhas nasceu numa arma? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
+# O saca-rolhas nasceu numa arma? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 25 s (23 falas, 588 palavras; se passar de 3 min 45 s, a fala 8 — o nome "corkscrew" em 1720 — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md. Continuação natural do vídeo 03 "E antes da rolha?" (mesma linha do tempo: a rolha volta nos anos 1600 com a garrafa forte).
 Linha do tempo: anos 1600 a rolha volta com a garrafa forte → anos 1630 gun worm no mosquete → 1681 1º registro escrito ("steel worm" de tirar rolha) → 1720 a palavra "corkscrew" (antes "bottlescrew") → 1795 1ª patente (Henshall) → 1882 abridor de garçom (Wienke) → 1930 saca-rolhas de asas (patente nos EUA) → 1974 clube de colecionadores (ICCA, 50 membros) → 1979 Screwpull (Herbert Allen) → 2015 recorde Guinness de coleção (Bucareste, 23.965).
 
