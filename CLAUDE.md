@@ -7,6 +7,12 @@ Para um vídeo novo: "faz um vídeo do canal sobre <tema>" + thumbnail. O zip pa
 O kit pronto (motor ajustado, cenários, exemplo completo, ferramentas) está em `kit-dark-divino/`.
 Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skills/stickman`, depois copiar `kit-dark-divino/engine/*` por cima da pasta do filme.
 
+## LEIA PRIMEIRO
+- `.claude/skills/wine-know-video/references/regras-do-dono.md`: TODAS as regras e correções do dono (pesquisa profunda, público leigo,
+  pronúncia por dicionário, 3 thumbs que dizem o assunto, voz só após aprovação, gestos, avisos, bolhas, personagens extras).
+- Situação atual dos vídeos: `pauta/STATUS.md`. Biblioteca de cenários: `.claude/skills/wine-know-video/engine/lib/`.
+- Responder ao dono SEMPRE em português.
+
 ## Referência de qualidade (APROVADA pelo dono do canal)
 - **`videos/sobrou-vinho-narrado-paulo.mp4`** é o vídeo-modelo. Todo vídeo novo deve chegar neste nível.
   O projeto completo dele está em `kit-dark-divino/exemplo-sobrou-vinho/` (partir dele para novos temas).
