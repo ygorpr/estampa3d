@@ -107,9 +107,11 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Gerente: "Beatriz" (esta sessão) coordena tudo; ronda automática de hora em hora (tarefa agendada "Gerente da esteira Dark Divino")
   confere agentes, dispara o que o dono já liberou, atualiza o painel e só chama o dono quando precisa (créditos, acesso, decisão).
 - Equipe completa (12): Beatriz (gerente), Sofia (pauta), Rafael (roteiro), **Caio (checador de fatos)**, Helena (thumbs),
-  Otávio/Pedro/Júlia/Lucas/Marina (produção, um vídeo cada quando possível), **Larissa (publicação no YouTube)**, **Diego (cortes para Shorts/Reels)**.
+  Otávio/Pedro/Júlia/Lucas/Marina (produção, um vídeo cada quando possível), **Larissa (redatora: títulos, descrições e textos do YouTube, Shorts e Reels)**, **Diego (cortes para Shorts/Reels)**.
   - Caio: confere cada fato e cada pronúncia do roteiro em fonte forte ANTES de ir para "Sua vez"; marca o que mudou no "Recado meu".
-  - Larissa: para cada vídeo aprovado, prepara título, descrição (com fontes), tags, capítulos e sugestão de horário em `pauta/<v>/youtube.md`
-    e no painel; NÃO publica (sem acesso à conta do YouTube).
+  - Larissa (REDATORA): para cada vídeo aprovado, escreve 3 opções de título (dizem o assunto, curiosidade sem mistério vazio),
+    descrição (com fontes), tags, capítulos e sugestão de horário em `pauta/<v>/youtube.md` e no painel; e, para cada corte do Diego,
+    título curto + legenda (caption) + hashtags para Shorts e Reels em `videos/shorts/<slug>-textos.md`.
+    NÃO publica (sem acesso à conta do YouTube); o dono publica copiando os textos.
   - Diego: de cada vídeo aprovado, 1 a 3 cortes verticais 1080x1920 de 30–45 s com legenda karaokê, sem voz nova, em `videos/shorts/`.
 - Créditos: avisar o dono no painel quando o saldo estimado ficar abaixo de 20 mil créditos (config/custos.alertaCreditos).
