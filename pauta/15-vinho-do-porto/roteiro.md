@@ -1,5 +1,5 @@
 # Por que se chama vinho do Porto? (e por que é mais forte) — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
-~3 min 35 s (22 falas + logo; estimado pelo ritmo do vídeo 09). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
+~3 min 20 s (22 falas + logo; ~530 palavras, estimado pelo ritmo do vídeo 06, 499 palavras = 3 min 13 s). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Cenário sugerido: abre num **bar-cave em Vila Nova de Gaia** (pipas ao fundo, janela para o rio com barcos rabelos e a cidade do Porto do outro lado, ao entardecer). Insertos: mapa antigo (Portus Cale), vale do Douro em degraus, rabelo nas corredeiras, navio à vela, cave com pipas, vinhedo com marco de pedra. Personagens extras (de verdade, no estilo do Sommelier): o **barqueiro do rabelo** (arrais, no remo comprido), o **Marquês de Pombal** (peruca branca, casaca) e as **leveduras** (bolinhas com carinha). Transições entre lugares com dissolve de ~0,5 s.
 
 ## Pronúncia (na voz vai escrito como se fala; a legenda mostra a grafia certa)
@@ -31,7 +31,7 @@ Cenário sugerido: abre num **bar-cave em Vila Nova de Gaia** (pipas ao fundo, j
 | 11 | No meio desse banquete, entra a aguardente, um destilado de vinho fortíssimo... e as leveduras param! | [excited] | jarro de aguardente; leveduras desmaiando |
 | 12 | Sobra açúcar, por isso ele é doce... e o álcool sobe. É o vinho fortificado: com reforço de aguardente. | [warm] | placa "FORTIFICADO = VINHO + AGUARDENTE" |
 | 13 | Mas era pra aguentar a viagem? Em parte, sim! No começo, punham um pouquinho de aguardente antes de embarcar. | [curious] | navio no mar agitado; carimbo "VERDADE (EM PARTE)" |
-| 14 | Agora, o abade que teria inventado o Porto doce num mosteiro? Lenda, ninguém prova! | [emphatic] | monge com taça; carimbo "LENDA" |
+| 14 | Agora, o abade que teria inventado o Porto doce num mosteiro? Lenda, ninguém prova! E a aguardente no meio da fermentação só virou regra lá por mil oitocentos e cinquenta. | [emphatic] | monge com taça; carimbo "LENDA"; depois "1850" |
 | 15 | Com o sucesso, veio a fraude: vinho fraco tingido com frutinha de sabugueiro! Até que, em mil setecentos e cinquenta e seis, o Marquês de Pombal, ministro do rei, botou ordem na casa. | [serious] | bagas escuras caindo no vinho, X vermelho; Marquês de Pombal (personagem: peruca branca, casaca) |
 | 16 | Criou uma companhia pra controlar o vinho e fincou trezentos e trinta e cinco marcos de pedra: uma das primeiras regiões demarcadas do mundo, com fronteira na lei! | [confident] | marcos de granito "FEITORIA" surgindo no mapa; "335 MARCOS" |
 | 17 | Na hora de comprar: o Ruby é o jovem, vermelho vivo, frutado. O Tawny envelhece em barril pequeno: fica cor de tijolo, com gosto de nozes e caramelo. | [warm] | garrafas RUBY e TAWNY; taças lado a lado |
