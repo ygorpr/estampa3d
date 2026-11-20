@@ -19,7 +19,9 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   falando agora; **sempre que a Pauta da esteira ficar sem assunto (ou abaixo de 10), gerar sozinho mais 10 temas novos** a partir dessas pesquisas,
   sem esperar pedido, aprendendo com o que ele aceitou e recusou (ver histórico no painel); trazer **no mínimo 10 temas** na esteira, cada um com o gancho e a evidência ("o que estão falando": vídeo, matéria, dúvida comum).
 - Painel de decisões: artefato "Esteira Dark Divino" (https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB, código em `painel/esteira.html`).
-  O dono aceita/recusa, aprova roteiro, escolhe thumb e aprova execução arrastando o cartão ou pelos botões; cada decisão me chega como comentário.
+  O dono aceita/recusa, aprova roteiro e escolhe a thumb arrastando o cartão ou pelos botões; cada decisão me chega como comentário.
+  **Escolher a thumb (A/B/C) = aprovar a execução** (pode gerar a voz). Junto com a escolha ele pode mandar um pedido para o vídeo:
+  esse pedido é obrigatório de seguir na produção. Não existe mais a etapa separada "Aprovar execução" (pedido do dono, 20/11/2026).
   Ler as decisões com ArtifactData (coleção `videos`) e atualizar os cartões (etapa, vez, roteiro, thumbs) conforme o trabalho anda.
 - Pesquisa de demanda no YouTube (`scripts/youtube_ideas.py`) ajuda, mas curiosidade boa vale mesmo sem busca (cresce por recomendação/Shorts).
 - Um tema pode virar dois vídeos (ex.: rolha no restaurante + palavra "sommelier"). Se surgir um assunto paralelo bom, separar em outro vídeo.
