@@ -102,3 +102,5 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   (cenas ~50%, stills conferidos ~70%, voz ~85%, render ~95%, na Revisão 100%).
 - Tempo de produção médio: cada vídeo pronto recebe `producaoMin` = minutos de trabalho da máquina somados
   (roteiro + thumbs + cenas + voz + render + ajustes). Medir pela duração real de cada agente/render e gravar no doc do vídeo.
+- Agente travado: preencher `esperando`, `comoResolver` (passo a passo curto) e `link` (ex.: https://elevenlabs.io/app/subscription).
+  O card mostra o botão "Já resolvi, pode continuar", que me manda um aviso: testar na hora (ex.: 1 frase curta de voz) e retomar.

@@ -403,7 +403,7 @@ function renderEquipe(){
   el.innerHTML=A.map(a=>{const st=(a.fazendo||[]).length?['on','Trabalhando']:(a.fila||[]).length?['wait','Esperando']:['off','Livre'];
     return `<article class="agent"><div class="who">${boneco(a.look)}<div style="min-width:0"><div class="nm">${esc(a.nome)}</div><div class="cg">${esc(a.cargo)}</div></div></div>
     <span class="st ${st[0]}">${st[1]}</span>
-    ${a.esperando?`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}</div>`:''}
+    ${a.esperando?`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div class="acts" style="margin-top:8px"><button class="b" type="button" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`:''}
     ${(a.fazendo||[]).length?`<div><h4>Fazendo agora</h4><div class="tasks">${a.fazendo.map(tarefa).join('')}</div></div>`:''}
     ${(a.fila||[]).length?`<div><h4>Fila de espera</h4><div class="tasks">${a.fila.map(tarefa).join('')}</div></div>`:''}
     ${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}</article>`}).join('');
@@ -435,6 +435,7 @@ async function agir(act,id,pick){
 }
 
 document.addEventListener('click',e=>{
+  const rs=e.target.closest('[data-resolvi]'); if(rs){avisarClaude('Equipe: o dono diz que resolveu o bloqueio de '+rs.dataset.resolvi+'. Pode continuar.');rs.disabled=true;rs.textContent='Aviso enviado';return}
   if(e.target.closest('[data-salvar-custo]')){salvarCusto();return}
   const a=e.target.closest('[data-act]'); if(a&&!a.disabled){agir(a.dataset.act,a.dataset.for,a.dataset.pick);return}
   const o=e.target.closest('[data-open]'); if(o){openDrawer(o.dataset.open,false,!!o.dataset.mudar);return}
