@@ -1,0 +1,61 @@
+{
+  "roteiro": [
+    "Por que a taça de vinho tem esse cabinho fino, a haste? E por que mandam segurar por ela?",
+    "Tem grego, vidreiro de Veneza, imposto inglês... e uma câmera que enxerga o álcool! Fica comigo!",
+    "Na Grécia antiga, o vinho ia numa kylix: uma taça de barro, larga e rasinha... com um pezinho embaixo. O pé já estava lá!",
+    "Depois veio o vidro soprado: o vidreiro sopra o vidro derretido num tubo, feito balão. E os romanos fizeram as primeiras taças de vidro com haste.",
+    "Só que, na Idade Média, vidro era luxo! O povo bebia em madeira, chifre, barro ou estanho, um metal parecido com prata.",
+    "Quem mudou isso foi Veneza: em mil duzentos e noventa e um, levou os fornos de vidro pra ilha de Murano. Pra evitar incêndio... e guardar o segredo!",
+    "Nos anos mil e quatrocentos, Murano inventou o cristallo: um vidro quase transparente, que esticava feito caramelo. Nasciam as taças de haste alta!",
+    "E o cristal pesado e brilhante? Esse é inglês! Nos anos mil seiscentos e setenta, George Ravenscroft fez um vidro com chumbo, que a Europa inteira copiou.",
+    "Uns setenta anos depois, a Inglaterra criou um imposto sobre o vidro... cobrado pelo peso! E durou cem anos!",
+    "Resultado? Taças menores e mais leves. E nessa época surgiu o air twist: uma bolha de ar torcida dentro da haste, como um saca-rolhas de luz!",
+    "Em mil novecentos e cinquenta e oito, o austríaco Claus Riedel mostra uma taça lisa, fina, sem enfeite. Só o vinho aparecendo!",
+    "Depois, ele lança uma taça diferente pra cada uva! Mas isso é ciência... ou marketing?",
+    "Primeiro, o mito: diziam que a taça joga o vinho num ponto certo da língua. Lenda! O gosto se sente na língua toda.",
+    "Já o cheiro muda de verdade! Num estudo alemão com cento e oitenta e uma pessoas, o formato da taça mudou a nota do aroma.",
+    "E no Japão, criaram uma câmera que enxerga o vapor do álcool! Com o vinho a treze graus, o álcool fez um anel na borda... e deixou o meio livre pro aroma.",
+    "E o mesmo vinho a vinte e quatro graus? O anel sumiu! É aqui que entra a haste.",
+    "Sua mão está a uns trinta e seis graus. Pegando pelo bojo, a parte redonda, você esquenta o vinho aos poucos... e deixa digital no vidro!",
+    "Pela haste, o vinho fica fresco, o vidro limpo, e dá pra girar. O giro solta o aroma, e a boca mais fechada guarda o cheiro pro nariz.",
+    "E aqui no Brasil? Nosso clássico nem tem haste: o copo americano, de mil novecentos e quarenta e sete. E foi parar num museu de Nova York!",
+    "Resumindo: o pé é grego, a haste alta é de Murano, a taça leve veio do imposto... e pela haste o vinho fica fresco e cheiroso!",
+    "Curtiu? Se inscreve no canal e me conta: você segura a taça pela haste ou pelo bojo?",
+    "Wine Know. Dark Divino."
+  ],
+  "pronuncia": [
+    {
+      "escreve": "kylix",
+      "fala": "kílix",
+      "fonte": "grego antigo κύλιξ /kŷ.liks/ (Wiktionary \"κύλιξ\"); em inglês /ˈkaɪlɪks/ (Wiktionary \"kylix\") — usamos a forma grega"
+    },
+    {
+      "escreve": "Murano",
+      "fala": "Murâno",
+      "fonte": "italiano /muˈraːno/ (Wiktionary \"Murano\")"
+    },
+    {
+      "escreve": "cristallo",
+      "fala": "cristálo",
+      "fonte": "italiano /kriˈstallo/ (Wiktionary \"cristallo\")"
+    },
+    {
+      "escreve": "George Ravenscroft",
+      "fala": "Djórdj Rêivenscróft",
+      "fonte": "inglês: George /dʒɔːdʒ/, raven /ˈreɪ.vən/, croft /krɒft/ (Cambridge Dictionary)"
+    },
+    {
+      "escreve": "air twist",
+      "fala": "ér tuíst",
+      "fonte": "inglês: air /eə/, twist /twɪst/ (Cambridge Dictionary)"
+    },
+    {
+      "escreve": "Claus Riedel",
+      "fala": "Kláus Rídel",
+      "fonte": "alemão /klaʊs ˈʁiːdl̩/ — regra do alemão: \"ie\" = /iː/ (Duden, Aussprachewörterbuch); a marca não publica guia — CONFIRMAR com o dono"
+    }
+  ],
+  "duracao": "~3 min 35 s",
+  "obs": "O pé da taça já existia na kylix grega, a taça inglesa ficou leve por causa de um imposto cobrado pelo peso do vidro (que durou 100 anos), e uma câmera japonesa de 2015 mostrou que o vinho fresco forma um anel de álcool na borda e deixa o meio livre pro aroma — e o anel some quando o vinho esquenta.",
+  "fontes": "Corning Museum of Glass (Roman Glassblowing) — taças de vidro com haste séc. III–IV; Britannica — George Ravenscroft e o vidro com chumbo; Arakawa…Mitsubayashi, Analyst 2015 (RSC) — sniffer-camera do álcool na taça; Hummel et al., Appetite 2003 (PubMed 14550318) — forma da taça muda a nota do aroma; Decanter/Wine Folly — segurar pela haste (calor e digitais)"
+}
