@@ -1,4 +1,4 @@
-# Por que a gente gira o vinho na taça? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (voz só depois do "aprovado")
+# Por que a gente gira o vinho na taça? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 15 s. Cenário: BAR Dark Divino (abre e fecha) + LABORATÓRIO (`lab()` de `pauta/10-tinto-branco/sets_lab.js`) com uma
 taça grande em close e um quadro para desenhar a onda; uma cena curta numa SALA DE BIORREATORES (tanque redondo de aço girando sobre uma base).
 Personagens extras (detalhados, no estilo do Sommelier): **físico da Suíça** (jaleco branco sobre camisa, óculos redondos, cabelo grisalho,
