@@ -1,4 +1,4 @@
-# Por que a gente brinda? — roteiro FLUIDO, voz C (emoção) — AGUARDANDO APROVAÇÃO
+# Por que a gente brinda? — roteiro FLUIDO, voz C (emoção) — AGUARDANDO APROVAÇÃO DO ROTEIRO · thumb escolhida: A "POR QUE A GENTE / BRINDA?"
 Para quem NÃO sabe nada de vinho. ~3 min. Fontes: pesquisa.md. Cenário do Sommelier: bar elegante, com taças.
 
 | # | Fala (narração = legenda) | O que aparece |

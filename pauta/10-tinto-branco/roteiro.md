@@ -1,4 +1,4 @@
-# O vinho tinto é feito de suco branco? — roteiro FLUIDO, voz C (emoção) — AGUARDANDO APROVAÇÃO
+# O vinho tinto é feito de suco branco? — roteiro FLUIDO, voz C (emoção) — AGUARDANDO APROVAÇÃO DO ROTEIRO · thumb escolhida: C "DE ONDE VEM / A COR DO VINHO?"
 Para quem NÃO sabe nada de vinho. ~3 min. Fontes: pesquisa.md. Cenário do Sommelier: vinícola/adega com tanques.
 
 | # | Fala (narração = legenda) | O que aparece |

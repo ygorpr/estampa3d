@@ -7,4 +7,4 @@
 | Mito do veneno: sem prova | Ripley's — https://www.ripleys.com/stories/drink-toasting ; Today I Found Out; HistoryFacts |
 | Teoria dos 5 sentidos (dita como "tem quem diga"); o tilintar ficou popular no séc. XVII com vidros novos | HistoryFacts — https://historyfacts.com/world-history/article/why-do-we-clink-glasses-when-toasting/ ; Wikipedia "Clinking glasses" |
 | Etiqueta: toque suave (evitar lascar), olhar nos olhos | HistoryFacts; etiqueta usual |
-| Bater pelo bojo, não pela borda (borda é mais frágil) | etiqueta/fabricantes de taças (Riedel e outros) — checar fonte antes da voz |
+| Bater pelo bojo, não pela borda (bojo é a parte mais forte; borda é a mais fina e frágil) | Wine Folly (sessão da Riedel) — https://plus.winefolly.com/tips/clinking-wine-glasses ; Tasting Table |
