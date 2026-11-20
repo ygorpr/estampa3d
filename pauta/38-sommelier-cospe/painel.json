@@ -1,0 +1,61 @@
+{
+ "roteiro": [
+  "Por que o sommelier põe o vinho na boca... e depois cospe? Não é desperdício? Não é falta de educação?",
+  "Tem uma razão muito boa! Tem concurso gigante, conta de matemática... e um truque do nariz. Fica comigo!",
+  "Primeiro: sommelier é o profissional que cuida do vinho no restaurante. E provar vinho faz parte do trabalho dele, todo santo dia.",
+  "Agora imagina um concurso de vinho. O maior do mundo é o da revista inglesa Decanter, lá em Londres.",
+  "Em dois mil e vinte e cinco, foram mais de dezesseis mil vinhos, de cinquenta e sete países, avaliados em cinco dias, por quase duzentos e cinquenta jurados!",
+  "E cada jurado prova até uns oitenta vinhos por dia. A própria revista explica: mais do que isso, o paladar cansa.",
+  "Agora, a conta. Se cada gole tem uns quinze mililitros, uma colher de sopa, oitenta goles dão mais de um litro! É mais de uma garrafa e meia... antes do almoço!",
+  "Quem engole tudo isso fica bêbado. E jurado bêbado dá nota errada: o vinho número setenta não pode perder ponto só porque o jurado já está alegrinho!",
+  "Teve até cientista que mediu isso. Na Holanda, dez voluntários provaram dez vinhos em uma hora.",
+  "Quem cuspiu ficou com quase nada de álcool no sangue. Já entre os que engoliram... metade passou do limite de álcool para dirigir no país!",
+  "E aqui no Brasil, com a Lei Seca, a regra é clara: provou bastante, mesmo cuspindo, não pega o volante!",
+  "Mas espera aí: se ele cospe, como é que sente o gosto? Aí é que vem o truque.",
+  "A língua só sente cinco gostos: doce, salgado, azedo, amargo, e o umami, que é o gosto de caldo de carne.",
+  "Cereja, baunilha, maracujá... isso tudo é cheiro! E ele chega ao nariz por dentro, pelo caminho de trás, da boca até o nariz. É a via retronasal.",
+  "Quer testar? Tapa o nariz e põe uma bala de fruta na boca. Ela fica só doce. Agora solta o nariz... e o sabor aparece!",
+  "Por isso o sommelier faz aquele barulhinho esquisito: puxa ar pela boca, com o vinho dentro. Isso leva o perfume direto pro nariz.",
+  "Ele espalha o vinho pela boca toda, presta atenção... e só depois cospe.",
+  "E o melhor: depois de cuspir, o sabor continua! Os franceses até medem isso em segundos, e cada segundo tem nome: caudalie.",
+  "E a Organização Internacional da Uva e do Vinho manda contar esse tempo a partir do momento em que o vinho sai da boca. Engolido... ou cuspido!",
+  "E onde ele cospe? Na cuspideira: um balde, ou um vaso, que fica na mesa só pra isso.",
+  "E tem técnica, viu? Gole pequeno, boca perto do balde, e um jato firme e curto, sem espirrar no vizinho!",
+  "Tem até prova famosa: no exame de Master of Wine, um dos títulos mais difíceis do vinho, são trinta e seis vinhos às cegas, sem ver o rótulo, em três manhãs.",
+  "Então, quando você vir um sommelier cuspindo, já sabe: não é nojo, nem desperdício. É profissionalismo!",
+  "Mas no jantar com os amigos, com uma tacinha só? Aí pode engolir, sem culpa nenhuma!",
+  "Resumindo: o profissional prova muitos vinhos, cuspir mantém o paladar e a cabeça no lugar, e o sabor chega pelo nariz, por dentro!",
+  "Curtiu? Se inscreve no canal e me conta: você teria coragem de cuspir numa degustação?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "sommelier",
+   "fala": "somelhê",
+   "fonte": "francês /sɔ.mə.lje/ (Wiktionary; já aprovado no canal)"
+  },
+  {
+   "escreve": "Decanter",
+   "fala": "Dikénter",
+   "fonte": "inglês /dɪˈkæn.tər/ (Cambridge \"decanter\")"
+  },
+  {
+   "escreve": "caudalie",
+   "fala": "codalí",
+   "fonte": "francês /ko.da.li/ (Wiktionary \"caudalie\"; de latim cauda, cauda)"
+  },
+  {
+   "escreve": "Master of Wine",
+   "fala": "Máster ov Uáin",
+   "fonte": "inglês /ˈmɑː.stər əv waɪn/ (Cambridge \"master\", \"wine\")"
+  },
+  {
+   "escreve": "umami",
+   "fala": "umámi",
+   "fonte": "japonês /ɯmami/ (Wiktionary \"umami\"); dicionarizado em português"
+  }
+ ],
+ "duracao": "~3 min 30 s",
+ "obs": "O profissional cospe porque prova muitos vinhos: no maior concurso do mundo (Decanter, Londres, 2025: +16 mil vinhos, 57 países, ~250 jurados) cada jurado prova até ~80 por dia; 80 goles de 15 ml = 1,2 L. O estudo holandês Bac(chus) mostrou: quem cospe fica com quase nada de álcool no sangue; metade de quem engoliu passou do limite. O sabor vem do cheiro pela via retronasal (teste da bala com nariz tapado) e continua depois de cuspir: a caudalie (1 s de persistência), que a OIV manda contar a partir do momento em que o vinho sai da boca. Cuspideira, técnica de cuspir (Wine Spectator), exame de Master of Wine (36 vinhos às cegas). Recado responsável: Lei Seca.",
+ "fontes": "Decanter (How we judge wine at DWWA; DWWA 2025: 57 países, 248 jurados); van de Wiel et al., The Bac(chus) experiment (Wine Studies); Union des Œnologues de France + ICV 2024 (via Vinetur); VinePair (por que se cospe no vinho e não na cerveja); Seattle Met (Oeno Files, mar. 2012); Wine Spectator (Dr. Vinny, como cuspir); Wine Folly (ciência da degustação, retronasal); OIV, norma de concursos 2021 (persistência); wein.plus (caudalie); Institute of Masters of Wine / Jancis Robinson (exame MW); Lei 12.760/2012 (Lei Seca)"
+}
