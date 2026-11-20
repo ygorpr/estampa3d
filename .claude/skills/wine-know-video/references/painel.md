@@ -69,3 +69,11 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
 - Ao terminar um vídeo, gravar no doc do vídeo: `produtor` (nome) e `ficha` {cenario, regras[], cenas[{n,desc}], stills
   ('fichas/vNN-stills.jpg', publicado em files, máx. 1200 px), voz, som, legenda, fechamento, pasta}. Extrair de scenes_vNN.js
   (1ª linha = cenário; comentários "// N ..." = cena N) e de stills-conferencia.jpg.
+
+## Painel do canal (sala da Larissa → botão "Painel do canal")
+- Igual ao YouTube Studio: Inscritos, Visualizações (28 d), Tempo de exibição (h), Duração média, Inscritos ganhos, Vídeos publicados;
+  gráfico de visualizações por dia (28 d, com dica ao passar o mouse); um cartão por vídeo; Público (idade, gênero, tráfego, aparelho, país).
+- Embaixo de cada cartão: comentário de especialista da Larissa (`comentarios.<chave>` e `videos[i].comentario`). Escrever de verdade,
+  com base nos números (o que funcionou, o que mudar, quem avisar: Rafael para gancho, Helena para thumb/CTR).
+- Dados: doc `canal/youtube`, gerado por `scripts/canal_youtube.py saida.json` (precisa de WINDSOR_API_KEY_DARKDIVINO no ambiente;
+  conta separada da 3uniformes). Atualizar a cada ronda da Beatriz e reescrever os comentários quando os números mudarem.

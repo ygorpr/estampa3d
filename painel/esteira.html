@@ -224,6 +224,34 @@ ul.lst li .when{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin
 .legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:5px;border-radius:2px;vertical-align:-1px;background:var(--c)}
 .calist{display:none}
 @media (max-width:700px){.cal{display:none}.calist{display:flex}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button.b.ghost[aria-pressed="true"],.tabs button.b.ghost[aria-pressed="true"]:hover{background:var(--gold);color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:10px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.kpi .kl{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.kpi>b{font-family:var(--f-display);font-size:30px;color:var(--cream);font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .ks{font-family:var(--f-ui);font-size:11px;color:var(--muted)}
+.lar{display:flex;gap:8px;align-items:flex-start;margin-top:6px;background:#d4a24c12;border-left:2px solid var(--gold);border-radius:4px;padding:6px 8px}
+.lar svg{width:28px;height:28px;flex:none;border-radius:50%;background:var(--wall)}
+.lar p{margin:0;font-size:15px;line-height:1.35}
+.lar b{color:var(--gold2);font-weight:600}
+.chartwrap{position:relative}
+.chartwrap svg{width:100%;height:auto;max-height:260px;display:block}
+.chartwrap .ax{font-family:var(--f-ui);font-size:8px;fill:var(--muted)}
+.chartwrap .bar:hover rect+rect{fill:var(--gold2)}
+.tip{position:absolute;pointer-events:none;background:var(--bg);border:1px solid var(--gold);border-radius:4px;padding:4px 8px;font-family:var(--f-ui);font-size:12px;color:var(--cream);white-space:nowrap;transform:translate(-50%,-110%)}
+.vcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.vcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px;display:flex;flex-direction:column;gap:6px}
+.vcard img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
+.vcard .vt{font-family:var(--f-display);font-size:15px;color:var(--cream)}.vcard .vt a{color:inherit}
+.vcard .vm{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pub{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.pub h5{margin:0 0 6px;font-family:var(--f-ui);font-size:12px;color:var(--muted);font-weight:500}
+.hb{display:flex;flex-direction:column;gap:5px}
+.hr{display:grid;grid-template-columns:minmax(70px,38%) 1fr auto;gap:8px;align-items:center;font-family:var(--f-ui);font-size:12px}
+.hk{color:var(--cream);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ht{height:10px;background:#ffffff10;border-radius:4px;overflow:hidden}.ht i{display:block;height:100%;background:var(--gold);border-radius:0 4px 4px 0}
+.hv{color:var(--muted);font-variant-numeric:tabular-nums}
 </style>
 
 <div class="wrap">
@@ -580,6 +608,37 @@ function calendarioHtml(){
 }
 function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) return '';
   return `<section class="box wide"><h4>Contas conectadas</h4><div class="integ">${I.map(c=>`<div class="c"><b>${esc(c.nome)}</b><span class="st ${c.ok?'on':'wait'}">${c.ok?'Conectado':'Não conectado'}</span><span class="note">${esc(c.txt||'')}</span>${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.linkTxt||'Conectar')}</a>`:''}</div>`).join('')}</div></section>`;}
+/* ---------- painel do canal (YouTube) na sala da Larissa ---------- */
+let CANAL=null, salaView='sala';
+const nfmt=n=>Number(n||0).toLocaleString('pt-BR',{maximumFractionDigits:1});
+const durfmt=s=>{s=Math.round(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+function falaLarissa(t){return t?`<div class="lar">${boneco('youtube')}<p><b>Larissa:</b> ${esc(t)}</p></div>`:''}
+function barrasH(lista,fmt){if(!lista||!lista.length) return '<span class="note">Sem dados ainda.</span>';
+  const mx=Math.max(...lista.map(x=>x[1]))||1;
+  return `<div class="hb">${lista.map(([k,v])=>`<div class="hr"><span class="hk">${esc(k)}</span><span class="ht" title="${esc(k)}: ${fmt?fmt(v):nfmt(v)}"><i style="width:${Math.max(2,v/mx*100)}%"></i></span><span class="hv">${fmt?fmt(v):nfmt(v)}</span></div>`).join('')}</div>`}
+function serieSvg(S){if(!S||!S.length) return '<span class="note">Sem dados ainda.</span>';
+  const W=720,H=180,p=24,mx=Math.max(1,...S.map(x=>x.v)),bw=(W-p*2)/S.length;
+  return `<div class="chartwrap"><svg viewBox="0 0 ${W} ${H+24}" role="img" aria-label="Visualizações por dia nos últimos 28 dias">
+   <line x1="${p}" y1="${H}" x2="${W-p}" y2="${H}" stroke="var(--line)"/>
+   ${S.map((x,i)=>{const h=x.v/mx*(H-16);return `<g class="bar" data-tip="${esc((x.d||'').split('-').reverse().slice(0,2).join('/'))}: ${nfmt(x.v)} visualizações"><rect x="${p+i*bw}" y="0" width="${bw}" height="${H}" fill="transparent"/><rect x="${p+i*bw+1}" y="${H-h}" width="${Math.max(1,bw-2)}" height="${Math.max(h,x.v?2:0)}" rx="3" fill="var(--gold)"/></g>`}).join('')}
+   <text x="${p}" y="${H+18}" class="ax">${esc((S[0].d||'').split('-').reverse().slice(0,2).join('/'))}</text><text x="${W-p}" y="${H+18}" text-anchor="end" class="ax">${esc((S[S.length-1].d||'').split('-').reverse().slice(0,2).join('/'))}</text>
+   <text x="${p}" y="12" class="ax">${nfmt(mx)}</text></svg><div class="tip" hidden></div></div>`}
+function dashHtml(){
+  const C=CANAL; if(!C) return `<section class="box wide"><span class="note">Lendo o canal…</span></section>`;
+  const c=C.canal||{}, L=C.comentarios||{};
+  const tiles=[['inscritos','Inscritos',nfmt(c.inscritos),'total do canal'],['views28','Visualizações',nfmt(c.views28),'últimos 28 dias'],['horas28','Tempo de exibição (horas)',nfmt(c.horas28),'últimos 28 dias'],
+    ['duracao','Duração média da visualização',durfmt(c.duracaoMedia28),'últimos 28 dias'],['inscritos28','Inscritos ganhos',(c.inscritos28>0?'+':'')+nfmt(c.inscritos28),'últimos 28 dias'],['videos_k','Vídeos publicados',nfmt(c.videos),'total do canal']];
+  let h=`<section class="box wide"><div class="sechead"><h4>Painel do canal · ${esc(c.titulo||'YouTube')}</h4><span class="note">Atualizado ${C.atualizado?dataBr(C.atualizado):''} · dados do YouTube pelo Windsor.ai (conta separada)</span></div>
+   ${falaLarissa(L.geral)}
+   <div class="kpis">${tiles.map(t=>`<article class="kpi"><span class="kl">${t[1]}</span><b>${t[2]}</b><span class="ks">${t[3]}</span>${falaLarissa(L[t[0]])}</article>`).join('')}</div></section>
+   <section class="box wide"><h4>Visualizações por dia · 28 dias</h4>${serieSvg(C.serie)}${falaLarissa(L.serie)}</section>
+   <section class="box wide"><h4>Vídeos do canal</h4>${(C.videos||[]).length?`<div class="vcards">${C.videos.map(v=>`<article class="vcard">${v.thumb?`<img src="${esc(v.thumb)}" alt="" loading="lazy">`:''}<div class="vt">${v.url?`<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.titulo)}</a>`:esc(v.titulo)}</div>
+     <div class="vm">${v.publicado?'Publicado '+esc(String(v.publicado).slice(0,10).split('-').reverse().join('/'))+' · ':''}${nfmt(v.views)} visualizações · ${nfmt(v.likes)} curtidas · ${nfmt(v.comentarios)} comentários · retenção ${nfmt(v.retencao)}% · duração média ${durfmt(v.duracaoMedia)}</div>${falaLarissa(v.comentario)}</article>`).join('')}</div>`:'<span class="note">Nenhum vídeo publicado ainda.</span>'}${falaLarissa(L.videos)}</section>
+   <section class="box wide"><h4>Público</h4><div class="pub">
+    <div><h5>Idade</h5>${barrasH((C.publico||{}).idade,v=>nfmt(v)+'%')}</div><div><h5>Gênero</h5>${barrasH((C.publico||{}).genero,v=>nfmt(v)+'%')}</div>
+    <div><h5>De onde vêm as visualizações</h5>${barrasH((C.publico||{}).trafego)}</div><div><h5>Aparelho</h5>${barrasH((C.publico||{}).dispositivo)}</div><div><h5>País</h5>${barrasH((C.publico||{}).pais)}</div></div>${falaLarissa(L.publico)}</section>`;
+  return h;
+}
 function abrirSala(look,refresh){
   const a=(EQUIPE?.agentes||[]).find(x=>x.look===look); if(!a) return;
   salaAberta=look; const el=$('#office'); const y=refresh?el.scrollTop:0;
@@ -587,7 +646,8 @@ function abrirSala(look,refresh){
   const st=(a.fazendo||[]).length?['on','Trabalhando']:a.esperando?['wait','Travado']:prox.length?['wait','Com fila']:['off','Livre'];
   const ger=(EQUIPE.agentes||[]).find(x=>x.look==='gerente');
   let h=`<div class="in"><header class="ohead"><div class="id">${boneco(a.look)}<div style="min-width:0"><span class="note">Escritório</span><h3 id="o-title">${esc(a.nome)}</h3><div class="cg">${esc(a.cargo)}</div></div></div>
-    <div class="acts"><span class="st ${st[0]}">${st[1]}</span><button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='youtube'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+  if(a.look==='youtube'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
   if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
   if(a.look==='youtube') h+=integracoesHtml()+calendarioHtml();
   if(a.look==='gerente'){
@@ -608,7 +668,7 @@ function abrirSala(look,refresh){
   el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden';
   if(!refresh) el.querySelector('[data-sala-fechar]').focus();
 }
-function fecharSala(){salaAberta=null;$('#office').hidden=true;document.body.style.overflow=''}
+function fecharSala(){salaAberta=null;salaView='sala';$('#office').hidden=true;document.body.style.overflow=''}
 function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
 
 /* ---------- decisões ---------- */
@@ -639,12 +699,14 @@ document.addEventListener('click',e=>{
   const rs=e.target.closest('[data-resolvi]'); if(rs){avisarClaude('Equipe: o dono diz que resolveu o bloqueio de '+rs.dataset.resolvi+'. Pode continuar.');rs.disabled=true;rs.textContent='Aviso enviado';return}
   if(e.target.closest('[data-salvar-custo]')){salvarCusto();return}
   if(e.target.closest('[data-sala-fechar]')){fecharSala();return}
+  {const vb=e.target.closest('[data-view]'); if(vb&&salaAberta){salaView=vb.dataset.view; abrirSala(salaAberta); return}}
   {const sl=e.target.closest('[data-sala]'); if(sl&&(sl.tagName==='BUTTON'||!e.target.closest('a,button,input,textarea,video'))){abrirSala(sl.dataset.sala);return}}
   const a=e.target.closest('[data-act]'); if(a&&!a.disabled){agir(a.dataset.act,a.dataset.for,a.dataset.pick);return}
   const o=e.target.closest('[data-open]'); if(o){openDrawer(o.dataset.open,false,!!o.dataset.mudar);return}
   if(e.target.closest('#kpi-custo')){abrirCustos();return}
   if(e.target.id==='d-x'||e.target.id==='scrim') closeDrawer();
 });
+document.addEventListener('mousemove',e=>{const g=e.target.closest&&e.target.closest('.bar[data-tip]'); document.querySelectorAll('.chartwrap .tip').forEach(t=>{if(!g||!t.parentNode.contains(g)){t.hidden=true;return} const r=t.parentNode.getBoundingClientRect(); t.textContent=g.dataset.tip; t.style.left=(e.clientX-r.left)+'px'; t.style.top=(e.clientY-r.top)+'px'; t.hidden=false;})});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('article[data-sala]')){e.preventDefault();abrirSala(e.target.dataset.sala);return} if(e.key!=='Escape')return; if(aberto){closeDrawer();return} if(salaAberta)fecharSala()});
 $('#newp').addEventListener('submit',async e=>{
   e.preventDefault(); const v=$('#newp-t').value.trim(); if(!v) return;
@@ -663,6 +725,7 @@ render(); pintarAviso();
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
   db.doc('equipe/agora').onSnapshot(s=>{EQUIPE=s.exists?s.data():{agentes:[]};renderEquipe()},()=>{});
   db.collection('escritorios').onSnapshot(s=>{ESCR={};s.docs.forEach(x=>ESCR[x.id]=x.data()); if(salaAberta) abrirSala(salaAberta,true)},()=>{});
+  db.doc('canal/youtube').onSnapshot(s=>{CANAL=s.exists?s.data():null; if(salaAberta==='youtube') abrirSala('youtube',true)},()=>{});
   db.doc('calendario/posts').onSnapshot(s=>{CAL=s.exists?s.data():null; if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{
