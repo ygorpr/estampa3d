@@ -1,0 +1,17 @@
+{
+ "A": "POR QUE A TAÇA / TEM HASTE?",
+ "B": "VOCÊ SEGURA / A TAÇA ERRADO?",
+ "C": "PARA QUE SERVE / A HASTE DA TAÇA?",
+ "recomendada": "A",
+ "porque": "É a pergunta exata do vídeo, curta e lida de relance; a haste fica bem à mostra na mão do Sommelier.",
+ "tituloYouTube": {
+  "A": "Por que a taça de vinho tem haste? A história (e a ciência) por trás",
+  "B": "Você segura a taça de vinho errado? O motivo da haste",
+  "C": "Para que serve a haste da taça de vinho? Do vidro grego ao bar"
+ },
+ "cenario": {
+  "A": "bar",
+  "B": "bar, mais perto (garrafa pelo gargalo)",
+  "C": "museu do vidro (espelhada: texto à direita)"
+ }
+}

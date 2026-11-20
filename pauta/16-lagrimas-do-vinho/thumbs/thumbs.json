@@ -1,0 +1,17 @@
+{
+ "A": "LÁGRIMAS NO VINHO / O QUE SIGNIFICAM?",
+ "B": "ESSAS GOTAS / SÃO QUALIDADE?",
+ "C": "O VINHO CHORA? / É FÍSICA!",
+ "recomendada": "B",
+ "porque": "Ataca direto o mito que o vídeo desmonta (gota = qualidade) e a taça grande deixa as lágrimas bem visíveis; texto curto e legível.",
+ "tituloYouTube": {
+  "A": "Lágrimas do vinho: o que essas gotas na taça significam?",
+  "B": "Essas gotas na taça mostram que o vinho é bom? (Não!)",
+  "C": "O vinho chora? As 'lágrimas' na taça são pura física"
+ },
+ "cenario": {
+  "A": "bar, taça erguida",
+  "B": "bar, mais perto (garrafa pelo gargalo)",
+  "C": "laboratório, de jaleco (espelhada)"
+ }
+}

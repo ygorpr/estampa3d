@@ -1,0 +1,17 @@
+{
+ "A": "GELO NO VINHO: / PODE?",
+ "B": "GELO NO VINHO / É CRIME?",
+ "C": "VINHO COM GELO? / NA FRANÇA, PODE!",
+ "recomendada": "A",
+ "porque": "É a thumb viva do roteiro (pedra de gelo sobre a taça) e a pergunta é a mesma da 1ª fala; o bar de praia com balde suando diz 'calor' na hora.",
+ "tituloYouTube": {
+  "A": "Pode colocar gelo no vinho? A resposta vai te surpreender",
+  "B": "Gelo no vinho é crime? Gregos, romanos e a 'piscine' francesa",
+  "C": "Vinho com gelo? Na França pode — e tem até nome: piscine"
+ },
+ "cenario": {
+  "A": "bar de praia ao entardecer, gelo na mão sobre a taça + balde de gelo",
+  "B": "bar de praia, taça de tinto com 3 pedras de gelo erguida",
+  "C": "bar de praia (espelhada), 'piscine' de espumante com gelo + balde"
+ }
+}
