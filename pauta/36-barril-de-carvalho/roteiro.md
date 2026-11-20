@@ -53,7 +53,7 @@ Números por extenso na fala e na legenda (legenda = fala). Algarismos (225 L, 1
 | 13 | E tem dois grandes rivais: o carvalho francês e o americano. O americano dá mais baunilha e coco. O francês é mais discreto, mais de especiaria. | [curious] | duas barricas lado a lado com bandeirinhas FRANÇA × EUA: baunilha e coco × especiarias |
 | 14 | Só que o francês custa bem mais. A madeira tem que ser rachada seguindo o veio, a linha natural da madeira, senão vaza. Só um quarto do tronco vira barril. | [serious] | tanoeiro racha o tronco com cunha e marreta seguindo o veio; tronco com 1/4 colorido; chip "SÓ 1/4 VIRA BARRIL" |
 | 15 | Resultado: uma barrica francesa nova sai por volta de mil dólares! A americana, que pode ser serrada, custa mais ou menos a metade. E, depois de uns três anos de uso, a barrica já quase não dá sabor. | [amazed] | etiquetas de preço: FRANCESA ~US$ 1.000 × AMERICANA ~METADE; depois barrica com calendário "3 ANOS" e sabor esvaziando |
-| 16 | E tem carvalho com história: na França, a floresta de Tronçais foi plantada em mil seiscentos e setenta, pra fazer navios do rei. Hoje, vira barril de vinho! | [thoughtful] | floresta de carvalhos altíssimos; navio a vela do séc. XVII ao fundo; placa "TRONÇAIS · 1670" |
+| 16 | E tem carvalho com história: na França, a floresta de Tronçais foi organizada em mil seiscentos e setenta, pra dar madeira aos navios do rei. Hoje, vira barril de vinho! | [thoughtful] | floresta de carvalhos altíssimos; navio a vela do séc. XVII ao fundo; placa "TRONÇAIS · 1670" |
 | 17 | Mas barril caro não cabe em vinho barato. O truque? Lascas de carvalho tostado, os chips, mergulhadas no tanque, feito saquinho de chá. | [serious] | tanque de aço inox; saquinho de lascas mergulhando como chá; chip "CHIPS = LASCAS" |
 | 18 | Na Europa, isso foi liberado em dois mil e seis. Dá o gostinho de madeira rapidinho... mas não tem a respiração lenta do barril. | [confident] | selo "UE · 2006"; ampulheta: chips rápido × barril devagar |
 | 19 | E aqui no Brasil? A gente tem barril de madeira nossa... só que na cachaça! Amburana, bálsamo, jequitibá... | [warm] | dissolve → alambique mineiro: tonéis de madeiras brasileiras com plaquinhas AMBURANA · BÁLSAMO · JEQUITIBÁ |
@@ -84,6 +84,6 @@ veio ("a linha natural da madeira", f. 14) · chips ("lascas de carvalho tostado
 - f. 11: tonel/tonne ← latim medieval *tunna* ← celta "pele" → "saco de couro": Académie française (9ª ed.); Etymonline acha incerto → "a explicação mais aceita".
 - f. 14–15: "só um quarto do tronco" (20–25 %) e "por volta de mil dólares" (federação francesa de tanoeiros: €800–900 em 2023; imprensa 2025: US$ 1.000+); americana ~metade. Preços variam muito.
 - f. 15: "depois de uns três anos" — Wine Folly (2–3 usos), Wine Spectator (3–4 usos / ~3 anos).
-- f. 16: Tronçais organizada por Colbert em 1670 para a Marinha francesa — Wikipedia/Decanter (fonte média; checar).
+- f. 16: CONFERIDO pelo Caio — Colbert ORGANIZOU (não plantou) a floresta em 1670, pela ordenança das Águas e Florestas de 1669, para a Marinha. Fala trocada de "foi plantada" para "foi organizada".
 - f. 18: UE liberou pedaços de carvalho pelo Regulamento (CE) 1507/2006.
 - f. 20: "muita gente compara a baunilha e canela" — cumarina é o composto principal da amburana (estudos UNESP/UFLA); a comparação de aroma vem de fonte comercial → dito como "muita gente compara".

@@ -1,0 +1,43 @@
+[
+ {
+  "bloco": 5,
+  "falas": [
+   15,
+   16,
+   17
+  ],
+  "caracteres": 468,
+  "ok": true,
+  "quando": "2026-11-20 01:47:10"
+ },
+ {
+  "bloco": 6,
+  "falas": [
+   18,
+   19,
+   20
+  ],
+  "caracteres": 402,
+  "ok": true,
+  "quando": "2026-11-20 01:47:18"
+ },
+ {
+  "bloco": 7,
+  "falas": [
+   21,
+   22
+  ],
+  "caracteres": 213,
+  "ok": true,
+  "quando": "2026-11-20 01:47:23"
+ },
+ {
+  "bloco": 8,
+  "falas": [
+   23
+  ],
+  "caracteres": 24,
+  "ok": true,
+  "quando": "2026-11-20 01:47:24"
+ }
+]

@@ -61,3 +61,9 @@ Onde as fontes divergem, o roteiro usa a forma conservadora (anotado abaixo). Li
 - **Proibição de chips em vinho DOP europeu**: só fonte secundária; fora.
 - **Barril de bourbon/whisky reaproveitado** e **pièce de Borgonha (228 L)**: bons, mas sem espaço.
 - **Cachaça com teor de cumarina acima do limite**: delicado (saúde/marcas); fora.
+
+## Checagem do Caio (20/11/2026)
+- Fala 16 CORRIGIDA: a floresta de Tronçais não foi "plantada" em 1670 — ela já existia; Colbert a ORGANIZOU (regras de manejo, pela ordenança das Águas e Florestas de 1669, aplicada em Tronçais em 1670) para dar madeira à Marinha. Nova fala: "na França, a floresta de Tronçais foi organizada em mil seiscentos e setenta, pra dar madeira aos navios do rei. Hoje, vira barril de vinho!" — https://en.wikipedia.org/wiki/Forest_of_Tron%C3%A7ais ; INA, "À la découverte de la futaie Colbert" — https://fresques.ina.fr/panorama-grand-est/fiche-media/GRDEST00294/a-la-decouverte-de-la-futaie-colbert.html ; FFRandonnée — https://www.ffrandonnee.fr/s-informer/actualites/la-grande-histoire-des-forets-francaises
+- Fala 11 (tonel): CONFIRMADO o caminho — português "tonel" ← francês antigo *tonel* (diminutivo de *tonne*) ← latim tardio *tunna* ← celta "pele, odre"; já no galego-português do séc. XIII. O Houaiss/Priberam não apareceram na busca; fontes: Wiktionary "tonel" (seção português) — https://en.wiktionary.com/wiki/tonel ; DiCCA-XV (Univ. de Barcelona) — https://ghcl.ub.edu/diccaxv/listings/WordsByEtymologicalFamilyView/TUNNA/sort:vocablo/direction:asc . A fala já diz "a explicação mais aceita". Mantida.
+- Fala 18 (UE, Reg. CE 1507/2006): CONFIRMADO (EUR-Lex). Fala 10 (~30 aduelas, sem cola nem prego no corpo): CONFIRMADO (Wine Spectator).
+- Pronúncia Tronçais /tʁɔ̃.sɛ/ ("Trõnssé"): OK.
