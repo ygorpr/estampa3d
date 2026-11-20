@@ -1,0 +1,17 @@
+{
+ "A": "DÁ PARA ABRIR CHAMPANHE / COM ESPADA?",
+ "B": "ABRIR CHAMPANHE / NA ESPADA?",
+ "C": "O SABRE NEM / TEM FIO!",
+ "recomendada": "B",
+ "porque": "Texto à direita (o formato que o dono escolheu nas duas últimas), frase curta e grande que já diz o assunto; a cena mostra o golpe: garrafa inclinada, gargalo longe do rosto, sabre passando e a rolha voando com o anel de vidro para o canto livre.",
+ "tituloYouTube": {
+  "A": "Dá para abrir champanhe com espada? A física do sabrage",
+  "B": "Abrir champanhe na espada: como funciona o sabrage (e o recorde do Brasil)",
+  "C": "O sabre nem tem fio! O segredo de abrir espumante com espada"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à esquerda"
+ }
+}

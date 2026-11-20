@@ -79,7 +79,8 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Nada encosta na legenda (avisos, garrafas, placas: até y≈880). Texto não sai de placa/cartão.
 - **Bolhas e líquidos só dentro do recipiente** (`fluteBubbles` recorta no bojo da taça). Sem bolha na haste.
 - Legenda = exatamente a fala, karaokê, **no máximo 2 linhas**. Sem legenda na tabela final e no logo.
-- Marca d'água grande e clarinha. Tabela final em 5 cartões dourados. CTA no canto superior esquerdo. Logo + "Wine Know. Dark Divino."
+- Marca d'água grande e clarinha. Tabela final em 5 cartões dourados, **com tempo para ler: cartões entram com calma e ficam parados ~8 s**,
+  depois um fechamento (brinde do Sommelier, música subindo) antes do logo. Erro real (vídeo 12): "não teve final" — pode passar dos 3 min. CTA no canto superior esquerdo. Logo + "Wine Know. Dark Divino."
 
 ## 9. Voz e som
 - ElevenLabs, voz Paulo, **eleven_v3 com emoção por frase** (voz "C" aprovada), em blocos de 3 frases (`scripts/tts_v3.py`). Logo final sozinho.

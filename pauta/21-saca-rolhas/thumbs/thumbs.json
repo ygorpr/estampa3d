@@ -1,0 +1,17 @@
+{
+ "A": "O SACA-ROLHAS / NASCEU NUMA ARMA?",
+ "B": "SACA-ROLHAS: / VEIO DO MOSQUETE?",
+ "C": "QUEM INVENTOU / O SACA-ROLHAS?",
+ "recomendada": "B",
+ "porque": "Texto à direita (preferência do dono) e a imagem faz a ligação sozinha: o Sommelier ergue o saca-rolhas e aponta para a vareta com a MESMA espiral, pendurada com o mosquete na parede.",
+ "tituloYouTube": {
+  "A": "O saca-rolhas nasceu numa arma? A história da espiral",
+  "B": "O saca-rolhas veio do mosquete? A história de quem inventou",
+  "C": "Quem inventou o saca-rolhas? Do mosquete ao abridor de garçom"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à esquerda"
+ }
+}

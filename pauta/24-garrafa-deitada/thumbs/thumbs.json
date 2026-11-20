@@ -1,0 +1,17 @@
+{
+ "A": "POR QUE O VINHO / FICA DEITADO?",
+ "B": "VINHO EM PÉ / ESTRAGA?",
+ "C": "DEITADO OU / EM PÉ?",
+ "recomendada": "C",
+ "porque": "Texto à direita, letras grandes e a dúvida exata do público; o Sommelier mostra as duas formas lado a lado (uma garrafa deitada apoiada por baixo, outra em pé pelo gargalo, rótulos livres) diante das pilhas de garrafas deitadas da adega.",
+ "tituloYouTube": {
+  "A": "Por que se guarda vinho deitado? (e quando tanto faz)",
+  "B": "Vinho em pé estraga? O que a ciência descobriu",
+  "C": "Vinho deitado ou em pé? O mito da rolha seca"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}
