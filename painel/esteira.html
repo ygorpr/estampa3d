@@ -30,6 +30,16 @@ header.top p{margin:4px 0 0;color:var(--muted);font-style:italic}
 .tally button.kpi{background:none;border:0;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
 .tally button.kpi:hover b,.tally button.kpi:focus-visible b{color:var(--gold2)}
 .tally small{display:block;font-size:11px;color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.agent{background:var(--wall);border:1px solid var(--line);border-radius:6px;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.agent .who{display:flex;gap:12px;align-items:center}
+.agent svg{width:84px;height:84px;flex:none;border-radius:50%;background:var(--panel);border:1px solid var(--line)}
+.agent .nm{font-family:var(--f-display);font-size:16px;color:var(--cream)}
+.agent .cg{font-family:var(--f-ui);font-size:12px;color:var(--muted);letter-spacing:.04em}
+.st{font-family:var(--f-ui);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;align-self:flex-start}
+.st.on{background:var(--bottle);color:#d6efdd}.st.off{background:#ffffff14;color:var(--muted)}.st.wait{background:#5a3a12;color:#ffd9a3}
+.agent ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:3px;font-size:16px}
+.agent h4{margin:0;font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .cfg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cfg label{display:flex;flex-direction:column;gap:4px;font-family:var(--f-ui);font-size:12px;color:var(--muted)}
 .cfg input{background:var(--panel);border:1px solid var(--line);color:var(--cream);font:inherit;font-size:16px;padding:8px;border-radius:4px}
@@ -160,6 +170,11 @@ textarea:focus{outline:2px solid var(--gold)}
     <p class="note" id="status"></p>
     <div class="belt-scroll"><div class="belt" id="belt"></div></div>
   </section>
+
+  <section class="sec" aria-labelledby="h-eq">
+    <div class="sechead"><h2 id="h-eq">A equipe agora</h2><span class="note" id="eq-at"></span></div>
+    <div class="team" id="team"><div class="empty">Carregando a equipe…</div></div>
+  </section>
 </div>
 
 <div class="scrim" id="scrim" hidden></div>
@@ -180,7 +195,8 @@ const ETAPAS=[
 const ORD=ETAPAS.map(e=>e.k);
 const PEDE={pauta:'Tema sugerido',roteiro:'Roteiro pronto para ler',thumb:'Escolha a thumb e libere o vídeo',revisao:'Assista e aprove o vídeo'};
 let db=null, cm=null, docs=[], aberto=null, carregou=false, arrastando=false, sortables=[];
-let CUSTO={usdPor1000:0.22,cotacao:5.4,plano:'ElevenLabs Creator (estimado)'};
+let CUSTO={usdPor1000:0.22,cotacao:5.4,plano:'ElevenLabs Creator (estimado)',creditosUsadosTotal:0,ledger:[]};
+let EQUIPE=null;
 const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const mmss=s=>Math.floor(s/60)+' min '+String(Math.round(s%60)).padStart(2,'0')+' s';
 const custoVoz=c=>c*CUSTO.usdPor1000/1000*CUSTO.cotacao;
@@ -224,10 +240,11 @@ function render(){
   const cnt=k=>ativos.filter(d=>d.etapa===k).length;
   const comT=docs.filter(d=>d.duracaoSeg>0), comC=docs.filter(d=>d.creditosVoz>0);
   const tMed=comT.length?comT.reduce((a,d)=>a+d.duracaoSeg,0)/comT.length:0;
-  const cMed=comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0;
+  const nProntos=docs.filter(d=>d.duracaoSeg>0).length;
+  const cMed=CUSTO.creditosUsadosTotal&&nProntos?custoVoz(CUSTO.creditosUsadosTotal)/nProntos:(comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0);
   $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><span class="sep" aria-hidden="true"></span>`+
     `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio<small>${comT.length} vídeos prontos</small></div>`+
-    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>voz + música + efeitos · ver detalhes</small></button>`;
+    `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo<small>tudo o que já foi gasto ÷ vídeos prontos · ver detalhes</small></button>`;
   const y=$('#yours');
   if(!carregou) y.innerHTML='<div class="empty">Carregando a esteira…</div>';
   else if(!docs.length) y.innerHTML='<div class="empty">A esteira está vazia. Eu coloco aqui os temas pesquisados; você também pode mandar um tema logo abaixo.</div>';
@@ -248,6 +265,7 @@ function render(){
   })));
   const rec=docs.filter(d=>d.etapa==='recusado').length;
   if(carregou&&!$('#status').classList.contains('warn')) $('#status').textContent=rec?`${rec} tema(s) em Recusados. Arraste de volta para a Pauta se mudar de ideia.`:'';
+  renderEquipe();
   if(aberto&&aberto!=='__custos') openDrawer(aberto,true);
 }
 function rowHtml(d){
@@ -334,17 +352,46 @@ function abrirCustos(){
   <div class="sec"><h2 class="s">Como é calculado</h2><div><b>Narração (ElevenLabs):</b> 1 crédito por caractere do texto falado (com as marcações de emoção). É o único custo que muda de vídeo para vídeo.</div>
   <div><b>Música (jazz) e efeitos:</b> gerados por programa aqui mesmo: R$ 0,00.</div><div><b>Animação e render:</b> feitos nesta sessão: R$ 0,00 a mais.</div>
   <div class="note">A assinatura do Claude é fixa por mês e não entra na conta por vídeo. Amostras de voz e refações também gastam créditos e não estão somadas aqui.</div></div>
-  <div class="sec"><h2 class="s">Seu plano (ajuste se for diferente)</h2><div class="cfg"><label for="cfg-usd">US$ por 1.000 créditos<input id="cfg-usd" type="number" step="0.01" min="0" value="${CUSTO.usdPor1000}"></label><label for="cfg-cot">Cotação do dólar (R$)<input id="cfg-cot" type="number" step="0.01" min="0" value="${CUSTO.cotacao}"></label></div>
+  ${CUSTO.creditosUsadosTotal?`<div class="sec"><h2 class="s">Gasto real desde o começo</h2><div><b>${CUSTO.creditosUsadosTotal.toLocaleString('pt-BR')} créditos</b> usados no ElevenLabs ≈ <b>${brl(custoVoz(CUSTO.creditosUsadosTotal))}</b>. Dividido pelos ${docs.filter(d=>d.duracaoSeg>0).length} vídeos prontos = <b>${brl(custoVoz(CUSTO.creditosUsadosTotal)/Math.max(1,docs.filter(d=>d.duracaoSeg>0).length))}</b> por vídeo.</div><span class="note">Inclui tudo: amostras de voz, vídeos refeitos, Shorts, vozes que pararam no meio e o que mais a conta usou.</span></div>`:''}
+  ${(CUSTO.ledger||[]).length?`<div class="sec"><h2 class="s">De onde saíram os créditos (estimativa pelos arquivos)</h2><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Item</th><th>Créditos</th></tr></thead><tbody>${CUSTO.ledger.map(l=>`<tr><td>${esc(l.item)}</td><td class="n">${Number(l.creditos).toLocaleString('pt-BR')}</td></tr>`).join('')}<tr><td><b>Soma que eu consigo comprovar</b></td><td class="n"><b>${CUSTO.ledger.reduce((a,l)=>a+Number(l.creditos||0),0).toLocaleString('pt-BR')}</b></td></tr></tbody></table></div><span class="note">${esc(CUSTO.ledgerNota||'')}</span></div>`:''}
+  <div class="sec"><h2 class="s">Seu plano (ajuste se for diferente)</h2><div class="cfg"><label for="cfg-usd">US$ por 1.000 créditos<input id="cfg-usd" type="number" step="0.01" min="0" value="${CUSTO.usdPor1000}"></label><label for="cfg-cot">Cotação do dólar (R$)<input id="cfg-cot" type="number" step="0.01" min="0" value="${CUSTO.cotacao}"></label><label for="cfg-tot">Créditos já usados no ElevenLabs (total)<input id="cfg-tot" type="number" step="1000" min="0" value="${CUSTO.creditosUsadosTotal||0}"></label></div>
   <span class="note">Padrão: plano Creator, US$ 22 por 100 mil créditos = US$ 0,22 por mil. Confira o seu plano no site do ElevenLabs.</span><div class="acts"><button class="b" type="button" data-salvar-custo="1">Salvar valores</button></div></div>
   <div class="sec"><h2 class="s">Por vídeo</h2><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Vídeo</th><th>Duração</th><th>Créditos</th><th>Custo</th></tr></thead><tbody>${comC.map(d=>`<tr><td>${d.num?d.num+'. ':''}${esc(d.titulo)}</td><td class="n">${d.duracaoSeg?mmss(d.duracaoSeg):'—'}</td><td class="n">${d.creditosVoz.toLocaleString('pt-BR')}</td><td class="n">${brl(custoVoz(d.creditosVoz))}</td></tr>`).join('')}</tbody></table></div>
   <span class="note">Total destes ${comC.length} vídeos: ${brl(tot)}.</span></div>`;
   $('#drawer').innerHTML=h; $('#drawer').hidden=false; $('#scrim').hidden=false; $('#d-x').focus();
 }
 async function salvarCusto(){
-  const u=parseFloat($('#cfg-usd').value), c=parseFloat($('#cfg-cot').value);
+  const u=parseFloat($('#cfg-usd').value), c=parseFloat($('#cfg-cot').value), tt=parseFloat($('#cfg-tot').value)||0;
   if(!(u>=0)||!(c>0)){toast('Confira os números.');return}
-  CUSTO={...CUSTO,usdPor1000:u,cotacao:c}; render(); abrirCustos();
+  CUSTO={...CUSTO,usdPor1000:u,cotacao:c,creditosUsadosTotal:tt}; render(); abrirCustos();
   if(db){try{await db.doc('config/custos').set({...CUSTO,atualizado:agora()});toast('Valores salvos.')}catch(e){toast('Não salvou: '+(e&&e.message||'erro'))}}
+}
+/* ---------- equipe: bonecos executivos ---------- */
+const LOOK={
+  pauta:{pele:'#E9C29E',cabelo:'#2B1B12',terno:'#2C0B15',gravata:'#D4A24C',tipo:'coque'},
+  roteiro:{pele:'#C98E62',cabelo:'#5A3E2A',terno:'#1E3A31',gravata:'#8E1B3A',tipo:'oculos'},
+  arte:{pele:'#8D5A3B',cabelo:'#141414',terno:'#3A2B4A',gravata:'#F2D27A',tipo:'cacho'},
+  producao:{pele:'#E6BF98',cabelo:'#7A7A7A',terno:'#5E1428',gravata:'#F3E6C8',tipo:'fone'}
+};
+function boneco(k){const L=LOOK[k]||LOOK.pauta;
+  const cab=L.tipo==='coque'?`<circle cx="50" cy="20" r="9" fill="${L.cabelo}"/><path d="M30 40c0-14 9-22 20-22s20 8 20 22c-3-6-10-10-20-10s-17 4-20 10z" fill="${L.cabelo}"/>`
+   :L.tipo==='cacho'?`<path d="M27 44c-4-18 8-30 23-30s27 12 23 30c-2-8-6-11-8-12-4 3-26 3-30 0-2 1-6 4-8 12z" fill="${L.cabelo}"/>`
+   :`<path d="M30 40c0-14 9-21 20-21s20 7 20 21c-4-5-11-8-20-8s-16 3-20 8z" fill="${L.cabelo}"/>`;
+  const extra=L.tipo==='oculos'?`<rect x="36" y="40" width="11" height="8" rx="3" fill="none" stroke="#111" stroke-width="2"/><rect x="53" y="40" width="11" height="8" rx="3" fill="none" stroke="#111" stroke-width="2"/><path d="M47 44h6" stroke="#111" stroke-width="2"/>`
+   :L.tipo==='fone'?`<path d="M28 44c0-16 10-25 22-25s22 9 22 25" fill="none" stroke="#1a1a1a" stroke-width="4"/><rect x="24" y="40" width="7" height="12" rx="3" fill="#1a1a1a"/><rect x="69" y="40" width="7" height="12" rx="3" fill="#1a1a1a"/><path d="M27 52c2 8 10 11 16 11" fill="none" stroke="#1a1a1a" stroke-width="2"/><circle cx="44" cy="63" r="2.5" fill="#1a1a1a"/>`:'';
+  return `<svg viewBox="0 0 100 100" role="img" aria-label="Boneco do agente"><path d="M14 100c2-20 16-30 36-30s34 10 36 30z" fill="${L.terno}"/><path d="M40 70l10 12 10-12z" fill="#F4F0E8"/><path d="M47 74l3 18 3-18-3-3z" fill="${L.gravata}"/><path d="M40 70l-6 30M60 70l6 30" stroke="#00000033" stroke-width="2"/><rect x="44" y="60" width="12" height="12" fill="${L.pele}"/><ellipse cx="50" cy="46" rx="19" ry="21" fill="${L.pele}"/>${cab}<circle cx="43" cy="45" r="2.3" fill="#2a1a12"/><circle cx="57" cy="45" r="2.3" fill="#2a1a12"/><path d="M44 55q6 4 12 0" fill="none" stroke="#7a3b2b" stroke-width="2" stroke-linecap="round"/>${extra}</svg>`;}
+function renderEquipe(){
+  const el=$('#team'); if(!el) return;
+  if(!EQUIPE){el.innerHTML='<div class="empty">Carregando a equipe…</div>';return}
+  const A=EQUIPE.agentes||[];
+  if(!A.length){el.innerHTML='<div class="empty">Ninguém trabalhando agora.</div>';return}
+  $('#eq-at').textContent=EQUIPE.atualizado?'atualizado '+dataBr(EQUIPE.atualizado):'';
+  el.innerHTML=A.map(a=>{const st=(a.fazendo||[]).length?['on','Trabalhando']:(a.fila||[]).length?['wait','Esperando']:['off','Livre'];
+    return `<article class="agent"><div class="who">${boneco(a.look)}<div style="min-width:0"><div class="nm">${esc(a.nome)}</div><div class="cg">${esc(a.cargo)}</div></div></div>
+    <span class="st ${st[0]}">${st[1]}</span>
+    ${(a.fazendo||[]).length?`<div><h4>Fazendo agora</h4><ul>${a.fazendo.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+    ${(a.fila||[]).length?`<div><h4>Fila de espera</h4><ul>${a.fila.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+    ${a.nota?`<span class="note">${esc(a.nota)}</span>`:''}</article>`}).join('');
 }
 function closeDrawer(){aberto=null;$('#drawer').hidden=true;$('#scrim').hidden=true}
 
@@ -361,7 +408,7 @@ async function agir(act,id,pick){
   if(act==='escolher'){up={etapa:'producao',vez:'claude',thumbEscolhida:pick,estado:'Na fila de produção'};msg='Thumb '+pick+' escolhida = execução APROVADA (pode gerar a voz)'}
   if(act==='executar'){up={etapa:'producao',vez:'claude',estado:'Na fila de produção'};msg='Execução APROVADA (pode gerar a voz)'}
   if(act==='aprovar-video'){up={etapa:'entregue',vez:'claude',estado:null};msg='Vídeo APROVADO'}
-  if(act==='mudar'){if(!nota){openDrawer(id,false,true);toast('Escreva o que mudar.');return}up={vez:'claude',estado:'Ajustando o que você pediu'};if(d.etapa==='revisao'||d.etapa==='entregue'){up.etapa='producao';msg='Pediu ajuste no vídeo'}else msg='Pediu mudança'}
+  if(act==='mudar'){if(!nota){openDrawer(id,false,true);toast('Escreva o que mudar.');return}up={vez:'claude',estado:'Ajustando o que você pediu'};if(d.etapa==='revisao'||d.etapa==='entregue'){up.etapa='revisao';up.estado='Ajustando o vídeo';msg='Pediu ajuste no vídeo'}else msg='Pediu mudança'}
   if(!up) return;
   const hist=(d.historico||[]).slice(-40);
   hist.push({em:agora(),quem:'Você',txt:msg+(nota?': '+nota:'')});
@@ -395,6 +442,7 @@ render(); pintarAviso();
   db=dbx; cm=cmx; checarAviso(); setInterval(checarAviso,60000);
   if(!db){carregou=true;$('#status').textContent='A esteira só abre dentro do claude.ai, conectado à sua conta.';$('#status').classList.add('warn');render();return}
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
+  db.doc('equipe/agora').onSnapshot(s=>{EQUIPE=s.exists?s.data():{agentes:[]};renderEquipe()},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{
     docs=s.docs.map(x=>({id:x.id,...x.data()})); carregou=true;

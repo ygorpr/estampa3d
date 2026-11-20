@@ -1,0 +1,17 @@
+{
+ "A": "TAMPA DE ROSCA / É VINHO BARATO?",
+ "B": "ROLHA OU / ROSCA?",
+ "C": "ROSCA NÃO É / VINHO RUIM!",
+ "recomendada": "B",
+ "porque": "Texto à direita (o formato que o dono costuma escolher), só 3 palavras e as maiores letras das três opções, então lê até no celular. A pergunta já é o duelo: rolha numa mão, garrafa de rosca erguida pelo gargalo na outra, com o rótulo livre e a adega dividida ao fundo. O rosto em dúvida fica no meio das duas.",
+ "tituloYouTube": {
+  "A": "Tampa de rosca é vinho barato? O que a ciência descobriu",
+  "B": "Rolha ou rosca? Qual tampa guarda melhor o vinho",
+  "C": "Rosca não é vinho ruim! Por que vinhos caros usam tampa de rosca"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

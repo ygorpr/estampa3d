@@ -1,0 +1,41 @@
+# Por que o champanhe tem uma gaiolinha de arame? — pesquisa (20/11/2026)
+Pesquisa feita por busca na web (o acesso direto às páginas estava bloqueado na rede desta sessão: maisons-champagne.com, worldsteel.org e vinepair.com
+não abriram). Os fatos abaixo vêm dos trechos que as buscas mostraram dessas páginas. Força da fonte: **A** = oficial/acadêmica/referência; **B** = imprensa ou site especializado; **C** = pista.
+
+| Fato (fala) | Fonte | Força |
+|---|---|---|
+| "Muselet" = gaiola de arame que coifa e segura a rolha do champanhe e dos espumantes; palavra do séc. XX, derivada de *museau* (focinho) (f. 2) | Académie française, Dictionnaire 9e éd. — https://www.dictionnaire-academie.fr/article/A9M3253 (muselet) | A |
+| *Museler* = pôr focinheira (muselière) num animal; do séc. XIV, de *musel*, forma antiga de *museau* (f. 2) | Académie française 9e éd. — https://www.dictionnaire-academie.fr/article/A9M3245 ; Wiktionary "museler" — https://en.wiktionary.org/wiki/museler | A |
+| Nome do muselet vem de *museler*, "to muzzle" (f. 2) | Wikipedia "Muselet" — https://en.wikipedia.org/wiki/Muselet | B |
+| Pressão no champanhe: 6 bar (f. 3) | Comité Champagne, Fiche Élaboration — https://champagne.education/sites/default/files/2024-05/Fiche-Elaboration-Champagne-FR.pdf | A |
+| Pressão varia com a temperatura: ~6 bar a 10–12 °C, ~8 bar a 20 °C (por isso "uns seis") | Université de Reims, jornal "Champagne & nuage" (dez. 2018) — https://www.univ-reims.fr/media-files/16732/champagne-20nuage-20le-20journal-20du-20centre-20d-c3-cembre-2018.pdf | A |
+| Pneu de carro de passeio: 2 a 3 bar (→ 6 bar ≈ "quase o triplo" de um pneu de ~2,2 bar) (f. 3) | Matmut — https://www.matmut.fr/assurance/auto/conseils/pression-des-pneus-voiture ; Continental — https://www.continental-tires.com/fr/fr/tire-knowledge/tire-pressure/ | B |
+| Antes: tampões de madeira vedados com pano oleado e cera; não seguravam bem, e passaram a amarrar com cordão (f. 5) | Wikipedia "Muselet" — https://en.wikipedia.org/wiki/Muselet | B |
+| No séc. XVIII as rolhas eram amarradas com barbante, não com arame (f. 5) | EHNE (Encyclopédie d'histoire numérique de l'Europe, Sorbonne), "Second Birth of the Bottle (18th century)" — https://ehne.fr/en/encyclopedia/themes/material-civilization/material-modernityies-europe-in-expansion/second-birth-bottle-18th-century | A |
+| A rolha era presa com corda de cânhamo amarrada à mão (f. 5) | UMC – Maisons de Champagne, "The history of the muselet and its collectable plaque" — https://maisons-champagne.com/en/appellation/stages-in-winemaking/article/the-history-of-the-muselet-and-its-collectable | A |
+| O cordão falhava: vazava ou a rolha escapava (f. 6) | Wikipedia "Muselet" (mesmo link) | B |
+| 5/7/1844: Adolphe Jacquesson, negociante de Châlons, pede patente de uma peça de lata (a plaque) colocada entre o topo da rolha e as amarras (f. 7) | UMC – Maisons de Champagne (mesmo link) | A |
+| Patente INPI nº 412, registrada em 15/11/1844 (por isso o roteiro diz só "1844") | Châlons Tourisme, "Adolphe Jacquesson" — https://en.chalons-tourisme.com/discover/history-and-iconic-landmarks/famous-people-from-chalons/adolphe-jacquesson/ ; Wikipedia "Jacquesson" — https://en.wikipedia.org/wiki/Jacquesson | A/B |
+| A lata vinha das adegas de Jacquesson, onde refletia a luz do dia que entrava por poços de luz cavados no giz (f. 8) | UMC – Maisons de Champagne (mesmo link) | A |
+| Comité Champagne: "1844 — a plaque de muselet, presa por um muselet de arame, é inventada" | Comité Champagne, Fiche Histoire — https://www.champagne.education/sites/default/files/2024-05/Fiche-Histoire-Champagne-FR.pdf | A |
+| Função da plaquinha: o arame não "entra"/corta a cortiça (f. 9) | champagner.com, glossário — https://champagner.com/en/champagne-lid/ ; UMC (peça entre a rolha e as amarras) | B |
+| Depois, gaiola e plaquinha viraram uma peça só (fabricante crava a plaquinha em marcas pré-formadas) (f. 9) | UMC – Maisons de Champagne (mesmo link) | A |
+| Gaiola de arame substituiu o barbante; os primeiros modelos eram difíceis de pôr e de abrir | Wikipedia "Muselet"; Champagne Everyday — https://www.champagneeveryday.com.au/post/the-history-of-the-muselet-a-champagne-invention (data ~1880, fonte C → fora do roteiro) | B/C |
+| Tradicionalmente, o muselet abre com 6 meias-voltas (f. 10) | Wikipedia "Muselet"; VinePair, "How many twists does it take to open a bottle of champagne?" — https://vinepair.com/articles/how-many-twists-does-it-take-to-open-a-bottle-of-champagne/ ; The Takeout — https://thetakeout.com/1735493/how-to-open-bottle-champagne-right | B |
+| Ligação 6 voltas × 6 bar: não documentada — tradição/padronização; "teoria" (f. 11: "dizem... ninguém prova") | VinePair (mesmo link); worldsteel, "Steel crucial to the muselet champagne business" — https://worldsteel.org/media/steel-stories/innovation/steel-crucial-muselet-champagne-business/ | B |
+| Plaquinhas: lata, às vezes em relevo, com 3–4 entalhes para o arame; hoje decoradas (f. 12) | UMC – Maisons de Champagne (mesmo link); Formes de Luxe, "Le Muselet Valentin" — https://www.formesdeluxe.com/article/le-muselet-valentin-a-history-of-expertise.56366 | A/B |
+| Placomusofilia = colecionar plaquinhas de muselet (plaque + muselet + -filia) (f. 13) | UMC (título: "its collectable plaque"); Pépites en Champagne — https://pepites-en-champagne.fr/en/maison/how-to-call-a-collector-of-capsules-of-champagne ; champagner.com glossário — https://champagner.com/en/glossary/placomusophilia/ | B |
+| Encontro anual de troca em Vertus; clubes de placomusófilos pela França; catálogo de cotação (Lambert) (f. 14) | Pépites en Champagne — https://news.pepites-en-champagne.fr/en/placomusophilie-a-la-rencontre-des-collectionneurs-de-capsules-de-champagne/ ; ANRC, inventário de clubes (2021) — https://anrc.multicollec.net/img/04-2021-01-Inventaire.pdf ; La Petite Cave — https://lapetitecave.net/guide-collectionner-capsules-champagne/ | B |
+| Garibaldi (RS): em 1913 a Peterlongo fez o primeiro "champanha" do país; a cidade se apresenta como capital/berço do espumante (f. 15: "a cidade conta") | Jornal do Comércio (Porto Alegre), especial vinhos e espumantes 2025 — https://www.jornaldocomercio.com/especiais/vinhos-e-espumantes/2025/11/1224465-novas-entidades-buscam-a-criacao-de-indicacoes-geograficas-igs.html ; Monitor do Mercado — https://monitordomercado.com.br/noticias/economia/395344-onde-nasceu-o-primeiro-espumante-do-brasil-em-1913-a-cidade-da-serra-gaucha-que-carrega-o-nome-de-um-heroi-italiano/ | B/C |
+| Rolha pode sair a ~50 mph (≈ 80 km/h), rápido o bastante para lesão grave no olho (f. 16) | American Academy of Ophthalmology — https://aao.org/newsroom/news-releases/detail/ophthalmologists-warn-flying-champagne-corks-cause ; ScienceDaily — https://www.sciencedaily.com/releases/2012/12/121217091015.htm | A |
+| Garrafa gelada, inclinada a 45° para longe de si e dos outros, pano por cima da rolha (f. 17–18) | American Academy of Ophthalmology (mesmo link) | A |
+| AAO: não use os polegares para FORÇAR a rolha (o roteiro só manda o polegar SEGURAR) | AAO (mesmo link) | A |
+| Polegar sobre a rolha depois de afrouxar o arame; girar a garrafa, não a rolha; a rolha sai com um "suspiro", não estouro (f. 17–19) | Berry Bros & Rudd — https://blog.bbr.com/2016/12/27/how-to-open-champagne ; Wine Enthusiast — https://www.wineenthusiast.com/2022/07/26/how-to-open-a-champagne-bottle/ ; VinePair — https://vinepair.com/articles/safest-way-to-open-champagne-bottle-explained ; Tasting Table (Aldo Sohm, Master Sommelier) — https://www.tastingtable.com/1782073/dont-remove-sparkling-wine-cage | B |
+
+## Fora do roteiro
+- Lenda: Dom Pérignon/Madame Clicquot inventaram a gaiola — é lenda (Wikipedia "Muselet"); fora para não repetir o vídeo 6.
+- Clubes ou números de colecionadores no Brasil — sem fonte confiável; a fala vira pergunta ao público.
+- Peterlongo, única marca brasileira que pode escrever "champanhe" (STF, 1974) — fonte fraca.
+- Le Muselet Valentin (muselet moderno, anos 1960) e Cortellazzi (máquina de fio único) — fonte de fabricante.
+- Agrafe × muselet — termos usados de modo diferente conforme o país (Brookston Beer Bulletin, wein.plus); confunde o leigo.
+- Manter a gaiola na rolha ao abrir — especialistas divergem (VinePair/Tasting Table × The Takeout).
