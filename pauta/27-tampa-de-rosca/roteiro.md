@@ -1,4 +1,4 @@
-# Tampa de rosca é vinho barato? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
+# Tampa de rosca é vinho barato? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 30 s (22 falas + logo; 568 palavras, estimado pelo ritmo do vídeo 06: 499 palavras = 3 min 13 s). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Liga sem repetir: com o vídeo 11 (gosto de rolha/TCA — aqui só 1 frase de lembrança, sem química nem "partes por trilhão"; o 11 já disse "NZ uns 90%", aqui usamos o salto 1% → "quase todos") e com o vídeo 3 "E antes da rolha?" (aqui só "casca do sobreiro, uns 400 anos"; nada de Roma/Hooke/saca-rolhas).
 Thumbs (a fazer DEPOIS da aprovação, 3 opções): "TAMPA DE ROSCA / É VINHO BARATO?" · "ROLHA OU / TAMPA DE ROSCA?" · "ROSCA É / VINHO RUIM?".
