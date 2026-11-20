@@ -90,3 +90,10 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 ## 10. Comunicação
 - Mostrar o que foi feito em frases simples; mandar arquivos (vídeo + thumb; roteiro + pesquisa) pelo SendUserFile.
 - Se algo travar (ex.: GitHub sem acesso), avisar UMA vez com o link de solução; não repetir em toda resposta.
+
+## 11. Painel: equipe e custos (pedido do dono, 20/11/2026)
+- Seção "A equipe agora" (doc `equipe/agora` no painel): 4 agentes-bonecos executivos — Sofia (pauta), Rafael (pesquisa e roteiro),
+  Helena (arte e thumbs), Otávio (produção, voz, render e ajustes). SEMPRE atualizar "fazendo" e "fila" de cada um quando um trabalho começa ou termina.
+- Ajuste pedido na Revisão: o vídeo FICA na Revisão (estado "Ajustando o vídeo") até voltar para "Sua vez"; não volta para Produção.
+- Custo: contar desde o primeiro vídeo. `config/custos.creditosUsadosTotal` = total real do ElevenLabs (o dono informou 160 mil);
+  custo médio = total ÷ vídeos prontos. Manter `ledger` com cada geração de voz (vídeo, refação, amostra) e somar os créditos de cada nova voz.
