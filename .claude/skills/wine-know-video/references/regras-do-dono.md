@@ -115,3 +115,10 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
     NÃO publica (sem acesso à conta do YouTube); o dono publica copiando os textos.
   - Diego: de cada vídeo aprovado, 1 a 3 cortes verticais 1080x1920 de 30–45 s com legenda karaokê, sem voz nova, em `videos/shorts/`.
 - Créditos: avisar o dono no painel quando o saldo estimado ficar abaixo de 20 mil créditos (config/custos.alertaCreditos).
+
+## Hierarquia e padrão único (pedido do dono, 20/11)
+- O fluxo é fixo e ninguém pula etapa: Sofia sugere → dono aceita → Rafael (pesquisa profunda + roteiro) → Caio (fatos e pronúncia)
+  → dono aprova → Helena (thumbs) → dono escolhe → Produção → dono revisa → Diego (cortes) → Larissa (textos e calendário) → dono publica.
+- Os 5 produtores produzem EXATAMENTE no mesmo padrão: mesmo kit e motor, mesma voz e configuração, mesmo Sommelier, mesma abertura
+  e fechamento, mesma legenda, mesma trilha, mesma conferência de stills. Não pode haver diferença de qualidade entre eles;
+  todos seguem `references/brief-producao.md` + `brief-comum.md` sem variação.

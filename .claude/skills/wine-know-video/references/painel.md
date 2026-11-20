@@ -59,3 +59,13 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
   `calendario/posts` {itens:[{data:'AAAA-MM-DD',hora,plat:'yt'|'sh'|'rl',titulo,status:'agendado'|'aguarda'|'publicado'}], nota, integracoes[]}.
   A cada trabalho concluído, acrescentar em `feitos` da sala; ao aprovar um vídeo, mudar o status dele no calendário para "agendado".
 - Links de conexão do Windsor.ai NÃO vão para o painel (são da conta do dono); mandar no chat.
+- Cartão inteiro da equipe é clicável (sem botão). Cartão e Mesa da gerente mostram: nome, cargo, bandeirinha (Trabalhando/Travado/Livre)
+  e até 2 linhas do que está acontecendo, com NOME do vídeo, não só o número (resumoDe()).
+- Toda sala mostra "Recebe de / Entrega para" (FLUXO) e a sala da Beatriz mostra "O caminho de um vídeo":
+  Sofia → Você aceita → Rafael → Caio → Você aprova → Helena → Você escolhe → Produção → Você revisa → Diego → Larissa → Você publica.
+  Ninguém pula etapa (a pauta não vira vídeo sem passar pela pesquisa profunda do Rafael e a checagem do Caio).
+- Produtores: "Padrão único de produção" (igual para os 5: mesmo kit, voz, abertura/fechamento, Sommelier v10, legenda, jazz, stills)
+  e "Histórico de produção" com cada vídeo (thumb, nome, etapa, duração); clicar abre a gaveta com a "Ficha de produção".
+- Ao terminar um vídeo, gravar no doc do vídeo: `produtor` (nome) e `ficha` {cenario, regras[], cenas[{n,desc}], stills
+  ('fichas/vNN-stills.jpg', publicado em files, máx. 1200 px), voz, som, legenda, fechamento, pasta}. Extrair de scenes_vNN.js
+  (1ª linha = cenário; comentários "// N ..." = cena N) e de stills-conferencia.jpg.
