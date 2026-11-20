@@ -1,0 +1,63 @@
+{
+ "roteiro": [
+  "Sabe aquela jarra de vidro chique, de pescoço comprido, do restaurante? É o decanter. Mas pra que serve? É só pose?",
+  "Ele tem dois trabalhos de verdade... um que é briga de especialista... e até uma versão no liquidificador! Fica comigo!",
+  "Começa pela palavra. Vem do latim \"decanthare\": \"de\", para fora, mais \"canthus\", o bico da jarra. Ou seja: despejar pela borda!",
+  "E quem usava primeiro? Os alquimistas! Lá pelos anos mil e seiscentos, decantar era esperar a sujeira descer pro fundo... e despejar só a parte limpa.",
+  "Aliás, você aprendeu isso na escola: decantação, a água barrenta que fica limpa em cima! É assim que se trata a água da sua casa.",
+  "Com vinho, é igual. Por séculos, se servia em jarra de barro ou de metal. O decanter de vidro ganhou força na Inglaterra, lá por mil e setecentos.",
+  "Por quê? Até uns mil setecentos e oitenta, quase todo vinho vinha sem filtro, com borra: um depósito escuro e amargo. E em garrafa escura, ninguém via!",
+  "E nos navios ingleses criaram o decanter de navio: com uma base larguíssima, pra não tombar com o balanço do mar!",
+  "E hoje? Primeiro trabalho: tirar a borra. Tinto que passa muitos anos na garrafa junta cor e tanino, aquilo que deixa a boca seca. Isso gruda... e cai.",
+  "Não faz mal nenhum, mas é áspero e amargo. Então: garrafa em pé por um dia... e despeja bem devagar, com uma vela embaixo do gargalo, o pescoço da garrafa.",
+  "Viu a borra chegando no gargalo? Para! Fica um dedinho de vinho turvo na garrafa... e o resto, limpinho, no decanter.",
+  "Segundo trabalho: dar ar. Vinho jovem, preso sem oxigênio, às vezes abre com cheiro de ovo podre ou borracha queimada. Com ar, isso vai embora!",
+  "Aí começa a briga! Émile Peynaud, famoso enólogo francês, o cientista do vinho, dizia: decanter, só se tiver borra, e na hora de servir. Ar demais mais atrapalha que ajuda.",
+  "Do outro lado, a crítica inglesa Jancis Robinson: tinto jovem e potente pode ir pro decanter até quatro horas antes, despejado com vontade, pra respirar.",
+  "E a ciência? Os químicos não viram o tanino mudar no decanter. A sensação de vinho mais macio vem, principalmente, do cheiro ruim que foi embora.",
+  "E cuidado com o vinho muito velho! Com uns vinte e cinco anos ou mais, ele é frágil: horas no decanter podem apagar o aroma. Esse, só na hora de servir.",
+  "E o famoso \"abre e deixa respirar\"? Pelo gargalo, o ar toca um pedacinho do tamanho de uma moeda. Quase nada!",
+  "E quanto tempo? Tinto leve, uns vinte, trinta minutos. Tinto médio, até uma hora. Encorpado, uma hora ou mais. Se começar a cheirar a vinagre, passou do ponto!",
+  "E aquele decanter de cisne, de pescoço gigante? Lindo! Mas o vinho não liga pro formato. Uma jarra de suco limpa, de vidro, resolve. Só não usa jarra de metal!",
+  "E o liquidificador? O inventor americano Nathan Myhrvold criou a hiperdecantação: bater o vinho de trinta a sessenta segundos, na potência máxima!",
+  "Ele jura que funciona com tinto jovem... mas o teste é dele, ninguém mais provou. E vinho velho? Nem pensar!",
+  "Resumindo: a palavra veio dos alquimistas, o primeiro trabalho é tirar a borra, o segundo é dar ar... vinho velho é frágil, e liquidificador é aposta!",
+  "Curtiu? Se inscreve no canal e me conta: você usa decanter... ou a jarra de suco?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "decanter",
+   "fala": "decânter",
+   "fonte": "inglês /dɪˈkæn.tər/ (Oxford Learner's, Merriam-Webster); no Brasil usa-se o empréstimo com tônica em \"can\" — CONFIRMAR com o dono (o português formal é \"decantador\")"
+  },
+  {
+   "escreve": "decanthare",
+   "fala": "decantáre",
+   "fonte": "latim medieval dēcanthāre (Wiktionary \"decant\"); \"th\" latino = /t/, tônica no \"ta\""
+  },
+  {
+   "escreve": "canthus",
+   "fala": "cântus",
+   "fonte": "latim /ˈkan.tʰus/ (Wiktionary \"canthus\")"
+  },
+  {
+   "escreve": "Émile Peynaud",
+   "fala": "Emíl Peinô",
+   "fonte": "francês /e.mil pɛ.no/ (Wiktionary \"Émile\"; \"ey\" = /ɛ/, \"aud\" final = /o/, regra do francês — sobrenome sem verbete próprio)"
+  },
+  {
+   "escreve": "Jancis Robinson",
+   "fala": "Djâncis Róbinson",
+   "fonte": "inglês /ˈdʒæn.sɪs ˈrɒb.ɪn.sən/ (Cambridge \"Robinson\"; prenome pela regra inglesa — CONFIRMAR com o dono)"
+  },
+  {
+   "escreve": "Nathan Myhrvold",
+   "fala": "Nêitan Mírvold",
+   "fonte": "inglês /ˈneɪ.θən ˈmɪər.voʊld/ (Cambridge \"Nathan\"; sobrenome norueguês, \"y\" = /i/) — CONFIRMAR com o dono"
+  }
+ ],
+ "duracao": "~3 min 20 s",
+ "obs": "A palavra \"decantar\" nasceu com os alquimistas — é a mesma decantação da água barrenta da aula de ciências — e, apesar da fama, os químicos não viram o tanino mudar no decanter: o que melhora é o cheiro ruim que vai embora.",
+ "fontes": "Etymonline e Wiktionary ('decant'); Wine Spectator (borra, Dr. Vinny); Jancis Robinson ('Decanters and decanting'); The Conversation/Univ. Sydney 2014 (Peynaud e teste do AWRI); Scientific American e Smithsonian (Waterhouse, tanino)"
+}
