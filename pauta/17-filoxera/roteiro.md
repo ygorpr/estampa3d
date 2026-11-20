@@ -1,5 +1,5 @@
 # A praga que quase acabou com o vinho (filoxera) — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (não gerar voz antes)
-~3 min 20 s · 24 falas · fluido, sem capítulos · para quem NÃO sabe nada de vinho · fontes: pesquisa.md
+~3 min 35 s · 24 falas + logo · fluido, sem capítulos · para quem NÃO sabe nada de vinho · fontes: pesquisa.md
 
 **Cenários sugeridos:** (1) bar escuro do canal (abertura, explicações e final); (2) vinhedo francês do séc. XIX ao entardecer,
 pés murchando; (3) laboratório/gabinete do cientista com lupa, frascos e raízes na mesa; (4) cais com navio a vapor;
@@ -22,11 +22,9 @@ Dissolve de ~0,5 s entre lugares.
 | Jules-Émile Planchon | "Jul Emíl Plãchõ" | francês /ʒyl e.mil plɑ̃.ʃɔ̃/ (regra do fr.; padrão de *blanchon* /blɑ̃.ʃɔ̃/, Wiktionary) |
 | Charles Riley | "Txárls Ráili" | inglês /tʃɑːrlz ˈraɪli/ (Wiktionary "Riley") |
 | Thomas Munson | "Tómas Mânsson" | inglês /ˈtɒməs ˈmʌnsən/ |
-| Missouri | "Missúri" | inglês /mɪˈzʊəri/; forma usual no Brasil "Missúri" |
 | Bordeaux | "Bordô" | francês /bɔʁ.do/ (Wiktionary) |
 | Champagne (região) | "Champanhe" | pt: Champanhe (região de Champagne) |
 | Colares | "Culárich" | pt-PT [kuˈlaɾɨʃ] (Wikipedia "Colares (Sintra)") |
-| Atacama | "Atacama" | es /a.taˈka.ma/ |
 
 ## Falas
 | # | Fala (narração = legenda) | Emoção (eleven_v3) | O que aparece na tela |
@@ -40,7 +38,7 @@ Dissolve de ~0,5 s entre lugares.
 | 6 | Ele veio da América do Norte, onde as videiras nativas convivem com ele há milênios. Elas aprenderam a se defender! | [thoughtful] | floresta americana; videira selvagem forte, inseto "quicando" na raiz |
 | 7 | E como cruzou o oceano? A explicação mais aceita: o navio a vapor. A viagem ficou tão curta que o bicho chegou vivo, nas mudas americanas. | [curious] | cais; navio a vapor; caixa de mudas; chip "VELA: 1 MÊS · VAPOR: ~10 DIAS" |
 | 8 | Em 1863, no sul da França, as videiras começaram a murchar. E ninguém sabia por quê! | [serious] | dissolve → vinhedo francês séc. XIX; Vinhateiro olha a videira seca e coça a cabeça; chip "1863" |
-| 9 | Cinco anos depois, o botânico Jules-Émile Planchon arrancou um pé doente, pegou a lupa... e viu a raiz coberta de bichinhos amarelos! | [excited] | Planchon ajoelhado, lupa, close dos pontinhos amarelos; chip "1868" (o "cinco anos depois" amarra 1863→1868) |
+| 9 | Cinco anos depois, o botânico, quem estuda plantas, Jules-Émile Planchon arrancou um pé doente, pegou a lupa... e viu a raiz coberta de bichinhos amarelos! | [excited] | Planchon ajoelhado, lupa, close dos pontinhos amarelos; chip "1868" (o "cinco anos depois" amarra 1863→1868) |
 | 10 | Mas a praga já corria solta: Bordeaux, Borgonha, Champagne... e depois Itália e Alemanha. | [serious] | mapa com mancha bordô se espalhando, nomes acendendo |
 | 11 | Em catorze anos, a França perdeu quase três quartos do vinho que fazia. | [emphatic] | gráfico de barris: 1875 cheio → 1889 quase vazio |
 | 12 | O governo, desesperado, ofereceu uma fortuna, uns trezentos mil francos, pela cura. E choveram ideias malucas! | [curious] | cartaz "PRÊMIO 300.000 FRANCOS"; cartas voando |
@@ -51,14 +49,14 @@ Dissolve de ~0,5 s entre lugares.
 | 17 | A raiz de baixo se chama porta-enxerto: ela aguenta o inseto. E a parte de cima dá a mesma uva, o mesmo vinho! | [thoughtful] | planta em corte: metade de baixo "AMERICANA", de cima "EUROPEIA"; inseto desiste |
 | 18 | Milhões de mudas cruzaram o oceano. E Thomas Munson, do Texas, achou as raízes certas pro solo da França. Os dois ganharam medalha! | [excited] | Munson com muda; medalhas douradas brilhando |
 | 19 | Replantar levou décadas. Faltou vinho e sobrou fraude: vinho de uva-passa, de água com açúcar! E muito produtor falido foi tentar a vida na Argélia. | [serious] | barril com "FALSO"; navio para a Argélia; dissolve |
-| 20 | Hoje, quase todo vinho europeu nasce de videira enxertada. Mas teve quem escapou! O Chile, protegido pelos Andes, pelo deserto e pelo mar, nunca foi atingido. | [warm] | Chile, Andes ao fundo; placa "PÉ-FRANCO = RAIZ PRÓPRIA" |
+| 20 | Hoje, quase todo vinho europeu nasce de videira enxertada. Mas teve quem escapou! O Chile, protegido pelos Andes, pelo deserto e pelo mar, nunca foi atingido. Lá, a videira tem raiz própria: é o pé-franco! | [warm] | Chile, Andes ao fundo; placa "PÉ-FRANCO = RAIZ PRÓPRIA" |
 | 21 | E em Colares, Portugal, as videiras crescem na areia da praia, onde o inseto não ataca a raiz. | [curious] | vinhas rasteiras na areia, mar ao fundo |
 | 22 | E no Brasil? A filoxera está aqui, sim! Mas a uva Isabel, a do suco, é americana e aguenta. Já as uvas finas da Serra Gaúcha... vão enxertadas! | [warm] | parreiral gaúcho; cacho de Isabel; muda enxertada |
 | 23 | Resumindo: um inseto americano quase matou o vinho europeu... e foi uma raiz americana que salvou! | [confident] | TABELA final (sem legenda) |
 | 24 | Curtiu? Se inscreve no canal e me conta: você já provou um vinho de pé-franco? | [friendly] | CTA |
 | 25 | Wine Know. Dark Divino. | — | logo (sem legenda) |
 
-(24 falas narradas + logo. Estimativa medida pelo nº de palavras, ~470 palavras ≈ 3 min 20 s; se passar de 3 min 45 s, encurtar 7 e 18.)
+(24 falas narradas + logo. Estimativa pelo nº de palavras (~510, comparado ao 09-brinde) ≈ 3 min 35 s, dentro do limite de ~3 min 45 s; se passar, encurtar 7, 13 e 19.)
 
 ## Tabela final (5 cartões dourados, sem legenda)
 1. **O VILÃO** – filoxera, inseto de 1 mm

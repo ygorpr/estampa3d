@@ -1,0 +1,75 @@
+{
+  "roteiro": [
+    "Um bichinho de um milímetro, quase invisível, quase acabou com o vinho da Europa. Você sabe qual foi?",
+    "A partir de 1863, ele matou de dois terços a nove em cada dez vinhedos da Europa: as plantações de uva!",
+    "E o que salvou o vinho? Uma raiz americana... e uma faca bem afiada. Fica comigo!",
+    "O vilão se chama filoxera. É uma praga: um inseto que ataca a plantação em massa.",
+    "Parente do pulgão, ele chupa a raiz da videira, o pé de uva. A raiz apodrece... e a planta morre.",
+    "O nome vem do grego: \"folha seca\". E os franceses ainda deram um sobrenome: vastatrix, a devastadora!",
+    "Ele veio da América do Norte, onde as videiras nativas convivem com ele há milênios. Elas aprenderam a se defender!",
+    "E como cruzou o oceano? A explicação mais aceita: o navio a vapor. A viagem ficou tão curta que o bicho chegou vivo, nas mudas americanas.",
+    "Em 1863, no sul da França, as videiras começaram a murchar. E ninguém sabia por quê!",
+    "Cinco anos depois, o botânico, quem estuda plantas, Jules-Émile Planchon arrancou um pé doente, pegou a lupa... e viu a raiz coberta de bichinhos amarelos!",
+    "Mas a praga já corria solta: Bordeaux, Borgonha, Champagne... e depois Itália e Alemanha.",
+    "Em catorze anos, a França perdeu quase três quartos do vinho que fazia.",
+    "O governo, desesperado, ofereceu uma fortuna, uns trezentos mil francos, pela cura. E choveram ideias malucas!",
+    "Inundar o vinhedo. Injetar veneno no chão. E dizem que teve quem enterrasse um sapo vivo debaixo de cada pé!",
+    "Nada deu certo. A resposta estava na terra do inimigo: os Estados Unidos.",
+    "O americano Charles Riley, estudioso de insetos, notou que as videiras de lá quase não sofriam. E se juntou a Planchon.",
+    "A ideia: enxertar. Enxerto é unir duas plantas: o galho da videira europeia é encaixado num pé com raiz americana. As duas cicatrizam e viram uma planta só.",
+    "A raiz de baixo se chama porta-enxerto: ela aguenta o inseto. E a parte de cima dá a mesma uva, o mesmo vinho!",
+    "Milhões de mudas cruzaram o oceano. E Thomas Munson, do Texas, achou as raízes certas pro solo da França. Os dois ganharam medalha!",
+    "Replantar levou décadas. Faltou vinho e sobrou fraude: vinho de uva-passa, de água com açúcar! E muito produtor falido foi tentar a vida na Argélia.",
+    "Hoje, quase todo vinho europeu nasce de videira enxertada. Mas teve quem escapou! O Chile, protegido pelos Andes, pelo deserto e pelo mar, nunca foi atingido. Lá, a videira tem raiz própria: é o pé-franco!",
+    "E em Colares, Portugal, as videiras crescem na areia da praia, onde o inseto não ataca a raiz.",
+    "E no Brasil? A filoxera está aqui, sim! Mas a uva Isabel, a do suco, é americana e aguenta. Já as uvas finas da Serra Gaúcha... vão enxertadas!",
+    "Resumindo: um inseto americano quase matou o vinho europeu... e foi uma raiz americana que salvou!",
+    "Curtiu? Se inscreve no canal e me conta: você já provou um vinho de pé-franco?",
+    "Wine Know. Dark Divino."
+  ],
+  "pronuncia": [
+    {
+      "escreve": "filoxera",
+      "fala": "filokséra",
+      "fonte": "pt-BR /fiˌlɔkˈsɛ.ɾɐ/ (Wiktionary \"filoxera\")"
+    },
+    {
+      "escreve": "vastatrix",
+      "fala": "vastátrix",
+      "fonte": "latim /wasˈtaː.triks/; no pt, tônica em \"TA\""
+    },
+    {
+      "escreve": "Jules-Émile Planchon",
+      "fala": "Jul Emíl Plãchõ",
+      "fonte": "francês /ʒyl e.mil plɑ̃.ʃɔ̃/ (regra do fr.; padrão de *blanchon* /blɑ̃.ʃɔ̃/, Wiktionary)"
+    },
+    {
+      "escreve": "Charles Riley",
+      "fala": "Txárls Ráili",
+      "fonte": "inglês /tʃɑːrlz ˈraɪli/ (Wiktionary \"Riley\")"
+    },
+    {
+      "escreve": "Thomas Munson",
+      "fala": "Tómas Mânsson",
+      "fonte": "inglês /ˈtɒməs ˈmʌnsən/"
+    },
+    {
+      "escreve": "Bordeaux",
+      "fala": "Bordô",
+      "fonte": "francês /bɔʁ.do/ (Wiktionary)"
+    },
+    {
+      "escreve": "Champagne (região)",
+      "fala": "Champanhe",
+      "fonte": "pt: Champanhe (região de Champagne)"
+    },
+    {
+      "escreve": "Colares",
+      "fala": "Culárich",
+      "fonte": "pt-PT [kuˈlaɾɨʃ] (Wikipedia \"Colares (Sintra)\")"
+    }
+  ],
+  "duracao": "~3 min 35 s",
+  "obs": "O mais surpreendente: o veneno e a cura vieram do mesmo lugar — um inseto americano quase matou o vinho europeu e foi a raiz americana que o salvou; até hoje o Chile e as vinhas na areia de Colares nunca precisaram de enxerto (e tem o sapo vivo enterrado, marcado como 'dizem').",
+  "fontes": "Britannica (grape phylloxera); Smithsonian Magazine (American bugs almost wiped out France's wine industry / T. V. Munson); Decanter (The Root of all Evil; Grafting); Jancis Robinson / Oxford Companion to Wine (Colares, phylloxera); Embrapa Uva e Vinho (Circular Técnica 166 – Filoxera-da-videira no Brasil)"
+}
