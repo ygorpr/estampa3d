@@ -131,8 +131,10 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 
 ## Contas separadas: Dark Divino x 3uniformes (NÃO misturar)
 - Dark Divino (YouTube, conta Google própria) = conta Windsor.ai SEPARADA. Acesso só pela API REST
-  `https://connectors.windsor.ai/all?...&select_accounts=youtube__108952&api_key=$WINDSOR_API_KEY_DARKDIVINO`,
-  com a chave na variável de ambiente `WINDSOR_API_KEY_DARKDIVINO` do ambiente de nuvem "estampa3d" (o dono cadastra
+  `https://connectors.windsor.ai/youtube?date_preset=...&fields=...&select_accounts=108952&api_key=...` (canal "Wine Know"; no endpoint
+  /youtube a conta é `108952`, no /all é `youtube__108952`; campos em /youtube/fields),
+  com a chave na variável de ambiente `WINDSOR_API_KEY_DARKDIVINO` (ou a que o dono passou na sessão, só em memória) do ambiente de nuvem "estampa3d" (o dono cadastra
   em Configurações do ambiente; NUNCA pedir a chave no chat, nunca gravar em arquivo nem em commit).
 - O conector Windsor.ai do claude.ai (ferramentas mcp__Windsor_ai__*) é da 3uniformes: NUNCA usar no painel do Dark Divino.
 - Host liberado na rede do ambiente: connectors.windsor.ai.
+- Estado em 20/11/2026: canal Wine Know com 0 inscritos, 0 vídeos, 0 visualizações (nada publicado). Calendário: 9, 10, depois 1 a 8.
