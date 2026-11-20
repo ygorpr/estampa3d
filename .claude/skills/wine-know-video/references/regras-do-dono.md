@@ -138,3 +138,9 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - O conector Windsor.ai do claude.ai (ferramentas mcp__Windsor_ai__*) é da 3uniformes: NUNCA usar no painel do Dark Divino.
 - Host liberado na rede do ambiente: connectors.windsor.ai.
 - Estado em 20/11/2026: canal Wine Know com 0 inscritos, 0 vídeos, 0 visualizações (nada publicado). Calendário: 9, 10, depois 1 a 8.
+
+## Publicador: Rodrigo (20/11)
+- Larissa = só REDATORA (títulos, descrição, tags, capítulos, textos dos Shorts). Rodrigo = PUBLICADOR e ANALISTA do canal:
+  junta vídeo aprovado + thumb + textos + cortes, monta o calendário, deixa pronto para publicar, lê os números a cada ronda e
+  comenta cada cartão do "Painel do canal" (fica na sala dele, `look: publica`). Ele não aperta "publicar": não há acesso de escrita
+  ao YouTube; o dono publica/agenda no YouTube Studio. Equipe: 11 pessoas.

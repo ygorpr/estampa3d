@@ -496,6 +496,7 @@ const LOOK={
   julia:{pele:'#F0C9A8',cabelo:'#6B3E1F',terno:'#4A1426',gravata:'#F2D27A',tipo:'cacho'},
   checador:{pele:'#9C6644',cabelo:'#D9D9D9',terno:'#1E3A31',gravata:'#D4A24C',tipo:'oculos'},
   youtube:{pele:'#EBC6A4',cabelo:'#8B1E1E',terno:'#2C0B15',gravata:'#F3E6C8',tipo:'coque'},
+  publica:{pele:'#D9A77E',cabelo:'#3B2A20',terno:'#1E3A31',gravata:'#E05252',tipo:'liso'},
   shorts:{pele:'#B07A52',cabelo:'#0F0F0F',terno:'#3A3A3A',gravata:'#D4A24C',tipo:'fone'}
 };
 function boneco(k){const L=LOOK[k]||LOOK.pauta;
@@ -532,9 +533,10 @@ const PASSOS={
   checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
   arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
   producao:['Gera a voz do Paulo (só depois da thumb escolhida)','Mede as falas e ajusta o tempo das cenas','Anima as cenas no cenário certo','Confere os quadros (stills)','Renderiza com jazz, efeitos e legenda karaokê','Faz a prévia e põe o vídeo na Revisão'],
-  youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Monta o calendário de postagem','Você publica copiando os textos'],
+  youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Entrega os textos para o Rodrigo publicar'],
   shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
 };
+PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Diego','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números do canal a cada ronda','Comenta cada número e avisa quem precisa mudar algo']
 ['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
 const passoAtual=(a)=>{const f=(a.fazendo||[])[0]; if(!f) return -1; const p=f.pct||0, n=(PASSOS[a.look]||[]).length; return Math.min(n-1,Math.floor(p/100*n));};
 function proximasDe(a){
@@ -548,6 +550,7 @@ function proximasDe(a){
   if(['producao','pedro','julia','anima','render'].includes(k)){V.filter(d=>d.etapa==='producao'&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Produzir: '+t(d)));
     V.filter(d=>d.etapa==='revisao'&&/[Aa]justando/.test(d.estado||'')&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Ajuste pedido: '+t(d)));}
   if(k==='youtube'){const feitos=(ESCR.youtube?.pacotes)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Pacote de textos: '+t(d)));}
+  if(k==='publica'){const cal=((CAL&&CAL.itens)||[]).filter(p=>p.status!=='publicado').sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)).slice(0,6); cal.forEach(p=>out.push('Publicar '+p.data.split('-').reverse().slice(0,2).join('/')+' '+(p.hora||'')+': '+p.titulo+(p.status==='aguarda'?' (aguarda sua aprovação)':'')));}
   if(k==='shorts'){const feitos=(ESCR.shorts?.cortados)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Cortes para Shorts e Reels: '+t(d)));}
   if(k==='gerente'){const sv=V.filter(d=>d.vez==='dono'&&PEDE[d.etapa]); if(sv.length) out.push(sv.length+' itens esperando você em "Sua vez"');
     (EQUIPE?.agentes||[]).filter(x=>x.esperando).forEach(x=>out.push(x.nome+' travado: '+x.esperando));}
@@ -574,10 +577,11 @@ const FLUXO={
   arte:{de:'Roteiro aprovado por você',para:'Você escolhe A, B ou C → vai para a Produção'},
   producao:{de:'Helena (thumb que você escolheu) e a Beatriz, que divide os vídeos',para:'Você assiste na Revisão → aprovado vai para Diego e Larissa'},
   shorts:{de:'Vídeo aprovado por você na Revisão',para:'Larissa escreve os textos dos cortes'},
-  youtube:{de:'Vídeo aprovado por você e os cortes do Diego',para:'Calendário de postagem → você publica'}
+  youtube:{de:'Vídeo aprovado por você e os cortes do Diego',para:'Rodrigo, que monta o calendário e publica'},
+  publica:{de:'Larissa (textos), Helena (thumb) e Diego (cortes), com o vídeo que você aprovou',para:'Canal no YouTube, no dia e hora do calendário; depois lê os números e avisa a equipe'}
 };
 PRODS.forEach(k=>FLUXO[k]=FLUXO.producao);
-const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['prod','Produção (3)'],['*','Você revisa'],['shorts','Diego'],['youtube','Larissa'],['*','Você publica']];
+const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['prod','Produção (3)'],['*','Você revisa'],['shorts','Diego'],['youtube','Larissa'],['publica','Rodrigo'],['*','Você confirma e publica']];
 const PADRAO=['Mesmo kit e mesmo motor de animação para todos (kit-dark-divino + a habilidade wine-know-video)','Mesma voz: Paulo, ElevenLabs v3 com emoção, em blocos de 3 frases','Abre com a thumb ganhando vida e fecha com o logo e "Wine Know. Dark Divino."','Sommelier versão 10: colete e gravata vinho, braços com profundidade, mão nunca na frente do rótulo','Legenda karaokê igual à fala; marca d\'água clara; avisos nunca em cima do rosto','Jazz com sax por baixo, voz na frente','Fechamento obrigatório: resumo, tabela parada 8 s, inscrição, brinde, logo','Conferência de quadros (stills) antes de renderizar e prévia na Revisão'];
 function fichaHtml(d){const f=d.ficha; if(!f) return '';
   return `<div class="sec ficha"><h2 class="s">Ficha de produção${d.produtor?' · '+esc(d.produtor)+(d.produtorOriginal?' (feito por '+esc(d.produtorOriginal)+')':''):''}</h2><dl style="margin:0">
@@ -612,7 +616,7 @@ function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) ret
 let CANAL=null, salaView='sala';
 const nfmt=n=>Number(n||0).toLocaleString('pt-BR',{maximumFractionDigits:1});
 const durfmt=s=>{s=Math.round(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
-function falaLarissa(t){return t?`<div class="lar">${boneco('youtube')}<p><b>Larissa:</b> ${esc(t)}</p></div>`:''}
+function falaLarissa(t){return t?`<div class="lar">${boneco('publica')}<p><b>Rodrigo:</b> ${esc(t)}</p></div>`:''}
 function barrasH(lista,fmt){if(!lista||!lista.length) return '<span class="note">Sem dados ainda.</span>';
   const mx=Math.max(...lista.map(x=>x[1]))||1;
   return `<div class="hb">${lista.map(([k,v])=>`<div class="hr"><span class="hk">${esc(k)}</span><span class="ht" title="${esc(k)}: ${fmt?fmt(v):nfmt(v)}"><i style="width:${Math.max(2,v/mx*100)}%"></i></span><span class="hv">${fmt?fmt(v):nfmt(v)}</span></div>`).join('')}</div>`}
@@ -646,10 +650,10 @@ function abrirSala(look,refresh){
   const st=(a.fazendo||[]).length?['on','Trabalhando']:a.esperando?['wait','Travado']:prox.length?['wait','Com fila']:['off','Livre'];
   const ger=(EQUIPE.agentes||[]).find(x=>x.look==='gerente');
   let h=`<div class="in"><header class="ohead"><div class="id">${boneco(a.look)}<div style="min-width:0"><span class="note">Escritório</span><h3 id="o-title">${esc(a.nome)}</h3><div class="cg">${esc(a.cargo)}</div></div></div>
-    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='youtube'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
-  if(a.look==='youtube'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
+    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='publica'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+  if(a.look==='publica'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
   if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
-  if(a.look==='youtube') h+=integracoesHtml()+calendarioHtml();
+  if(a.look==='publica') h+=integracoesHtml()+calendarioHtml();
   if(a.look==='gerente'){
     h+=`<section class="box wide"><h4>O caminho de um vídeo</h4><div class="flow">${CADEIA.map((c,i)=>`${i?'<span class="ar" aria-hidden="true">→</span>':''}${c[0]==='*'?`<span class="n you">${esc(c[1])}</span>`:c[0]==='prod'?`<span class="n">${esc(c[1])}</span>`:`<button class="n" data-sala="${c[0]}" style="all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px">${esc(c[1])}</button>`}`).join('')}</div><span class="note">Ninguém pula etapa: cada um só começa quando o anterior entrega e, nos pontos dourados, quando você aprova.</span></section>`;
     h+=`<section class="box wide"><h4>Mesa da gerente · conectada a todas as salas</h4><div class="mesa">${(EQUIPE.agentes||[]).filter(x=>x.look!=='gerente').map(x=>{const s=(x.fazendo||[]).length?'on':x.esperando?'wait':'off';
@@ -725,7 +729,7 @@ render(); pintarAviso();
   const timer=setTimeout(()=>{$('#status').textContent='A esteira ainda não respondeu. Os dados podem estar desatualizados.';$('#status').classList.add('warn')},10000);
   db.doc('equipe/agora').onSnapshot(s=>{EQUIPE=s.exists?s.data():{agentes:[]};renderEquipe()},()=>{});
   db.collection('escritorios').onSnapshot(s=>{ESCR={};s.docs.forEach(x=>ESCR[x.id]=x.data()); if(salaAberta) abrirSala(salaAberta,true)},()=>{});
-  db.doc('canal/youtube').onSnapshot(s=>{CANAL=s.exists?s.data():null; if(salaAberta==='youtube') abrirSala('youtube',true)},()=>{});
+  db.doc('canal/youtube').onSnapshot(s=>{CANAL=s.exists?s.data():null; if(salaAberta==='publica') abrirSala('publica',true)},()=>{});
   db.doc('calendario/posts').onSnapshot(s=>{CAL=s.exists?s.data():null; if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{

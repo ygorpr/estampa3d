@@ -53,7 +53,7 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
 - Sala = Fazendo agora (barras) · Passo a passo do cargo (passo atual em ouro, pela % da tarefa) · Próximas tarefas (fila + o que o
   painel mostra para aquele cargo) · Já fez · Ligação com a gerente (relatório que a Beatriz lê a cada ronda).
 - Beatriz: "Mesa da gerente" com todos os agentes, relatório de cada um e atalho para cada sala.
-- Larissa (redatora): Contas conectadas (YouTube e Instagram do Dark Divino, via Windsor.ai) + Calendário de postagem (9 semanas; YouTube
+- Rodrigo (publicador; antes era a Larissa): Contas conectadas (YouTube e Instagram do Dark Divino, via Windsor.ai) + Calendário de postagem (9 semanas; YouTube
   vermelho, Shorts laranja, Reels roxo; tracejado = vídeo ainda na Revisão). Ritmo: longos qui 19h e dom 18h; cortes 12h nos dias entre.
 - Dados: `escritorios/<look>` {feitos:[{em,txt}], relatorio, pacotes:[nums] (Larissa), cortados:[nums] (Diego)} e
   `calendario/posts` {itens:[{data:'AAAA-MM-DD',hora,plat:'yt'|'sh'|'rl',titulo,status:'agendado'|'aguarda'|'publicado'}], nota, integracoes[]}.
@@ -70,10 +70,10 @@ dispara o que o dono já liberou, repõe a pauta, atualiza a equipe e só chama 
   ('fichas/vNN-stills.jpg', publicado em files, máx. 1200 px), voz, som, legenda, fechamento, pasta}. Extrair de scenes_vNN.js
   (1ª linha = cenário; comentários "// N ..." = cena N) e de stills-conferencia.jpg.
 
-## Painel do canal (sala da Larissa → botão "Painel do canal")
+## Painel do canal (sala do Rodrigo, publicador → botão "Painel do canal"; comentários assinados por ele)
 - Igual ao YouTube Studio: Inscritos, Visualizações (28 d), Tempo de exibição (h), Duração média, Inscritos ganhos, Vídeos publicados;
   gráfico de visualizações por dia (28 d, com dica ao passar o mouse); um cartão por vídeo; Público (idade, gênero, tráfego, aparelho, país).
-- Embaixo de cada cartão: comentário de especialista da Larissa (`comentarios.<chave>` e `videos[i].comentario`). Escrever de verdade,
+- Embaixo de cada cartão: comentário de especialista do Rodrigo (`comentarios.<chave>` e `videos[i].comentario`). Escrever de verdade,
   com base nos números (o que funcionou, o que mudar, quem avisar: Rafael para gancho, Helena para thumb/CTR).
 - Dados: doc `canal/youtube`, gerado por `scripts/canal_youtube.py saida.json` (precisa de WINDSOR_API_KEY_DARKDIVINO no ambiente;
   conta separada da 3uniformes). Atualizar a cada ronda da Beatriz e reescrever os comentários quando os números mudarem.
