@@ -43,3 +43,10 @@ Onde as fontes divergem, o roteiro usa a forma conservadora (anotado abaixo). **
 - **Condado** (Qushui × Chushul): fontes divergem; o roteiro diz "perto de Lhasa".
 - Comparar diretamente São Joaquim ao Tibete em clima: não há estudo; só a altura (2,5×) entra.
 - **Vinhos de altitude em outros estados (PR, GO/DF, BA, MG — "vinho de inverno")**: tema bom para outro vídeo.
+
+## Checagem do Caio (20/11/2026)
+- Fala 4 ("um terço a menos de oxigênio" por respiração): CONFIRMADO o princípio pela medicina de montanha — a fração de O₂ do ar fica em 21 %, mas a pressão cai, e a pressão de O₂ cai junto (21 % da pressão do ar). Pela atmosfera-padrão, a 3.500 m a pressão é ~493 mmHg ≈ 65 % dos 760 mmHg do nível do mar → ~1/3 a menos. 3.500 m é o começo da faixa de "altitude muito alta" (3.500–5.500 m). Fala mantida ("mais ou menos um terço") — https://en.wikipedia.org/wiki/Effects_of_high_altitude_on_humans ; capítulo de amostra Auerbach's Wilderness Medicine (Elsevier) — https://www.eu.elsevierhealth.com/media/s3/UKMEAEU/eSample/9780323359429-sample-chapter.pdf
+- Falas 1 e 3 (3.563 m; Guinness 27/09/2018; primeira vez da categoria): CONFIRMADOS — https://www.guinnessworldrecords.com/world-records/85895-highest-vineyard
+- Fala 0 (Pico da Neblina 2.995 m, IBGE): OK. Fala 18 (IP Vinhos de Altitude de SC, 2021, INPI): OK.
+- Pronúncia Jujuy /xuˈxui̯/ → "Rurúi": OK.
+- Resultado: 0 correções.
