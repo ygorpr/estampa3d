@@ -1,4 +1,4 @@
-# Por que a taça de vinho tem haste? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (não gerar voz antes)
+# Por que a taça de vinho tem haste? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 35 s (494 palavras; o 09 tinha 429 = 3 min 15 s). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Cenários: MUSEU DO VIDRO (vitrines: kylix, taça romana, veneziana de dragão, inglesa air twist) → OFICINA DO VIDREIRO (forno, tubo; vidreiro = personagem de verdade, avental de couro, luvas, tubo de soprar) → BAR do Sommelier (ciência, haste, Brasil, tabela). Dissolve de ~0,5 s entre lugares.
 Thumb (3 opções a fazer depois): "POR QUE A TAÇA / TEM HASTE?" · "VOCÊ SEGURA / A TAÇA ERRADO?" · "O SEGREDO / DA HASTE" (esta última só se o dono achar que diz o assunto).

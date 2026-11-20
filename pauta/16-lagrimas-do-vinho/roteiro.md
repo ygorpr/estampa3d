@@ -1,4 +1,4 @@
-# As "lágrimas" do vinho — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (voz só depois do "aprovado")
+# As "lágrimas" do vinho — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel) (voz só depois do "aprovado")
 ~3 min 20 s. Cenário: laboratório Dark Divino (`lab()` de `pauta/10-tinto-branco/sets_lab.js`) com bancada, taça grande em close
 e quadro-negro para os desenhos; abre e fecha no bar. Personagens extras (detalhados, no estilo do Sommelier): James Thomson
 (cavalheiro vitoriano de costeletas, 1855) e Carlo Marangoni (jovem italiano de bigode, 1865). Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.

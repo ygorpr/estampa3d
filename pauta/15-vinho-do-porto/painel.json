@@ -1,0 +1,89 @@
+{
+ "roteiro": [
+  "O vinho do Porto... nem é feito na cidade do Porto! Então por que esse nome? E por que ele é tão mais forte?",
+  "Tem guerra, barco na corredeira, um marquês mandão... e um truque com aguardente. Fica comigo!",
+  "No tempo dos romanos, onde o rio Douro encontra o mar, tinha um povoado: Portus Cale. Portus quer dizer porto.",
+  "Dali veio o nome da cidade, Porto... e o do país inteiro: Portugal! O país tem o nome de uma cidade!",
+  "Mas a uva nasce longe, rio acima, no vale do Douro: morros de pedra, com a vinha plantada em degraus. Hoje, Patrimônio da Humanidade!",
+  "E o vinho descia o rio no barco rabelo: fundo chato, vela quadrada... e um remo enorme atrás, pra desviar das pedras!",
+  "O rio era bravo, cheio de corredeiras! Só em mil oitocentos e oitenta e sete chegou o trem, e o rabelo foi perdendo o serviço.",
+  "O vinho parava em Vila Nova de Gaia, do outro lado do rio, nas caves: armazéns cheios de pipas, os barris grandes. E dali, de navio, pra Inglaterra!",
+  "Os ingleses chamaram de \"Port wine\": o vinho que sai do Porto! O nome é do porto de saída, não de onde ele nasce.",
+  "E por que a Inglaterra? Guerra com a França! Em mil setecentos e três, o Tratado de Methuen: o vinho português pagava um terço a menos de imposto que o francês.",
+  "E a força? O vinho comum tem uns treze por cento de álcool. O do Porto, de dezenove a vinte e dois!",
+  "É que o vinho nasce quando as leveduras, uns bichinhos invisíveis, comem o açúcar da uva e soltam álcool.",
+  "No meio desse banquete, entra a aguardente: um destilado de vinho, fortíssimo. As leveduras não aguentam... e param!",
+  "Sobra açúcar, por isso o Porto é doce... e o álcool sobe. É o vinho fortificado: vinho com reforço de aguardente.",
+  "Mas era pra aguentar a viagem? Em parte, sim! No começo, punham um pouquinho de aguardente antes de embarcar.",
+  "Agora, o abade que teria inventado o Porto doce num mosteiro? Lenda, ninguém prova! O jeito de hoje só virou regra lá por mil oitocentos e cinquenta.",
+  "Com o sucesso, veio a fraude: vinho fraco tingido com frutinha de sabugueiro! Em mil setecentos e cinquenta e seis, o Marquês de Pombal, o ministro forte do rei, botou ordem na casa.",
+  "Criou uma companhia pra controlar o vinho e fincou trezentos e trinta e cinco marcos de pedra: uma das primeiras regiões demarcadas do mundo, com fronteira escrita na lei!",
+  "Os italianos juram que o Chianti veio antes! E até mil novecentos e oitenta e seis, o Porto só podia ir pro mundo passando por Gaia.",
+  "Na hora de comprar: o Ruby é o jovem, vermelho vivo, frutado. O Tawny envelhece em barril pequeno: fica cor de tijolo, com gosto de nozes e caramelo.",
+  "O Vintage é de um ano só, de safra excepcional, pra guardar. E o branco? Em Portugal, tem quem tome com gelo e água tônica!",
+  "E o nome é protegido: vinho de outro lugar não pode se chamar Porto. No Brasil, isso vale desde um tratado de mil novecentos e trinta e três!",
+  "Resumindo: o nome vem do porto de saída, o país tem o nome da cidade, e a força vem da aguardente que para a fermentação!",
+  "Curtiu? Se inscreve no canal e me conta: você é do time Ruby ou do time Tawny?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Portus Cale",
+   "fala": "Pórtus Cále",
+   "fonte": "latim /ˈpɔr.tus ˈka.le/ (pronúncia latina clássica)"
+  },
+  {
+   "escreve": "Douro",
+   "fala": "Dôuro",
+   "fonte": "português /ˈdo(w)ɾu/ (Priberam/Infopedia) — a voz lê normal"
+  },
+  {
+   "escreve": "Vila Nova de Gaia",
+   "fala": "Vila Nova de Gáia",
+   "fonte": "português /ˈɡajɐ/ (Infopedia) — a voz lê normal"
+  },
+  {
+   "escreve": "rabelo",
+   "fala": "rabêlo",
+   "fonte": "português /ʁɐˈbelu/ (Priberam)"
+  },
+  {
+   "escreve": "Port wine",
+   "fala": "Pórt uáin",
+   "fonte": "inglês /pɔːt waɪn/ (Cambridge)"
+  },
+  {
+   "escreve": "Methuen",
+   "fala": "Métiuen",
+   "fonte": "inglês /ˈmɛθjuːən/ (pronounce.tv; o \"th\" vira \"t\") — confirmar com o dono"
+  },
+  {
+   "escreve": "Chianti",
+   "fala": "Quiânti",
+   "fonte": "italiano /ˈkjanti/ (Treccani/Wiktionary)"
+  },
+  {
+   "escreve": "Ruby",
+   "fala": "Rúbi",
+   "fonte": "inglês /ˈruː.bi/ (Cambridge)"
+  },
+  {
+   "escreve": "Tawny",
+   "fala": "Tóni",
+   "fonte": "inglês UK /ˈtɔː.ni/ (Cambridge)"
+  },
+  {
+   "escreve": "Vintage",
+   "fala": "Víntidj",
+   "fonte": "inglês /ˈvɪn.tɪdʒ/ (Cambridge)"
+  },
+  {
+   "escreve": "Wine Know",
+   "fala": "Uáin Nôu",
+   "fonte": "inglês /waɪn noʊ/ (padrão do canal)"
+  }
+ ],
+ "duracao": "~3 min 30 s",
+ "obs": "O vinho nem é feito na cidade do Porto — o nome é do porto de saída, o próprio país Portugal tem o nome dessa cidade (Portus Cale), e a força vem de aguardente jogada no meio da fermentação, que 'desmaia' as leveduras e deixa o vinho doce e com 19–22% de álcool.",
+ "fontes": "Britannica (Port; Porto; Portugal; Methuen Treaty); Caderno de especificações da DOP Porto (UE/IVDP); Taylor's – Dawn of Fortification / The Marquis of Pombal; RTP/Museu do Douro – 335 marcos pombalinos; Wine Folly – Styles of Port"
+}

@@ -1,4 +1,4 @@
-# Pode colocar gelo no vinho? — roteiro v1 (história + física + Brasil) — AGUARDANDO APROVAÇÃO DO DONO
+# Pode colocar gelo no vinho? — roteiro v1 (história + física + Brasil) — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 20 s. Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Cenário sugerido: **bar de praia / beach club ao entardecer** (balcão de madeira, balde de gelo com espumante suando, taça grande,
 coqueiro e mar ao fundo; geladeira pequena atrás do balcão para a dica do tinto). Inserções com dissolve: banquete grego (cratera),
