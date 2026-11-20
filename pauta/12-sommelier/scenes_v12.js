@@ -71,30 +71,36 @@ const SC=[null,
  // 18 — lembra do burro!
  (t,c,s)=>talkScene(t,c,s,Object.assign({},REST,{set:(x,t)=>{restaurant(x,t);const a=ease(seg(t,wt(18,'lembra')-.3,wt(18,'lembra')+.5));if(a>0){x.save();x.globalAlpha=a;donkey(x,1700,840,.82,t,{face:-1,load:'baskets',nod:kf(t,[[0,0],[wt(18,'burro'),0],[wt(18,'burro')+.3,.15],[wt(18,'burro')+.8,0]])});x.restore()}},
   bottles:[['red',800]],gest:[[0,'open'],[3.5,'point'],[6.5,'rest']],chips:[['LÁ NO COMEÇO...',430,320,wt(18,'começo')]],face:t=>({brow:.7,mouth:.75})})),
- (t,c,s)=>finalTable(t,s),
  (t,c,s)=>ctaScene(t,c,s),
+ (t,c,s)=>finalTable(t,s),
+ (t,c,s)=>toastScene(t,c,s),
  null];
+const CARD_AT=[1.2,2.5,4.0,5.2,6.2];   // segundos após o início da tabela; todos visíveis aos ~7 s, parados até o fim (15 s)
 function finalTable(t,s){veil(null,t,castleHall,.78);const g=layer('g',null);goldText(g,'DE ONDE VEM SOMMELIER',960,130,66);ornament(g,960,205,600);blit(ctx,L.g,0,seg(t,T[s],T[s]+.5));
- const C=[['saddle','SÁGMA','a sela grega','','sela',0],['donkey','SOMMIER','o burro de carga','','burro',0],['bottle','SOMMELIER','das provisões','ao vinho','sommelier',0],['gold','BOUTEILLER','virou "butler",','o mordomo','garrafas',0],['trophy','1969','1º Melhor Sommelier','do Mundo','mordomo',.6]];
- C.forEach(([ic,n,d,d2,w,dl],i)=>{const cx=220+i*370,ta=wt(19,w)-.15+dl,c=layer('c'+i,null);plaque(c,cx,600,330,560);
+ const C=[['saddle','SÁGMA','a sela grega',''],['donkey','SOMMIER','o burro de carga',''],['bottle','SOMMELIER','das provisões','ao vinho'],['gold','BOUTEILLER','virou "butler",','o mordomo'],['trophy','1969','1º Melhor Sommelier','do Mundo']];
+ C.forEach(([ic,n,d,d2],i)=>{const cx=220+i*370,ta=T[s]+CARD_AT[i],c=layer('c'+i,null);plaque(c,cx,600,330,560);
   if(ic=='saddle')packSaddle(c,cx,620,1);else if(ic=='donkey')donkey(c,cx+20,720,.48,t,{load:'baskets',face:-1});else if(ic=='bottle')bottleS(c,[cx,720],.8,'red');else if(ic=='gold')goldBottle(c,cx,720,.62);else trophy(c,cx,600,1);
-  goldText(c,n,cx,768,34,'Cinzel',700);const a=seg(t,ta,ta+.45);blit(ctx,L['c'+i],0,a);serif(d,cx,818,30,`rgba(243,230,200,${a})`);if(d2)serif(d2,cx,852,30,`rgba(243,230,200,${a})`)})}
+  goldText(c,n,cx,768,34,'Cinzel',700);const a=easeIO(seg(t,ta,ta+.8));blit(ctx,L['c'+i],0,a);serif(d,cx,818,30,`rgba(243,230,200,${a})`);if(d2)serif(d2,cx,852,30,`rgba(243,230,200,${a})`)})}
 function ctaScene(t,cam,s){talkScene(t,cam,s,Object.assign({gest:[[0,'wave'],[2.2,'open'],[4.2,'rest']],bottles:[['red',1100]],face:t=>({mouth:.7,brow:.5})},REST));
  const a=easeIO(seg(t,T[s]+.4,T[s]+1)),g=layer('g',null);g.save();g.globalAlpha=a;g.fillStyle='#B0122E';g.beginPath();g.roundRect(120,120,520,110,55);g.fill();g.strokeStyle=GOLD2;g.lineWidth=5;g.stroke();g.restore();
  g.save();g.globalAlpha=a;goldText(g,'INSCREVA-SE',380,176,52,'Cinzel',900);g.restore();chip(g,380,300,'QUAL CURIOSIDADE?',ap(t,20,'curiosidade'));blit(ctx,L.g,0);
  if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=a;ctx.drawImage(LOGO,1640,40,230,220);ctx.restore()}}
-const TALKS=[8,13,17,18,20];
+// fechamento sem fala: o Sommelier ergue a taça pela haste num brinde (só música), câmera aproximando devagar
+const TOAST_K=[[0,860,812,0],[.45,860,812,0],[.6,860,808,0],[1.5,808,616,-.05],[1.85,794,600,-.08],[2.1,804,592,-.03],[2.35,796,600,-.08],[3.5,794,598,-.07],[4.5,794,598,-.07]];
+function toastScene(t,cam,s){talkScene(t,cam,s,Object.assign({bottles:[['red',1100]],gest:[[0,'rest']],sip:T[s],keys:TOAST_K,wine:.45,face:t=>({mouth:.9,brow:.45,look:-.05,lookY:-.1,open:0})},REST))}
+const TALKS=[8,13,17,18,19];
 FILM={dur:T[T.length-1],cuts:T.map(v=>Math.round(v*30)),fadeIn:0,fadeOut:.8,warm(){return .4},
- cam(s,u,t){if(TALKS.includes(s)){const k=TALKS.indexOf(s)%3;return [{x:lerp(950,975,u),y:lerp(560,545,u),z:lerp(1.18,1.28,easeIO(u)),b:[6,0,0]},{x:lerp(930,915,u),y:lerp(545,520,u),z:lerp(1.3,1.45,easeIO(u)),b:[8,0,0]},{x:lerp(1000,985,u),y:550,z:lerp(1.2,1.3,u),b:[7,0,0]}][k]}return {x:960,y:540,z:1,b:[10,0,0]}},
- draw(t,cam,s,u){if(s==0){thumbFrame(t);return}if(s==21){photo(IMG.logo,t,T[21],T[22],1,1.05);return}SC[s](t,cam,s)},
+ cam(s,u,t){if(s==21)return {x:lerp(960,930,u),y:lerp(545,505,u),z:lerp(1.12,1.34,easeIO(u)),b:[6,0,0]};if(TALKS.includes(s)){const k=TALKS.indexOf(s)%3;return [{x:lerp(950,975,u),y:lerp(560,545,u),z:lerp(1.18,1.28,easeIO(u)),b:[6,0,0]},{x:lerp(930,915,u),y:lerp(545,520,u),z:lerp(1.3,1.45,easeIO(u)),b:[8,0,0]},{x:lerp(1000,985,u),y:550,z:lerp(1.2,1.3,u),b:[7,0,0]}][k]}return {x:960,y:540,z:1,b:[10,0,0]}},
+ draw(t,cam,s,u){if(s==0){thumbFrame(t);return}if(s==22){photo(IMG.logo,t,T[22],T[23],1,1.05);return}SC[s](t,cam,s)},
  plants(){return {}}};
-(function(){const DISS={1:.6},xf=mk(),xz=mk(),CARD=[1,2,3,4,5,6,7,9,10,11,12,14,15,16,19],draw0=FILM.draw,cam0=FILM.cam;for(let s=2;s<22;s++)DISS[s]=.45;
+(function(){const DISS={1:.6},xf=mk(),xz=mk(),CARD=[1,2,3,4,5,6,7,9,10,11,12,14,15,16,20],draw0=FILM.draw,cam0=FILM.cam;for(let s=2;s<23;s++)DISS[s]=.45;
  FILM.draw=(t,c,s,u)=>{const d=DISS[s],a=d?1-easeIO(seg(t,T[s],T[s]+d)):0;if(a>0){draw0(t,cam0(s-1,1,t),s-1,1);const x=xf.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0)}
   draw0(t,c,s,u);if(CARD.includes(s)){const k=1+.035*easeIO(u),x=xz.getContext('2d');x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,W,H);x.drawImage(main,0,0);ctx.save();ctx.setTransform(k,0,0,k,W/2*(1-k),H/2*(1-k));ctx.drawImage(xz,0,0);ctx.restore()}
-  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=20&&s!=21)watermark();if(s!=19&&s!=21)karaoke(t)}})();
+  if(a>0)blit(ctx,xf,0,a);if(s!=0&&s!=19&&s!=22)watermark();if(s<20)karaoke(t)}})();
 // som
-for(let s=1;s<21;s++)say(T[s],'whoosh');
+for(let s=1;s<22;s++)say(T[s],'whoosh');
 for(const [i,w] of [[2,'sela'],[3,'sagmarius'],[4,'"sommier"'],[6,'duzentos'],[8,'"bouteiller"'],[9,'cinco'],[10,'"butler"'],[12,'seiscentos'],[13,'escanção'],[14,'mil'],[15,'trezentos'],[16,'oitenta']])say(wt(i,w),'tag');
 say(wt(5,'mesma'),'bottledown');say(wt(9,'garrafas'),'coins');say(wt(14,'concurso'),'coins');
 for(const st of [T[3],T[7]])for(let k=0;k<Math.floor(LEN[st==T[3]?3:7]/.5);k++)say(st+.2+k*.5,'step');
-for(const [w,d] of [['sela',0],['burro',0],['sommelier',0],['garrafas',0],['mordomo',.6]])say(wt(19,w)-.15+d,'line');
+for(const d of CARD_AT)say(T[20]+d,'line');
+say(T[21]+2.1,'lift');

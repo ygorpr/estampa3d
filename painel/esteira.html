@@ -372,7 +372,9 @@ const LOOK={
   pauta:{pele:'#E9C29E',cabelo:'#2B1B12',terno:'#2C0B15',gravata:'#D4A24C',tipo:'coque'},
   roteiro:{pele:'#C98E62',cabelo:'#5A3E2A',terno:'#1E3A31',gravata:'#8E1B3A',tipo:'oculos'},
   arte:{pele:'#8D5A3B',cabelo:'#141414',terno:'#3A2B4A',gravata:'#F2D27A',tipo:'cacho'},
-  producao:{pele:'#E6BF98',cabelo:'#7A7A7A',terno:'#5E1428',gravata:'#F3E6C8',tipo:'fone'}
+  producao:{pele:'#E6BF98',cabelo:'#7A7A7A',terno:'#5E1428',gravata:'#F3E6C8',tipo:'fone'},
+  anima:{pele:'#F1CFAE',cabelo:'#B5651D',terno:'#22313F',gravata:'#D4A24C',tipo:'cacho'},
+  render:{pele:'#A86F4C',cabelo:'#1F1F1F',terno:'#3B2F2F',gravata:'#8E1B3A',tipo:'oculos'}
 };
 function boneco(k){const L=LOOK[k]||LOOK.pauta;
   const cab=L.tipo==='coque'?`<circle cx="50" cy="20" r="9" fill="${L.cabelo}"/><path d="M30 40c0-14 9-22 20-22s20 8 20 22c-3-6-10-10-20-10s-17 4-20 10z" fill="${L.cabelo}"/>`
