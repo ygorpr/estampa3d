@@ -1,4 +1,4 @@
-# O que é vinho encorpado? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO (não gerar voz antes)
+# O que é vinho encorpado? — roteiro v1 — ROTEIRO APROVADO PELO DONO em 20/11/2026 (painel)
 ~3 min 30 s (480 palavras; o 09 tem 429 para ~3 min 15 s). 25 falas (0–24). Fluido, sem capítulos. Para quem NÃO sabe nada de vinho. Fontes: pesquisa.md.
 Cenário sugerido: bar Dark Divino; no balcão, três taças (rosado-claro / rubi / quase preto) e, na frente delas, três copos:
 leite desnatado, leite integral e creme de leite. Inserts: vinhedo ao sol (fermentação), "laboratório" de bancada (glicerina),
