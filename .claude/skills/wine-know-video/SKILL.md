@@ -22,6 +22,12 @@ repetir aqueles erros. `SK` = a pasta desta habilidade. Fale com o usuário em p
 Antes de começar, leia **`references/padrao.md`** (o que foi aprovado e por quê). Os outros arquivos você abre quando chegar no passo.
 
 
+
+## PAINEL "ESTEIRA DARK DIVINO" (onde o dono decide tudo)
+Leia `references/painel.md`: fluxo Pauta → Roteiro → Thumb (escolher = aprovar execução) → Produção → Revisão (prévia) → Entregue,
+banco de dados (videos, config/custos, equipe/agora), equipe de agentes com barras de progresso, custos em R$, gerente automática.
+Cada decisão chega como comentário: executar, responder no thread e resolver. Código do painel: `painel/esteira.html`.
+
 ## FECHAMENTO OBRIGATÓRIO (erro real nos vídeos 11 e 12: "não teve final")
 A ordem do fim é SEMPRE: fala de resumo → **tabela final** → CTA (inscreva-se) → **cena de fechamento** → **logo**.
 - **Tabela final** (5 cartões, sem legenda): cartões entram um a um com calma (~1 s cada) e ficam PARADOS ≥ 8 s; a cena tem **≥ 14 s**.

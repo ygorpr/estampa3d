@@ -10,7 +10,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
 ## LEIA PRIMEIRO
 - `.claude/skills/wine-know-video/references/regras-do-dono.md`: TODAS as regras e correções do dono (pesquisa profunda, público leigo,
   pronúncia por dicionário, 3 thumbs que dizem o assunto, voz só após aprovação, gestos, avisos, bolhas, personagens extras).
-- Situação atual dos vídeos: `pauta/STATUS.md`. Biblioteca de cenários: `.claude/skills/wine-know-video/engine/lib/`.
+- Situação atual dos vídeos: `pauta/STATUS.md` e o painel https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB (ver `.claude/skills/wine-know-video/references/painel.md`). Biblioteca de cenários: `.claude/skills/wine-know-video/engine/lib/`.
 - Responder ao dono SEMPRE em português.
 
 ## Referência de qualidade (APROVADA pelo dono do canal)
