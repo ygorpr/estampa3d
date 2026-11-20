@@ -1,0 +1,68 @@
+{
+ "roteiro": [
+  "Sabe aquelas gotinhas que escorrem na taça depois que você gira o vinho? Muita gente olha e diz: \"esse vinho é bom!\" Será?",
+  "Vou te contar: essas gotas não mostram qualidade nenhuma. É física pura! E a história delas passa até pela Bíblia. Fica comigo!",
+  "Aqui no Brasil, a gente chama de \"lágrimas\" do vinho... ou de \"pernas\". Em inglês, \"legs\": pernas. Na França, \"larmes\": lágrimas.",
+  "E na Alemanha? Chamam de \"janelas de igreja\"! Os arquinhos que o vinho desenha no vidro parecem os vitrais de uma catedral.",
+  "Mas por que o vinho \"chora\"? Pra entender, a gente precisa de uma ideia só: a tensão superficial.",
+  "Tensão superficial é como uma pele fininha na superfície do líquido. É ela que deixa a gota redondinha... e que faz um inseto andar sobre a água.",
+  "E aqui está o truque: a água tem uma pele forte, que puxa com força. O álcool tem uma pele fraca. Quanto mais água, mais forte o puxão.",
+  "Quando você gira a taça, fica uma película, uma camada fininha de vinho, grudada no vidro. E ali o álcool evapora, vira vapor e vai pro ar, mais rápido que a água.",
+  "Lá em cima sobra mais água... e ela puxa mais forte! Então o vinho é puxado lá de baixo, taça acima, contra a gravidade!",
+  "O vinho sobe, se junta num cordão lá no alto... fica pesado demais... e cai, em gotas. Pronto: são as lágrimas!",
+  "Esse puxão tem nome: efeito Marangoni. Por causa do italiano Carlo Marangoni, que estudou isso na universidade, em mil oitocentos e sessenta e cinco.",
+  "Mas dez anos antes, em mil oitocentos e cinquenta e cinco, quem explicou as lágrimas do vinho foi o engenheiro James Thomson... irmão do famoso físico Lorde Kelvin!",
+  "E a Bíblia? No livro de Provérbios tem um aviso: não olhes para o vinho quando resplandece no copo... e se escoa suavemente.",
+  "Mais de cem anos atrás, o físico inglês Charles Boys escreveu que o versículo falava das lágrimas! Ninguém pode provar... mas faz sentido: vinho que chora muito é vinho forte.",
+  "E a ciência ainda não acabou! Em dois mil e vinte, matemáticos da Universidade da Califórnia descobriram que o vinho sobe numa espécie de onda de choque.",
+  "É uma onda que sobe pelo vidro, como uma lombada, deixando atrás uma camada mais fina. Ela é instável... e se quebra em lágrimas.",
+  "Agora, o mito: lágrima não é sinal de vinho bom! E também não é a glicerina, uma substância meio adocicada do vinho, como muita gente fala.",
+  "O que as lágrimas mostram de verdade é álcool. Mais álcool, mais lágrimas. E vinho doce escorre mais devagar, porque o açúcar deixa o vinho mais grosso.",
+  "E tem mais: a temperatura e a umidade do ar mudam a velocidade da evaporação... e mudam as lágrimas. Elas falam da sala, não da qualidade!",
+  "Quer tirar a prova em casa? Gire o vinho e tampe a taça com a mão, ou com plástico filme. Sem evaporar, as lágrimas param! Destampe... e elas recomeçam.",
+  "E isso vale pra toda bebida de álcool com água: vinho do Porto, uísque... e a nossa cachaça. É a mesma física!",
+  "Resumindo: lágrima é física, não qualidade. Mostra álcool, açúcar e o clima da sala. E quem explicou primeiro foi Thomson; o nome ficou com Marangoni!",
+  "Curtiu? Se inscreve no canal e me conta: qual mito do vinho você quer que eu desmonte no próximo vídeo?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Marangoni",
+   "fala": "Marangôni",
+   "fonte": "italiano /maraŋˈɡoːni/"
+  },
+  {
+   "escreve": "Carlo",
+   "fala": "Cárlo",
+   "fonte": "italiano /ˈkarlo/"
+  },
+  {
+   "escreve": "James Thomson",
+   "fala": "Djêims Tómsson",
+   "fonte": "inglês /dʒeɪmz ˈtɒm.sən/ (Cambridge)"
+  },
+  {
+   "escreve": "Kelvin",
+   "fala": "Kélvin",
+   "fonte": "inglês /ˈkel.vɪn/ (Cambridge)"
+  },
+  {
+   "escreve": "Charles Boys",
+   "fala": "Tchárls Bóis",
+   "fonte": "inglês /tʃɑːlz bɔɪz/ (Cambridge)"
+  },
+  {
+   "escreve": "legs",
+   "fala": "légs",
+   "fonte": "inglês /leɡz/ (Cambridge)"
+  },
+  {
+   "escreve": "larmes",
+   "fala": "larm",
+   "fonte": "francês /laʁm/ (Wiktionary)"
+  }
+ ],
+ "duracao": "~3 min 20 s",
+ "obs": "As lágrimas não mostram qualidade: é o álcool evaporando e a água puxando o vinho para cima (efeito Marangoni) — explicado por James Thomson, irmão de Lorde Kelvin, em 1855; um físico ligou isso a Provérbios 23:31, e em 2020 a UCLA achou uma 'onda de choque' por trás das gotas.",
+ "fontes": "Wikipedia 'Tears of wine' (en.wikipedia.org/wiki/Tears_of_wine); Dukler, Ji, Falcon & Bertozzi, Physical Review Fluids 5, 034002 (2020); Venerus & Nieto Simavilla, Scientific Reports 5:16162 (2015); Jancis Robinson / Oxford Companion to Wine (tears, glycerol); Wine Folly 'What do wine legs really mean?'"
+}
