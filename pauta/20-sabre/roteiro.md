@@ -1,5 +1,5 @@
 # Dá para abrir champanhe com espada? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
-~3 min 25 s (23 falas, 581 palavras; se passar de 3 min 45 s, a fala 15 — recorde da Suíça — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md.
+~3 min 25 s (23 falas, 582 palavras; se passar de 3 min 45 s, a fala 15 — recorde da Suíça — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md.
 Linha do tempo: lenda dos hussardos (Napoleão, começo dos anos 1800, sem registro) → 1986 Confraria do Sabre de Ouro (França) → 2009 sabrage coletivo criado em Garibaldi → 2013 Garibaldi, 196 pessoas → 2015 Suíça, 487 (recorde Guinness atual) → maio/2026 italiano, 91 em 1 min (Guinness) → agosto/2026 dentista suíço, 118 em 1 min (sem Guinness).
 
 **Cenário sugerido:** abre e fecha numa **adega de espumante** (cave de pedra com garrafas deitadas e cavaletes de remuagem, luz de vela) — o Sommelier atrás do balcão a y=600, garrafa no balde de gelo, sabre apoiado no balcão. **Close técnico** do gargalo (costura e anel desenhados em ouro, câmera lenta). **Campo do séc. XIX ao entardecer** com um château ao fundo (lenda). **Praça de festa em Garibaldi** (bandeirolas, pórtico de festa, fileira de pessoas de sabre). **Jardim suíço** com cronômetro para os recordes. Fecha no bar com **fogos de Réveillon** pela janela.
@@ -25,7 +25,7 @@ Linha do tempo: lenda dos hussardos (Napoleão, começo dos anos 1800, sem regis
 | # | Fala (narração = legenda) | Emoção (eleven_v3) | O que aparece na tela |
 |---|---|---|---|
 | 0 | Dá pra abrir uma garrafa de espumante... com uma espada? Dá! E o vidro sai cortado tão limpinho que parece mágica! | [curious] | THUMB viva: Sommelier com o sabre encostado no gargalo, pisca e fala; câmera aproxima devagar |
-| 1 | Essa história tem física, soldado de Napoleão, recorde mundial no Brasil... e muita lenda. Fica comigo! | [excited] | placas surgindo: FÍSICA · NAPOLEÃO · RECORDE · LENDA |
+| 1 | Essa história tem física, soldado de Napoleão, recorde mundial, festa no Brasil... e muita lenda. Fica comigo! | [excited] | placas surgindo: FÍSICA · NAPOLEÃO · RECORDE · BRASIL · LENDA |
 | 2 | Esse truque tem nome francês: sabrage. Vem de sabre, aquela espada curva da cavalaria. Sabrage é abrir a garrafa com um golpe de sabre. | [warm] | dissolve p/ adega de espumante; sabre curvo em close; chip "SABRAGE = ABRIR COM O SABRE" |
 | 3 | Mas aqui vai o segredo: não é o fio da lâmina que corta. O sabre de sabrage nem é afiado! Quem faz o trabalho é a própria garrafa. | [curious] | dedo passando no lado sem fio; chip "SEM FIO!" |
 | 4 | Espumante é o vinho com gás. E esse gás aperta a garrafa com umas seis atmosferas: seis vezes a pressão do ar que a gente respira. Mais que o dobro do pneu do seu carro! | [serious] | garrafa em corte com setinhas de pressão; medidor "6 atm" ao lado de um pneu "~2,2" |
