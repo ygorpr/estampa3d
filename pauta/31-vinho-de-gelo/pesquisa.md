@@ -55,3 +55,10 @@ Onde as fontes divergem, o roteiro usa a forma conservadora (anotado abaixo).
 - **"Comida de bicho"**: a fonte diz ração/forragem para animais; usamos "comida de animal" (sem dizer qual).
 - **Argentina exportou vinho de gelo** (Decanter) — não verificado em detalhe; fora.
 - Preço em reais e "1 ml a cada 10 uvas": fontes fracas; fora.
+
+## Checagem do Caio (20/11/2026)
+- Fala 19 (Pericó, São Joaquim, inverno de 2009, primeiro vinho de gelo do Brasil): CONFIRMADO pela Decanter (notícia de 2010 e guia de 2020) — https://www.decanter.com/wine-news/ice-wine-produced-in-brazil-for-the-first-time-67784/ ; https://www.decanter.com/premium/a-beginners-guide-to-brazil-wines-423551/
+- Fala 3 (−7 °C Alemanha, −8 °C Canadá) e fala 7 (35 °Brix): CONFIRMADOS (DWI; VQA Ontario, links acima).
+- Fala 15 (2019: só Zimmerle, ~70 L) e fala 16 (nov/2025, ~−9 °C): CONFIRMADOS (wein.plus; DWI 22/11/2025, links acima).
+- Pronúncias (Eiswein /ˈaɪsvaɪn/, Riesling /ˈʁiːslɪŋ/, Dromersheim /ˈdʁoːmɐsˌhaɪm/): OK.
+- Resultado: 0 correções.

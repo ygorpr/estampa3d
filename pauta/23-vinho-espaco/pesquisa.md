@@ -26,3 +26,9 @@ Busca feita com WebSearch (o acesso direto a Decanter, Drinks Business etc. esta
 - 1985: meia-garrafa de Lynch-Bages 1975 voou no Discovery (STS-51-G) com o francês Patrick Baudry e voltou fechada — Decanter: https://www.decanter.com/wine-news/opinion/news-blogs-anson/anson-on-thursday-the-surprising-adventure-of-lynch-bages-in-space-263427/
 - Michael David Winery (Califórnia): suco de Cabernet fermentado na estação em 2021; levedura isolada; vinho "Zero Gravity" lançado em 12/03/2025 — https://michaeldavidwinery.com/zerogravity ; Wine-Searcher nov/2025 — https://www.wine-searcher.com/m/2025/11/space-terroirs-final-frontier
 - Space Cargo Unlimited em 2025–2026: missões de cápsula (ATMOS Phoenix 2, BentoBox) e fábrica orbital REV1 — https://payloadspace.com/atmos-and-space-cargo-unlimited-target-first-reentry-mission-in-2026/ ; https://space-cu.com/
+
+## Checagem do Caio (20/11/2026)
+- Fala 5, "milhares de dólares": CONFIRMADO. Pétrus 2000 hoje entre ~US$ 5,6 mil e ~US$ 10,7 mil por garrafa no varejo; leilão Waddingtons 2017: 2 garrafas por US$ 12 mil — https://www.millesima-usa.com/bordeaux-2000.html ; https://www.waddingtons.ca/notable-sales/chateau-petrus-2000/ . Sem mudança na fala.
+- Fala 20, Texas A&M 2026: CONFIRMADO (AgriLife Today 10/06/2026; Texas Public Radio 10/07/2026; The Drinks Business jul/2026); data de lançamento ainda não divulgada — a fala diz "anunciou que vai mandar", certo — https://agrilifetoday.tamu.edu/2026/06/10/wine-grapes-in-space-texas-am-seeds-bound-for-international-space-station/ ; https://www.tpr.org/news/2026-07-10/researchers-will-launch-texas-wine-grapes-into-space
+- Pronúncias conferidas (Pétrus /pe.tʁys/, Bordeaux /bɔʁ.do/, Christie's /ˈkrɪs.tiz/): OK.
+- Resultado: 0 correções.

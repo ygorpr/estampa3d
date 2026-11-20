@@ -68,3 +68,11 @@ Obs.: o acesso direto às páginas está bloqueado nesta sessão (DNS); tudo aba
 - **Embrapa (Mauro Zanus, 2003) sobre temperatura de serviço** — o PDF não abriu (só o título); fora.
 - **Temperatura do Porto/fortificados (16–18 °C) e vinho doce exato (6–8 °C)** — faltou fonte forte e tempo; ficou só "vinho doce vai bem geladinho".
 - **Genética do ardor (TRPV1)** — curiosidade boa, mas alongaria o vídeo; guardada para Short.
+
+## Checagem do Caio (20/11/2026)
+- Fala 13–14 (Ocado, +1.020%, 56% dos jovens): CONFIRMADO no comunicado da Ocado de 18/06/2026 — https://ocadoretail.com/media-centre/press-releases/young-wine-drinkers-turn-to-chilled-reds-to-cool-off-this-summer/
+- Fala 4–5 (TRPV1 dispara ~42 °C; com álcool, ~34 °C): CONFIRMADO, Trevisani et al., Nature Neuroscience 2002 — https://www.nature.com/articles/nn852
+- Faixas de temperatura (falas 11–12): batem com Decanter, Wine Spectator e Comité Champagne (links acima). OK.
+- Detalhe de voz (não é fato): na fala 13 o ano está em algarismo ("2026"); os outros roteiros escrevem por extenso ("dois mil e vinte e seis") para a voz não errar. Ajustado.
+- Pronúncia Ocado: inglês britânico /əʊˈkɑː.dəʊ/ ("ô-CÁ-dou") — "Ocádou" OK.
+- Resultado: 0 correções de fato.

@@ -54,3 +54,11 @@ Busca feita só por WebSearch (o acesso direto aos sites — decanter.com, winef
 - Evaporação de álcool em taça aberta (J. Agric. Food Chem. 2016): fala de taça, não de decanter; e encosta no vídeo 22 (girar a taça).
 - Altura do Riedel Swan (~60 cm): só loja; tirado o número.
 - Romanos "com jarra de vidro para servir": dito de forma genérica ("jarras"), sem detalhe de vidro (o vídeo 13 já contou o vidro romano/veneziano).
+
+## Checagem do Caio (20/11/2026)
+- Fala 16 (moeda no gargalo): CONFIRMADO o sentido. Decanter: "só uma proporção mínima do vinho, a do gargalo, fica exposta ao ar"; servir uma taça baixa o nível até o ombro e aumenta o contato — https://www.decanter.com/learn/advice/let-wine-breathe-ask-decanter-363531/ . A "moeda" é só comparação de tamanho (boca da garrafa padrão ~18,5 mm por dentro). Fala mantida.
+- Fala 13 (Jancis: até 4 h antes) e fala 15 (vinho de 25+ anos frágil): CONFIRMADOS no texto de Jancis Robinson — https://www.jancisrobinson.com/learn/drinking-wine/decanters-decanting-and-caring-for-glassware
+- Fala 14 (tanino não muda, Waterhouse/UC Davis): CONFIRMADO — https://www.scientificamerican.com/article/how-does-decanting-red-wi/
+- Aviso (fora da fala): a tabela final diz "AR – tinto jovem: 30 min a 2 h"; a fala 17 dá 20–30 min / 1 h / 1 h+. Sugiro a tabela "AR – 20 min a 1 h ou mais" para bater com a fala.
+- Pronúncia: decanter /dɪˈkæn.tər/ (Oxford Learner's); Peynaud /pɛ.no/; Myhrvold — o próprio Myhrvold diz "MEER-vold" (sobrenome norueguês): "Mírvold" OK.
+- Resultado: 0 correções na fala.

@@ -39,3 +39,11 @@ não abriram). Os fatos abaixo vêm dos trechos que as buscas mostraram dessas p
 - Le Muselet Valentin (muselet moderno, anos 1960) e Cortellazzi (máquina de fio único) — fonte de fabricante.
 - Agrafe × muselet — termos usados de modo diferente conforme o país (Brookston Beer Bulletin, wein.plus); confunde o leigo.
 - Manter a gaiola na rolha ao abrir — especialistas divergem (VinePair/Tasting Table × The Takeout).
+
+## Checagem do Caio (20/11/2026)
+- Fala 7 (Adolphe Jacquesson, 1844): CONFIRMADO pelo Comité Champagne ("1844 — a plaque de muselet é inventada") e pela UMC — https://www.champagne.education/sites/default/files/2024-05/Fiche-Histoire-Champagne-FR.pdf ; https://maisons-champagne.com/en/appellation/stages-in-winemaking/article/the-history-of-the-muselet-and-its-collectable
+- Fala 3 (6 bar) e fala 16 (rolha a ~80 km/h, AAO "50 mph"): CONFIRMADOS (links acima).
+- Fala 11 (6 voltas × 6 bar = "dizem"): forma correta, sem fonte que prove.
+- Detalhe de voz (não é fato): os anos das falas 7, 15 e 20 estavam em algarismos ("1844", "1913"); escritos por extenso, como nos outros roteiros, para a voz não errar.
+- Pronúncia muselet /myz.lɛ/ (Académie française / Wiktionary): "muzlê" OK. Jacquesson /ʒa.kɛ.sɔ̃/: "Jaquessôn" OK.
+- Resultado: 0 correções de fato.

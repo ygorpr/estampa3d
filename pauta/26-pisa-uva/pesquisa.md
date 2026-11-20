@@ -64,3 +64,9 @@ Liga com o vídeo 15 (vinho do Porto): lá explicamos aguardente, fortificação
 - **"É proibido vender vinho pisado a pé nos EUA"**: boato, sem prova. Tirado.
 - **TV em cores 1972**: verdade, mas desvia. Tirada.
 - **Nome Symington na voz**: a pronúncia não está em dicionário (fontes divergem entre "Sái-" e "Sí-"). O nome aparece só na placa; a fala diz "uma das famílias mais tradicionais do Porto".
+
+## Checagem do Caio (20/11/2026)
+- Fala 7 CORRIGIDA: não achei fonte de "o capataz grita: liberdade!". A Taylor's diz que o corte é feito em silêncio, só com o "marcador" dando o ritmo, e que a liberdade costuma vir com música — os pisadores cantam a "Canção da Liberdade". Nova fala: "Depois de horas, vem a fase da liberdade! Aí cada um pisa do seu jeito, e muitas vezes a turma até canta!" — https://www.taylor.pt/en/what-is-port-wine/how-is-port-made ; glossário Taylor's (letra L) — https://www.taylor.pt/en/what-is-port-wine/glossary?l=L
+- Personagem "capataz que grita" trocado por "marcador" (opcional) que dá o ritmo do corte.
+- Corte de braço dado, ombro com ombro: CONFIRMADO (Taylor's; Wine Anorak — https://www.wineanorak.com/wineblog/portugal/how-port-wine-is-made-in-pictures).
+- Egito "há mais de três mil anos" (Nakht, c. 1400 a.C.; Nekhebu, c. 2300 a.C.): OK. Festa da Uva de 1931: OK.

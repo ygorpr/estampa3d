@@ -62,3 +62,10 @@ Obs.: o acesso direto às páginas está bloqueado nesta sessão (DNS); tudo aba
 - **Hino próprio da videira** (Atlas Obscura) — curioso, mas sem detalhe; fora (bom para Short).
 - **Descendente plantado no cemitério de Pobrežje (2020)** — fora por tempo.
 - **Vinho da Velha Videira é bom?** — sem fonte de crítico; fora.
+
+## Checagem do Caio (20/11/2026)
+- Fala 18 (Hampton Court, 1768, "a maior do mundo" pelo Guinness): CONFIRMADO — Guinness "Largest vine" (2005) e Historic Royal Palaces — https://www.guinnessworldrecords.com/world-records/66375-largest-vine ; https://www.hrp.org.uk/hampton-court-palace/explore/the-great-vine/
+- Fala 20 (Tibete, 416 anos, Guinness 2025, "selvagem"): CONFIRMADO — https://www.guinnessworldrecords.com/news/commercial/2025/11/416-year-old-grape-vine-found-in-tibet-is-oldest-in-the-world-with-incredible-history/
+- Fala 6–7 (1972, 350–400 anos, miolo podre; Guinness "mais velha que dá fruto"): CONFIRMADO — https://www.guinnessworldrecords.com/world-records/72739-oldest-vine
+- Pronúncia "Žametovka": a tônica NÃO aparece nas buscas do dicionário esloveno (fran.si / SSKJ não abriu por busca). Continua pendente com o dono — sugestão segura: "Jametóvka" é a leitura mais comum em vídeos eslovenos, mas sem dicionário; se o dono preferir evitar, a fala pode dizer só "uma uva tinta antiga da Eslovênia, que tem nome de veludo".
+- Resultado: 0 correções de fato.

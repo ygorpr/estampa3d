@@ -34,3 +34,9 @@ Conclusão: não dá para afirmar hoje se o selo ainda existe nem dizer que ele 
 - Nome do inseto (traça/gorgulho da cortiça) — fontes fracas.
 - Papel e polilaminado como materiais — técnico demais.
 - Cápsula do champanhe (sobre a gaiolinha) — é do vídeo 33.
+
+## Checagem do Caio (20/11/2026)
+- Fala 18 CORRIGIDA: o "74% → 55% em um ano" NÃO foi confirmado. O relatório de embalagens de 2023 da Wine Business Monthly mostra números por região (76% das vinícolas de Napa usam cápsula; 26% na Central Coast), não a queda nacional de 74 para 55. Nova fala, sem número: "E não é só ela: nos Estados Unidos, tem cada vez mais vinícola tirando a cápsula, pra gastar menos material!" — fontes da tendência: Washington Post (McIntyre, 2019, "wine bottle foil is wasteful… and going away") — https://www.iol.co.za/lifestyle/food-drink/drink/trend-alert-wine-bottle-foil-is-wasteful-annoying-and-going-away-79c9f6c4-561e-428c-89b0-8bdaa2b5ff89 ; WBM ago/2023 (reprodução) — https://www.gray-robinson.com/docs/wbm_2023-08.pdf
+- Fala 15 AJUSTADA: "esse paninho é obrigatório" → "esse paninho é mais importante ainda" (não existe regra escrita que obrigue; é cuidado prudente pelo motivo da proibição da FDA).
+- Fala 8: datas CONFIRMADAS (Federal Register 61 FR 4816, 8/2/1996; UE desde 1/1/1993); anos escritos por extenso para a voz.
+- Selo fiscal (fora do roteiro, para o dono): a IN RFB nº 1.583, de 31/08/2015, revogou o art. 58 da IN RFB nº 1.432/2013 e o selo de controle deixou de ser exigido para vinhos (relato do TRF1) — https://www.sedep.com.br/?p=92663 ; https://www.coad.com.br/home/noticias-detalhe/37276/bebida-rfb-antecipa-prazo-para-comercio-de-vinhos-sem-selo-de-controle . Ou seja: hoje não há selo da Receita no vinho; continua fora do roteiro.

@@ -46,7 +46,7 @@ Thumbs: ainda não feitas (pedido desta etapa: só pesquisa e roteiro).
 | 9 | E desde então, quase todo ano, cada safra, o vinho de cada colheita, ganha um rótulo de um artista diferente. | [confident] | parede da galeria se enche de molduras, uma por ano |
 | 10 | E que artistas! Georges Braque, Salvador Dalí, Joan Miró, Marc Chagall, Kandinsky... e Andy Warhol, que desenhou o próprio barão! | [excited] | travelling pela parede: placas com nome e ano (1955, 1958, 1969, 1970, 1971, 1975); a de 1975 com a silhueta do barão em cor pop |
 | 11 | Depois vieram Francis Bacon, Jeff Koons... até o rei Charles, quando ainda era príncipe, pintou um rótulo! | [playful] | placas 1990, 2004, 2010; coroazinha na de 2004 |
-| 12 | E quanto ganha um artista desses? Dinheiro, nenhum! O pagamento é em vinho: dez caixas, metade da safra que ele pintou. | [curious] | PINTOR recebe pilha de caixas de madeira; chip "10 CAIXAS DE VINHO" |
+| 12 | E quanto ganha um artista desses? Dinheiro, nenhum! O pagamento é em vinho: dez caixas, cinco delas da safra que ele pintou. | [curious] | PINTOR recebe pilha de caixas de madeira; chip "10 CAIXAS DE VINHO" |
 | 13 | E o Picasso? Aí vem a surpresa: Picasso nunca pintou um rótulo para eles! | [curious] | Sommelier ergue o dedo; carimbo "SURPRESA" |
 | 14 | Ele morreu em abril de setenta e três. Em homenagem, o rótulo daquele ano levou uma pintura dele, de cinquenta e nove: uma bacanal, a festa do deus do vinho. | [serious] | moldura "1973 · EM HOMENAGEM A PICASSO" com taças e uvas estilizadas (NÃO copiar a obra); vela acesa |
 | 15 | E mil novecentos e setenta e três foi o maior ano da história da casa! O Mouton virou Premier Cru, a primeira classe. | [excited] | chip dourado "PREMIER CRU = PRIMEIRA CLASSE"; confete dourado |

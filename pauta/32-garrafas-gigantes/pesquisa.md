@@ -56,3 +56,10 @@ Não repete o vídeo 2 (pauta/02-garrafa: origem dos 750 ml).
 - **F1 usa Jeroboão de 3 L no pódio** (Glass of Bubbly): fonte fraca; fora.
 - **Boerl & Kroff 1995, Melquisedeque leiloada por £173 mil** (The Drinks Business): bom, mas fugiria do tema; fora.
 - **Vídeo de garrafa derrubada em balada**: viral, sem fonte; fora.
+
+## Checagem do Caio (20/11/2026)
+- Fala 19 (3.094 L, Suíça, 2014, 4,17 m): CONFIRMADO no Guinness (Lyssach, 20/10/2014) — https://guinnessworldrecords.com/world-records/largest-bottle-of-wine
+- Falas 3–10 (tamanhos de Champagne) e fala 12 (Bordeaux: Dupla Magnum 3 L, Jeroboão 5 L, Imperial 6 L): CONFIRMADOS — https://www.decanter.com/learn/wine-bottle-sizes-methuselah-vs-balthazar-440193/ ; https://www.sothebys.com/en/articles/the-collectors-guide-to-wine-bottle-sizes
+- Fala 13 (Walter Scott, 1816) e fala 14 ("homem valente", 1 Reis 11:28): CONFIRMADOS (World Wide Words; Bíblia). Fala 18 segue como "diz que é" (afirmação da casa).
+- Pronúncia Drappier /dʁa.pje/ ("Drapiê"): OK pela regra do francês (-ier = /je/).
+- Resultado: 0 correções.

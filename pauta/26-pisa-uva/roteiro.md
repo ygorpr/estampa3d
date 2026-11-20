@@ -21,7 +21,7 @@ Thumbs (a fazer DEPOIS da aprovação, 3 opções): "AINDA SE PISA / UVA COM O P
 | 4 | Depois vieram as máquinas, e a pisa foi sumindo de quase todo lugar. Menos de um: o Douro, em Portugal, a terra do vinho do Porto. | [curious] | prensa de ferro girando; mapa de Portugal com o DOURO brilhando (dissolve) |
 | 5 | Lá a uva vai pro lagar: um tanque de pedra, quase sempre de granito, largo e baixinho, pra uva ficar espalhada. | [warm] | CENÁRIO: adega de pedra na quinta; lagar de granito cheio de uva; placa 'LAGAR = TANQUE DE PEDRA' |
 | 6 | Aí entra a turma: uma fila de braço dado, ombro com ombro, pisando junto, bem devagar. É o corte. | [excited] | fila de pisadores de braço dado atravessando o lagar; placa 'O CORTE' |
-| 7 | Depois de horas, o capataz, o chefe da turma, grita: liberdade! Aí cada um pisa do seu jeito, às vezes até com música! | [playful] | capataz de boné grita; fila se desfaz; notas musicais; placa 'LIBERDADE!' |
+| 7 | Depois de horas, vem a fase da liberdade! Aí cada um pisa do seu jeito, e muitas vezes a turma até canta! | [playful] | fila se desfaz; pisadores cantando, notas musicais; placa 'LIBERDADE!' |
 | 8 | Mas por que o pé, e não uma máquina qualquer? A resposta está escondida dentro da uva: a semente. | [curious] | uva gigante em corte: casca, polpa, SEMENTE em destaque |
 | 9 | A semente da uva é amarga. Se ela quebra, solta no vinho um amargor áspero, que ninguém quer. | [serious] | semente rachando; nuvem cinza; carimbo 'AMARGO' |
 | 10 | E o pé é perfeito: a sola é macia, firme e quentinha. Estoura a casca e solta a cor... mas não quebra a semente! | [confident] | pé descalço pisando: casca estoura, cor sai; semente intacta com ✓ |
@@ -45,7 +45,7 @@ Thumbs (a fazer DEPOIS da aprovação, 3 opções): "AINDA SE PISA / UVA COM O P
 
 **Personagens extras (de verdade, no estilo do Sommelier):**
 - **Pisadores do Douro** (3–5): homens e mulheres de 30–60 anos, calça arregaçada até a coxa, pernas tingidas de roxo até o joelho, camisa xadrez/regata, boné ou lenço; braços enganchados uns nos outros, cotovelo para baixo; passo lento e sincronizado no "corte" (sobe e desce, com pausa), passos soltos e sorrisos na "liberdade".
-- **Capataz**: mais velho, bigode grisalho, colete de lã escuro, boina; gesto de chamar com a mão e boca aberta no "Liberdade!".
+- **Marcador** (opcional, fala 6): mais velho, bigode grisalho, colete de lã escuro, boina; marca o ritmo do corte com a mão (corte em silêncio).
 - **Pisador egípcio** (na pintura): de perfil, saiote branco, pele morena, as duas mãos nas cordas que descem da trave; animação "recortada" (perfil, como as pinturas), pé escorrega e volta.
 - **Robô do lagar**: não é boneco genérico — é uma ponte de inox sobre o tanque com fileira de "pés" (hastes com almofadas de silicone cinza-claro em forma de sola), luzinha de status, subindo e descendo em ritmo; leve vapor para mostrar "o calor do pé".
 - **Turista na Festa da Uva** (Brasil): homem ~45 anos, camisa polo, calça arregaçada, sapato na mão, rindo; atrás, menina com tranças e senhora de avental (herança italiana).
@@ -55,5 +55,5 @@ Thumbs (a fazer DEPOIS da aprovação, 3 opções): "AINDA SE PISA / UVA COM O P
 1. **Duração**: ~3 min 30 s (565 palavras), um pouco acima dos 3 min 20 s — dá para cortar a fala 3 (Romanos) se quiser mais curto.
 2. **Nome Symington fora da voz** (pronúncia sem dicionário; fontes divergem). A fala diz "uma família tradicional do Porto" e a placa mostra SYMINGTON. Ok?
 3. **Números do robô são do produtor** (dito na fala 14 e 20): Symington ("tão bom ou melhor", provas às cegas) e Taylor's ("96–98% do pé", Decanter 2002, frase de 24 anos atrás).
-4. **"Liberdade" gritada pelo capataz**: costume descrito por várias casas, mas a fonte mais clara é média (checar antes da voz).
+4. **"Liberdade"**: CONFERIDO pelo Caio (Taylor's): o corte é em silêncio, só o "marcador" dá o ritmo; a liberdade costuma vir com a turma cantando a "Canção da Liberdade". A fala não cita mais o capataz gritando.
 5. **Festa da Uva**: a próxima edição é em 2028 (anos pares). A pisa é atração tradicional, mas não achei a programação oficial de 2026 confirmando — a fala não cita ano da pisa.

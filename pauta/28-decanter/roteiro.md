@@ -45,7 +45,7 @@ Números falados por extenso ("mil setecentos e oitenta") para a voz não errar.
 | 13 | Do outro lado, a crítica inglesa Jancis Robinson: tinto jovem e potente pode ir pro decanter até quatro horas antes, despejado com vontade, pra respirar. | [confident] | placa "JANCIS ROBINSON" à direita; balança A FAVOR; vinho caindo com respingo no decanter |
 | 14 | E a ciência? Os químicos não viram o tanino mudar no decanter. A sensação de vinho mais macio vem, principalmente, do cheiro ruim que foi embora. | [curious] | dissolve p/ LABORATÓRIO: químico (personagem) com jaleco e óculos; gráfico "TANINO: IGUAL" |
 | 15 | E cuidado com o vinho muito velho! Com uns vinte e cinco anos ou mais, ele é frágil: horas no decanter podem apagar o aroma. Esse, só na hora de servir. | [serious] | garrafa empoeirada; aroma (fumacinha dourada) sumindo com o relógio; placa "VELHO = NA HORA" |
-| 16 | E o famoso "abre e deixa respirar"? Pelo gargalo, o ar toca um pedacinho do tamanho de uma moeda. Quase nada! | [playful] | vista de cima: círculo do gargalo com moeda ao lado; carimbo "MITO" — CHECAR FONTE ANTES DA VOZ |
+| 16 | E o famoso "abre e deixa respirar"? Pelo gargalo, o ar toca um pedacinho do tamanho de uma moeda. Quase nada! | [playful] | vista de cima: círculo do gargalo com moeda ao lado; carimbo "MITO" (conferido pelo Caio: Decanter) |
 | 17 | E quanto tempo? Tinto leve, uns vinte, trinta minutos. Tinto médio, até uma hora. Encorpado, uma hora ou mais. Se começar a cheirar a vinagre, passou do ponto! | [confident] | três taças (leve/médio/encorpado) com relógios 20–30 min · 1 h · 1 h+ |
 | 18 | E aquele decanter de cisne, de pescoço gigante? Lindo! Mas o vinho não liga pro formato. Uma jarra de suco limpa, de vidro, resolve. Só não usa jarra de metal! | [playful] | decanter-cisne ao lado de jarra de suco de vidro; jarra de metal com X |
 | 19 | E o liquidificador? O inventor americano Nathan Myhrvold criou a hiperdecantação: bater o vinho de trinta a sessenta segundos, na potência máxima! | [excited] | cozinha: inventor (personagem) de avental com liquidificador; vinho girando DENTRO do copo; espuma |
@@ -57,6 +57,6 @@ Números falados por extenso ("mil setecentos e oitenta") para a voz não errar.
 Tabela final (5 cartões dourados com ícone de taça, sem legenda): **BORRA** – vela no gargalo, parar na borra · **AR** – tinto jovem: 30 min a 2 h · **VINHO VELHO** – frágil: só na hora · **JARRA DE SUCO** – serve (de vidro) · **LIQUIDIFICADOR** – aposta, não comprovado.
 
 ## Checar antes da voz
-- Fala 16 (moeda no gargalo): achar fonte forte (Decanter "How to let a wine breathe"); senão trocar por "dizem os especialistas: quase nada".
+- Fala 16 (moeda no gargalo): CONFERIDO — Decanter diz que pelo gargalo só uma parte mínima do vinho toca o ar; a "moeda" é comparação de tamanho (o gargalo tem ~18,5 mm por dentro, como uma moeda pequena). Mantida.
 - Pronúncia de "decanter" (decânter × decantér) e "Myhrvold" com o dono.
 - Fala 5: "lá por mil e setecentos" = faixa (fonte: Decanter "Objets d'art" — "por volta de 1700").

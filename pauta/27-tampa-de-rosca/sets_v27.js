@@ -1,0 +1,25 @@
+// ===== Vídeo 27 — objetos e cenários novos: fileira de 100 garrafas, fábrica anos 50, Clare Valley, Nova Zelândia, laboratório do AWRI, corte da tampa, château, gôndola, teste do "ploc" =====
+const BARA=(x,t)=>barAdega(x,t,{split:1330,lamps:[1000,1900]});
+function bottleRow(g,x0,y0,n,cols,lit,t){for(let i=0;i<n;i++){const cx=x0+(i%cols)*44,cy=y0+Math.floor(i/cols)*120,bad=lit.includes(i);g.fillStyle=bad?'#8A8A8A':'#1E3A31';g.fillRect(cx-10,cy-60,20,60);g.fillRect(cx-4,cy-82,8,24);if(bad){g.fillStyle='rgba(170,170,170,.5)';g.beginPath();g.arc(cx,cy-100-Math.sin(t*2+i)*6,14,0,7);g.fill()}}}
+function factory50(x,t){let g=x.createLinearGradient(0,-300,0,900);g.addColorStop(0,'#1E1A22');g.addColorStop(1,'#3A3036');x.fillStyle=g;x.fillRect(-900,-600,W+1800,1900);
+ x.fillStyle='#4A4048';for(let i=0;i<5;i++){x.fillRect(80+i*380,140,300,340);x.fillStyle='rgba(200,220,230,.2)';x.fillRect(100+i*380,160,260,300);x.fillStyle='#4A4048'}
+ x.fillStyle='#5A5058';x.fillRect(-900,700,W+1800,30);x.fillStyle='#2A2428';x.fillRect(-900,730,W+1800,400);
+ for(let i=0;i<9;i++){const bx=((i*210+t*60)%2100)-100;screwBottle(x,bx,700,.55,0,'#6F8F57')}x.fillStyle='#8A8090';x.fillRect(-900,640,W+1800,14)}
+function clareValley(x,t){let g=x.createLinearGradient(0,-300,0,620);g.addColorStop(0,'#2A3A5A');g.addColorStop(1,'#F0B070');x.fillStyle=g;x.fillRect(-900,-600,W+1800,1900);
+ x.fillStyle='#A8442A';x.beginPath();x.moveTo(-900,560);x.quadraticCurveTo(500,420,1000,500);x.quadraticCurveTo(1500,580,W+900,460);x.lineTo(W+900,1100);x.lineTo(-900,1100);x.fill();
+ for(const [ex,eh] of [[200,300],[1700,340],[1450,260]]){x.fillStyle='#E9E2D2';x.fillRect(ex-8,560-eh,16,eh);x.fillStyle='#6A8A5A';x.beginPath();x.ellipse(ex,560-eh,90,60,0,0,7);x.fill()}
+ for(let r=0;r<4;r++){x.strokeStyle='#4A7A34';x.lineWidth=16-r*2;x.setLineDash([22,12]);x.beginPath();x.moveTo(-900,620+r*70);x.quadraticCurveTo(900,560+r*70,W+900,600+r*70);x.stroke()}x.setLineDash([])}
+function nzFlag(g,cx,cy,w){const h=w*.5;g.save();g.translate(cx-w/2,cy-h/2);g.fillStyle='#1E2E6A';g.fillRect(0,0,w,h);g.save();g.scale(.5,.5);flag2(g,'uk',w*.5,h*.66,w*.98);g.restore();g.fillStyle='#C8213F';g.strokeStyle='#F3F0E6';g.lineWidth=2;for(const [sx,sy] of [[.75,.25],[.68,.5],[.82,.45],[.75,.8]]){star(g,w*sx,h*sy,h*.07);g.fill();g.stroke()}g.restore()}
+function corkBottle(g,cx,base,s,glass='#6F8F57'){g.save();g.translate(cx,base);g.scale(s,s);g.fillStyle=glass;g.beginPath();g.moveTo(-34,0);g.lineTo(-34,-200);g.quadraticCurveTo(-34,-240,-14,-262);g.lineTo(-14,-320);g.lineTo(14,-320);g.lineTo(14,-262);g.quadraticCurveTo(34,-240,34,-200);g.lineTo(34,0);g.closePath();g.fill();g.fillStyle='#8E1B3A';g.fillRect(-15,-330,30,60);g.fillStyle='#E9DCC0';g.fillRect(-28,-150,56,80);g.restore()}
+// corte da tampa: disquinho (liner) e setinhas de oxigênio
+function capCut(g,cx,cy,s,kind,t,a=1){g.save();g.translate(cx,cy);g.scale(s,s);g.fillStyle='rgba(111,143,87,.6)';g.fillRect(-60,-40,120,300);
+ if(kind=='cork'){g.fillStyle='#C99A5B';g.fillRect(-48,-60,96,160)}else{g.fillStyle='#C9CDD2';g.fillRect(-72,-90,144,170);g.fillStyle='#F4F0E8';g.fillRect(-60,-66,120,14);goldText(g,'DISCO',0,-110,22,'Cinzel',900)}
+ const n=kind=='cork'?5:1;g.fillStyle='rgba(150,200,255,.95)';for(let i=0;i<n;i++){const u=((t*.5+i/n)%1);g.beginPath();g.arc(-30+(i*17)%60,-140+u*260,9,0,7);g.fill();goldText(g,'O₂',-30+(i*17)%60+22,-140+u*260,16,'Cinzel',900)}g.restore()}
+function match(g,cx,cy,s,t){g.save();g.translate(cx,cy);g.rotate(-.5);g.scale(s,s);g.fillStyle='#E9D2A0';g.fillRect(-6,0,12,200);g.fillStyle='#8E1B3A';g.beginPath();g.ellipse(0,0,12,18,0,0,7);g.fill();
+ for(let i=0;i<3;i++){g.fillStyle=`rgba(255,${160+i*30},80,${.8-i*.2})`;g.beginPath();g.ellipse(Math.sin(t*9+i)*3,-30-i*14,14-i*3,26-i*5,0,0,7);g.fill()}g.restore()}
+function chateau(x,t){let g=x.createLinearGradient(0,-300,0,620);g.addColorStop(0,'#2A1430');g.addColorStop(1,'#E8A06E');x.fillStyle=g;x.fillRect(-900,-600,W+1800,1900);
+ x.fillStyle='#E9DCC0';x.fillRect(560,300,800,320);for(let i=0;i<4;i++){x.fillStyle='#C9BC9C';x.fillRect(640+i*180,360,40,260)}x.fillStyle='#C9BC9C';x.beginPath();x.moveTo(520,310);x.lineTo(1400,310);x.lineTo(1360,270);x.lineTo(560,270);x.fill();x.fillRect(860,200,200,80);x.beginPath();x.moveTo(840,210);x.lineTo(960,140);x.lineTo(1080,210);x.fill();
+ x.fillStyle='#3E5A2E';x.fillRect(-900,620,W+1800,500);for(let r=0;r<4;r++){x.strokeStyle='#4A7A34';x.lineWidth=14;x.setLineDash([20,12]);x.beginPath();x.moveTo(-900,680+r*60);x.lineTo(W+900,670+r*60);x.stroke()}x.setLineDash([])}
+function soundWave(g,cx,cy,s,t,a=1){fade(g,a,()=>{g.strokeStyle=GOLD2;g.lineWidth=6;for(let k=0;k<4;k++){const r=(40+k*40+((t*80)%40))*s;g.globalAlpha=a*(1-k*.22);g.beginPath();g.arc(cx,cy,r,-.7,.7);g.stroke()}g.globalAlpha=a;goldText(g,'PLOC!',cx+180*s,cy,60*s,'Cinzel',900)})}
+function headphones(g,cx,cy,s){g.save();g.translate(cx,cy);g.scale(s,s);g.strokeStyle='#2A2A30';g.lineWidth=16;g.beginPath();g.arc(0,0,90,Math.PI,0);g.stroke();g.fillStyle='#8E1B3A';g.beginPath();g.roundRect(-110,-10,40,70,14);g.roundRect(70,-10,40,70,14);g.fill();g.restore()}
+function shelfBR(x,t){marketWall(x,t)}

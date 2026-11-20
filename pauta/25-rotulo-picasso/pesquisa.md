@@ -50,3 +50,8 @@ Obs.: o site oficial do château e a Wikipedia não abriram direto aqui (rede bl
 - Philippine de Rothschild (filha) assume em 1988; Museu do Vinho na Arte (1962) e a "Sala dos Rótulos" — cortados por tempo.
 - Dalí 1958: descrição do desenho (carneiro) não confirmada em fonte forte → só o nome e o ano.
 - Lucian Freud (2006), David Hockney (2014), Gerhard Richter (2015), Xu Bing (2018), Peter Doig (2020), Chiharu Shiota (2021), Gérard Garouste (2022): citáveis, cortados por tempo.
+
+## Checagem do Caio (20/11/2026)
+- Fala 12 CORRIGIDA: "dez caixas, metade da safra que ele pintou" dava a entender metade da COLHEITA inteira. O acordo é 10 caixas: 5 da safra que o artista ilustrou + 5 de outras safras (Decanter). Nova fala: "O pagamento é em vinho: dez caixas, cinco delas da safra que ele pintou." — https://www.decanter.com/wine-news/savignac-follows-in-footsteps-of-picasso-moore-bacon-108861
+- Fala 21, leilão Sotheby's em Londres, 4/fev/2027: CONFIRMADO (Haute Living nov/2026; RBC Wine) — https://hauteliving.com/2026/11/mouton-rothschild-sothebys-auction-artist-labels-100th-anniversary-2027/801530/ ; https://www.rbc.ru/wine/news/6aed8cd8d1ea9bbf08b4e617
+- Pronúncia "Rótchild": em português "ch" = /ʃ/, então "Rót-child" já reproduz o francês /ʁɔt.ʃild/ (Larousse). Mantida.
