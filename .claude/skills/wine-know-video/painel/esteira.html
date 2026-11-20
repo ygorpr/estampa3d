@@ -498,13 +498,13 @@ function renderEquipe(){
 /* ---------- escritórios ---------- */
 let ESCR={}, CAL=null, salaAberta=null;
 const PASSOS={
-  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Divide a produção entre os produtores','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
+  gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Divide a produção entre Otávio, Lucas e Marina','Repõe a pauta quando cai abaixo de 10 temas','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
   pauta:['Pesquisa o que está em alta (Google, YouTube, redes)','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
   roteiro:['Pesquisa profunda em fontes confiáveis (pesquisa.md)','Monta a linha do tempo sem buracos','Escreve as falas curtas, explicando cada palavra difícil','Fechamento obrigatório: resumo, tabela, inscrição, brinde e logo','Lista as pronúncias com dicionário','Manda para o Caio checar e depois para você aprovar'],
   checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
   arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
   producao:['Gera a voz do Paulo (só depois da thumb escolhida)','Mede as falas e ajusta o tempo das cenas','Anima as cenas no cenário certo','Confere os quadros (stills)','Renderiza com jazz, efeitos e legenda karaokê','Faz a prévia e põe o vídeo na Revisão'],
-  youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte (Shorts e Reels)','Monta o calendário de postagem','Você publica copiando os textos'],
+  youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Monta o calendário de postagem','Você publica copiando os textos'],
   shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
 };
 ['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
@@ -549,10 +549,10 @@ const FLUXO={
   youtube:{de:'Vídeo aprovado por você e os cortes do Diego',para:'Calendário de postagem → você publica'}
 };
 PRODS.forEach(k=>FLUXO[k]=FLUXO.producao);
-const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['prod','Produção (5)'],['*','Você revisa'],['shorts','Diego'],['youtube','Larissa'],['*','Você publica']];
+const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['prod','Produção (3)'],['*','Você revisa'],['shorts','Diego'],['youtube','Larissa'],['*','Você publica']];
 const PADRAO=['Mesmo kit e mesmo motor de animação para todos (kit-dark-divino + a habilidade wine-know-video)','Mesma voz: Paulo, ElevenLabs v3 com emoção, em blocos de 3 frases','Abre com a thumb ganhando vida e fecha com o logo e "Wine Know. Dark Divino."','Sommelier versão 10: colete e gravata vinho, braços com profundidade, mão nunca na frente do rótulo','Legenda karaokê igual à fala; marca d\'água clara; avisos nunca em cima do rosto','Jazz com sax por baixo, voz na frente','Fechamento obrigatório: resumo, tabela parada 8 s, inscrição, brinde, logo','Conferência de quadros (stills) antes de renderizar e prévia na Revisão'];
 function fichaHtml(d){const f=d.ficha; if(!f) return '';
-  return `<div class="sec ficha"><h2 class="s">Ficha de produção${d.produtor?' · '+esc(d.produtor):''}</h2><dl style="margin:0">
+  return `<div class="sec ficha"><h2 class="s">Ficha de produção${d.produtor?' · '+esc(d.produtor)+(d.produtorOriginal?' (feito por '+esc(d.produtorOriginal)+')':''):''}</h2><dl style="margin:0">
    ${f.cenario?`<dt>Cenário</dt><dd>${esc(f.cenario)}</dd>`:''}
    ${(f.regras||[]).length?`<dt>Cuidados deste vídeo</dt><dd>${f.regras.map(esc).join('<br>')}</dd>`:''}
    <dt>Voz</dt><dd>${esc(f.voz||'')}</dd><dt>Som</dt><dd>${esc(f.som||'')}</dd><dt>Legenda</dt><dd>${esc(f.legenda||'')}</dd><dt>Final</dt><dd>${esc(f.fechamento||'')}</dd>
@@ -575,7 +575,7 @@ function calendarioHtml(){
    ${dias.map(d=>{const ps=itens.filter(p=>p.data===iso(d));return `<div class="d${d<hoje?' past':''}${+d===+hoje?' today':''}"><span class="n">${d.getDate()}/${d.getMonth()+1}</span>${ps.map(post).join('')}</div>`}).join('')}</div>`;
   const lista=`<ul class="lst calist">${itens.filter(p=>p.data>=iso(hoje)).sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)).map(p=>`<li><span class="when">${p.data.split('-').reverse().slice(0,2).join('/')} ${esc(p.hora||'')}</span>${esc(nomeP[p.plat])} · ${esc(p.titulo)}${p.status==='aguarda'?' <i class="note">(aguarda aprovação)</i>':''}</li>`).join('')}</ul>`;
   return `<section class="box wide"><h4>Calendário de postagem</h4>
-   <div class="legend"><span style="--c:${cor.yt}">YouTube (vídeo longo)</span><span style="--c:${cor.sh}">Shorts</span><span style="--c:${cor.rl}">Reels (Instagram)</span><span style="--c:#ffffff33">tracejado = vídeo ainda na sua Revisão</span></div>
+   <div class="legend"><span style="--c:${cor.yt}">YouTube (vídeo longo)</span><span style="--c:${cor.sh}">Shorts</span><span style="--c:#ffffff33">tracejado = vídeo ainda na sua Revisão</span></div>
    ${grid}${lista}${CAL&&CAL.nota?`<span class="note">${esc(CAL.nota)}</span>`:''}</section>`;
 }
 function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) return '';
@@ -600,7 +600,7 @@ function abrirSala(look,refresh){
    <section class="box"><h4>Passo a passo do cargo</h4><ol class="steps">${passos.map((p,i)=>`<li class="${i===cur?'cur':''}"${i===cur?' aria-current="step"':''}>${esc(p)}</li>`).join('')}</ol></section>
    <section class="box"><h4>Próximas tarefas</h4>${prox.length?`<ul class="lst">${prox.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<span class="note">Fila vazia. Assim que você liberar algo no painel, aparece aqui.</span>'}</section>
    ${FLUXO[a.look]?`<section class="box wide"><h4>Onde ${esc(a.nome)} fica na esteira</h4><div class="io"><div><b>Recebe de</b>${esc(FLUXO[a.look].de)}</div><div><b>Entrega para</b>${esc(FLUXO[a.look].para)}</div></div></section>`:''}
-   ${PRODS.includes(a.look)?`<section class="box"><h4>Padrão único de produção (igual para os 5 produtores)</h4><ul class="padrao">${PADRAO.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
+   ${PRODS.includes(a.look)?`<section class="box"><h4>Padrão único de produção (igual para os 3 produtores)</h4><ul class="padrao">${PADRAO.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>
    <section class="box"><h4>Histórico de produção</h4>${vidsDe(a).length?`<ul class="hist">${vidsDe(a).map(d=>{const et=ETAPAS.find(e=>e.k===d.etapa);return `<li><button data-open="${esc(d.id)}">${d.thumbImg?`<img src="${esc(d.thumbImg)}" alt="">`:''}<span><span class="t">Vídeo ${esc(d.num)} · ${esc(curto(d.titulo))}</span><br><span class="m">${et?esc(et.t):''}${d.duracaoSeg?' · '+mmss(d.duracaoSeg):''} · ver tudo o que foi usado →</span></span></button></li>`}).join('')}</ul>`:'<span class="note">Ainda não produziu nenhum vídeo.</span>'}</section>`:''}
    <section class="box"><h4>Já fez</h4>${feitas.length?`<ul class="lst">${feitas.slice(0,40).map(x=>`<li>${x.em?`<span class="when">${esc(String(x.em).slice(8,10)+'/'+String(x.em).slice(5,7))}</span>`:''}${esc(x.txt)}</li>`).join('')}</ul>`:'<span class="note">Ainda sem registro.</span>'}</section>`;
   if(a.look!=='gerente') h+=`<section class="box wide"><h4>Ligação com a gerente</h4><div class="link-ger"><span class="pulse" aria-hidden="true"></span><div><b>Relatório para a Beatriz:</b> ${esc(relatorioDe(a))}<div class="note" style="margin-top:4px">A Beatriz lê esta sala a cada ronda (de hora em hora)${ger&&ger.nota?' · última ronda: '+esc(ger.nota):''}.</div></div></div></section>`;

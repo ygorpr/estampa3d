@@ -122,3 +122,9 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Os 5 produtores produzem EXATAMENTE no mesmo padrão: mesmo kit e motor, mesma voz e configuração, mesmo Sommelier, mesma abertura
   e fechamento, mesma legenda, mesma trilha, mesma conferência de stills. Não pode haver diferença de qualidade entre eles;
   todos seguem `references/brief-producao.md` + `brief-comum.md` sem variação.
+
+## Equipe enxuta (20/11, pedido do dono)
+- Pedro e Júlia SAÍRAM. Produção = Otávio, Lucas e Marina. Os vídeos deles passaram para o Otávio
+  (doc do vídeo: `produtor: "Otávio"`, `produtorOriginal: "Júlia"|"Pedro"`). Equipe: 10 pessoas.
+- O Dark Divino NÃO tem Instagram: nada de Reels no calendário. Só YouTube (longo) e Shorts.
+- O canal do YouTube fica numa conta Google separada da 3uniformes; NÃO misturar as contas.

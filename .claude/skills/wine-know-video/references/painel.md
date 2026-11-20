@@ -27,7 +27,7 @@ fazer o trabalho, responder no thread (ArtifactComments reply) e resolver o thre
   creditosUsadosTotal (160 mil informado pelo dono), ledger[{item,creditos}], ledgerNota. Custo médio = total ÷ vídeos prontos.
   Somar ao ledger cada nova geração de voz.
 - `equipe/agora`: agentes[{look,nome,cargo,esperando,comoResolver,link,fazendo[{txt,pct,eta|bloqueio}],fila[...],nota}].
-  Equipe: Beatriz (gerente), Sofia (pauta), Rafael (roteiro), Helena (thumbs), Otávio/Lucas/Marina (produção, mesmo cargo, cada um com seus vídeos).
+  Equipe: Beatriz (gerente), Sofia (pauta), Rafael (roteiro), Helena (thumbs), Otávio/Lucas/Marina (produção; Pedro e Júlia saíram em 20/11).
   Atualizar SEMPRE que um trabalho começa/termina; porcentagens: cenas ~50%, stills ~70%, voz ~85%, render ~95%, Revisão 100%.
   Agente travado → `esperando` + `comoResolver` + `link`; o card mostra "Já resolvi, pode continuar" (me manda um aviso; testar e retomar).
 
