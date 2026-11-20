@@ -10,7 +10,7 @@ leiloeiro (fraque, martelo), falsificador (óculos, avental, rótulos na mesa) e
 |---|---|---|
 | Romanée-Conti | "Romanê-Contí" | francês /ʁɔ.ma.ne kɔ̃.ti/ (Wiktionary "Romanée"; "Conti") |
 | Domaine de la Romanée-Conti | "Domén de lá Romanê-Contí" | francês /dɔ.mɛn də la ʁɔ.ma.ne kɔ̃.ti/ (Wiktionary "domaine") — só na placa/legenda; na fala usamos "Romanée-Conti" |
-| Borgonha (Bourgogne) | "Borgônha (em português); "Burgônhe" só se dito em francês" | francês /buʁ.ɡɔɲ/ (Wiktionary "Bourgogne"); no roteiro usamos o nome em português |
+| Borgonha (Bourgogne) | "Borgônha" (nome em português; em francês seria "Burgônhe") | francês /buʁ.ɡɔɲ/ (Wiktionary "Bourgogne"); no roteiro usamos o nome em português |
 | Conti | "Contí" | francês /kɔ̃.ti/ |
 | Pompadour | "Pompadúr" | francês /pɔ̃.pa.duʁ/ (Wiktionary "pompadour"; Cambridge /ˈpɒm.pə.dɔːr/) |
 | Sotheby's | "Sâdebis" | inglês /ˈsʌð.ə.biz/ (Cambridge "Sotheby's") |
@@ -56,5 +56,5 @@ VINHEDO – 1,8 ha, ~6 mil garrafas/ano · 1945 – última safra das vinhas vel
 
 **Thumb (3 opções, a fazer depois):** A "A GARRAFA MAIS / CARA DO MUNDO" · B "R$ 4 MILHÕES / NUMA GARRAFA?" · C "POR QUE ESSE VINHO / CUSTA R$ 4 MILHÕES?"
 
-Contagem: 24 falas, 601 palavras (≈ 3.9 min a 2,6 palavras/s, sem contar pausas e a tabela final).
+Contagem: 24 falas, 601 palavras (os vídeos 14 e 16 tinham 547–573 palavras e ~3 min 20 s → este fica em ~3 min 30–35 s; se passar de 3 min 45 s, a fala 13 do Screaming Eagle é a primeira a sair).
 Checar antes da voz: nada pendente de fonte; todos os fatos do roteiro estão no pesquisa.md (o que ficou de fora está em "Fora do roteiro").
