@@ -104,3 +104,5 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   (roteiro + thumbs + cenas + voz + render + ajustes). Medir pela duração real de cada agente/render e gravar no doc do vídeo.
 - Agente travado: preencher `esperando`, `comoResolver` (passo a passo curto) e `link` (ex.: https://elevenlabs.io/app/subscription).
   O card mostra o botão "Já resolvi, pode continuar", que me manda um aviso: testar na hora (ex.: 1 frase curta de voz) e retomar.
+- Gerente: "Beatriz" (esta sessão) coordena tudo; ronda automática de hora em hora (tarefa agendada "Gerente da esteira Dark Divino")
+  confere agentes, dispara o que o dono já liberou, atualiza o painel e só chama o dono quando precisa (créditos, acesso, decisão).
