@@ -49,6 +49,8 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
   aprovada), gerada em BLOCOS de 3 frases e cortada por frase (`.claude/skills/wine-know-video/scripts/tts_v3.py`).
   Texto escrito para falar: perguntas, exclamações, frases curtas. Nada de frase isolada (fica "mole").
   Se a fala não couber, esticar as cenas (time-warp), não cortar o sentido.
+- Nomes estrangeiros: checar a pronúncia em dicionário (IPA) e combinar com o dono ANTES da voz. Na voz escreve-se como se fala
+  (ex.: Veuve Clicquot /vœv kli.ko/ → "Vév Clicô"); a legenda mostra a grafia certa. Veuve Clicquot é a MARCA — não traduzir para "viúva".
 - Efeitos: rolha, taças, geladeira, calendário. Voz na frente; música e efeitos abaixo.
 
 ## Legendas
