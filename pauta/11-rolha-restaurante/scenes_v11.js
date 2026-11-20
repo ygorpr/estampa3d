@@ -92,21 +92,21 @@ const SC=[null,
   fade(g,ap(t,3,'identidade',.5),()=>{plaque(g,960,740,760,150);goldText(g,'A IDENTIDADE DA GARRAFA',960,740,44,'Cinzel',900)})},.6),
  // 4 — falsário reenche e retampa (mão esquerda: jarra e depois a rolha; direita apoiada na mesa)
  (t,c,s)=>{veil(null,t,tavern,.5);const g=layer('g',null);const t0=T[s],tE=wt(4,'enchesse')-.3,tT=wt(4,'tampasse')-.3;
-  const pour=easeIO(seg(t,tE,tE+.6))*(1-easeIO(seg(t,tT-.3,tT+.1))),cap=easeIO(seg(t,tT,tT+.6)),press=cap*(1-.0)+Math.max(0,Math.sin((t-tT-.6)*7))*seg(t,tT+.6,tT+1.4)*(1-seg(t,tT+1.4,tT+1.6));
+  const pour=easeIO(seg(t,tE,tE+.6)),cap=easeIO(seg(t,tT,tT+.6)),press=cap*(1-.0)+Math.max(0,Math.sin((t-tT-.6)*7))*seg(t,tT+.6,tT+1.4)*(1-seg(t,tT+1.4,tT+1.6));
   const p={x:990,y:560,s:1,face:1,noLegs:true,breath:t*2,hands:{},arm3d:true,hat:true,look:kf(t,[[t0,-.5],[t0+1.6,-.5],[t0+2,.55],[t0+3.3,.55],[t0+3.7,-.4]]),lookY:.25,brow:-.3,sad:-.4,mouth:-.1,blink:blinkAt(t,[t0+1,t0+4.4,t0+8.2])};
   const rest=[1000,750],pourP=[860,450],capP=[760,492+press*6];
   const lh=cap>0?[lerp(pourP[0],capP[0],cap),lerp(pourP[1],capP[1],cap)]:[lerp(rest[0],pourP[0],pour),lerp(rest[1],pourP[1],pour)];
-  setHands(p,[lh,cap>0?90:lerp(60,40,pour)],[[1170,770],40]);const h=layer('h',null);actor(h,'forger',FORGER,p,null,'rgba(255,180,110,1)',1);
+  setHands(p,[lh,cap>0?60:lerp(40,20,pour)],[[1085,745],30]);const h=layer('h',null);actor(h,'forger',FORGER,p,null,'rgba(255,180,110,1)',1);
   const f=layer('f',null);f.fillStyle='#3A1C12';f.fillRect(0,815,W,300);f.fillStyle='#5A2E1C';f.fillRect(0,815,W,14);candle(f,1300,840,50,t);
   const hl=h2w(p,'l'),hr=h2w(p,'r');gripHand(f,hr[0],hr[1],0,FORGER,.85);bottleS(f,[760,825],1,'red');
-  if(cap<=0){if(pour>.02){f.save();f.translate(hl[0],hl[1]);f.rotate(-1*pour);pitcher(f);f.restore()}else pitcher(f,hl[0],hl[1]-0);
+  const pa=1-seg(cap,0,.5);if(cap>0)fade(f,1-pa,()=>pitcher(f,560,750));if(pa>0){f.save();f.globalAlpha=pa;if(pour>.02){f.save();f.translate(hl[0],hl[1]);f.rotate(-1*pour*(1-cap));pitcher(f);f.restore()}else pitcher(f,hl[0],hl[1]);f.restore()}if(cap<=0){
    if(pour>.97){f.strokeStyle='rgba(120,20,40,.9)';f.lineWidth=8;f.beginPath();const sp=[hl[0]-119,hl[1]+84];f.moveTo(sp[0],sp[1]);f.quadraticCurveTo(sp[0]-4,sp[1]+20,761,552);f.stroke()}}
-  else{pitcher(f,560,750);bigCork(f,hl[0],hl[1]+44,.5)}
+  else{fade(f,seg(cap,.3,.7),()=>bigCork(f,hl[0],hl[1]+44,.5))}
   gripHand(f,hl[0],hl[1],0,FORGER,.85);
   comp([['w',10]]);ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='rgba(20,6,10,.45)';ctx.fillRect(0,0,W,H);ctx.restore();blit(ctx,L.h,0);blit(ctx,L.f,0);
   goldText(g,'A FALSIFICAÇÃO',960,165,62);ornament(g,960,232,560);chip(g,1520,380,'TROCAVAM O VINHO',ap(t,4,'trocasse'));chip(g,1520,520,'ENCHIAM DE NOVO',ap(t,4,'enchesse'));chip(g,1520,660,'OUTRA ROLHA',ap(t,4,'tampasse'));done(g,t,s)},
  // 5 — garçom mostra a rolha marcada
- (t,c,s)=>{const ta=T[5]+.5;duo(t,c,s,{whands:t=>{const u=easeIO(seg(t,ta,ta+.7));return {l:[[440,600],60],r:[[lerp(700,880,u),lerp(720,620,u)],lerp(60,140,u)]}},
+ (t,c,s)=>{const ta=T[5]+.5;duo(t,c,s,{whands:t=>{const u=easeIO(seg(t,ta,ta+.7));return {l:[[440,600],60],r:[[lerp(700,800,u),lerp(720,650,u)],lerp(50,55,u)]}},
   wheld:(f,wl,wr,t)=>{bottleAt(f,wl[0],wl[1],1,0,'red');corkH(f,wr[0]+10,wr[1]-46,150,54,{brand:'CHÂTEAU',wet:1})},wface:t=>({look:.5,mouth:.6,brow:.5}),
   shands:t=>({l:[[1160,780],70],r:[[1450,778],40]}),glass:{b:[1160,822],lv:.0},sface:t=>({look:-.5,lookY:.15,brow:t>wt(5,'provava')?.8:.4,mouth:.6}),
   m:{bottle:false,rHold:true,props0:null,front:(f,t)=>{}},
