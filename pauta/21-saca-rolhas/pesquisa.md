@@ -1,0 +1,34 @@
+# O saca-rolhas nasceu numa arma? — pesquisa (20/11/2026)
+Busca feita por WebSearch (o acesso direto aos sites está bloqueado nesta sessão; os trechos foram lidos nos resultados de busca). Fato fraco = "dizem"/"lá pelos", ou fora do roteiro.
+
+| Fato (como aparece no roteiro) | Fonte |
+|---|---|
+| Gun worm: espiral/garra de metal na ponta da vareta de madeira, usada por soldados para tirar bala e bucha de mosquete que falhou; a ponta enrolada inspirou o saca-rolhas, que foi chamado de "steel worm" | National Geographic, "Tools: Seven twists in corkscrew history" — https://www.nationalgeographic.com/culture/article/tools-seven-twists-in-corkscrew-history ; National Geographic, "Corked!" (historiadores: o desenho "pode ter vindo" do gun worm) — https://nationalgeographic.com/culture/food/the-plate/2014/09/02/corked |
+| Espirais assim eram usadas por soldados e caçadores desde os anos 1630; ninguém sabe quem primeiro usou numa rolha, nem quando | Popular Science, "The corkscrew began as a tool for muskets, not merlot" — https://www.popsci.com/science/wine-corkscrew-history/ |
+| Mosquete: arma antiga de cano longo, carregada pela boca (antecarga) com pólvora, bala e bucha | Britannica "musket" — https://www.britannica.com/technology/musket |
+| A rolha de cortiça volta no séc. XVII junto com a garrafa de vidro forte (inglesa) | Vídeo 03 "E antes da rolha?" — pauta/03-rolha/pesquisa.md (Wine Spectator — https://www.winespectator.com/articles/cork-won-wine-battle-we-lost) |
+| 1681: primeiro registro escrito — um catálogo de museu compara uma raridade a "a Steel Worme used for the drawing of Corks out of Bottles" | National Geographic (mesmo link); Guinness, "Oldest corkscrew" (cita a 1ª referência em inglês, 1681) — https://www.guinnessworldrecords.com/world-records/630186-oldest-corkscrew |
+| Em inglês a espiral do saca-rolhas ainda se chama "worm" | National Geographic (mesmo link); Wikipedia "Corkscrew" — https://en.wikipedia.org/wiki/Corkscrew |
+| Palavra "corkscrew" (cork + screw) registrada em 1720 (poema de Nicholas Amhurst); antes, "bottlescrew" (parafuso de garrafa) | Etymonline "corkscrew" — https://www.etymonline.com/word/corkscrew ; Wiktionary "corkscrew" — https://en.wiktionary.org/wiki/corkscrew |
+| 1ª patente de saca-rolhas: reverendo Samuel Henshall, patente nº 2061, 24/ago/1795 (Inglaterra) | UK Intellectual Property Office, "Uncorking innovation" (27/03/2025) — https://ipo.blog.gov.uk/2025/03/27/uncorking-innovation/ ; Guinness "Oldest corkscrew" (Henshall, reitor da igreja de Bow, Londres) |
+| O "botão de Henshall": disco entre a haste e a espiral que trava na rolha e a faz girar, soltando-a do vidro | Datamp (patente) — https://www.datamp.org/patents/displayPatent.php?id=57356 ; Wikipedia "Samuel Henshall" — https://en.wikipedia.org/wiki/Samuel_Henshall |
+| (Placa/tela) Fabricado por Matthew Boulton, Soho, Birmingham | Revolutionary Players (museus de Birmingham) — https://revolutionaryplayers.org.uk/?p=2618 |
+| Abridor de garçom (waiter's friend): Karl/Carl Wienke, de Rostock (Alemanha), patente alemã DRP 20815 de 26/maio/1882; EUA nº 283.731 (1883), "lever corkscrew"; espiral + alavanca apoiada na boca + lâmina | Wikipedia "Corkscrew" (mesmo link); VinePair — https://vinepair.com/wine-blog/history-of-the-wine-corkscrew/ ; Wine History Project — https://winehistoryproject.org/corkscrew-development-exhibit/ |
+| "Wine key" viria do nome Wienke mal pronunciado = RELATO, repetido em blogs, sem documento da época | VinePair; Annie André — https://www.annieandre.com/anatomy-waiters-friend-corkscrew-french-english/ (pistas; nenhuma fonte primária) |
+| Saca-rolhas de asas/borboleta (rack and pinion, duas alavancas): 1ª patente americana em 1930, de Dominick (ou Domenico) Rosati, italiano; precursor: Heeley, Inglaterra, 1888 | Wikipedia "Corkscrew" (mesmo link); Wine History Project (mesmo link) |
+| Screwpull: Herbert Allen (1907–1990), Houston, Texas, 1979; espiral comprida coberta de teflon; está na coleção permanente do MoMA; ele também patenteou um modelo de alavanca (desce–sobe–desce); marca é da Le Creuset desde 1992 | Wikipedia "Herbert Allen (inventor)" — https://en.wikipedia.org/wiki/Herbert_Allen_(inventor) ; Click2Houston — https://www.click2houston.com/features/2020/07/15/made-in-texas-this-houston-invention-has-helped-wine-lovers-uncork-a-bottle-effortlessly-since-1979 ; VinePair |
+| ICCA (International Correspondence of Corkscrew Addicts): criada em 1974 (Bernard Watney e Timothy Diener), limitada a 50 membros | CorkscrewNet — https://corkscrewnet.com/?p=164 ; Saveur — https://www.saveur.com/culture/vintage-corkscrew-collector/ |
+| Maior coleção de saca-rolhas (Guinness): Ion Chirescu, Bucareste (Romênia), 23.965 peças, 18/jun/2015 | Guinness World Records — https://www.guinnessworldrecords.com/world-records/374789-largest-collection-of-corkscrews |
+| Museu do Saca-Rolhas (Musée du Tire-Bouchon), Ménerbes, Provença (França): ~1.200 peças, aberto desde 1993 | Provence Guide (turismo oficial) — https://www.provenceguide.co.uk/cultural-heritage/luberon/corkscrew-museum/provence-825569-1.html ; Fodor's — https://fodors.fodors.com/world/europe/france/provence/things-to-do/sights/reviews/musee-du-tire-bouchon-485973 |
+| Saca-rolhas mais antigo (Guinness): francês, tipo gaiola, datado de 1685 | Guinness "Oldest corkscrew" (mesmo link) |
+| Portugal produz ~metade (49,6%) da cortiça do mundo e ~62% das exportações; rolhas são mais de 70% do que o setor exporta | APCOR (via Amorim) — https://amorimcork.com/en/media-center/news/apcors-201819-yearbook-highlights-the-continuing-strong-export-growth-of-cork-stoppers/258 ; RTP (2024) — https://www.rtp.pt/noticias/economia/exportacoes-de-cortica-caem-52-para-1148-me-em-2024-apos-anos-de-recordes_n1635228 |
+
+## Fora do roteiro (fonte fraca, divergente ou sem espaço)
+- **"Saca-trapo"** como nome português do gun worm: não achei em dicionário. Fora.
+- **Museu de saca-rolhas no Brasil**: só achei matéria de turismo (Catraca Livre: museu de vinícola em Bento Gonçalves com vitrine de 99 saca-rolhas; guia de viagem cita "saca-rolhas centenários" no museu da Dal Pizzol). Fonte fraca → fora (o ângulo Brasil ficou na cortiça de Portugal). Se o dono quiser, dá pra ligar para a Dal Pizzol e confirmar.
+- **Henshall morreu endividado**: só blog. Fora.
+- **Profissão/origem de Henshall** (Cheshire, Oxford, Londres): fontes divergem; a fala diz só "padre inglês".
+- **Nome do italiano da patente de 1930** (Dominick × Domenico Rosati): divergente; a fala não cita o nome.
+- **Data da patente do Screwpull** (1978 × 1979 × 1981): a fala usa 1979, ano da criação da marca (Wikipedia).
+- **Museu de Tessalônica (Grécia) com 2.600 abridores** e o "maior saca-rolhas do mundo" de Hurley (EUA): curiosidades sem espaço.
+- **Rabbit** (alavanca moderna, ~2000): só a VinePair cita; ficou genérico ("os de alavanca").

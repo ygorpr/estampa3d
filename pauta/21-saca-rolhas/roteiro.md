@@ -1,5 +1,5 @@
 # O saca-rolhas nasceu numa arma? — roteiro v1 — AGUARDANDO APROVAÇÃO DO DONO
-~3 min 25 s (23 falas, 587 palavras; se passar de 3 min 45 s, a fala 8 — o nome "corkscrew" em 1720 — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md. Continuação natural do vídeo 03 "E antes da rolha?" (mesma linha do tempo: a rolha volta nos anos 1600 com a garrafa forte).
+~3 min 25 s (23 falas, 588 palavras; se passar de 3 min 45 s, a fala 8 — o nome "corkscrew" em 1720 — é a primeira a sair). Para quem NÃO sabe nada de vinho. Fluido, sem capítulos (transição pela fala; dissolve de ~0,5 s entre lugares). Fontes: pesquisa.md. Continuação natural do vídeo 03 "E antes da rolha?" (mesma linha do tempo: a rolha volta nos anos 1600 com a garrafa forte).
 Linha do tempo: anos 1600 a rolha volta com a garrafa forte → anos 1630 gun worm no mosquete → 1681 1º registro escrito ("steel worm" de tirar rolha) → 1720 a palavra "corkscrew" (antes "bottlescrew") → 1795 1ª patente (Henshall) → 1882 abridor de garçom (Wienke) → 1930 saca-rolhas de asas (patente nos EUA) → 1974 clube de colecionadores (ICCA, 50 membros) → 1979 Screwpull (Herbert Allen) → 2015 recorde Guinness de coleção (Bucareste, 23.965).
 
 **Cenário sugerido:** abre e fecha no **bar** de sempre (Sommelier atrás do balcão a y=600, garrafa apoiada, mão atrás dela, rótulo livre; gaveta de balcão aberta com saca-rolhas). **Acampamento militar do séc. XVII** (barraca de lona, fogueira, mosquetes em pé) para o gun worm, com **corte transversal do cano** em close. **Gabinete georgiano** (escrivaninha, pena, pergaminho com selo) para Henshall. **Restaurante alemão de 1880** (mesas com toalha, lustre) para Wienke. **Galeria de museu** (pedestal com luz) para o Screwpull/MoMA. **Sala de colecionador** com parede inteira de saca-rolhas para o recorde. Transições sempre por dissolve de ~0,5 s.
@@ -18,11 +18,11 @@ Linha do tempo: anos 1600 a rolha volta com a garrafa forte → anos 1630 gun wo
 | worm | "uârm" | inglês /wɜːm/ (Cambridge "worm") |
 | corkscrew | "córcscru" | inglês /ˈkɔːk.skruː/ (Cambridge "corkscrew") |
 | Henshall | "Rênxol" | inglês /ˈhɛn.ʃəl/ (sobrenome; padrão inglês, sem verbete em dicionário — h aspirado = R do português) |
-| Wienke | "Vínque" | alemão /ˈviːŋ.kə/ (regra do alemão: w = /v/, ie = /iː/; Duden, pronúncia padrão) |
+| Wienke | "Vínque" | alemão /ˈviːŋ.kə/ (regras de pronúncia do alemão: w = /v/, ie = /iː/, -nke = /ŋkə/; sobrenome sem verbete em dicionário) |
 | wine key | "uáin qui" | inglês /waɪn kiː/ (Cambridge "wine", "key") |
 | Herbert Allen | "Rérbert Álen" | inglês /ˈhɜː.bət ˈæl.ən/ (Cambridge "Herbert", "Allen") |
 | Screwpull | "Scrúpul" | inglês /ˈskruː.pʊl/ (Cambridge "screw" + "pull") |
-| MoMA | "Môma" | inglês /ˈmoʊ.mə/ (sigla do Museum of Modern Art; Cambridge/uso do museu) |
+| MoMA | "Môma" | inglês /ˈmoʊ.mə/ (sigla do Museum of Modern Art; como o próprio museu e a imprensa americana falam) |
 "Samuel", "Karl", "Texas", "Bucareste", "Portugal" e "teflon" ficam como se lê em português.
 
 ## Falas
@@ -35,8 +35,8 @@ Linha do tempo: anos 1600 a rolha volta com a garrafa forte → anos 1630 gun wo
 | 4 | A espiral gira no cano, fisga a bucha... e puxa tudo pra fora. Te lembra alguma coisa? | [curious] | espiral girando e puxando a bucha; Sommelier ergue uma sobrancelha |
 | 5 | Pois é! Nessa mesma época, a rolha de cortiça voltava, junto com a garrafa de vidro forte. Lembra do nosso vídeo "E antes da rolha?" | [warm] | dissolve p/ bar; garrafa escura antiga com rolha; mini-cartão do vídeo "E ANTES DA ROLHA?" |
 | 6 | Só que agora a rolha entrava inteira no gargalo. Ninguém sabe quem teve a ideia primeiro... mas alguém pegou a espiral da arma e enfiou numa rolha! | [thoughtful] | rolha afundada no gargalo; espiral da vareta virando saca-rolhas; chip "QUEM? NINGUÉM SABE" |
-| 7 | O primeiro registro escrito é de mil seiscentos e oitenta e um: um catálogo de museu inglês fala numa "minhoca de aço de tirar rolha". E até hoje, em inglês, a espiral se chama worm! | [confident] | pergaminho "1681" com a frase; seta para a espiral: "WORM" |
-| 8 | E o nome? Primeiro chamavam de parafuso de garrafa. Corkscrew, parafuso de rolha, o nosso saca-rolhas, só aparece em mil setecentos e vinte. | [curious] | linha do tempo: 1681 "PARAFUSO DE GARRAFA" → 1720 "CORKSCREW" |
+| 7 | O primeiro registro escrito é de mil seiscentos e oitenta e um: um catálogo de museu fala numa "minhoca de aço de tirar rolha". E até hoje, em inglês, a espiral se chama worm! | [confident] | pergaminho "1681" com a frase; seta para a espiral: "WORM" |
+| 8 | E o nome? Em inglês, primeiro chamavam de parafuso de garrafa. Corkscrew, parafuso de rolha, o nosso saca-rolhas, só aparece em mil setecentos e vinte. | [curious] | linha do tempo: 1681 "PARAFUSO DE GARRAFA" → 1720 "CORKSCREW" |
 | 9 | Até que, em mil setecentos e noventa e cinco, um padre inglês, o reverendo Samuel Henshall, tirou a primeira patente de saca-rolhas: o documento que diz "essa invenção é minha". | [excited] | dissolve p/ escritório georgiano; reverendo Henshall (personagem detalhado) com o pergaminho "PATENTE 1795" |
 | 10 | A sacada dele? Um botãozinho de metal em cima da espiral. Ele trava na rolha e, quando você continua girando, a rolha gira junto e se solta do vidro. Simples e genial! | [playful] | close do botão (disco) encostando na rolha; rolha girando; chip "O BOTÃO DE HENSHALL" |
 | 11 | Em mil oitocentos e oitenta e dois chegou o que você provavelmente tem em casa: o abridor de garçom. Quem patenteou foi um alemão, Karl Wienke. | [warm] | dissolve p/ restaurante do séc. XIX; garçom Wienke (personagem detalhado) abre o canivete; chip "1882 · ALEMANHA" |
