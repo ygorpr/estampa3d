@@ -21,6 +21,16 @@ repetir aqueles erros. `SK` = a pasta desta habilidade. Fale com o usuário em p
 
 Antes de começar, leia **`references/padrao.md`** (o que foi aprovado e por quê). Os outros arquivos você abre quando chegar no passo.
 
+
+## FECHAMENTO OBRIGATÓRIO (erro real nos vídeos 11 e 12: "não teve final")
+A ordem do fim é SEMPRE: fala de resumo → **tabela final** → CTA (inscreva-se) → **cena de fechamento** → **logo**.
+- **Tabela final** (5 cartões, sem legenda): cartões entram um a um com calma (~1 s cada) e ficam PARADOS ≥ 8 s; a cena tem **≥ 14 s**.
+  Se a tabela tem fala por cima, a cena dura a fala + 8 s de tabela parada.
+- **Cena de fechamento** (sem fala, sem legenda, ~3 s): o Sommelier ergue a taça pela haste num brinde, câmera aproxima, música sobe.
+- **Logo** 3,5 s com o áudio "Wine Know. Dark Divino.".
+- Em `plan_timing.py` passe `--min` com esses mínimos (ex.: `--min 3 3 ... 14 6 3 3.5`) e acrescente a cena de fechamento no LEN.
+- Pode passar dos 3 min (o dono autorizou). Conferir o FIM no contact sheet: os 5 cartões visíveis e o brinde antes do logo.
+
 ## Fluxo
 
 **1. Pauta.** Se o usuário não deu tema, pesquise o que o público pergunta: `python3 SK/scripts/youtube_ideas.py` (autocompletar do
