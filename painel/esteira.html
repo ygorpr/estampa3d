@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap">
 <style>
-/* Layout: faixa "Sua vez" em linhas com botões, depois a esteira de 7 estações (arrastar = decidir) e uma gaveta de detalhe. Visual único escuro, da marca. */
+/* Layout: faixa "Sua vez" em linhas com botões, depois a esteira de 8 estações (arrastar = decidir) e uma gaveta de detalhe. Visual único escuro, da marca. */
 :root{
   --bg:#140509; --wall:#1F0810; --panel:#2C0B15; --line:#4A1A26;
   --wine:#5E1428; --bordo:#8E1B3A; --gold:#D4A24C; --gold2:#F2D27A;
@@ -78,7 +78,7 @@ table.custo th{font-family:var(--f-ui);font-size:12px;color:var(--muted);font-we
 
 /* Esteira */
 .belt-scroll{overflow-x:auto;padding-bottom:6px}
-.belt{display:grid;grid-template-columns:repeat(6,minmax(210px,1fr)) minmax(170px,.7fr);gap:12px;min-width:1500px}
+.belt{display:grid;grid-template-columns:repeat(8,minmax(210px,1fr)) minmax(170px,.7fr);gap:12px;min-width:1960px}
 .station{background:var(--wall);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
 .station.rej{background:transparent;border-style:dashed}
 .station>header{padding:12px 12px 10px;display:flex;flex-direction:column;gap:2px}
@@ -310,6 +310,8 @@ const ETAPAS=[
   {k:'producao',n:'4', t:'Produção',         who:'Voz, animação, render, conferência'},
   {k:'revisao', n:'5', t:'Revisão',          who:'Você assiste e aprova ou pede ajustes'},
   {k:'entregue',n:'6', t:'Entregue e aprovado', who:'Vídeo final aprovado por você'},
+  {k:'studio',  n:'7', t:'No YouTube Studio', who:'Rodrigo: vídeo enviado, legenda e descrição arrumadas'},
+  {k:'publicado',n:'8', t:'Publicado',       who:'Rodrigo: no ar no canal'},
   {k:'recusado',n:'–', t:'Recusados',        who:'Solte aqui para descartar', rej:true}
 ];
 const ORD=ETAPAS.map(e=>e.k);
@@ -364,7 +366,7 @@ function render(){
   const nProntos=docs.filter(d=>d.duracaoSeg>0).length;
   const comP=docs.filter(d=>d.producaoMin>0), pMed=comP.length?comP.reduce((x,d)=>x+d.producaoMin,0)/comP.length:0;
   const cMed=CUSTO.creditosUsadosTotal&&nProntos?custoVoz(CUSTO.creditosUsadosTotal)/nProntos:(comC.length?custoVoz(comC.reduce((a,d)=>a+d.creditosVoz,0)/comC.length):0);
-  $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><span class="sep" aria-hidden="true"></span>`+
+  $('#tally').innerHTML=`<div class="hot"><b>${vez.length}</b>esperando você</div><div><b>${cnt('producao')}</b>em produção</div><div><b>${cnt('revisao')}</b>em revisão</div><div><b>${cnt('entregue')}</b>entregues</div><div><b>${cnt('studio')}</b>no YouTube Studio</div><div><b>${cnt('publicado')}</b>publicados</div><span class="sep" aria-hidden="true"></span>`+
     `<div><b>${tMed?mmss(tMed):'—'}</b>tempo médio</div>`+
     `<button class="kpi" id="kpi-custo" type="button"><b>${cMed?brl(cMed):'—'}</b>custo médio por vídeo</button>`+
     `<div><b>${pMed?(pMed>=60?Math.floor(pMed/60)+' h '+String(Math.round(pMed%60)).padStart(2,'0')+' min':Math.round(pMed)+' min'):'—'}</b>tempo de produção médio</div>`;
@@ -403,7 +405,9 @@ function rowHtml(d){
     <div class="acts">${a}</div></div>`;
 }
 function pillFor(d){
-  if(d.etapa==='entregue') return '<span class="pill feito">Pronto</span>';
+  if(d.etapa==='entregue') return '<span class="pill feito">Pronto · falta subir</span>';
+  if(d.etapa==='studio') return `<span class="pill claude">${esc(d.agendado?'Agendado '+d.agendado:'Rascunho no Studio')}</span>`;
+  if(d.etapa==='publicado') return '<span class="pill feito">No ar</span>';
   if(d.etapa==='recusado') return '';
   if(d.vez==='dono'&&PEDE[d.etapa]) return d.doComentario&&d.etapa==='pauta'?'<span class="pill publico">Pedido do público</span>':'<span class="pill dono">Sua vez</span>';
   return `<span class="pill claude">${esc(d.estado||'Comigo')}</span>`;
@@ -455,6 +459,7 @@ function openDrawer(id,refresh,mudar){
   h+=fichaHtml(d);
   if(d.previa) h+=`<div class="sec"><h2 class="s">Assista ao vídeo${d.duracao?' · '+esc(d.duracao):''}</h2><video class="sheet" controls preload="metadata" playsinline src="${esc(d.previa)}"${d.thumbImg?` poster="${esc(d.thumbImg)}"`:''}></video><span class="note">Prévia em qualidade menor para assistir aqui. O arquivo final em alta está na conversa e em ${esc(d.video||'videos/')}.</span></div>`;
   else if(d.video) h+=`<div class="sec"><h2 class="s">Arquivo</h2><span class="file">${esc(d.video)}</span></div>`;
+  if(d.youtube){const Y=d.youtube; h+=`<div class="sec"><h2 class="s">No YouTube · Rodrigo</h2><div><b>${esc(Y.titulo||'')}</b></div><div class="note">${esc(Y.status||'')} · idioma ${esc(Y.idioma||'')} · legenda ${esc(Y.legenda||'')}${Y.id?` · <a href="https://studio.youtube.com/video/${esc(Y.id)}/edit" target="_blank" rel="noopener" style="color:var(--gold2)">abrir no Studio</a>`:''}</div><div style="white-space:pre-wrap;font-size:16px">${esc(Y.descricao||'')}</div></div>`;}
   if(d.obs) h+=`<div class="sec"><h2 class="s">Recado meu</h2><div>${esc(d.obs)}</div></div>`;
   if(d.etapa!=='producao'){
     h+=`<div class="sec"><h2 class="s">${sua?'Sua decisão':'Comentário'}</h2><label class="note" for="d-note">${mudar?'Diga o que mudar e clique em "Pedir mudança"':'Comentário (opcional; obrigatório para pedir mudança)'}</label><textarea id="d-note" placeholder="${d.etapa==='thumb'?'Ex.: quero o Sommelier rindo no fim; mostre o mapa do Brasil':(d.etapa==='revisao'||d.etapa==='entregue')?'Ex.: aos 1:20 a legenda cobre a taça; deixe a música mais baixa':'Ex.: troque a frase 4; quero mais sobre o Brasil'}">${esc(keepNote)}</textarea><div class="acts">`;
@@ -543,7 +548,7 @@ const PASSOS={
   youtube:['Pega o vídeo aprovado','Escreve 3 títulos que dizem o assunto','Escreve descrição com fontes, tags e capítulos','Escreve título, legenda e hashtags de cada corte do Shorts','Entrega os textos para o Rodrigo publicar'],
   shorts:['Escolhe 1 a 3 trechos fortes do vídeo aprovado','Corta em vertical 1080x1920, de 30 a 45 s','Mantém a legenda karaokê e o áudio original','Fecha com o selo e "vídeo completo no canal"','Passa para a Larissa escrever os textos']
 };
-PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Otávio','Monta o calendário (quinta 19h, domingo 18h, Shorts ao meio-dia)','Deixa tudo pronto para publicar e agendar','Você confirma e publica (ou agenda) no YouTube Studio','Lê os números e os comentários do canal','Relatório 48 h depois de cada vídeo e toda segunda: o que aconteceu, certo, errado, sugestões e ideias','Dúvidas e temas dos comentários vão para a Sofia e para você','Entrega o relatório para a Beatriz'];
+PASSOS.publica=['Junta vídeo aprovado, thumb, textos da Larissa e cortes do Otávio','Sobe o vídeo para o YouTube Studio: título, descrição, legenda e idioma em português (estação 7)','Monta o calendário editorial: 1 vídeo por dia (19h em dia de semana, 18h no fim de semana), Shorts ao meio-dia','Deixa tudo pronto para agendar','Você confirma e publica (ou agenda) no YouTube Studio → vídeo passa para Publicado (estação 8)','Lê os números e os comentários do canal','Relatório 48 h depois de cada vídeo e toda segunda: o que aconteceu, certo, errado, sugestões e ideias','Dúvidas e temas dos comentários vão para a Sofia e para você','Entrega o relatório para a Beatriz'];
 ['pedro','julia','anima','render'].forEach(k=>PASSOS[k]=PASSOS.producao);
 const passoAtual=(a)=>{const f=(a.fazendo||[])[0]; if(!f) return -1; const p=f.pct||0, n=(PASSOS[a.look]||[]).length; return Math.min(n-1,Math.floor(p/100*n));};
 function proximasDe(a){
@@ -557,6 +562,8 @@ function proximasDe(a){
   if(['producao','pedro','julia','anima','render'].includes(k)){V.filter(d=>d.etapa==='producao'&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Produzir: '+t(d)));
     V.filter(d=>d.etapa==='revisao'&&/[Aa]justando/.test(d.estado||'')&&(!d.produtor||d.produtor===a.nome)).forEach(d=>out.push('Ajuste pedido: '+t(d)));}
   if(k==='youtube'){const feitos=(ESCR.youtube?.pacotes)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Pacote de textos: '+t(d)));}
+  if(k==='publica'){V.filter(d=>d.etapa==='entregue').forEach(d=>out.push('Subir para o YouTube Studio (título, descrição, legenda e idioma): '+t(d)));
+    V.filter(d=>d.etapa==='studio'&&!d.agendado).forEach(d=>out.push('Agendar no Studio conforme o calendário (com seu OK): '+t(d)));}
   if(k==='publica'){const cal=((CAL&&CAL.itens)||[]).filter(p=>p.status!=='publicado').sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora)).slice(0,6); cal.forEach(p=>out.push('Publicar '+p.data.split('-').reverse().slice(0,2).join('/')+' '+(p.hora||'')+': '+p.titulo+(p.status==='aguarda'?' (aguarda sua aprovação)':'')));}
   if(k==='producao'||k==='shorts'){const feitos=(ESCR.producao?.cortados)||[]; V.filter(d=>d.etapa==='entregue'&&d.num&&!feitos.includes(d.num)).forEach(d=>out.push('Cortes para Shorts e Reels: '+t(d)));}
   if(k==='gerente'){const sv=V.filter(d=>d.vez==='dono'&&PEDE[d.etapa]); if(sv.length) out.push(sv.length+' itens esperando você em "Sua vez"');
@@ -589,7 +596,7 @@ const FLUXO={
 };
 PRODS.forEach(k=>FLUXO[k]=FLUXO.producao);
 const CADEIA=[['pauta','Sofia'],['*','Você aceita'],['roteiro','Rafael'],['checador','Caio'],['*','Você aprova'],['arte','Helena'],['*','Você escolhe'],['producao','Otávio'],['*','Você revisa'],['youtube','Larissa'],['publica','Rodrigo'],['*','Você confirma e publica']];
-const PADRAO=['Mesmo kit e mesmo motor de animação para todos (kit-dark-divino + a habilidade wine-know-video)','Mesma voz: Paulo, ElevenLabs v3 com emoção, em blocos de 3 frases','Abre com a thumb ganhando vida e fecha com o logo e "Wine Know. Dark Divino."','Sommelier versão 10: colete e gravata vinho, braços com profundidade, mão nunca na frente do rótulo','Legenda karaokê igual à fala; marca d\'água clara; avisos nunca em cima do rosto','Jazz com sax por baixo, voz na frente','Fechamento obrigatório: resumo, tabela parada 8 s, inscrição, brinde, logo','Conferência de quadros (stills) antes de renderizar e prévia na Revisão'];
+const PADRAO=['Mesmo kit e mesmo motor de animação para todos (kit-dark-divino + a habilidade wine-know-video)','Mesma voz: Paulo, ElevenLabs v3 com emoção, em blocos de 3 frases','Abre com a thumb ganhando vida e fecha com o logo e "Wine Know. Dark Divino."','Sommelier versão 10: colete e gravata vinho, braços com profundidade, mão nunca na frente do rótulo','Legenda karaokê igual à fala; marca d\'água clara; avisos nunca em cima do rosto','Jazz com sax por baixo, voz na frente','Fechamento obrigatório: tabela durante o resumo (no máx. 2 s parada), inscrição, brinde, logo — nunca pausa muda longa','Conferência de quadros (stills) antes de renderizar e prévia na Revisão'];
 function fichaHtml(d){const f=d.ficha; if(!f) return '';
   return `<div class="sec ficha"><h2 class="s">Ficha de produção${d.produtor?' · '+esc(d.produtor)+(d.produtorOriginal?' (feito por '+esc(d.produtorOriginal)+')':''):''}</h2><dl style="margin:0">
    ${f.cenario?`<dt>Cenário</dt><dd>${esc(f.cenario)}</dd>`:''}
@@ -617,6 +624,13 @@ function calendarioHtml(){
    <div class="legend"><span style="--c:${cor.yt}">YouTube (vídeo longo)</span><span style="--c:${cor.sh}">Shorts</span><span style="--c:#ffffff33">tracejado = vídeo ainda na sua Revisão</span></div>
    ${grid}${lista}${CAL&&CAL.nota?`<span class="note">${esc(CAL.nota)}</span>`:''}</section>`;
 }
+function editorialHtml(){
+  const I=((CAL&&CAL.itens)||[]).filter(p=>p.plat==='yt').sort((a,b)=>(a.data+a.hora).localeCompare(b.data+b.hora));
+  if(!I.length) return '';
+  const dia=x=>{const d=new Date(x+'T12:00:00');return ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'][d.getDay()]+' '+x.split('-').reverse().slice(0,2).join('/')};
+  const st={aguarda:'aguarda sua aprovação na Revisão',subir:'pronto · Rodrigo precisa subir no Studio',studio:'no Studio · falta agendar',agendado:'agendado no Studio',publicado:'publicado ✓'};
+  return `<section class="box wide"><h4>Calendário editorial · 1 vídeo por dia</h4>${CAL.editorial?`<span class="note">${esc(CAL.editorial)}</span>`:''}
+   <div style="overflow-x:auto"><table class="custo"><thead><tr><th>Dia</th><th>Hora</th><th>Vídeo</th><th>Situação</th><th>Por que nesse dia</th></tr></thead><tbody>${I.map(p=>`<tr><td>${esc(dia(p.data))}</td><td>${esc(p.hora||'')}</td><td>${esc(p.titulo)}</td><td class="note">${esc(st[p.status]||p.status||'')}</td><td class="note">${esc(p.motivo||'')}</td></tr>`).join('')}</tbody></table></div></section>`;}
 function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) return '';
   return `<section class="box wide"><h4>Contas conectadas</h4><div class="integ">${I.map(c=>`<div class="c"><b>${esc(c.nome)}</b><span class="st ${c.ok?'on':'wait'}">${c.ok?'Conectado':'Não conectado'}</span><span class="note">${esc(c.txt||'')}</span>${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.linkTxt||'Conectar')}</a>`:''}</div>`).join('')}</div></section>`;}
 /* ---------- painel do canal (YouTube) na sala da Larissa ---------- */
@@ -678,7 +692,7 @@ function abrirSala(look,refresh){
   if(a.look==='publica'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
   if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
   h+=recadosHtml(a);
-  if(a.look==='publica') h+=integracoesHtml()+calendarioHtml();
+  if(a.look==='publica') h+=integracoesHtml()+editorialHtml()+calendarioHtml();
   if(a.look==='gerente'){
     h+=`<section class="box wide"><h4>O caminho de um vídeo</h4><div class="flow">${CADEIA.map((c,i)=>`${i?'<span class="ar" aria-hidden="true">→</span>':''}${c[0]==='*'?`<span class="n you">${esc(c[1])}</span>`:c[0]==='prod'?`<span class="n">${esc(c[1])}</span>`:`<button class="n" data-sala="${c[0]}" style="all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px">${esc(c[1])}</button>`}`).join('')}</div><span class="note">Ninguém pula etapa: cada um só começa quando o anterior entrega e, nos pontos dourados, quando você aprova.</span></section>`;
     h+=`<section class="box wide"><h4>Último relatório do analista (Rodrigo)</h4>${RELS.length?relHtml(RELS[0]):'<span class="note">Nenhum relatório ainda. O primeiro sai 48 h depois da estreia.</span>'}</section>`;
