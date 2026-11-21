@@ -194,3 +194,7 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - O quadro 0 continua IDÊNTICO à thumb, mas já no 1º segundo o Sommelier faz um gesto claro (ergue a taça, troca de mão,
   olha para o objeto do tema) e o título da thumb some entre 1,4 e 2,4 s (`txtA` no `thumbTH`). Câmera aproxima durante toda a cena.
 - Nunca deixar a thumb parada só com piscada e boca mexendo durante a 1ª fala inteira.
+- (21/11, vídeo 13) "Final tá muito longo depois dos cards": além da tabela, o BRINDE mudo deixava ~4 s de silêncio entre o
+  "inscreva-se" e o "Wine Know. Dark Divino.". Agora: CTA termina 0,3 s após a fala, brinde 1,5 s, voz do logo 0,3 s após o corte
+  (`scripts/apertar_final.py`). Silêncio máximo no fim ≈ 2 s.
+- (21/11, vídeo 19) "Tá demorando pra sair da thumb, o personagem tá falando muito sem ação": vale a regra da abertura viva acima.

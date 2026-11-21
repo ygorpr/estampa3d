@@ -1,0 +1,79 @@
+{
+ "roteiro": [
+  "Por que tem taça de vinho de tudo quanto é jeito? Alta, redonda, fininha, rasinha... Quem inventou cada uma?",
+  "Tem rainha da França, câmera que enxerga gás, briga entre França e Alemanha... e uma taça pra cada uva! Fica comigo!",
+  "A haste, o cabinho, já ganhou vídeo próprio aqui no canal. Hoje é o formato do copo, e tudo começa no vinho branco!",
+  "Na Holanda e na Alemanha dos anos mil e seiscentos, o branco tinha taça própria: o roemer. Vidro verde, com bolinhas de vidro na haste, pra mão não escorregar.",
+  "E por que verde? Porque o vidro esverdeado deixava o vinho branco com cor de ouro!",
+  "Nessa época, o champanhe, o vinho com bolinhas da França, virou moda na Inglaterra. E bebia-se em taças altas e estreitas: a flûte, que em francês quer dizer flauta!",
+  "Aí, nos anos mil oitocentos e trinta, aparece a rival: a coupe, larga e rasinha, quase um pratinho com pé.",
+  "E vem a lenda: dizem que a coupe foi moldada no seio da rainha Maria Antonieta. Lenda! A rainha morreu em mil setecentos e noventa e três, uns quarenta anos antes da coupe virar moda.",
+  "O que existe é outra peça: uma tigela de porcelana pra beber leite, feita pra leiteria de luxo da rainha. E até essa história de molde... ninguém prova!",
+  "A coupe viveu seu auge entre as duas guerras mundiais. Depois, a flûte voltou com tudo. Mas qual é melhor?",
+  "Um físico francês mediu com uma câmera que enxerga gás: logo depois de servir, em cima da flûte tinha o dobro do gás das bolhas do que na coupe!",
+  "A coupe deixa a bolha fugir. Só que a flûte, de boca apertada, esconde o perfume. Por isso, muito especialista hoje prefere a tulipa: larga no meio e fechadinha na boca, como a flor!",
+  "E os profissionais? Precisavam de uma taça igual pra todo mundo. Em mil novecentos e sessenta e oito, a Alemanha propôs um modelo... e a França, outro!",
+  "Em mil novecentos e setenta, numa reunião na Turquia, venceu o francês! É a taça INAO, do instituto francês que cuida dos vinhos com nome de lugar. Depois, virou norma mundial.",
+  "Pequena, uns duzentos e quinze mililitros, com formato de ovo: a boca mais estreita que a barriga, pra prender o cheiro. Vale até hoje!",
+  "E as taças Bordeaux e Borgonha? Os nomes vêm de duas regiões de vinho da França. Mas quem fez disso uma regra foi um austríaco: Claus Riedel.",
+  "Em mil novecentos e cinquenta e oito, ele ganhou um grande prêmio em Bruxelas com uma taça de Borgonha lisa e fina. Em mil novecentos e setenta e três, lançou uma taça pra cada uva!",
+  "A de Borgonha tem o bojo, a parte redonda, feito um balão: cabe mais de um litro! É pra uvas de perfume delicado, como a Pinot Noir. A Bordeaux é mais alta, pros tintos encorpados, mais pesados na boca.",
+  "E a de branco é menor: o vinho fica gelado por mais tempo, e o cheiro, que no frio é tímido, fica pertinho do nariz.",
+  "Mas precisa de uma pra cada vinho? Um estudo alemão mostrou que o formato muda o cheiro, sim. Mas a famosa crítica inglesa Jancis Robinson acha que uma só resolve.",
+  "Em dois mil e dezoito, ela lançou uma taça só, pra tudo: tinto, branco, rosé... e até espumante!",
+  "Então, em casa: vidro fino e liso, bojo largo, boca um pouco mais fechada. E se hoje for no copo americano do boteco... tudo bem também!",
+  "Resumindo: a verde era do branco, a flûte veio da Inglaterra, a coupe não é da rainha, a INAO é dos profissionais... e a Riedel deu uma taça pra cada uva!",
+  "Curtiu? Se inscreve no canal e me conta: em casa, você bebe vinho em qual taça?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "flûte",
+   "fala": "flút",
+   "fonte": "francês /flyt/ (Wiktionary \"flûte\"); o som /y/ não existe em português, \"flút\" é o mais próximo — dono decide"
+  },
+  {
+   "escreve": "coupe",
+   "fala": "cúp",
+   "fonte": "francês /kup/ (Wiktionary \"coupe\")"
+  },
+  {
+   "escreve": "roemer",
+   "fala": "rúmer",
+   "fonte": "holandês /ˈru.mər/ (Wiktionary \"roemer\"); alemão Römer /ˈʁøːmɐ/"
+  },
+  {
+   "escreve": "INAO",
+   "fala": "Inaô",
+   "fonte": "sigla francesa lida como palavra, /i.na.o/ (Institut National des Appellations d'Origine)"
+  },
+  {
+   "escreve": "Bordeaux",
+   "fala": "Bordô",
+   "fonte": "francês /bɔʁ.do/ (Wiktionary \"Bordeaux\"); em português \"bordô\""
+  },
+  {
+   "escreve": "Borgonha (Bourgogne)",
+   "fala": "Borgonha (português)",
+   "fonte": "francês /buʁ.ɡɔɲ/ (Wiktionary \"Bourgogne\"); a fala usa o nome em português"
+  },
+  {
+   "escreve": "Claus Riedel",
+   "fala": "Kláus Rídel",
+   "fonte": "alemão /klaʊs ˈʁiːdl̩/ (Duden: \"ie\" = /iː/); mesma forma do vídeo 13"
+  },
+  {
+   "escreve": "Pinot Noir",
+   "fala": "Pinô Nuár",
+   "fonte": "francês /pi.no nwaʁ/ (Wiktionary; já aprovado no canal)"
+  },
+  {
+   "escreve": "Jancis Robinson",
+   "fala": "Djânsis Róbinson",
+   "fonte": "inglês: Robinson /ˈrɒb.ɪn.sən/ (Cambridge \"Robinson\"); Jancis é nome raro, sem verbete em dicionário, /ˈdʒæn.sɪs/ provável — CONFIRMAR com o dono"
+  }
+ ],
+ "duracao": "~3 min 45 s",
+ "obs": "A origem de cada formato de taça, em linha do tempo: roemer verde do vinho branco (Holanda/Alemanha, séc. XVII; verde dava cor de ouro); champanhe vira moda na Inglaterra e as taças altas e estreitas (flûte = flauta) ficam populares no fim do séc. XVII; coupe larga nos anos 1830, auge entre as guerras; MITO desmentido: não foi moldada no seio de Maria Antonieta (morreu em 1793; o real é o bol-sein de porcelana de Sèvres, para leite, da leiteria de Rambouillet — e até esse molde é lenda); ciência de Liger-Belair (PLoS ONE 2012: câmera infravermelha, o dobro de CO2 sobre a flûte; flûte 'ingênua' para o aroma → tulipa); taça INAO/ISO (Londres 1968, Ancara 1970, AFNOR 1971, ISO 3591:1977, ~215 ml, formato de ovo, confirmada em 2022); Claus Riedel (Bruxelas 1958, linha Sommeliers 1973; Borgonha 1.050 ml, Bordeaux mais alta); taça de branco menor; estudo alemão (Hummel) e taça única de Jancis Robinson (2018). Não repete o vídeo 13 (haste) nem o 22 (girar).",
+ "fontes": "Rijksmuseum e Chrysler Museum (roemer); V&A (flûte, Riedel); Graham Harding (Oxford), EHNE/Sorbonne 'The European champagne glass'; Snopes, The Smart Set, Slate.fr (mito); Britannica (Maria Antonieta); The Met e Sèvres Cité de la céramique (bol-sein de Rambouillet); Liger-Belair et al., PLoS ONE 2012; Decanter (Krebiehl, 2016); ISO 3591:1977 e ISO News 2013; Syndicat des Côtes-du-Rhône (história do copo INAO); AFNOR NF V09-110; Riedel (Sommeliers, Burgundy/Bordeaux Grand Cru); Wine Folly; Wine Enthusiast; Hummel et al., Appetite 2003 (PubMed); JancisRobinson.com (2018)"
+}

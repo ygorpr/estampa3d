@@ -30,7 +30,7 @@ Cada decisão chega como comentário: executar, responder no thread e resolver. 
 
 ## FECHAMENTO OBRIGATÓRIO (erro real nos vídeos 11 e 12: "não teve final")
 A ordem do fim é SEMPRE: fala de resumo → **tabela final** → CTA (inscreva-se) → **cena de fechamento** → **logo**.
-- Tempos: `scripts/mins.py` + `scripts/fechamento.py` (já com a regra nova).
+- Tempos: `scripts/mins.py` + `scripts/fechamento.py` e DEPOIS `scripts/apertar_final.py` (CTA justo, brinde 1,5 s, voz do logo logo em seguida: nunca mais de ~2 s mudo no fim). Abertura viva: gesto já no 1º segundo e `txtA` apagando o título da thumb entre 1,4 e 2,4 s.
 - **Tabela final** (5 cartões, sem legenda): cartões entram um a um (~1 s cada) ENQUANTO o narrador faz o resumo; depois da fala, no máximo ~2 s
   de tabela parada e já entra o CTA. **NUNCA pausa muda longa** (> 2,5 s sem fala) em nenhuma parte do vídeo — ordem do dono (vídeo 15, 21/11).
 - **Cena de fechamento** (sem fala, sem legenda, ~3 s): o Sommelier ergue a taça pela haste num brinde, câmera aproxima, música sobe.
