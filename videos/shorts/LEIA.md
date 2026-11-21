@@ -61,3 +61,25 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Como girar o vinho sem derramar? (32)
 - **Descrição:** Poucos segundos já bastam: gira, para e leva logo ao nariz. Para não derramar, deixa a taça apoiada na mesa e faz pequenos círculos. Enche só até o bojo, e espumante não se gira!
 - **Hashtags:** #vinho #dicasdevinho #sommelier
+## Vídeo 20: Dá para abrir champanhe com espada?
+
+### abrir-champanhe-com-espada-corte1.mp4 (43,5 s, origem 0:36,1–1:18,0)
+- **Título:** Por que o sabre abre a garrafa? (31)
+- **Descrição:** Quem abre o espumante não é o fio do sabre: é a pressão! São umas seis atmosferas lá dentro, e o vidro tem dois pontos fracos, a costura e o anel da boca. Um golpe no lugar certo e rolha e anel voam juntos. Não tente sem saber: vídeo completo no canal.
+- **Hashtags:** #espumante #champanhe #sabrage
+
+### abrir-champanhe-com-espada-corte2.mp4 (34,9 s, origem 1:29,2–2:02,5)
+- **Título:** Napoleão abria champanhe no sabre? (34)
+- **Descrição:** Dizem que os hussardos, os soldados a cavalo de Napoleão, abriam garrafas com o sabre para impressionar Madame Clicquot. Bonito, mas ninguém prova: é lenda! Certo mesmo é a Confraria do Sabre de Ouro, criada na França em 1986.
+- **Hashtags:** #champanhe #historia #curiosidades
+## Vídeo 21: O saca-rolhas nasceu numa arma?
+
+### o-saca-rolhas-nasceu-numa-arma-corte1.mp4 (30,1 s, origem 0:17,0–0:45,5)
+- **Título:** O saca-rolhas nasceu numa arma? (31)
+- **Descrição:** Nos anos 1600, quando o tiro do mosquete falhava, a bala e a bucha ficavam presas no cano. A solução era uma espiral de ferro na ponta da vareta, o "gun worm", a minhoca da arma. Ela gira, fisga e puxa tudo pra fora. Te lembra alguma coisa?
+- **Hashtags:** #vinho #sacarolhas #curiosidades
+
+### o-saca-rolhas-nasceu-numa-arma-corte2.mp4 (31,1 s, origem 1:50,0–2:19,5)
+- **Título:** O abridor de garçom que você tem em casa (40)
+- **Descrição:** O abridor de garçom foi patenteado em 1882 pelo alemão Karl Wienke: espiral, alavanca e lâmina pro lacre, num canivete que cabe no bolso do avental. Em inglês é a "wine key". Dizem que o nome veio de Wienke mal pronunciado, mas ninguém prova.
+- **Hashtags:** #vinho #sacarolhas #historia
