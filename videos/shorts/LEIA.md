@@ -39,3 +39,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Vinho escuro é encorpado? Nem sempre! (37)
 - **Descrição:** A cor vem da casca, não do peso. O Barolo, da uva Nebbiolo, é clarinho e é um dos tintos mais potentes da Itália. E encorpado não quer dizer melhor: corpo é estilo, não é nota. Pra guardar: leves, Pinot Noir e Sauvignon Blanc; médio, Merlot; encorpados, Cabernet Sauvignon, Syrah, Malbec e Chardonnay de barril.
 - **Hashtags:** #vinho #mitosdovinho #sommelier
+## Vídeo 16: As "lágrimas" do vinho na taça
+
+### as-lagrimas-do-vinho-corte1.mp4 (32,6 s, origem 1:03,5–1:34,5)
+- **Título:** Por que o vinho "chora" na taça? (32)
+- **Descrição:** Quando você gira a taça, fica uma camada fininha de vinho no vidro. O álcool evapora primeiro, lá em cima sobra mais água, e a água puxa mais forte: o vinho sobe contra a gravidade, fica pesado e cai em gotas. São as lágrimas! Vídeo completo no canal.
+- **Hashtags:** #vinho #curiosidades #ciencia
+
+### as-lagrimas-do-vinho-corte2.mp4 (32,9 s, origem 2:38,3–3:09,6)
+- **Título:** Lágrima no vinho é sinal de qualidade? Não! (43)
+- **Descrição:** As lágrimas na taça não mostram vinho bom, e também não são a glicerina. Elas mostram álcool: mais álcool, mais lágrimas. Vinho doce escorre mais devagar, e o calor e a umidade da sala mudam tudo. Vídeo completo no canal.
+- **Hashtags:** #vinho #mitosdovinho #dicasdevinho
