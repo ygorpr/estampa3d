@@ -177,7 +177,7 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - O dono fixa o comentário ao publicar (não temos acesso de escrita ao YouTube).
 
 ## Cofre do Obsidian (pedido do dono, 21/11)
-- TUDO do Wine Know também vai para o cofre do Obsidian em `C:\Users\User\Desktop\GPT - WINE KNOW` (computador do dono).
+- TUDO do Wine Know também vai para o cofre do Obsidian em `E:\Users\User\Desktop\GPT - WINE KNOW` (computador do dono).
 - Estrutura: "Wine Know - Inicio.md" (índice) · 00 Regras e habilidade · 01 Videos/<NN-tema>/(roteiro, pesquisa, youtube) · 02 Painel e equipe · 03 Pauta.
   Cópia no repositório: `obsidian-wine-know/` (+ .zip).
 - Sempre que algo mudar (regra, roteiro, pacote, relatório), atualizar `obsidian-wine-know/` e, se a pasta do computador estiver
