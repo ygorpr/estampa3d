@@ -2,6 +2,7 @@
 // o: set(x,t) fundo · back(h,t) atrás do Sommelier · hl/hr alvo das mãos (mundo, z) · face{} · front(f,hl,hr,hp,t) objetos e mãos
 //    l1/l2 textos (s1/s2 tamanho máx.) · cam{} opcional · dim (0..1) véu do fundo
 //    right:true = ESPELHADA: Sommelier à esquerda, texto à direita (câmera em x≈1577, véu vindo da direita)
+//    txtA opcional: opacidade do título/selo (abertura viva: some entre 1,4 e 2,4 s)
 //    over(T,t) opcional: desenha por cima do véu (no espaço da tela) — ex.: rolha voando
 function fitSize(txt,max,maxW){const c=document.createElement('canvas').getContext('2d');c.font=`900 100px Cinzel`;const w=c.measureText(txt).width;return Math.min(max,Math.floor(maxW/w*100))}
 function thumbTH(t,o){const R=!!o.right,sg=R?-1:1,u=easeIO(seg(t,.6,LEN[0])),c0=o.cam||(R?{x:1577,y:500,z:1.7}:{x:1080,y:500,z:1.7}),cam={x:c0.x+sg*u*10,y:c0.y-u*6,z:c0.z+u*.07,b:[6,0,0]};
@@ -15,5 +16,5 @@ function thumbTH(t,o){const R=!!o.right,sg=R?-1:1,u=easeIO(seg(t,.6,LEN[0])),c0=
  ctx.save();ctx.setTransform(1,0,0,1,0,0);const v=R?ctx.createLinearGradient(W,0,W*.38,0):ctx.createLinearGradient(0,0,W*.62,0);v.addColorStop(0,'rgba(16,3,7,.92)');v.addColorStop(.75,'rgba(16,3,7,.42)');v.addColorStop(1,'rgba(16,3,7,0)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);ctx.restore();
  if(o.over){ctx.save();ctx.setTransform(1,0,0,1,0,0);o.over(ctx,t,cam);ctx.restore()}
  const TX=R?W-545:545,T_=layer('t',null),s1=fitSize(o.l1,o.s1||90,740),s2=fitSize(o.l2,o.s2||124,740);
- const y2=598-s2/2;goldText(T_,o.l1,TX,y2-s2/2-14-s1/2,s1,'Cinzel',900);goldText(T_,o.l2,TX,y2,s2,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(TX-340,645,680,10);blit(ctx,L.t,0);
- if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85;ctx.drawImage(LOGO,TX-62,680,124,119);ctx.restore()}}
+ const y2=598-s2/2;goldText(T_,o.l1,TX,y2-s2/2-14-s1/2,s1,'Cinzel',900);goldText(T_,o.l2,TX,y2,s2,'Cinzel',900);T_.fillStyle='#B0122E';T_.fillRect(TX-340,645,680,10);const tA=o.txtA==null?1:o.txtA;blit(ctx,L.t,0,tA);
+ if(LOGO.complete){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=.85*tA;ctx.drawImage(LOGO,TX-62,680,124,119);ctx.restore()}}

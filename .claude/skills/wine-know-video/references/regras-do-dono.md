@@ -188,3 +188,9 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   resumo). Tabela final = cartões entram durante o resumo + no máximo 2 s parada → CTA → brinde (3,2 s) → logo. `mins.py`: tabela = fala do resumo + 2 s.
 - **Personagem SEMPRE apoiado onde está** (barco, chão, banco, balcão): nunca flutuando ao lado. Ex.: o barqueiro do rabelo fica EM CIMA do
   estrado da popa, não na água ao lado. Conferir nos stills cada cena com personagem extra.
+
+## Abertura viva logo de cara (pedido do dono, 21/11, vídeo 18)
+- "Tá demorando muito no começo o personagem falando com a thumb; tem que se movimentar logo."
+- O quadro 0 continua IDÊNTICO à thumb, mas já no 1º segundo o Sommelier faz um gesto claro (ergue a taça, troca de mão,
+  olha para o objeto do tema) e o título da thumb some entre 1,4 e 2,4 s (`txtA` no `thumbTH`). Câmera aproxima durante toda a cena.
+- Nunca deixar a thumb parada só com piscada e boca mexendo durante a 1ª fala inteira.
