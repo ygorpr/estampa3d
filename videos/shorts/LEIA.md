@@ -94,3 +94,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Vinho de 1945 que só existia desde 1982?! (41)
 - **Descrição:** Em 1985, uma garrafa com as iniciais de Thomas Jefferson foi vendida por 156 mil dólares, e peritos disseram depois que a gravação era falsa. E Rudy Kurniawan, o maior falsificador de vinho já preso, foi pego vendendo um vinho de 1945 que o produtor só começou a fazer em 1982!
 - **Hashtags:** #vinho #fraude #historia
+## Vídeo 17: A praga que quase acabou com o vinho (filoxera)
+
+### filoxera-a-praga-do-vinho-corte1.mp4 (40,0 s, origem 0:23,3–1:01,7)
+- **Título:** O inseto que quase acabou com o vinho (37)
+- **Descrição:** A filoxera é um inseto de um milímetro, parente do pulgão, que chupa a raiz da videira até a planta morrer. O nome vem do grego, "folha seca". Ela veio da América do Norte e, pela explicação mais aceita, cruzou o oceano viva graças ao navio a vapor. Vídeo completo no canal.
+- **Hashtags:** #vinho #filoxera #curiosidades
+
+### filoxera-a-praga-do-vinho-corte2.mp4 (34,2 s, origem 2:46,7–3:19,3)
+- **Título:** Quem escapou da praga do vinho? (31)
+- **Descrição:** Hoje, quase todo vinho europeu nasce de videira enxertada em raiz americana. Mas o Chile, protegido pelos Andes, pelo deserto e pelo mar, nunca foi atingido, e em Colares, Portugal, as videiras crescem na areia da praia. E no Brasil? A filoxera está aqui, mas a uva Isabel aguenta.
+- **Hashtags:** #vinho #filoxera #historiadovinho
