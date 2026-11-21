@@ -27,3 +27,15 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Por que vinho velho fica cor de tijolo? (39)
 - **Descrição:** Com a idade, o vermelho do vinho cai e o amarelo sobe. Também tem rosé, branco de uva tinta e vinho laranja. A dica de sommelier é inclinar a taça sobre uma toalha branca e olhar a borda.
 - **Hashtags:** #vinho #sommelier #dicasdevinho
+
+## Vídeo 18: O que é vinho encorpado?
+
+### o-que-e-vinho-encorpado-corte1.mp4 (38,8 s, origem 0:15,9–0:53,1)
+- **Título:** Vinho encorpado é leite integral? (33)
+- **Descrição:** Faz o teste: leite desnatado e leite integral. O integral pesa mais na boca, e isso é corpo! Vinho leve é o desnatado, o médio é o integral e o encorpado é quase um creme de leite. Mas vinho não tem gordura: segundo os especialistas, quem dá o peso é o álcool. Vídeo completo no canal.
+- **Hashtags:** #vinho #vinhoencorpado #dicasdevinho
+
+### o-que-e-vinho-encorpado-corte2.mp4 (36,1 s, origem 1:58,9–2:33,4)
+- **Título:** Vinho escuro é encorpado? Nem sempre! (37)
+- **Descrição:** A cor vem da casca, não do peso. O Barolo, da uva Nebbiolo, é clarinho e é um dos tintos mais potentes da Itália. E encorpado não quer dizer melhor: corpo é estilo, não é nota. Pra guardar: leves, Pinot Noir e Sauvignon Blanc; médio, Merlot; encorpados, Cabernet Sauvignon, Syrah, Malbec e Chardonnay de barril.
+- **Hashtags:** #vinho #mitosdovinho #sommelier
