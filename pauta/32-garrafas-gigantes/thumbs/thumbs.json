@@ -1,0 +1,17 @@
+{
+ "A": "GARRAFA COM / NOME DE REI?",
+ "B": "GARRAFA DE / 30 LITROS!",
+ "C": "QUEM É / NABUCODONOSOR?",
+ "recomendada": "A",
+ "porque": "É a pergunta do título do vídeo, dita do jeito mais claro, e a imagem responde na hora: uma garrafa gigante, maior que o Sommelier, com uma COROA no topo. O rosto espantado fica no meio, entre a garrafa normal e a gigante, e a comparação de tamanho se entende em meio segundo. Se o dono preferir texto à direita, a B (30 litros, com a etiqueta \"40 garrafas\") é a melhor alternativa.",
+ "tituloYouTube": {
+  "A": "Por que a garrafa gigante de vinho tem nome de rei?",
+  "B": "Garrafa de 30 litros! Os nomes das garrafas gigantes de vinho",
+  "C": "Quem é Nabucodonosor? Os reis por trás das garrafas gigantes de champanhe"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

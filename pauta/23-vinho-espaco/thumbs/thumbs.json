@@ -1,0 +1,17 @@
+{
+ "A": "VINHO FOI / PRO ESPAÇO!",
+ "B": "14 MESES / NO ESPAÇO",
+ "C": "O ESPAÇO / ENVELHECE VINHO?",
+ "recomendada": "B",
+ "porque": "Texto à direita (o formato que o dono costuma escolher), curto e grande, e já diz o fato surpreendente do vídeo. A imagem completa a frase sem precisar ler: a Terra azul atrás do Sommelier, a Estação Espacial e um astronauta flutuando pela janela do bar, e a garrafa de tinto na mão dele (pelo gargalo, rótulo livre). O azul da Terra contrasta com o bordô e chama o olho no celular.",
+ "tituloYouTube": {
+  "A": "Esse vinho foi pro espaço! O que aconteceu com ele depois de 14 meses",
+  "B": "14 meses no espaço: o que aconteceu com esse vinho caríssimo?",
+  "C": "O espaço envelhece o vinho? O teste às cegas com o vinho que voltou da órbita"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

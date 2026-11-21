@@ -1,0 +1,17 @@
+{
+ "A": "PICASSO PINTOU / RÓTULO DE VINHO?",
+ "B": "PICASSO / NO RÓTULO?",
+ "C": "DALÍ E WARHOL / NO RÓTULO!",
+ "recomendada": "B",
+ "porque": "Texto à direita, só 3 palavras e as maiores letras das três, então lê até no celular. Diz o assunto (Picasso e rótulo de vinho) em forma de pergunta, que é exatamente a surpresa do vídeo (ele nunca pintou um rótulo para eles). Atrás do título fica o quadro de 1973 (taças e uvas estilizadas, a homenagem) e o Sommelier segura o pincel com tinta e a garrafa de rótulo artístico pelo gargalo.",
+ "tituloYouTube": {
+  "A": "Picasso pintou rótulo de vinho? A garrafa que virou museu",
+  "B": "Picasso no rótulo? A história louca do vinho que paga artistas com garrafas",
+  "C": "Dalí, Warhol e Picasso no rótulo de vinho: o château que virou galeria de arte"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}
