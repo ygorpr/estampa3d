@@ -128,3 +128,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Os 3 vilões do seu vinho (24)
 - **Descrição:** O vilão de verdade é o calor: acima de 25 graus, por muito tempo, o vinho sofre e fica com gosto de cozido. Os outros dois são a luz e a vibração. Vídeo completo no canal.
 - **Hashtags:** #vinho #dicasdevinho #comoguardarvinho
+## Vídeo 27: Tampa de rosca é vinho barato?
+
+### tampa-de-rosca-e-vinho-barato-corte1.mp4 (38,0 s, origem 1:28,4–2:04,8)
+- **Título:** Vinho com rosca envelhece? (26)
+- **Descrição:** Em 1999, o instituto de pesquisa do vinho da Austrália fechou o mesmo vinho branco com 14 tampas diferentes e foi provando ano a ano. Uns dez anos depois, quase todas as outras garrafas estavam estragadas. A da rosca seguia fresquinha! O segredo é o ar. Vídeo completo no canal.
+- **Hashtags:** #vinho #tampaderosca #curiosidades
+
+### tampa-de-rosca-e-vinho-barato-corte2.mp4 (32,8 s, origem 2:15,4–2:46,6)
+- **Título:** Vinho caro com rosca? Existe! (30)
+- **Descrição:** O Château Margaux, um dos vinhos mais caros do mundo, testa a rosca desde 2002. Na Austrália, o Hill of Grace, de quase mil dólares australianos, sai com rosca no mercado de lá. E na Califórnia um tinto caro já saiu com rosca custando mais que o de rolha!
+- **Hashtags:** #vinho #vinhotinto #mitosdovinho
