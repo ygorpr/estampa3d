@@ -175,3 +175,10 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   2ª linha = convite fixo: "E se tiver alguma dúvida de vinho, deixa aqui embaixo: as melhores viram vídeo no canal! 👇"
 - Objetivo: fazer as pessoas responderem. O Rodrigo lê as respostas no relatório; dúvidas viram "Pedido do público" na pauta.
 - O dono fixa o comentário ao publicar (não temos acesso de escrita ao YouTube).
+
+## Cofre do Obsidian (pedido do dono, 21/11)
+- TUDO do Wine Know também vai para o cofre do Obsidian em `C:\Users\User\Desktop\GPT - WINE KNOW` (computador do dono).
+- Estrutura: "Wine Know - Inicio.md" (índice) · 00 Regras e habilidade · 01 Videos/<NN-tema>/(roteiro, pesquisa, youtube) · 02 Painel e equipe · 03 Pauta.
+  Cópia no repositório: `obsidian-wine-know/` (+ .zip).
+- Sempre que algo mudar (regra, roteiro, pacote, relatório), atualizar `obsidian-wine-know/` e, se a pasta do computador estiver
+  conectada (Remote Control / sessão local), gravar lá também. Se não estiver, mandar o .zip para o dono.

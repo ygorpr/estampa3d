@@ -12,6 +12,7 @@ Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skill
   pronúncia por dicionário, 3 thumbs que dizem o assunto, voz só após aprovação, gestos, avisos, bolhas, personagens extras).
 - Situação atual dos vídeos: `pauta/STATUS.md` e o painel https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB (ver `.claude/skills/wine-know-video/references/painel.md`). Biblioteca de cenários: `.claude/skills/wine-know-video/engine/lib/`.
 - Responder ao dono SEMPRE em português.
+- Cofre do Obsidian de tudo do Wine Know: `C:\Users\User\Desktop\GPT - WINE KNOW` (cópia no repo em `obsidian-wine-know/`).
 
 ## Referência de qualidade (APROVADA pelo dono do canal)
 - **`videos/sobrou-vinho-narrado-paulo.mp4`** é o vídeo-modelo. Todo vídeo novo deve chegar neste nível.
