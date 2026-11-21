@@ -50,3 +50,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Lágrima no vinho é sinal de qualidade? Não! (43)
 - **Descrição:** As lágrimas na taça não mostram vinho bom, e também não são a glicerina. Elas mostram álcool: mais álcool, mais lágrimas. Vinho doce escorre mais devagar, e o calor e a umidade da sala mudam tudo. Vídeo completo no canal.
 - **Hashtags:** #vinho #mitosdovinho #dicasdevinho
+## Vídeo 22: Por que a gente gira o vinho na taça?
+
+### por-que-a-gente-gira-o-vinho-corte1.mp4 (41,9 s, origem 0:47,0–1:27,3)
+- **Título:** A onda que gira dentro da taça (30)
+- **Descrição:** Em 2011, físicos da Politécnica de Lausanne, na Suíça, filmaram um vinho girando em câmera lenta e viram uma onda! Ela funciona como uma bomba: leva o vinho de baixo pra cima e do centro pra borda, e mistura até o ar. Vídeo completo no canal.
+- **Hashtags:** #vinho #curiosidades #ciencia
+
+### por-que-a-gente-gira-o-vinho-corte2.mp4 (39,1 s, origem 2:25,7–3:03,2)
+- **Título:** Como girar o vinho sem derramar? (32)
+- **Descrição:** Poucos segundos já bastam: gira, para e leva logo ao nariz. Para não derramar, deixa a taça apoiada na mesa e faz pequenos círculos. Enche só até o bojo, e espumante não se gira!
+- **Hashtags:** #vinho #dicasdevinho #sommelier
