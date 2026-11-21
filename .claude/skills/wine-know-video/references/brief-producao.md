@@ -18,5 +18,8 @@ Portanto você PODE gerar a voz (uma única vez). Siga também o briefing comum:
 
 ## FECHAMENTO OBRIGATÓRIO (o dono reclamou 2x: "não teve final")
 Ordem: resumo → TABELA FINAL (cartões entram durante a fala do resumo; depois da fala no máx. ~2 s parada; sem legenda; NUNCA pausa muda > 2,5 s) → CTA → CENA DE FECHAMENTO
-(~3 s, sem fala: Sommelier ergue a taça num brinde, câmera aproxima, música sobe) → LOGO 3,5 s. Pode passar de 3 min.
+(1,5 s, sem fala: Sommelier ergue a taça num brinde) → LOGO 3,5 s com a voz "Wine Know. Dark Divino." 0,3 s após o corte. Rode scripts/apertar_final.py depois de fechamento.py: silêncio máximo no fim ≈ 2 s.
+
+## ABERTURA VIVA (regra do dono, 21/11)
+O quadro 0 é a thumb idêntica, mas já no 1º segundo o Sommelier faz um gesto claro do assunto (ergue a garrafa/taça, aponta o objeto) e o título some entre 1,4 e 2,4 s (`txtA:1-easeIO(seg(t,1.4,2.4))` no thumbTH). Nunca a thumb parada durante a 1ª fala.
 Também: se o dono escreveu um pedido junto com a escolha da thumb, ele está no campo "pedido" do painel e é OBRIGATÓRIO.

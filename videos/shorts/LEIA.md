@@ -83,3 +83,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** O abridor de garçom que você tem em casa (40)
 - **Descrição:** O abridor de garçom foi patenteado em 1882 pelo alemão Karl Wienke: espiral, alavanca e lâmina pro lacre, num canivete que cabe no bolso do avental. Em inglês é a "wine key". Dizem que o nome veio de Wienke mal pronunciado, mas ninguém prova.
 - **Hashtags:** #vinho #sacarolhas #historia
+## Vídeo 19: A garrafa de vinho mais cara do mundo
+
+### a-garrafa-de-vinho-mais-cara-do-mundo-corte1.mp4 (36,0 s, origem 1:04,8–1:39,2)
+- **Título:** O inseto que quase acabou com o vinho (37)
+- **Descrição:** A filoxera, um inseto minúsculo vindo da América, come a raiz da videira e, a partir de 1860, arrasou os vinhedos da Europa. A saída foi o enxerto numa raiz americana. Mas o Romanée-Conti salvou as videiras velhas... até 1945, quando deu só umas 600 garrafas. Vídeo completo no canal.
+- **Hashtags:** #vinho #filoxera #curiosidades
+
+### a-garrafa-de-vinho-mais-cara-do-mundo-corte2.mp4 (41,3 s, origem 2:35,3–3:14,9)
+- **Título:** Vinho de 1945 que só existia desde 1982?! (41)
+- **Descrição:** Em 1985, uma garrafa com as iniciais de Thomas Jefferson foi vendida por 156 mil dólares, e peritos disseram depois que a gravação era falsa. E Rudy Kurniawan, o maior falsificador de vinho já preso, foi pego vendendo um vinho de 1945 que o produtor só começou a fazer em 1982!
+- **Hashtags:** #vinho #fraude #historia
