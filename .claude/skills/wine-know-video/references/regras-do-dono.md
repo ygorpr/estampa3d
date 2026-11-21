@@ -79,7 +79,7 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
 - Nada encosta na legenda (avisos, garrafas, placas: até y≈880). Texto não sai de placa/cartão.
 - **Bolhas e líquidos só dentro do recipiente** (`fluteBubbles` recorta no bojo da taça). Sem bolha na haste.
 - Legenda = exatamente a fala, karaokê, **no máximo 2 linhas**. Sem legenda na tabela final e no logo.
-- Marca d'água grande e clarinha. Tabela final em 5 cartões dourados, **com tempo para ler: cartões entram com calma e ficam parados ~8 s**,
+- Marca d'água grande e clarinha. Tabela final em 5 cartões dourados, **cartões entram durante a fala do resumo; depois dela no máximo ~2 s parada (a pausa de 8 s foi REPROVADA em 21/11)**,
   depois um fechamento (brinde do Sommelier, música subindo) antes do logo. Erro real (vídeo 12): "não teve final" — pode passar dos 3 min. CTA no canto superior esquerdo. Logo + "Wine Know. Dark Divino."
 
 ## 9. Voz e som
@@ -182,3 +182,9 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   Cópia no repositório: `obsidian-wine-know/` (+ .zip).
 - Sempre que algo mudar (regra, roteiro, pacote, relatório), atualizar `obsidian-wine-know/` e, se a pasta do computador estiver
   conectada (Remote Control / sessão local), gravar lá também. Se não estiver, mandar o .zip para o dono.
+
+## Correções do vídeo 15 (21/11) — valem para TODOS os próximos
+- **Sem pausa longa**: nenhum trecho do vídeo pode ficar mais de ~2,5 s sem fala (o dono reprovou a tabela final parada 8,5 s depois do
+  resumo). Tabela final = cartões entram durante o resumo + no máximo 2 s parada → CTA → brinde (3,2 s) → logo. `mins.py`: tabela = fala do resumo + 2 s.
+- **Personagem SEMPRE apoiado onde está** (barco, chão, banco, balcão): nunca flutuando ao lado. Ex.: o barqueiro do rabelo fica EM CIMA do
+  estrado da popa, não na água ao lado. Conferir nos stills cada cena com personagem extra.

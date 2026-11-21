@@ -30,8 +30,9 @@ Cada decisão chega como comentário: executar, responder no thread e resolver. 
 
 ## FECHAMENTO OBRIGATÓRIO (erro real nos vídeos 11 e 12: "não teve final")
 A ordem do fim é SEMPRE: fala de resumo → **tabela final** → CTA (inscreva-se) → **cena de fechamento** → **logo**.
-- **Tabela final** (5 cartões, sem legenda): cartões entram um a um com calma (~1 s cada) e ficam PARADOS ≥ 8 s; a cena tem **≥ 14 s**.
-  Se a tabela tem fala por cima, a cena dura a fala + 8 s de tabela parada.
+- Tempos: `scripts/mins.py` + `scripts/fechamento.py` (já com a regra nova).
+- **Tabela final** (5 cartões, sem legenda): cartões entram um a um (~1 s cada) ENQUANTO o narrador faz o resumo; depois da fala, no máximo ~2 s
+  de tabela parada e já entra o CTA. **NUNCA pausa muda longa** (> 2,5 s sem fala) em nenhuma parte do vídeo — ordem do dono (vídeo 15, 21/11).
 - **Cena de fechamento** (sem fala, sem legenda, ~3 s): o Sommelier ergue a taça pela haste num brinde, câmera aproxima, música sobe.
 - **Logo** 3,5 s com o áudio "Wine Know. Dark Divino.".
 - Em `plan_timing.py` passe `--min` com esses mínimos (ex.: `--min 3 3 ... 14 6 3 3.5`) e acrescente a cena de fechamento no LEN.

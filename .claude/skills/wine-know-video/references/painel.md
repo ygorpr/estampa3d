@@ -10,7 +10,7 @@ para manter o link. Imagens e prévias vão como `files` (`thumbs/...`, `previas
 2. **Roteiro** — pesquisa profunda + roteiro + pronúncia. Dono: Aprovar / Mudar (com comentário).
 3. **Thumbnail** — 3 opções A/B/C (pelo menos uma com texto à DIREITA — ele costuma escolher assim). **Escolher a letra = aprovar a execução**
    (pode gerar a voz). Junto vem um campo "pedido para o vídeo": obrigatório seguir.
-4. **Produção** — voz (ElevenLabs), cenas, render. Fechamento obrigatório (tabela parada ≥8 s, brinde, logo 3,5 s).
+4. **Produção** — voz (ElevenLabs), cenas, render. Fechamento obrigatório (tabela durante o resumo + no máx. 2 s parada, CTA, brinde, logo 3,5 s; sem pausas mudas longas).
 5. **Revisão** — vídeo com prévia 480p (`painel/previas/<slug>.mp4`) para ele assistir no painel. Aprovar → 6. Ajustar → FICA na Revisão
    com estado "Ajustando o vídeo" até voltar para "Sua vez" (não volta para Produção).
 6. **Entregue e aprovado**.

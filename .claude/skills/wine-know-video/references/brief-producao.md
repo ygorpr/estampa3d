@@ -17,6 +17,6 @@ Portanto você PODE gerar a voz (uma única vez). Siga também o briefing comum:
 5. Relatório curto em português: duração, o que conferiu, problemas, e lembrar "áudio medido, não ouvido".
 
 ## FECHAMENTO OBRIGATÓRIO (o dono reclamou 2x: "não teve final")
-Ordem: resumo → TABELA FINAL (≥14 s; 5 cartões entram com calma e ficam PARADOS ≥8 s; sem legenda) → CTA → CENA DE FECHAMENTO
+Ordem: resumo → TABELA FINAL (cartões entram durante a fala do resumo; depois da fala no máx. ~2 s parada; sem legenda; NUNCA pausa muda > 2,5 s) → CTA → CENA DE FECHAMENTO
 (~3 s, sem fala: Sommelier ergue a taça num brinde, câmera aproxima, música sobe) → LOGO 3,5 s. Pode passar de 3 min.
 Também: se o dono escreveu um pedido junto com a escolha da thumb, ele está no campo "pedido" do painel e é OBRIGATÓRIO.
