@@ -1,0 +1,98 @@
+[
+ {
+  "bloco": 0,
+  "falas": [
+   0,
+   1,
+   2
+  ],
+  "caracteres": 470,
+  "ok": true,
+  "quando": "2026-11-21 15:56:56"
+ },
+ {
+  "bloco": 1,
+  "falas": [
+   3,
+   4,
+   5
+  ],
+  "caracteres": 409,
+  "ok": true,
+  "quando": "2026-11-21 15:57:04"
+ },
+ {
+  "bloco": 2,
+  "falas": [
+   6,
+   7,
+   8
+  ],
+  "caracteres": 364,
+  "ok": true,
+  "quando": "2026-11-21 15:57:11"
+ },
+ {
+  "bloco": 3,
+  "falas": [
+   9,
+   10,
+   11
+  ],
+  "caracteres": 452,
+  "ok": true,
+  "quando": "2026-11-21 15:57:21"
+ },
+ {
+  "bloco": 4,
+  "falas": [
+   12,
+   13,
+   14
+  ],
+  "caracteres": 428,
+  "ok": true,
+  "quando": "2026-11-21 15:57:30"
+ },
+ {
+  "bloco": 5,
+  "falas": [
+   15,
+   16,
+   17
+  ],
+  "caracteres": 498,
+  "ok": true,
+  "quando": "2026-11-21 15:57:40"
+ },
+ {
+  "bloco": 6,
+  "falas": [
+   18,
+   19,
+   20
+  ],
+  "caracteres": 544,
+  "ok": true,
+  "quando": "2026-11-21 15:57:51"
+ },
+ {
+  "bloco": 7,
+  "falas": [
+   21,
+   22
+  ],
+  "caracteres": 284,
+  "ok": true,
+  "quando": "2026-11-21 15:57:57"
+ },
+ {
+  "bloco": 8,
+  "falas": [
+   23
+  ],
+  "caracteres": 24,
+  "ok": true,
+  "quando": "2026-11-21 15:57:58"
+ }
+]
