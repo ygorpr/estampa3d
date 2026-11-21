@@ -117,3 +117,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Por que segurar a taça pela haste? (34)
 - **Descrição:** No Japão, uma câmera que enxerga o vapor do álcool mostrou um anel na borda da taça com o vinho a 13 graus. A 24 graus, o anel sumiu. Sua mão está a uns 36 graus: pela haste, o vinho fica fresco, o vidro limpo e dá pra girar. Vídeo completo no canal.
 - **Hashtags:** #vinho #sommelier #dicasdevinho
+## Vídeo 24: Por que se guarda vinho deitado?
+
+### por-que-se-guarda-vinho-deitado-corte1.mp4 (41,8 s, origem 0:24,8–1:04,9)
+- **Título:** Deitar o vinho é mito? (22)
+- **Descrição:** Dizem que, com a garrafa em pé por anos, a rolha seca, encolhe e deixa o ar entrar. Mas em 2018 a Amorim, de Portugal, a maior fabricante de rolhas do mundo, disse que é mito: dentro da garrafa a umidade fica perto de 100%, e a rolha não seca. Vídeo completo no canal.
+- **Hashtags:** #vinho #curiosidades #rolha
+
+### por-que-se-guarda-vinho-deitado-corte2.mp4 (33,1 s, origem 1:59,6–2:31,1)
+- **Título:** Os 3 vilões do seu vinho (24)
+- **Descrição:** O vilão de verdade é o calor: acima de 25 graus, por muito tempo, o vinho sofre e fica com gosto de cozido. Os outros dois são a luz e a vibração. Vídeo completo no canal.
+- **Hashtags:** #vinho #dicasdevinho #comoguardarvinho
