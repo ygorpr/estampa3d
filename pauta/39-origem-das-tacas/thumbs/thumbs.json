@@ -1,0 +1,17 @@
+{
+ "A": "DE ONDE VEM / CADA TAÇA?",
+ "B": "A COUPE NÃO É / O SEIO DA RAINHA!",
+ "C": "POR QUE CADA VINHO / TEM UMA TAÇA?",
+ "recomendada": "A",
+ "porque": "A recomendação da pesquisa: diz o assunto em 4 palavras grandes e a imagem já é a resposta visual, com a fileira iluminada de taças diferentes no alto (roemer verde, flûte, coupe, tulipa, Bordeaux, Borgonha) e o Sommelier comparando uma coupe e uma flûte, bolhas só dentro do bojo. A B é a mais curiosa (o mito de Maria Antonieta com o carimbo LENDA, texto à direita), mas o tema fica mais estreito que o vídeo.",
+ "tituloYouTube": {
+  "A": "De onde vem cada taça de vinho? (a história que ninguém conta)",
+  "B": "A taça de champanhe foi moldada no seio de Maria Antonieta? É lenda!",
+  "C": "Por que cada vinho tem uma taça diferente? Bordeaux, Borgonha, flûte e coupe"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

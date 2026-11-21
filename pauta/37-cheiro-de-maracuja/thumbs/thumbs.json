@@ -1,0 +1,17 @@
+{
+ "A": "CHEIRO DE MARACUJÁ / SEM MARACUJÁ?",
+ "B": "MARACUJÁ NO VINHO? / NÃO TEM!",
+ "C": "POR QUE ESSE VINHO / CHEIRA A MARACUJÁ?",
+ "recomendada": "A",
+ "porque": "É exatamente a pergunta do vídeo e da 1ª fala ('cheiro de maracujá sem ter um pingo de maracujá?'). A imagem mostra o paradoxo: o aroma sobe da taça de Sauvignon Blanc e forma um maracujá-fantasma no ar, enquanto o maracujá de verdade, cortado ao meio, está na outra mão. O rosto desconfiado do Sommelier fica no meio dos dois. Se o dono preferir texto à direita, a B (MARACUJÁ NO VINHO? / NÃO TEM!) tem as letras maiores.",
+ "tituloYouTube": {
+  "A": "Como o vinho tem cheiro de maracujá sem ter maracujá? A química do Sauvignon Blanc",
+  "B": "Maracujá no vinho? Não tem! De onde vem esse cheiro",
+  "C": "Por que esse vinho cheira a maracujá? O segredo do Sauvignon Blanc"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

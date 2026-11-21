@@ -139,3 +139,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Vinho caro com rosca? Existe! (30)
 - **Descrição:** O Château Margaux, um dos vinhos mais caros do mundo, testa a rosca desde 2002. Na Austrália, o Hill of Grace, de quase mil dólares australianos, sai com rosca no mercado de lá. E na Califórnia um tinto caro já saiu com rosca custando mais que o de rolha!
 - **Hashtags:** #vinho #vinhotinto #mitosdovinho
+## Vídeo 14: Pode colocar gelo no vinho?
+
+### pode-colocar-gelo-no-vinho-corte1.mp4 (38,3 s, origem 0:25,8–1:02,5)
+- **Título:** Gregos e romanos já mexiam no vinho! (36)
+- **Descrição:** Os gregos quase nunca bebiam vinho puro: misturavam com água num vaso chamado cratera. Os romanos ricos compravam neve das montanhas para gelar a bebida, e o filósofo Sêneca achava isso um luxo absurdo. Na Espanha, nasceu o "tinto de verano". Vídeo completo no canal.
+- **Hashtags:** #vinho #historia #curiosidades
+
+### pode-colocar-gelo-no-vinho-corte2.mp4 (40,5 s, origem 2:04,4–2:43,3)
+- **Título:** Temperatura ambiente? Só na Europa fria! (40)
+- **Descrição:** O "tinto em temperatura ambiente" é uma regra da Europa sem aquecedor, com a sala de jantar entre 13 e 18 graus. No verão do Brasil, a sala passa dos 30! A temperatura certa: espumante de 6 a 10 °C, branco e rosé de 7 a 12 °C, tinto de 15 a 18 °C. Vídeo completo no canal.
+- **Hashtags:** #vinho #vinhotinto #dicasdevinho

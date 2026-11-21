@@ -1,0 +1,17 @@
+{
+ "A": "AINDA SE PISA / UVA COM O PÉ?",
+ "B": "PISAR UVA / COM O PÉ?",
+ "C": "O PÉ QUE FAZ / VINHO DO PORTO",
+ "recomendada": "A",
+ "porque": "É a pergunta que o próprio vídeo responde e a primeira fala repete ('Pisar uva com o pé? Isso não ficou no passado?'). A cena conta tudo sem ler: o lagar de granito cheio de uva, a fila de pisadores de braço dado e, ao lado do Sommelier, um pisador levantando o pé roxo pingando suco. O rosto do Sommelier, olhando para ele com o cálice de Porto, é o ponto focal. A B tem o texto à direita e letras maiores, boa alternativa.",
+ "tituloYouTube": {
+  "A": "Ainda se pisa uva com o pé? O segredo dos melhores vinhos do Porto",
+  "B": "Pisar uva com o pé? Por que o Porto ainda faz assim (e o robô que imita o pé)",
+  "C": "O pé que faz vinho do Porto: por que pisar uva ainda vale a pena"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}

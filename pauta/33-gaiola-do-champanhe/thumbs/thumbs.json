@@ -1,0 +1,17 @@
+{
+ "A": "POR QUE O CHAMPANHE / TEM GAIOLINHA?",
+ "B": "PRA QUE SERVE / A GAIOLINHA?",
+ "C": "GAIOLINHA DO CHAMPANHE / 6 MEIAS-VOLTAS?",
+ "recomendada": "B",
+ "porque": "Texto à direita (o formato que o dono costuma escolher), curto e com letras grandes, lê no celular. A garrafa erguida pelo gargalo ao lado do rosto deixa a gaiolinha de arame com a plaquinha dourada bem à mostra, e o Sommelier olha para ela intrigado: a pergunta e o objeto estão juntos. A adega cavada no giz com o feixe do poço de luz já antecipa a história da plaquinha de 1844.",
+ "tituloYouTube": {
+  "A": "Por que o champanhe tem uma gaiolinha de arame? A história do muselet",
+  "B": "Pra que serve a gaiolinha do champanhe? (e quem inventou a plaquinha)",
+  "C": "A gaiolinha do champanhe abre com 6 meias-voltas? A curiosidade que ninguém conta"
+ },
+ "layout": {
+  "A": "texto à esquerda",
+  "B": "texto à direita",
+  "C": "texto à direita"
+ }
+}
