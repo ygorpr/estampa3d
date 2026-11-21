@@ -105,3 +105,15 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Quem escapou da praga do vinho? (31)
 - **Descrição:** Hoje, quase todo vinho europeu nasce de videira enxertada em raiz americana. Mas o Chile, protegido pelos Andes, pelo deserto e pelo mar, nunca foi atingido, e em Colares, Portugal, as videiras crescem na areia da praia. E no Brasil? A filoxera está aqui, mas a uva Isabel aguenta.
 - **Hashtags:** #vinho #filoxera #historiadovinho
+
+## Vídeo 13: Por que a taça de vinho tem haste?
+
+### por-que-a-taca-tem-haste-corte1.mp4 (30,2 s, origem 1:02,5–1:31,1)
+- **Título:** Imposto no vidro cobrado pelo peso?! (36)
+- **Descrição:** O cristal pesado e brilhante é inglês: nos anos 1670, George Ravenscroft fez um vidro com chumbo. Uns 70 anos depois, a Inglaterra criou um imposto sobre o vidro cobrado pelo peso, e as taças ficaram menores e mais leves. Foi nessa época que surgiu o air twist. Vídeo completo no canal.
+- **Hashtags:** #vinho #historia #curiosidades
+
+### por-que-a-taca-tem-haste-corte2.mp4 (38,3 s, origem 2:04,3–2:40,9)
+- **Título:** Por que segurar a taça pela haste? (34)
+- **Descrição:** No Japão, uma câmera que enxerga o vapor do álcool mostrou um anel na borda da taça com o vinho a 13 graus. A 24 graus, o anel sumiu. Sua mão está a uns 36 graus: pela haste, o vinho fica fresco, o vidro limpo e dá pra girar. Vídeo completo no canal.
+- **Hashtags:** #vinho #sommelier #dicasdevinho
