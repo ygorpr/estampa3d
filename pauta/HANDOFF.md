@@ -3,7 +3,7 @@
 Leia junto: `CLAUDE.md`, `.claude/skills/wine-know-video/references/regras-do-dono.md` (todas as regras, inclusive as de 21/11 no fim), `references/painel.md`.
 
 ## Painel
-- Artifact "Esteira Dark Divino": https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB — código `painel/esteira.html` (publicar com `root=painel`, arquivos `previas/*.mp4`, `thumbs/*.jpg`). Última versão publicada: v44.
+- Artifact "Esteira Dark Divino": https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB — código `painel/esteira.html` (publicar com `root=painel`, arquivos `previas/*.mp4`, `thumbs/*.jpg`). **Outra sessão também publica o painel** (24/11 21h: versão com sala da Sofia + aba Trends, doc `trends/sofia`). Antes de publicar, SEMPRE ler a versão viva (Artifact read) e partir dela.
 - **Nunca publicar sem** `node .claude/skills/wine-know-video/scripts/testar_painel.js /home/user/estampa3d/painel/esteira.html` → OK.
 - Dados: ArtifactData `videos/<id>` (etapa: pauta|roteiro|thumb|producao|revisao|entregue|studio), `equipe/agora` (v30), `escritorios/<look>`, `calendario/posts`, `canal/youtube`, `relatorios`, `config/custos`.
 - Decisões do dono chegam como comentários "[Esteira] Decisões do dono" (webhook). Responder + resolver cada thread.

@@ -259,6 +259,13 @@ ul.lst li .when{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin
 .cmt{display:flex;flex-direction:column;gap:2px;border-left:2px solid var(--candle);padding-left:8px}
 .cq{font-style:italic}
 .pill.publico{background:#5a3a12;color:#ffd9a3}
+.ideias{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.ideia{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.ideia .it{font-family:var(--f-display);font-size:15px;color:var(--cream)}
+.ideia .por{font-size:16px}
+.tag-ok{color:var(--ok)}.tag-fora{color:var(--no)}
+.fale textarea{min-height:64px}
+table.custo tr.fora td{opacity:.6}
 </style>
 
 <div class="wrap">
@@ -281,7 +288,7 @@ ul.lst li .when{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin
   </section>
 
   <section class="sec" aria-labelledby="h-nova">
-    <h2 id="h-nova">Tem um tema em mente?</h2>
+    <div class="sechead"><h2 id="h-nova">Tem um tema em mente? Fale com a Sofia</h2><span class="note">O tema vai direto para a Sofia (pauta). Para pedir uma pesquisa no Trends ou sobre um assunto específico, <button type="button" class="b ghost" data-sala="pauta" style="padding:4px 8px">entre na sala dela</button>.</span></div>
     <form class="newp" id="newp">
       <input id="newp-t" name="tema" placeholder="Ex.: Por que o vinho do Porto é mais forte?" autocomplete="off" aria-label="Tema que você quer ver">
       <button class="b" type="submit">Mandar para a pauta</button>
@@ -540,7 +547,7 @@ function renderEquipe(){
 let ESCR={}, CAL=null, salaAberta=null;
 const PASSOS={
   gerente:['Ronda de hora em hora: lê o painel e os comentários','Confere cada sala: quem terminou, quem travou','Libera o próximo trabalho que você já aprovou','Passa cada vídeo liberado para o Otávio','Repõe a pauta quando cai abaixo de 10 temas','Lê o relatório do Rodrigo e manda um recado para cada funcionário que precisa mudar algo','Atualiza a equipe e os custos','Só chama você para créditos, acesso ou decisão'],
-  pauta:['Pesquisa o que está em alta (Google, YouTube, redes) e lê os pedidos do público que o Rodrigo achou nos comentários','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho e fontes de cada tema','Coloca 10 temas na Pauta para você aceitar ou recusar'],
+  pauta:['Pesquisa o que está em alta: Google Trends (buscas em alta no Brasil, temas subindo e buscas relacionadas no YouTube), autocompletar do YouTube, Google, notícias e redes; lê os pedidos do público que o Rodrigo achou nos comentários','Escolhe temas que o leigo pergunta','Confere se o canal ainda não fez','Escreve gancho, fontes e a evidência de cada tema (ex.: "+1.500% no Trends do YouTube")','Coloca 10 temas na Pauta para você aceitar ou recusar'],
   roteiro:['Pesquisa profunda em fontes confiáveis (pesquisa.md)','Monta a linha do tempo sem buracos','Escreve as falas curtas, explicando cada palavra difícil','Fechamento obrigatório: resumo, tabela, inscrição, brinde e logo','Lista as pronúncias com dicionário','Manda para o Caio checar e depois para você aprovar'],
   checador:['Confere cada fato do roteiro com a fonte','Corta o que não se confirma','Confere a pronúncia de nomes estrangeiros (IPA)','Marca o que você precisa decidir','Libera o roteiro para a sua aprovação'],
   arte:['Lê o roteiro aprovado','Escreve 2 linhas que dizem o assunto','Monta 3 opções (A, B, C), uma com texto à direita','Confere rosto, selo pequeno e leitura no celular','Manda as 3 para você escolher'],
@@ -585,7 +592,7 @@ function resumoDe(a){
 }
 const FLUXO={
   gerente:{de:'Todas as salas mandam relatório para ela a cada ronda',para:'Libera o trabalho que você aprovou e chama você quando precisa'},
-  pauta:{de:'Pesquisa de tendências, os temas que você sugere e os pedidos do público nos comentários (via Rodrigo)',para:'Você aceita ou recusa → tema aceito vai para o Rafael'},
+  pauta:{de:'Google Trends, YouTube, Google e redes, os temas que você sugere e os pedidos do público nos comentários (via Rodrigo)',para:'Você aceita ou recusa → tema aceito vai para o Rafael'},
   roteiro:{de:'Sofia, depois que você aceita o tema',para:'Caio confere fatos e pronúncia'},
   checador:{de:'Rafael (roteiro pronto)',para:'Você aprova o roteiro → vai para a Helena'},
   arte:{de:'Roteiro aprovado por você',para:'Você escolhe A, B ou C → vai para a Produção'},
@@ -631,6 +638,59 @@ function editorialHtml(){
   const st={aguarda:'aguarda sua aprovação na Revisão',subir:'pronto · Rodrigo precisa subir no Studio',studio:'no Studio · falta agendar',agendado:'agendado no Studio',publicado:'publicado ✓'};
   return `<section class="box wide"><h4>Calendário editorial · 1 vídeo por dia</h4>${CAL.editorial?`<span class="note">${esc(CAL.editorial)}</span>`:''}
    <div style="overflow-x:auto"><table class="custo"><thead><tr><th>Dia</th><th>Hora</th><th>Vídeo</th><th>Situação</th><th>Por que nesse dia</th></tr></thead><tbody>${I.map(p=>`<tr><td>${esc(dia(p.data))}</td><td>${esc(p.hora||'')}</td><td>${esc(p.titulo)}</td><td class="note">${esc(st[p.status]||p.status||'')}</td><td class="note">${esc(p.motivo||'')}</td></tr>`).join('')}</tbody></table></div></section>`;}
+let TRENDS=null;
+const temNoPainel=t=>{const n=x=>String(x||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]/g,'').trim(); return docs.find(d=>n(d.titulo)===n(t));};
+function trendsHtml(){
+  const T=TRENDS; if(!T) return `<section class="box wide"><span class="note">Ainda não há pesquisa do Trends gravada. Peça na aba Sala: "Atualizar o Trends agora".</span></section>`;
+  const st={ideia:'Ideia nova',parecido:'Parecido com algo que já temos'};
+  const ideias=(T.ideias||[]).map((x,i)=>{const ja=temNoPainel(x.titulo);
+    return `<article class="ideia"><div class="sechead"><span class="it">${esc(x.titulo)}</span><span class="pill ${x.status==='parecido'?'publico':'claude'}">${esc(st[x.status]||x.status||'')}</span></div>
+     <div class="note">Para quem: ${esc(x.publico==='iniciante'?'quem está começando no vinho':x.publico==='curioso'?'curiosos de todas as idades':x.publico||'')}</div>
+     <div class="por"><b>Por que a Sofia sugeriu:</b> ${esc(x.porque||'')}</div>${x.obs?`<div class="note">${esc(x.obs)}</div>`:''}
+     <div class="acts">${ja?`<span class="note">Já está no painel (${esc((ETAPAS.find(e=>e.k===ja.etapa)||{}).t||ja.etapa)})</span>`:`<button class="b" type="button" data-trends-pauta="${i}">Pôr na pauta</button>`}</div></article>`}).join('');
+  const alta=(T.altaHoje||[]), altaV=alta.filter(x=>x.vinho);
+  const rel=(T.relacionadas||[]).filter(r=>r.tipo!=='erro');
+  const grupos=[...new Set(rel.map(r=>r.termo))];
+  return `<section class="box wide"><div class="sechead"><h4>O que a Sofia pesquisou no Google Trends</h4><span class="note">${esc(T.fonte||'')} · atualizado ${T.atualizado?dataBr(T.atualizado):''}</span></div>
+     <div>Termos pesquisados: <b>${esc((T.termos||[]).join(', '))}</b>. ${rel.filter(r=>!r.fora).length} buscas aproveitáveis de ${rel.length}.</div>
+     ${T.descartadosResumo?`<span class="note">${esc(T.descartadosResumo)}</span>`:''}</section>
+   <section class="box wide"><h4>Ideias de tema que saíram da pesquisa</h4><span class="note">Nenhuma vai sozinha para a pauta: você decide clicando em "Pôr na pauta".</span><div class="ideias">${ideias||'<span class="note">Sem ideias nesta pesquisa.</span>'}</div></section>
+   <section class="box wide"><h4>Buscas relacionadas no YouTube (últimos 12 meses)</h4><span class="note">"Mais buscada" = volume (100 é o máximo do termo). "Crescendo" = o quanto subiu no período.</span>
+     ${grupos.map(g=>`<h5 style="margin:8px 0 2px;font-family:var(--f-ui);color:var(--gold)">Junto com "${esc(g)}"</h5><div style="overflow-x:auto"><table class="custo"><thead><tr><th>Busca</th><th>Tipo</th><th>Número</th><th>Situação</th></tr></thead><tbody>${rel.filter(r=>r.termo===g).map(r=>`<tr class="${r.fora?'fora':''}"><td>${esc(r.busca)}</td><td>${r.tipo==='alta'?'Crescendo':'Mais buscada'}</td><td class="n">${esc(r.valor||'')}</td><td class="${r.fora?'tag-fora':'tag-ok'}">${r.fora?'Descartada: '+esc(r.fora):'Aproveitável'}</td></tr>`).join('')}</tbody></table></div>`).join('')}</section>
+   <section class="box wide"><h4>Em alta hoje no Brasil (todas as buscas)</h4>${altaV.length?'':`<span class="note">Nenhuma busca em alta hoje tem a ver com vinho. As maiores do dia:</span>`}<ul class="lst">${(altaV.length?altaV:alta.slice(0,10)).map(x=>`<li><b>${esc(x.busca)}</b> <span class="note">${esc(x.trafego||'')}${x.noticia?' · '+esc(x.noticia):''}</span></li>`).join('')}</ul></section>
+   <section class="box wide"><h4>Filtro da Sofia (regras do dono)</h4><ul class="lst">${(T.regras||[]).map(r=>`<li>${esc(r)}</li>`).join('')}<li>Público: quem gosta de vinho (40+) e também quem está começando a beber com os amigos.</li></ul></section>`;
+}
+function faleSofiaHtml(){
+  const P=((ESCR.pauta||{}).pedidos||[]).slice().reverse();
+  const tipo={tema:'Tema sugerido',pesquisa:'Pesquisar no Trends',atualizar:'Atualizar o Trends'};
+  return `<section class="box wide fale"><h4>Fale com a Sofia</h4><span class="note">Tudo sobre pauta e temas é com ela. Escreva e escolha o que ela deve fazer; o pedido chega para o Claude e aparece aqui com a situação.</span>
+   <textarea id="sofia-txt" placeholder="Ex.: vinho para churrasco; ou: pesquise no Trends 'vinho rosé'"></textarea>
+   <div class="acts"><button class="b" type="button" data-sofia="tema">Sugerir como tema</button><button class="b ghost" type="button" data-sofia="pesquisa">Pesquisar este assunto no Trends</button><button class="b ghost" type="button" data-sofia="atualizar">Atualizar o Trends agora</button></div>
+   ${P.length?`<h5 style="margin:6px 0 2px;font-family:var(--f-ui);color:var(--gold)">Seus pedidos</h5><ul class="lst">${P.slice(0,15).map(x=>`<li><span class="when">${esc(String(x.em||'').slice(8,10)+'/'+String(x.em||'').slice(5,7))}</span><b>${esc(tipo[x.tipo]||x.tipo)}</b>${x.txt?': '+esc(x.txt):''} <span class="note">· ${esc(x.status||'pendente')}${x.resposta?' · '+esc(x.resposta):''}</span></li>`).join('')}</ul>`:''}</section>`;
+}
+async function novoTema(titulo,extra){
+  const ref=await db.collection('videos').add({titulo,etapa:'pauta',vez:'claude',estado:'Vou pesquisar este tema',ordem:900,
+    historico:[{em:agora(),quem:'Você',txt:extra&&extra.origem==='trends'?'Pôs na pauta a ideia do Trends':'Sugeriu o tema'}],atualizado:agora(),origem:'dono',...(extra||{})});
+  return ref;
+}
+async function pedirSofia(t){
+  if(!db){toast('Sem conexão com a esteira agora.');return}
+  const txt=($('#sofia-txt')?.value||'').trim();
+  if(t!=='atualizar'&&!txt){toast('Escreva o tema ou o assunto.');$('#sofia-txt')?.focus();return}
+  try{
+    if(t==='tema'){const ref=await novoTema(txt); avisarClaude(`Novo tema para a Sofia [${ref.id}]: ${txt}`);}
+    else avisarClaude(t==='pesquisa'?`Pedido para a Sofia: pesquisar no Google Trends "${txt}" e trazer ideias`:'Pedido para a Sofia: atualizar a pesquisa do Google Trends'+(txt?` (${txt})`:''));
+    const P=((ESCR.pauta||{}).pedidos||[]).slice(-40); P.push({em:agora(),tipo:t,txt,status:t==='tema'?'na pauta':'pendente'});
+    await db.doc('escritorios/pauta').update({pedidos:P});
+    if($('#sofia-txt')) $('#sofia-txt').value=''; toast(t==='tema'?'Tema enviado para a Sofia.':'Pedido enviado para a Sofia.');
+  }catch(e){toast('Não salvou: '+(e&&e.message||'erro')+'.')}
+}
+async function trendsPauta(i){
+  const x=(TRENDS&&TRENDS.ideias||[])[i]; if(!x||!db) return;
+  try{const ref=await novoTema(x.titulo,{origem:'trends',gancho:x.porque,emAlta:'Google Trends: '+x.porque,obs:x.obs||null});
+    avisarClaude(`Ideia do Trends posta na pauta [${ref.id}]: ${x.titulo}`); toast('Ideia na pauta.');}
+  catch(e){toast('Não salvou: '+(e&&e.message||'erro')+'.')}
+}
 function integracoesHtml(){const I=(CAL&&CAL.integracoes)||[]; if(!I.length) return '';
   return `<section class="box wide"><h4>Contas conectadas</h4><div class="integ">${I.map(c=>`<div class="c"><b>${esc(c.nome)}</b><span class="st ${c.ok?'on':'wait'}">${c.ok?'Conectado':'Não conectado'}</span><span class="note">${esc(c.txt||'')}</span>${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.linkTxt||'Conectar')}</a>`:''}</div>`).join('')}</div></section>`;}
 /* ---------- painel do canal (YouTube) na sala da Larissa ---------- */
@@ -687,11 +747,13 @@ function abrirSala(look,refresh){
   const st=(a.fazendo||[]).length?['on','Trabalhando']:a.esperando?['wait','Travado']:prox.length?['wait','Com fila']:['off','Livre'];
   const ger=(EQUIPE.agentes||[]).find(x=>x.look==='gerente');
   let h=`<div class="in"><header class="ohead"><div class="id">${boneco(a.look)}<div style="min-width:0"><span class="note">Escritório</span><h3 id="o-title">${esc(a.nome)}</h3><div class="cg">${esc(a.cargo)}</div></div></div>
-    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='publica'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button><button class="b ghost" data-view="rel" aria-pressed="${salaView==='rel'}">Relatórios</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+    <div class="acts"><span class="st ${st[0]}">${st[1]}</span>${a.look==='pauta'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='trends'}">Sala</button><button class="b ghost" data-view="trends" aria-pressed="${salaView==='trends'}">Tendências (Trends)</button></span>`:''}${a.look==='publica'?`<span class="tabs" role="group" aria-label="Seções da sala"><button class="b ghost" data-view="sala" aria-pressed="${salaView!=='dash'}">Sala</button><button class="b ghost" data-view="dash" aria-pressed="${salaView==='dash'}">Painel do canal</button><button class="b ghost" data-view="rel" aria-pressed="${salaView==='rel'}">Relatórios</button></span>`:''}<button class="b ghost" data-sala-fechar="1">← Voltar ao painel</button></div></header>`;
+  if(a.look==='pauta'&&salaView==='trends'){h+=trendsHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="trends"]').focus(); return;}
   if(a.look==='publica'&&salaView==='rel'){h+=relatoriosHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="rel"]').focus(); return;}
   if(a.look==='publica'&&salaView==='dash'){h+=dashHtml()+'</div>'; el.innerHTML=h; el.hidden=false; el.scrollTop=y; document.body.style.overflow='hidden'; if(!refresh) el.querySelector('[data-view="dash"]').focus(); return;}
   if(a.esperando) h+=`<div class="blk"><b>Esperando:</b> ${esc(a.esperando)}${a.comoResolver?`<div style="margin-top:6px">${esc(a.comoResolver)}</div>`:''}${a.link?`<div style="margin-top:6px"><a href="${esc(a.link)}" target="_blank" rel="noopener" style="color:var(--gold2)">${esc(a.linkTxt||'Abrir')}</a></div>`:''}<div style="margin-top:8px"><button class="b" data-resolvi="${esc(a.nome)}">Já resolvi, pode continuar</button></div></div>`;
   h+=recadosHtml(a);
+  if(a.look==='pauta') h+=faleSofiaHtml();
   if(a.look==='publica') h+=integracoesHtml()+editorialHtml()+calendarioHtml();
   if(a.look==='gerente'){
     h+=`<section class="box wide"><h4>O caminho de um vídeo</h4><div class="flow">${CADEIA.map((c,i)=>`${i?'<span class="ar" aria-hidden="true">→</span>':''}${c[0]==='*'?`<span class="n you">${esc(c[1])}</span>`:c[0]==='prod'?`<span class="n">${esc(c[1])}</span>`:`<button class="n" data-sala="${c[0]}" style="all:unset;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:4px 10px">${esc(c[1])}</button>`}`).join('')}</div><span class="note">Ninguém pula etapa: cada um só começa quando o anterior entrega e, nos pontos dourados, quando você aprova.</span></section>`;
@@ -742,6 +804,8 @@ async function agir(act,id,pick){
 document.addEventListener('click',e=>{
   const rs=e.target.closest('[data-resolvi]'); if(rs){avisarClaude('Equipe: o dono diz que resolveu o bloqueio de '+rs.dataset.resolvi+'. Pode continuar.');rs.disabled=true;rs.textContent='Aviso enviado';return}
   if(e.target.closest('[data-salvar-custo]')){salvarCusto();return}
+  {const sf=e.target.closest('[data-sofia]'); if(sf){pedirSofia(sf.dataset.sofia);return}}
+  {const tp=e.target.closest('[data-trends-pauta]'); if(tp){tp.disabled=true;trendsPauta(+tp.dataset.trendsPauta);return}}
   if(e.target.closest('[data-sala-fechar]')){fecharSala();return}
   {const vb=e.target.closest('[data-view]'); if(vb&&salaAberta){salaView=vb.dataset.view; abrirSala(salaAberta); return}}
   {const sl=e.target.closest('[data-sala]'); if(sl&&(sl.tagName==='BUTTON'||!e.target.closest('a,button,input,textarea,video'))){abrirSala(sl.dataset.sala);return}}
@@ -755,9 +819,8 @@ document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.tar
 $('#newp').addEventListener('submit',async e=>{
   e.preventDefault(); const v=$('#newp-t').value.trim(); if(!v) return;
   if(!db){toast('Sem conexão com a esteira agora.');return}
-  try{const ref=await db.collection('videos').add({titulo:v,etapa:'pauta',vez:'claude',estado:'Vou pesquisar este tema',origem:'dono',ordem:900,
-      historico:[{em:agora(),quem:'Você',txt:'Sugeriu o tema'}],atualizado:agora()});
-    $('#newp-t').value=''; avisarClaude(`Novo tema sugerido pelo dono [${ref.id}]: ${v}`);}
+  try{const ref=await novoTema(v);
+    $('#newp-t').value=''; avisarClaude(`Novo tema para a Sofia [${ref.id}]: ${v}`); toast('Tema enviado para a Sofia.');}
   catch(err){toast('Não salvou: '+(err&&err.message||'erro')+'.')}
 });
 
@@ -771,6 +834,7 @@ render(); pintarAviso();
   db.collection('escritorios').onSnapshot(s=>{ESCR={};s.docs.forEach(x=>ESCR[x.id]=x.data()); if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.collection('relatorios').onSnapshot(s=>{RELS=s.docs.map(x=>({id:x.id,...x.data()})).sort((a,b)=>String(b.em||'').localeCompare(String(a.em||''))); if(salaAberta==='publica'||salaAberta==='gerente') abrirSala(salaAberta,true)},()=>{});
   db.doc('canal/youtube').onSnapshot(s=>{CANAL=s.exists?s.data():null; if(salaAberta==='publica') abrirSala('publica',true)},()=>{});
+  db.doc('trends/sofia').onSnapshot(s=>{TRENDS=s.exists?s.data():null; if(salaAberta==='pauta') abrirSala('pauta',true)},()=>{});
   db.doc('calendario/posts').onSnapshot(s=>{CAL=s.exists?s.data():null; if(salaAberta) abrirSala(salaAberta,true)},()=>{});
   db.doc('config/custos').onSnapshot(s=>{if(s.exists){CUSTO={...CUSTO,...s.data()};render()}},()=>{});
   db.collection('videos').onSnapshot(s=>{
@@ -780,3 +844,4 @@ render(); pintarAviso();
   },err=>{clearTimeout(timer);carregou=true;$('#status').textContent='Não consegui ler a esteira ('+(err&&err.code||'erro')+').';$('#status').classList.add('warn');render()});
 })();
 </script>
+
