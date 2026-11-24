@@ -1,0 +1,37 @@
+{
+ "roteiro": [
+  "Como uma uva vira vinho tinto? Parece mágica... mas quem faz o trabalho pesado é um ser vivo que você nem enxerga!",
+  "Hoje eu te levo do parreiral até a taça, passo a passo. E no caminho tem gás perigoso, bactéria do bem e um cientista famoso. Fica comigo!",
+  "Tudo começa na vindima, que é a colheita da uva. Aqui na Serra Gaúcha, ela acontece no verão, entre janeiro e março.",
+  "E pra encher uma única garrafa, vai mais ou menos um quilo de uva. São centenas de bagos, as bolinhas do cacho!",
+  "Na vinícola, a primeira coisa é tirar o engaço, o cabinho verde do cacho. Se ficar, ele deixa o vinho amargo e áspero.",
+  "Depois, as uvas são esmagadas, só pra romper a casca e soltar o suco. Antigamente, isso era feito com os pés!",
+  "Agora, o segredo do tinto: o suco da uva tinta é quase sem cor! A cor está na casca.",
+  "Por isso, no tinto, o suco fica de molho junto com as cascas e as sementes. Isso se chama maceração. É como fazer um chá: a casca solta a cor, o sabor e o tanino.",
+  "Tanino é aquilo que amarra a boca, que deixa ela meio áspera, igual a um chá preto bem forte.",
+  "Enquanto fica de molho, começa a fermentação. A levedura, um fungo minúsculo, o mesmo do pão, come o açúcar da uva e solta álcool e gás carbônico.",
+  "O tanque borbulha como se estivesse fervendo! E a explicação mais aceita é que a palavra fermentação vem do latim, ligada justamente a ferver.",
+  "Mais ou menos dezessete gramas de açúcar por litro viram um grau de álcool. Então, uva mais doce dá vinho mais forte!",
+  "Só que esse gás é perigoso. Ele é mais pesado que o ar e se acumula embaixo. Por isso, a vinícola precisa de muita ventilação.",
+  "Enquanto isso, as cascas sobem e formam uma tampa grossa em cima do tanque: o chapéu. Várias vezes por dia, alguém afunda o chapéu ou joga o suco por cima, pra tirar mais cor.",
+  "Isso leva uns dias, às vezes semanas. Quando o açúcar acaba, o vinho é separado das cascas, e o bagaço vai pra prensa, pra espremer o que sobrou.",
+  "Por muito tempo, ninguém sabia por que o suco virava vinho. Foi o francês Louis Pasteur, no século dezenove, que estudou o vinho e mostrou que é tudo obra de seres vivos.",
+  "E ainda tem uma segunda fermentação, agora feita por bactérias do bem. Elas trocam o ácido málico, o da maçã verde, pelo ácido lático, o do leite. E o vinho fica mais macio.",
+  "Aí o vinho descansa: em tanque de aço inox ou em barril de madeira, por meses ou até anos.",
+  "No fim, ele é clarificado, ou seja, fica limpinho, sem resto de casca. Depois é filtrado e vai pra garrafa. Do parreiral até a sua taça!",
+  "E o vinho branco? Muda um detalhe: as uvas são espremidas logo, e o suco fermenta sem as cascas. Por isso ele não pega cor.",
+  "Resumindo: colhe, tira o cabinho, esmaga, deixa de molho com a casca, a levedura transforma o açúcar em álcool, prensa, descansa... e engarrafa!",
+  "Curtiu? Se inscreve no canal e me conta: você já visitou uma vinícola na época da vindima?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Louis Pasteur",
+   "fala": "Luí Pastér",
+   "fonte": "francês /lwi pas.tœʁ/ (Collins; Wiktionary). No Brasil também se ouve \"Pastêr\" — **dono decide**"
+  }
+ ],
+ "duracao": "~3 min 20 s",
+ "obs": "Do parreiral à taça: vindima (colheita; na Serra Gaúcha de janeiro a março, Embrapa) → ~1 kg de uva por garrafa → desengace (tirar o engaço, que amarga) → esmagamento → maceração (suco de molho com cascas e sementes, como um chá: cor, sabor e tanino) → fermentação (a levedura, fungo do pão, transforma açúcar em álcool e gás; ~17 g/L de açúcar = 1 grau) → gás carbônico perigoso, vinícola ventilada → chapéu de cascas afundado várias vezes por dia → descuba e prensa → Pasteur (séc. XIX) mostrou que é obra de seres vivos → malolática (bactérias trocam o ácido da maçã pelo do leite: vinho mais macio) → descanso em inox ou barril → clarificação, filtragem e garrafa. O branco fermenta sem as cascas. O DONO PRECISA DECIDIR: (1) pronúncia de Louis Pasteur: 'Luí Pastér' (francês) ou 'Pastêr' (como se ouve no Brasil); (2) manter o trecho do gás carbônico perigoso (f. 12) — é verdadeiro e curioso, mas é o único momento 'sério'; (3) manter a etimologia 'fermentação ↔ ferver' como 'explicação mais aceita' (f. 10); (4) duração ~3 min 20 s (pode cortar a f. 19, 'e o branco?', se quiser ~3 min); (5) thumb recomendada A 'COMO A UVA / VIRA VINHO?'; (6) chaptalização (açúcar no mosto) ficou fora — pode virar vídeo próprio.",
+ "fontes": "Embrapa Uva e Vinho (Agência Embrapa, Processo de elaboração; Rizzon, Vinho Tinto, 2007; boletins agrometeorológicos 2021 e 2023); WSET (especificação nível 3; plano de aulas nível 2); Decanter (maceração WSET 2; kg de uva por garrafa; açúcar por grau; acidente com CO2 em 2008); Wine Folly (tanino; uvas por garrafa; uma uva tinta faz tinto, rosé e branco); AWRI (açúcar → álcool; fermentação malolática); Britannica (Saccharomyces cerevisiae; Wine—Fermentation; Louis Pasteur); Science History Institute (Études sur le vin, 1866); UC Davis Healthy Buildings 2015, CDC/NIOSH e PMC11599993 (risco de CO2); Wiktionary, Etymonline e Dicio (fermentar); PMC10281991 e PMC11278986 (leveduras); vídeos 10, 26 e 36 do canal."
+}
