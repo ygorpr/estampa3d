@@ -13,8 +13,8 @@ Leia junto: `CLAUDE.md`, `.claude/skills/wine-know-video/references/regras-do-do
 Beatriz (gerente) · Sofia (pauta) · Rafael (roteiro) · Caio (checagem) · Helena (thumbs) · Otávio (produção + cortes Shorts) · Larissa (redatora: youtube.md) · Rodrigo (publicador/analista).
 
 ## Situação agora
-- **Esperando o dono — Revisão (8 vídeos):** 23 espaço, 25 Picasso, 26 pisa da uva, 32 garrafa gigante, 33 gaiolinha, 35 Tibete, 37 maracujá, 39 origem das taças. Todos com prévia no painel e em `videos/`.
-- **Esperando o dono — roteiros 40–44** (`pauta/40-cidade-subterranea` … `44-primeiro-vinho-brasil`), cada um com recado do que decidir (pronúncias, fatos fracos).
+- **Esperando o dono — Revisão:** 26, 33, 35, 37, 39 e o corte 1 do Shorts do 32 (s-32-corte1). 23, 25 e 32 aprovados em 23/11 (pacote + Shorts prontos).
+- **Esperando o dono — 12 roteiros:** 28, 29, 30, 31, 34, 36, 38 e 40–44. 3 temas do Instagram esperando o dono colar o texto (Instagram bloqueado na rede).
 - **Aprovados em 21/11 (13, 14, 16–22, 24, 27, 18):** pacote do YouTube (`pauta/<NN>/youtube.md`) e 2 cortes do Shorts cada (`videos/shorts/`, textos em `videos/shorts/LEIA.md`) prontos. **Falta:** Rodrigo encaixar no calendário (calendario/posts) — ainda sem datas.
 - Vídeos 1–8 no YouTube Studio (estação 7); 9–12 entregues. Rodrigo aguarda OK do dono para agendar 1 vídeo/dia.
 - Pauta: ~20 temas na estação pauta.
@@ -31,3 +31,4 @@ Beatriz (gerente) · Sofia (pauta) · Rafael (roteiro) · Caio (checagem) · Hel
 ## Segurança
 - Chave Windsor do Dark Divino: nunca gravar em arquivo/commit. Contas Dark Divino e 3uniformes separadas.
 - Branch: `claude/video-transcription-steps-c6pkcc`. Sem PR. Responder sempre em português.
+- Calendário remarcado em 24/11: 25 em 25/11 (antes de 1º/12), 23 em 19/12, 32 em 20/12.
