@@ -1,0 +1,42 @@
+{
+ "roteiro": [
+  "Seco ou suave? Na prateleira, essa é a dúvida número um! E a resposta cabe numa colherzinha de açúcar!",
+  "Hoje você vai ver o que a regra brasileira diz, três mitos que todo mundo repete... e qual escolher em cada ocasião. Fica comigo!",
+  "Começa pela uva. Toda uva madura é doce, cheia de açúcar.",
+  "Pra virar vinho, entra em cena a levedura: um fungo minúsculo, invisível, o mesmo que faz o pão crescer.",
+  "Ela come o açúcar da uva e devolve álcool e gás. Isso se chama fermentação.",
+  "Se a levedura come quase todo o açúcar, o vinho fica seco. Seco, aqui, quer dizer só uma coisa: sem doce.",
+  "Se sobra açúcar, o vinho fica suave. É o tal do açúcar residual: o açúcar que sobrou na garrafa.",
+  "E aqui no Brasil isso não é chute! A regra do Ministério da Agricultura mede em gramas por litro.",
+  "Seco: até quatro gramas de açúcar por litro. Quatro gramas é mais ou menos uma colherzinha de chá... num litro inteiro!",
+  "Suave: mais de vinte e cinco gramas por litro, umas seis colherzinhas. E no meio do caminho fica o meio seco, que o rótulo também chama de demi-sec.",
+  "E como o suave fica doce? Às vezes a fermentação é parada antes do fim. E no vinho de mesa, a regra permite até adoçar com açúcar depois!",
+  "Agora, os mitos! Mito número um: vinho seco é o que deixa a boca seca. Errado!",
+  "Aquela boca áspera, que amarra, é o tanino: uma substância que vem da casca e da semente da uva. É a mesma sensação de um chá preto bem forte.",
+  "Tanino é textura. Açúcar é doce. São coisas diferentes!",
+  "Mito número dois: cheiro de fruta é sinal de doce. Também não! O nariz sente morango, ameixa... mas a língua não encontra açúcar nenhum.",
+  "E tem mais: a acidez, aquele azedinho, disfarça o doce, igual limonada com bastante limão. Na Europa, um vinho bem azedinho pode ter um pouco mais de açúcar e ainda se chamar seco!",
+  "Mito número três: suave é vinho ruim. Calma! Aqui, o suave do mercado costuma ser vinho de mesa, feito com uvas americanas, como a Isabel e a Bordô. É simples, barato, e muita gente começa por ele.",
+  "E lá fora, alguns vinhos doces estão entre os mais famosos e caros do mundo, como o Sauternes, da França. Doce não é sinônimo de ruim!",
+  "E na hora de escolher? Com sobremesa, a regra é: o vinho tem que ser mais doce que o doce. Senão, ele fica sem graça.",
+  "Com comida apimentada, um vinho com um pouquinho de açúcar acalma o ardido. E se você só bebe suave e quer conhecer o seco, vai pelo meio seco primeiro.",
+  "Resumindo: seco tem até quatro gramas de açúcar por litro, suave tem mais de vinte e cinco, boca amarrando é tanino, cheiro de fruta não é doce... e na sobremesa, o vinho mais doce que o prato!",
+  "Curtiu? Se inscreve no canal e me conta aqui embaixo: você é time seco ou time suave?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Sauternes",
+   "fala": "Sotérn",
+   "fonte": "francês /sotɛʁn/ (Collins; Cambridge French-English). \"s\" final mudo — **dono decide** se cita o nome"
+  },
+  {
+   "escreve": "demi-sec",
+   "fala": "demi-séc",
+   "fonte": "francês /də.mi.sɛk/ (Wiktionary fr); termo da norma do MAPA; no Brasil fala-se \"demi-séc\" — **dono decide**"
+  }
+ ],
+ "duracao": "~3 min 05 s",
+ "obs": "A diferença é o açúcar que sobra depois da fermentação (açúcar residual): a levedura, o fungo do pão, come o açúcar da uva e faz álcool e gás. Regra do Ministério da Agricultura (vinho de mesa): seco até 4 g/L (~1 colherzinha por litro), meio seco/demi-sec de 4 a 25 g/L, suave acima de 25 g/L (~6 colherzinhas); no vinho de mesa pode-se adoçar com açúcar. Mitos: boca seca/amarrando é tanino, não 'seco'; cheiro de fruta não é doce (e a acidez disfarça o doce; na UE seco vai até 9 g/L se for bem ácido); suave não é sinônimo de ruim (no Brasil o suave do mercado costuma ser vinho de mesa de uvas americanas, Isabel e Bordô; lá fora há doces famosos como o Sauternes). Na mesa: vinho mais doce que a sobremesa; um pouco de açúcar acalma a pimenta. O DONO PRECISA DECIDIR: (1) ALERTA DE LEI: o Decreto 8.198/2014, que trazia os limites 4/25 g/L, foi revogado pelo Decreto 12.709/2025; não conseguimos abrir o texto novo — aprovar a fala genérica 'regra do Ministério da Agricultura' e confirmar os números antes da voz (ou liberar o acesso ao planalto.gov.br para o Caio conferir); (2) manter a frase sobre adoçar com açúcar no vinho de mesa (f. 10); (3) citar o Sauternes ('Sotérn') ou tirar (f. 17); (4) pronúncia 'demi-séc'; (5) thumb recomendada A 'SECO OU SUAVE? / QUAL A DIFERENÇA?'; (6) duas correções do material antigo do GPT: saiu 'o doce briga com a carne' (sem fonte) e entrou o mito da boca seca (tanino).",
+ "fontes": "Decreto 8.198/2014 (regulamento da Lei 7.678/1988; LegJur/Planalto) e minuta de PIQ do MAPA (Portaria 346/2021); IN MAPA 14/2018; Decreto 12.709/2025 (Planalto; apresentação MAPA); Decreto 99.066/1990 (SISLEGIS, regra antiga); ESALQ/USP Visão Agrícola; Embrapa (A vitivinicultura brasileira; ID10885); Britannica (Saccharomyces cerevisiae); AWRI e Decanter (açúcar → álcool); Wine Folly (sweetness chart, tannins, pairing); Reg. Delegado (UE) 2019/33 Anexo III; Decanter (Karen MacNeil); WSET; Jancis Robinson; Harvard Nutrition Source e Rutgers (4 g ≈ 1 colher de chá)."
+}
