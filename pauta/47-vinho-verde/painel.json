@@ -1,0 +1,52 @@
+{
+ "roteiro": [
+  "Vinho verde é verde mesmo? Abre uma garrafa e olha: ele é clarinho... e às vezes é até tinto! Então de onde vem esse nome?",
+  "Hoje eu te conto o segredo desse vinho português, e o mito que quase todo mundo acredita. Fica comigo!",
+  "Primeiro: vinho verde não é uma cor. É o nome de um lugar! Uma região no noroeste de Portugal, o Minho, que vai até a divisa com a Espanha.",
+  "É uma Denominação de Origem. Ou seja: só pode usar esse nome o vinho feito ali, seguindo as regras da região. Igual ao champanhe, que só pode vir de uma região da França.",
+  "Essa região foi demarcada, ou seja, teve as fronteiras marcadas por lei, em mil novecentos e oito. E desde mil novecentos e vinte e seis, uma comissão fiscaliza esses vinhos.",
+  "Mas por que verde? Aqui tem que ter cuidado, porque existe mais de uma explicação.",
+  "A mais repetida pelos especialistas: verde quer dizer jovem. É um vinho feito pra beber novinho, poucos meses depois da colheita.",
+  "Muita gente da própria região lembra outra: a paisagem. Ali chove muito, por causa do oceano Atlântico, e o campo fica verde o ano inteiro.",
+  "E tem um mito: o de que é feito com uva verde. Não é! Ninguém faz vinho com uva verde. A uva é colhida madura, como em qualquer lugar.",
+  "Então guarda isso: o verde tem a ver com a juventude e com a região. Com a cor do vinho, nada!",
+  "E agora a surpresa: existe vinho verde branco, rosé... e tinto!",
+  "O branco é o mais famoso, e hoje é a grande maioria. Mas, por muito tempo, o mais comum por lá era o tinto!",
+  "O tinto é feito principalmente com uma uva chamada Vinhão, de casca grossa e escura. O vinho sai roxo, quase preto. E na região, é tradição beber numa malga, uma tigelinha de louça branca!",
+  "E as uvas brancas mais conhecidas são a Alvarinho e a Loureiro. O Alvarinho é a estrela de Monção e Melgaço, um pedacinho lá no norte, colado no rio.",
+  "Ao todo, a região tem nove pedaços assim, as sub-regiões. E é a maior região demarcada de Portugal!",
+  "E sabe aquele gasinho leve, que pica de leve na língua? Tem história!",
+  "Antigamente, ele nascia sozinho: o vinho fazia uma segunda fermentação dentro do barril, feita por bactérias do bem, e soltava gás. Hoje, quase sempre, o produtor põe um pouquinho de gás na hora de engarrafar.",
+  "Por isso ele é leve, fresquinho, com uma acidez gostosa e, em geral, menos álcool. Perfeito pro calor do Brasil!",
+  "Bebe bem gelado, com peixe, frutos do mar, salada... E a maioria foi feita pra beber jovem: não precisa guardar anos na adega.",
+  "Então, da próxima vez que alguém disser que vinho verde é feito de uva verde... você já sabe a verdade!",
+  "Resumindo: vinho verde é uma região do norte de Portugal; verde quer dizer jovem; tem branco, rosé e tinto; e aquele gasinho é leve e refrescante!",
+  "Curtiu? Se inscreve no canal e me conta: você já provou vinho verde tinto?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Minho",
+   "fala": "Minho",
+   "fonte": "português /ˈmiɲu/ (Priberam/Infopédia); a voz pt-BR lê bem — sem troca"
+  },
+  {
+   "escreve": "Vinhão",
+   "fala": "Vinhão",
+   "fonte": "português /viˈɲɐ̃w/ — sem troca"
+  },
+  {
+   "escreve": "Alvarinho / Loureiro",
+   "fala": "Alvarinho / Lourêiro",
+   "fonte": "português — sem troca"
+  },
+  {
+   "escreve": "Monção e Melgaço",
+   "fala": "Monção e Melgaço",
+   "fonte": "português — sem troca"
+  }
+ ],
+ "duracao": "~3 min 5 s",
+ "obs": "PARA VOCÊ DECIDIR: (1) teorias do nome: deixei \"verde = jovem\" como a mais repetida pelos especialistas (Jancis Robinson/Oxford) e \"paisagem verde\" como a que a região lembra (Público/Observador); o \"feito de uva verde\" entra como MITO — ok assim? (2) manter a f. 11 \"por muito tempo o mais comum por lá era o tinto\" (fonte média: Monitor Mercantil e Público; não achei estatística histórica da Comissão) ou cortar; (3) manter a malga (f. 12) — tradição real, mas com fonte regional/turística; (4) o site oficial da Comissão (vinhoverde.pt) não abriu nesta sessão (rede bloqueada): datas 1908/1926, 9 sub-regiões e uvas vieram do press kit da Comissão e do Público pela busca — se quiser, confiro de novo com o site aberto antes da voz; (5) pronúncia: só palavras portuguesas (Minho, Vinhão, Alvarinho, Loureiro, Monção e Melgaço), sem troca na voz; (6) thumb sugerida A: \"VINHO VERDE / É VERDE MESMO?\" (B \"EXISTE VINHO / VERDE TINTO?\", C \"VERDE NÃO É / A COR!\"); (7) duração ~3 min 5 s.",
+ "fontes": "Comissão de Viticultura da Região dos Vinhos Verdes (press kit \"Saiba tudo sobre a Região dos Vinhos Verdes\"; caderno de especificações da DO Vinho Verde, IVV 2024; regulamento e guia de rotulagem no vinhoverde.pt — site não abriu, lido pela busca); IVV (Instituto da Vinha e do Vinho); Diário da República (Portaria da DO); Público (Consultório 2021, 2022 e \"Verde é a região, os vinhos são todos maduros\", 2023); Observador (2022); Jancis Robinson (Vinho Verde; Oxford Companion to Wine via ckbk); Wine Folly; Wikipedia (Vinho Verde, só como apoio); Monitor Mercantil (tinto histórico — fonte média)."
+}

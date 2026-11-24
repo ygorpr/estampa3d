@@ -1,0 +1,103 @@
+{
+ "roteiro": [
+  "Calor, vinho branco na geladeira... e se virasse um drink? Tem receita clássica, famosa no mundo inteiro, e com história de verdade!",
+  "Hoje são quatro drinks com vinho branco, fáceis de fazer em casa, e com a medida certinha. Fica comigo!",
+  "O primeiro é o mais simples de todos: o Spritzer. Na Áustria, chamam de Gespritzter, que quer dizer borrifado.",
+  "É só vinho branco e água com gás, meio a meio. E lá isso é tão sério que tem lei: pra ter esse nome, precisa ter pelo menos metade de vinho!",
+  "E como metade é água, o copo fica leve e refrescante. Ótimo pra uma tarde quente.",
+  "Agora, o primo italiano: o Spritz. A história mais contada vem do século dezenove, quando a região de Veneza era governada pela Áustria.",
+  "Dizem que os soldados austríacos achavam o vinho de lá forte demais e pediam pra borrifar um pouco de água. E spritzen, em alemão, é justamente borrifar.",
+  "No começo, era só vinho branco com água. O laranja chegou depois: o Aperol, um aperitivo amargo, criado em Pádua, na Itália, em mil novecentos e dezenove.",
+  "E o vinho parado virou Prosecco, um espumante italiano. Ou seja: vinho branco com gás.",
+  "A receita oficial da Associação Internacional de Bartenders é assim: noventa mililitros de Prosecco, sessenta de Aperol e um pouquinho de água com gás. Gelo e uma rodela de laranja.",
+  "Terceiro drink, da França: o Kir. Antes ele se chamava blanc-cassis... e mudou de nome por causa de um padre!",
+  "O cônego Félix Kir, um padre que virou prefeito de Dijon, na França, logo depois da Segunda Guerra. Ele servia esse drink nas recepções da prefeitura.",
+  "O drink já existia antes dele, mas ficou famoso com ele, e acabou ganhando o seu nome.",
+  "É vinho branco seco com um pouco de creme de cassis, um licor de groselha preta. Na receita oficial, são nove partes de vinho pra uma de licor.",
+  "O vinho tradicional é o Aligoté, uma uva branca da própria região. E se trocar o vinho por champanhe, vira o Kir Royal!",
+  "E o quarto é o mais conhecido aqui na América do Sul: o Clericot, ou Clericó, como falam na Argentina, no Uruguai e no Paraguai.",
+  "O nome vem do inglês, de um ponche, uma bebida misturada servida em jarra, que era moda entre os britânicos no século dezenove: o Claret Cup, feito com vinho tinto.",
+  "Ele chegou com os imigrantes britânicos e, por aqui, ganhou cara de verão: vinho branco com frutas picadas, numa jarra bem gelada.",
+  "Não tem receita oficial. Uma jarra simples: uma garrafa de vinho branco seco, umas duas xícaras de frutas picadas, como maçã, laranja, pêssego e morango, e gelo. Quem gosta põe uma colher de açúcar.",
+  "Dica de sommelier: pra drink, use um branco simples, leve e bem gelado. Não precisa abrir aquela garrafa cara!",
+  "E lembra: drink de vinho é pra refrescar e acompanhar a conversa. Um ou dois copos, com calma, sempre com água do lado. E se beber, não dirija.",
+  "Resumindo: Spritzer, vinho e água com gás meio a meio; Spritz, Prosecco, Aperol e um pouco de água com gás; Kir, vinho branco com cassis; e Clericot, vinho branco com frutas!",
+  "Curtiu? Se inscreve no canal e me conta: qual desses você vai fazer primeiro?",
+  "Wine Know. Dark Divino."
+ ],
+ "pronuncia": [
+  {
+   "escreve": "Spritzer",
+   "fala": "Sprítzer",
+   "fonte": "alemão austríaco /ˈʃprɪtsɐ/ (Duden \"Spritzer\"; Wiktionary de); no Brasil se diz \"Sprítzer\" — **dono decide** entre \"Sprítzer\" e \"Xprítzer\""
+  },
+  {
+   "escreve": "Gespritzter",
+   "fala": "Guexprítster",
+   "fonte": "alemão /ɡəˈʃprɪtstɐ/ (Duden \"Gespritzte\"; Wiktionary de)"
+  },
+  {
+   "escreve": "spritzen",
+   "fala": "xprítzen",
+   "fonte": "alemão /ˈʃprɪtsn̩/ (Duden \"spritzen\"; Wiktionary de)"
+  },
+  {
+   "escreve": "Spritz",
+   "fala": "Sprítz",
+   "fonte": "italiano /sprits/ (Treccani \"spritz\"; Wiktionary it) — como se fala no Brasil"
+  },
+  {
+   "escreve": "Aperol",
+   "fala": "Áperol",
+   "fonte": "italiano /ˈa.pe.rol/, acento na 1ª sílaba (Wiktionary it; DiPI) — no Brasil se ouve \"Aperól\" — **dono decide**"
+  },
+  {
+   "escreve": "Prosecco",
+   "fala": "Prossécco",
+   "fonte": "italiano /proˈsek.ko/ (Treccani; Wiktionary it)"
+  },
+  {
+   "escreve": "Pádua",
+   "fala": "Pádua",
+   "fonte": "português — sem troca"
+  },
+  {
+   "escreve": "Kir / Kir Royal",
+   "fala": "Quir / Quir Ruaiál",
+   "fonte": "francês /kiʁ/, /kiʁ ʁwa.jal/ (Larousse \"kir\"; Wiktionary fr)"
+  },
+  {
+   "escreve": "Félix Kir",
+   "fala": "Félix Quir",
+   "fonte": "francês /fe.liks kiʁ/ (Wiktionary fr)"
+  },
+  {
+   "escreve": "blanc-cassis",
+   "fala": "blã-cassís",
+   "fonte": "francês /blɑ̃ ka.sis/ (Larousse \"cassis\"; Wiktionary fr)"
+  },
+  {
+   "escreve": "Dijon",
+   "fala": "Dijôn",
+   "fonte": "francês /di.ʒɔ̃/ (Wiktionary fr; Collins)"
+  },
+  {
+   "escreve": "Aligoté",
+   "fala": "Aligotê",
+   "fonte": "francês /a.li.ɡɔ.te/ (Wiktionary fr)"
+  },
+  {
+   "escreve": "Clericot / Clericó",
+   "fala": "Clericô",
+   "fonte": "espanhol /kle.ɾiˈko/ (RAE/DLE \"clericó\" — rioplatense); no Brasil \"Clericô\""
+  },
+  {
+   "escreve": "Claret Cup",
+   "fala": "Clérêt Câp",
+   "fonte": "inglês /ˈklær.ət kʌp/ (Cambridge \"claret\", \"cup\")"
+  }
+ ],
+ "duracao": "~3 min 25 s",
+ "obs": "PARA VOCÊ DECIDIR: (1) a origem do Spritz com os soldados austríacos é \"a história mais contada\", sem documento — deixei com \"dizem que\" (f. 6); manter ou cortar? (2) o Clericot original (Claret Cup inglês) era de vinho TINTO; a versão com branco é do Rio da Prata — a fala conta isso (f. 16–17); ok? (3) o Spritz moderno usa Prosecco (espumante branco) e Aperol, que é marca: mostro garrafa genérica, sem rótulo; (4) pronúncias: Aperol \"Áperol\" (italiano, acento no A) ou \"Aperól\" (como se ouve no Brasil)? Spritzer \"Sprítzer\" ou \"Xprítzer\" (alemão)? Kir \"Quir\", Dijon \"Dijôn\", Prosecco \"Prossécco\", Clericot \"Clericô\", Claret Cup \"Clérêt Câp\"; (5) a medida do Clericot é caseira (não há receita oficial) e a fala diz isso; (6) fala de moderação (f. 20, com \"se beber, não dirija\") — sugestão minha para não incentivar excesso; (7) ficou fora: o fröccs húngaro (a história do poeta que deu o nome em 1842 é lenda, segundo historiador húngaro) e a sangria (é de vinho tinto); (8) thumb sugerida A: \"DRINKS COM / VINHO BRANCO\" (B \"CLERICOT E SPRITZ / DE VERDADE\", C \"O KIR TEM NOME / DE PADRE!\"); (9) duração ~3 min 25 s (24 falas; dá pra cortar a f. 19 se quiser ~3 min 15 s).",
+ "fontes": "IBA – International Bartenders Association (receitas oficiais Spritz e Kir, iba-world.com); Lei austríaca Weinbezeichnungsverordnung §3 (RIS/jusline); wein.plus Glossar (Spritzer); Der Standard (\"Der Gspritzte ist Gesetz\"); Caffè Florian e Retrogusti (história do Spritz veneziano); Oxford Companion to Spirits and Cocktails (verbete, só resumo); Difford's Guide (Kir); Assemblée nationale – base Sycomore (Félix Kir); Revue Conflits (Dijon e o cassis); Wikipedia es (Clericó) e Revista El Pasajero (Clarete, Clericot o Clericó); Kiss Imre, Szódavíz (Hungaricana, 2008 — fröccs, fora do roteiro)."
+}
