@@ -183,3 +183,14 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Por que a garrafa tem nome da Bíblia? (37)
 - **Descrição:** Ninguém sabe ao certo! O registro mais antigo é o Jeroboão, num livro de Walter Scott de 1816. A explicação mais aceita é uma piada: a Bíblia chama Jeroboão de "homem valente". E garrafa grande envelhece o vinho mais devagar? Dizem que sim, mas a ciência ainda não provou de vez. Vídeo completo no canal.
 - **Hashtags:** #vinho #champanhe #historia
+## Vídeo 26: Ainda se pisa uva com o pé?
+
+### ainda-se-pisa-uva-com-o-pe-corte1.mp4 (38,5 s, origem 1:06,8–1:43,7)
+- **Título:** Por que pisar uva com o pé? (27)
+- **Descrição:** A resposta está escondida dentro da uva: a semente. Ela é amarga, e se quebra, solta no vinho um amargor áspero. O pé é perfeito: macio, firme e quentinho, estoura a casca e solta a cor, mas não quebra a semente! E no vinho do Porto sobram só uns dois dias para tirar cor e sabor da casca. Vídeo completo no canal.
+- **Hashtags:** #vinho #vinhodoporto #curiosidades
+
+### ainda-se-pisa-uva-com-o-pe-corte2.mp4 (41,7 s, origem 1:44,4–2:24,5)
+- **Título:** Robô com pé de silicone pisa uva! (33)
+- **Descrição:** Pisar uva custa caro: em 2002, uma grande casa do Porto precisava de 24 pessoas por lagar. Então uma família tradicional do Porto inventou um robô com pés de metal e almofadas de silicone, que imitam até o calor do pé humano. Mas, para os melhores vinhos, o chefe da Taylor's ainda prefere pé de gente! Vídeo completo no canal.
+- **Hashtags:** #vinho #vinhodoporto #robo
