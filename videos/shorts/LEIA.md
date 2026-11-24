@@ -150,3 +150,36 @@ Cada corte tem um quadro de conferência (`*-conferencia.jpg`).
 - **Título:** Temperatura ambiente? Só na Europa fria! (40)
 - **Descrição:** O "tinto em temperatura ambiente" é uma regra da Europa sem aquecedor, com a sala de jantar entre 13 e 18 graus. No verão do Brasil, a sala passa dos 30! A temperatura certa: espumante de 6 a 10 °C, branco e rosé de 7 a 12 °C, tinto de 15 a 18 °C. Vídeo completo no canal.
 - **Hashtags:** #vinho #vinhotinto #dicasdevinho
+## Vídeo 23: O vinho que passou 14 meses no espaço
+
+### o-vinho-que-passou-14-meses-no-espaco-corte1.mp4 (46,8 s, origem 1:32,8–2:18,1)
+- **Título:** O vinho do espaço voltou mais velho?! (37)
+- **Descrição:** Doze garrafas de Pétrus passaram 438 dias na Estação Espacial. De volta, em Bordeaux, doze especialistas provaram às cegas: o do espaço contra a garrafa gêmea que ficou na adega. O do espaço estava mais cor de tijolo, com cheiro de flor, e parecia uns dois ou três anos mais velho! Vídeo completo no canal.
+- **Hashtags:** #vinho #espaco #curiosidades
+
+### o-vinho-que-passou-14-meses-no-espaco-corte2.mp4 (45,8 s, origem 2:40,4–3:24,7)
+- **Título:** Videiras que foram ao espaço (28)
+- **Descrição:** Junto com o vinho, 320 pedacinhos de videira de Merlot e Cabernet Sauvignon passaram uns dez meses na Estação Espacial. Replantados, deram mais plantas resistentes ao míldio, um fungo que ataca a uva. A ideia: achar videiras mais fortes para um mundo mais quente. Vídeo completo no canal.
+- **Hashtags:** #vinho #ciencia #espaco
+## Vídeo 25: Picasso pintou rótulo de vinho?
+
+### picasso-pintou-rotulo-de-vinho-corte1.mp4 (45,8 s, origem 1:25,1–2:09,2)
+- **Título:** Picasso pintou rótulo de vinho? (31)
+- **Descrição:** O Château Mouton Rothschild, de Bordeaux, ganha quase todo ano um rótulo de um artista: Dalí, Miró, Chagall, Andy Warhol, até o rei Charles. O pagamento? Dez caixas de vinho! Mas Picasso nunca pintou um rótulo para eles: o de 1973 é uma homenagem, com uma pintura dele de 1959. Vídeo completo no canal.
+- **Hashtags:** #vinho #picasso #arte
+
+### picasso-pintou-rotulo-de-vinho-corte2.mp4 (41,8 s, origem 2:09,8–2:50,0)
+- **Título:** O vinho que subiu de classe (27)
+- **Descrição:** Em 1855, os melhores vinhos de Bordeaux foram divididos em cinco classes, e o Mouton ficou na segunda. O barão nunca engoliu: "Primeiro não posso, segundo não me digno, Mouton sou." Em 1973, um decreto subiu o Mouton para a primeira classe, a única promoção da lista em mais de cem anos!
+- **Hashtags:** #vinho #historia #bordeaux
+## Vídeo 32: Por que a garrafa gigante tem nome de rei?
+
+### por-que-a-garrafa-gigante-tem-nome-de-rei-corte1.mp4 (44,7 s, origem 0:00,3–0:43,4)
+- **Título:** Garrafa de vinho com nome de rei?! (34)
+- **Descrição:** Jeroboão, Baltazar, Nabucodonosor... e a maior de todas, a Melquisedeque, com 30 litros! São nomes da Bíblia em garrafa de champanhe. A régua é a garrafa normal de 750 ml; a Magnum ("grande", em latim) vale duas, a Jeroboão quatro e a Roboão seis. Vídeo completo no canal.
+- **Hashtags:** #vinho #champanhe #curiosidades
+
+### por-que-a-garrafa-gigante-tem-nome-de-rei-corte2.mp4 (45,9 s, origem 2:15,5–2:59,9)
+- **Título:** Por que a garrafa tem nome da Bíblia? (37)
+- **Descrição:** Ninguém sabe ao certo! O registro mais antigo é o Jeroboão, num livro de Walter Scott de 1816. A explicação mais aceita é uma piada: a Bíblia chama Jeroboão de "homem valente". E garrafa grande envelhece o vinho mais devagar? Dizem que sim, mas a ciência ainda não provou de vez. Vídeo completo no canal.
+- **Hashtags:** #vinho #champanhe #historia
