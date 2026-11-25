@@ -11,7 +11,7 @@ def url_robo():
 
 
 def chamar(payload):
-    r = subprocess.run(['curl', '-sL', '-X', 'POST', '-H', 'Content-Type: application/json',
+    r = subprocess.run(['curl', '-sL', '-H', 'Content-Type: application/json',
                         '--data-binary', '@-', url_robo()], input=json.dumps(payload).encode(),
                        capture_output=True, timeout=600)
     out = r.stdout.decode()
@@ -30,8 +30,16 @@ def pacote(md):
     return titulo.strip(), desc, [x.strip() for x in tags.split(',') if x.strip()]
 
 
+def canal():
+    r = subprocess.run(['curl', '-sL', url_robo()], capture_output=True, timeout=120)
+    return json.loads(r.stdout.decode()).get('canal', '')
+
+
 if __name__ == '__main__':
     a = sys.argv[1:]
+    c = canal()
+    if a[0] in ('thumb', 'subir') and 'wine know' not in c.lower():
+        sys.exit('PARADO: o robô está no canal "%s", não no Wine Know. Reautorizar escolhendo o canal Wine Know.' % c)
     if a[0] == 'listar':
         print(json.dumps(chamar({'acao': 'listar'}), ensure_ascii=False, indent=1))
     elif a[0] == 'thumb':
