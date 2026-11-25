@@ -17,7 +17,7 @@ os dados vieram dos resumos/abstracts indexados). Itens marcados "checar" devem 
 | Para aprender: taça apoiada na mesa, segurando pela base, pequenos círculos; dose pequena/moderada para girar sem derramar (falas 16–17) | Wine Folly — https://winefolly.com/tutorial/how-to-swirl-wine/ ; Wine.com — https://www.wine.com/content/landing/why-do-we-swirl-wine |
 | Espumante: girar só faz as bolhas sumirem mais rápido (fala 18) | Wine Folly (how to swirl) ; Wine.com (mesmo link) |
 | Tempo: poucos segundos (guias falam em 5–10 s — fonte fraca, por isso sem número) (fala 15) | Chowhound — https://chowhound.com/1726584/how-to-swirl-wine-tasting (só pista) |
-| Brasil: matérias "Girar a taça de vinho não é frescura" (Gazeta SP) e "Entenda por que os especialistas giram a taça" (Diário do Litoral) — mostram a dúvida/piada do público (fala 2) | pauta/novos-temas-2026-11-20.json (pesquisa de demanda) |
+| Brasil: matérias "Girar a taça de vinho não é frescura" (Gazeta SP) e "Entenda por que os especialistas giram a taça" (Diário do Litoral) — mostram a dúvida/piada do público (fala 2) | pauta/_temas-e-pesquisas/novos-temas-2026-11-20.json (pesquisa de demanda) |
 
 ## Ligações com outros vídeos (sem repetir)
 - Lágrimas do vinho (vídeo 16): só citadas na fala 19.

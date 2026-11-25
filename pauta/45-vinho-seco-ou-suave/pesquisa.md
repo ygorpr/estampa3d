@@ -2,7 +2,7 @@
 Pesquisa: Rafael · Checagem: Caio. Observação: nesta sessão a leitura direta das páginas (WebFetch) está bloqueada e os sites do governo
 (planalto.gov.br, camara.leg.br) não abrem; os fatos foram conferidos pela busca (WebSearch), que mostra trechos dos textos legais.
 Demanda (Google Trends, passado pela Beatriz): "vinho tinto suave" = busca nº 1 junto com "vinho tinto" (100); "vinho tinto seco" (76);
-"vinho tinto suave bom e barato" +110%. Material antigo aproveitado: pauta de 19/11 (`pauta/pauta-videos-3min.md`, tema 4, "roteiro e storyboard já prontos")
+"vinho tinto suave bom e barato" +110%. Material antigo aproveitado: pauta de 19/11 (`pauta/_temas-e-pesquisas/pauta-videos-3min.md`, tema 4, "roteiro e storyboard já prontos")
 e o rascunho antigo de 11 cenas (`.claude/skills/wine-know-video-workspace/iteration-1/roteiro-thumb-storyboard/with_skill/outputs/roteiro.md`).
 Do rascunho antigo ficaram as ideias "o segredo é o açúcar que sobra" e "frutado não é doce". **Saiu** a frase "o doce briga com a carne... e os dois perdem o sabor":
 as fontes de harmonização não dão isso como regra (Jancis Robinson diz que doce pode ir bem com salgado; Wine Folly e WSET elogiam doce + salgado).

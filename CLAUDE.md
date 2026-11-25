@@ -8,6 +8,7 @@ O kit pronto (motor ajustado, cenários, exemplo completo, ferramentas) está em
 Instalar a skill: copiar `skills/stickman` do repositório para `~/.claude/skills/stickman`, depois copiar `kit-dark-divino/engine/*` por cima da pasta do filme.
 
 ## LEIA PRIMEIRO
+- **Mapa das pastas e regras de economia: `MAPA.md`.** Ronda: `.claude/skills/wine-know-video/references/ronda.md`. Conversa longa → habilidade `/nova-sessao`.
 - `.claude/skills/wine-know-video/references/regras-do-dono.md`: TODAS as regras e correções do dono (pesquisa profunda, público leigo,
   pronúncia por dicionário, 3 thumbs que dizem o assunto, voz só após aprovação, gestos, avisos, bolhas, personagens extras).
 - **Retomar daqui: `pauta/HANDOFF.md`** (estado em 22/11). Situação atual dos vídeos: `pauta/STATUS.md` e o painel https://claude.ai/artifact/1t32YxYY99HV5bq4DAvcAB (ver `.claude/skills/wine-know-video/references/painel.md`). Biblioteca de cenários: `.claude/skills/wine-know-video/engine/lib/`.

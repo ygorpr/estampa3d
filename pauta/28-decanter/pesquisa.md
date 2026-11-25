@@ -1,5 +1,5 @@
 # Para que serve o decanter? — pesquisa (20/11/2026)
-Busca feita só por WebSearch (o acesso direto aos sites — decanter.com, winefolly.com, phys.org — está bloqueado na rede desta sessão). Onde só vimos o resumo da busca, está marcado "(resumo)". Pista inicial: `pauta/novos-temas-2026-11-20-b.json` (id p-decanter).
+Busca feita só por WebSearch (o acesso direto aos sites — decanter.com, winefolly.com, phys.org — está bloqueado na rede desta sessão). Onde só vimos o resumo da busca, está marcado "(resumo)". Pista inicial: `pauta/_temas-e-pesquisas/novos-temas-2026-11-20-b.json` (id p-decanter).
 
 ## Palavra e origem
 | Fato | Fonte |

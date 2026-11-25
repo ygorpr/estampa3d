@@ -198,3 +198,10 @@ Consolidado de meses de conversa. Cada item é um pedido ou uma correção real 
   "inscreva-se" e o "Wine Know. Dark Divino.". Agora: CTA termina 0,3 s após a fala, brinde 1,5 s, voz do logo 0,3 s após o corte
   (`scripts/apertar_final.py`). Silêncio máximo no fim ≈ 2 s.
 - (21/11, vídeo 19) "Tá demorando pra sair da thumb, o personagem tá falando muito sem ação": vale a regra da abertura viva acima.
+
+## Economia de tokens (25/11, ordem do dono)
+- Ronda da Beatriz SÓ em horário comercial: dia útil, 9h07 e 18h07 (Brasília). Fora disso ninguém faz ronda.
+- Cada ronda roda numa sessão NOVA (não nesta conversa longa) e com modelo mais barato; passo a passo em `references/ronda.md`.
+- Uma sessão só cuida do painel (a ronda agendada). A sessão com o Chrome só sobe vídeos no Studio quando o dono pedir.
+- Agentes de roteiro, checagem, textos e thumbs com modelo "sonnet"; produção com o padrão. Trabalho em LOTE (vários roteiros num agente só).
+- Conversa já resumida uma vez ou muito longa → habilidade `nova-sessao` (HANDOFF + sessão nova). Não dá para medir 70% exato; usar esses sinais.
