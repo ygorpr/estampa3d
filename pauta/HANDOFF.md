@@ -33,3 +33,8 @@ Beatriz (gerente) · Sofia (pauta) · Rafael (roteiro) · Caio (checagem) · Hel
 - Chave Windsor do Dark Divino: nunca gravar em arquivo/commit. Contas Dark Divino e 3uniformes separadas.
 - Branch: `claude/video-transcription-steps-c6pkcc`. Sem PR. Responder sempre em português.
 - Calendário remarcado em 24/11: 25 em 25/11 (antes de 1º/12), 23 em 19/12, 32 em 20/12.
+
+## Upload automático no YouTube (24/11, 23h30 Brasília)
+- Windsor_Dark_Divino (youtube, conta 108952) tem `upload_video` por URL pública (raw do GitHub funciona; repo público) com `publish_at`. NÃO define thumbnail.
+- 24/11 noite: 4 tentativas do Picasso deram "rate-limited" (cota diária). Tarefa agendada trig_01QKAcmZUPFzZ6gHRnK2NPkx (25/11 5h10) tenta de novo: Picasso para 25/11 9h (dono liberou manhã), depois os "subir" do calendário.
+- Thumb sem o dono: proposta = conector Make (módulo YouTube de thumbnail/upload) ou Zapier. Dono precisa conectar uma vez (OAuth do YouTube dentro do Make); depois tudo roda sozinho.
