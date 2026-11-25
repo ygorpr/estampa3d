@@ -2,7 +2,7 @@
 
 Sobe o vídeo, coloca a thumb e agenda, tudo pelo Claude, sem abrir o Studio. O dono instala uma vez só (uns 5 minutos).
 
-## Instalação (o dono faz uma vez)
+## Instalação (v2, canal de marca): ver a mensagem de 24/11 no chat e os passos abaixo
 1. Abrir https://script.google.com, entrando com a conta Google que é dona do canal Wine Know, e clicar em **Novo projeto**.
 2. Apagar o que estiver no editor e colar todo o conteúdo de `Codigo.gs`. Dar ao projeto o nome "Robô Wine Know".
 3. Na barra da esquerda, em **Serviços**, clicar em **+**, escolher **YouTube Data API v3** e clicar em **Adicionar**.
@@ -19,3 +19,8 @@ Sobe o vídeo, coloca a thumb e agenda, tudo pelo Claude, sem abrir o Studio. O 
 O link do robô **não vai para o repositório**, porque o repositório é público. Ele fica em `~/.robo_wine_know` ou na variável `ROBO_URL`.
 Thumb personalizada exige o canal verificado por telefone (https://www.youtube.com/verify).
 Cota do robô: projeto próprio do Google, separado do Windsor (cerca de 6 envios por dia).
+
+## v2 (24/11): o Wine Know é conta de marca, e o Apps Script não aceita conta de marca
+O robô passou a usar um cliente OAuth próprio, criado no Google Cloud, cujo login aceita escolher o canal de marca.
+CLIENT_ID e CLIENT_SECRET ficam nas Propriedades do script; o REFRESH_TOKEN é gravado sozinho depois de abrir `/exec?conectar=1`.
+No Google Cloud, a tela de consentimento precisa estar "Em produção": em "Teste", o login expira em 7 dias.
