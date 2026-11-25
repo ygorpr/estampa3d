@@ -61,3 +61,11 @@ Ninguém fica só com "Último trabalho": sempre dizer o que faz ou o que espera
 ## 6. Fechar a ronda
 - Se gerou trabalho ou mudou algo: atualizar `pauta/HANDOFF.md` (seção "Situação agora", 5–10 linhas), commit + push.
 - Mensagem final ao dono: no máximo 5 linhas. Só chamar o dono para crédito, acesso ou decisão.
+
+## 7. Arquivar a própria sessão (ordem do dono, 25/11)
+O dono não quer as sessões de ronda na tela principal do Claude. Depois de terminar TUDO (commit/push feitos, painel atualizado,
+agentes que você disparou já terminados e com o resultado no painel):
+1. `set_session_tags` na própria sessão (id via `get_session` sem argumento) com a tag `wine-know-ronda`.
+2. Escreva a mensagem final (no máximo 5 linhas).
+3. Por último, `archive_session` com o id da própria sessão. A sessão continua guardada (Arquivadas), só sai da lista principal.
+Se algum agente ainda estiver rodando, NÃO arquive: anote no HANDOFF e deixe a próxima ronda conferir.
